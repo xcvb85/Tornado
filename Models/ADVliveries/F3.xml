@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+	<sim>
+		<model>
+				<livery>
+					<name type="string">F3</name>
+					 <index type="int">1</index>
+					  <texture>F3.jpg</texture>
+					  <texture-pilot>F3liveries/RAFpilot.png</texture-pilot>
+				</livery>
+		</model>
+	</sim>
+</PropertyList>

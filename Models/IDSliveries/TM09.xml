@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+	<sim>
+		<model>
+				<livery>
+					<name type="string">Luftwaffe AG51 Tiger Meet '09</name>
+					 <index type="int">1</index>
+					  <texture>IDSliveries/TM09.jpg</texture>
+				</livery>
+		</model>
+	</sim>
+</PropertyList>

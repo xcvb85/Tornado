@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+            <key n="60">
+                <name>&lt;</name>
+                <desc>Decrease Sweep</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>libraries.wingSweep(-1)</script>
+                </binding>
+            </key>
+            <key n="62">
+                <name>&gt;</name>
+                <desc>Increase Sweep</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>libraries.wingSweep(1)</script>
+                </binding>
+            </key>
+</PropertyList>

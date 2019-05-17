@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<PropertyList>
+   <sim include="Systems/views.xml">
+		<flight-model>jsb</flight-model>
+		<aero>Tornado</aero>
+
+		<flaps>
+			<setting>0.0</setting>
+			<setting>0.5</setting> 
+			<setting>1.0</setting> 
+		</flaps>
+
+		<sound>
+			<path>Aircraft/Tornado/Sounds/sound.xml</path>
+		</sound>		
+	</sim>
+    <fdm>
+        <jsbsim>
+            <systems>
+                <hook>
+                    <tailhook-cmd-norm type="bool">false</tailhook-cmd-norm>
+                </hook>
+                <hydraulics>
+                    <flight-system-psi type="float">0</flight-system-psi>
+                    <combined-system-psi type="float">0</combined-system-psi>
+                </hydraulics>
+                <electrics>
+                    <ac-right-main-bus type="float">0</ac-right-main-bus>
+                </electrics>
+            </systems>
+            <fcs>
+				<wing-sweep-cmd type="int">0</wing-sweep-cmd>
+				<wing-sweep type="double">0.00</wing-sweep>
+            </fcs>
+
+            <propulsion>
+                <engine n="0">
+                    <augmentation-alight type="float">0</augmentation-alight>
+                </engine>
+                <engine n="1">
+                    <augmentation-alight type="float">0</augmentation-alight>
+                </engine>
+            </propulsion>
+        </jsbsim>
+    </fdm>
+
+	<controls n="0">
+		<flight n="0">
+			<sweep>1</sweep>
+		</flight>
+	</controls>
+	<nasal>
+		<libraries>
+			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
+		</libraries>
+	</nasal>
+</PropertyList>

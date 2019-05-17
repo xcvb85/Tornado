@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+	<sim>
+		<model>
+				<livery>
+					<name type="string">RAF 111th Sqdn, 90th Anniv.</name>
+					 <index type="int">1</index>
+					  <texture>F3liveries/111.jpg</texture>
+					  <texture-pilot>F3liveries/RAFpilot.png</texture-pilot>
+				</livery>
+		</model>
+	</sim>
+</PropertyList>

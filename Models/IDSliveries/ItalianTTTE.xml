@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+	<sim>
+		<model>
+				<livery>
+					<name type="string">Aeronautica Militaire, TTTE</name>
+					 <index type="int">1</index>
+					  <texture>IDSliveries/ItalianTTTE.jpg</texture>
+				</livery>
+	<Tornado>
+	<FuelHose type="bool">true</FuelHose>
+	</Tornado>
+		</model>
+	</sim>
+</PropertyList>

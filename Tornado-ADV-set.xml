@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<PropertyList include="Tornado-Common.xml">
+   <sim>
+		<description>Panavia Tornado ADV</description>
+		<author>Heiko Schulz (3D external model)</author>
+		<status>pre-alpha</status>
+
+		<startup>
+			<splash-texture>Aircraft/Tornado/splash_adv.png</splash-texture>
+		</startup>
+
+		<model>
+			<path>Aircraft/Tornado/Models/Tornado.xml</path>
+		</model>
+		<model>
+			<name>Cockpit</name>
+			<path>Aircraft/Tornado/Models/Cockpit-ADV.xml</path>
+		</model>
+		<aircraft-type type="int">1</aircraft-type>
+
+		<menubar>
+			<default>
+				<menu n="100">
+					<label>Tornado ADV</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Select Livery</label>
+						<binding>
+							<command>nasal</command>
+							<script>aircraft.livery.dialog.toggle()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Magic Startup</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							libraries.doMagicStartup();
+							</script>
+						</binding>
+					</item>
+				</menu>
+			</default>
+		</menubar>
+	</sim>
+</PropertyList>

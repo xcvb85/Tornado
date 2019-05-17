@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+	<sim>
+		<model>
+				<livery>
+					<name type="string">IDS</name>
+					 <index type="int">1</index>
+					  <texture>IDS.jpg</texture>
+					  <texture-pilot>IDSliveries/fighter_pilot.png</texture-pilot>
+				</livery>
+	<Tornado>
+	<FuelHose type="bool">true</FuelHose>
+	</Tornado>
+		</model>
+	</sim>
+</PropertyList>

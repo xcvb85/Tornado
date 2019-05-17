@@ -1,0 +1,37 @@
+<PropertyList>
+ <path>Aircraft/Tornado/Models/Cockpit.ac</path>
+
+ <model>
+  <name>HUD</name>
+  <path>Aircraft/Tornado/Models/Instruments/hud/hud.ac</path>
+  <offsets>
+   <x-m>-4.810</x-m>
+   <y-m> 0.000</y-m>
+   <z-m>-0.340</z-m>
+   <pitch-deg>-11.0</pitch-deg>
+  </offsets>
+  </model>
+
+ <model>
+  <name>RPMD</name>
+  <path>Aircraft/Tornado/Models/Instruments/rpmd/rpmd.ac</path>
+  <offsets>
+   <x-m>-4.845</x-m>
+   <y-m> 0.000</y-m>
+   <z-m>-0.575</z-m>
+   <pitch-deg>-15.0</pitch-deg>
+  </offsets>
+  </model>
+
+ <model>
+  <name>ASI</name>
+  <path>Aircraft/Tornado/Models/Instruments/asi/asi.xml</path>
+  <offsets>
+   <x-m>-4.828</x-m>
+   <y-m>-0.255</y-m>
+   <z-m>-0.550</z-m>
+   <pitch-deg>-10.0</pitch-deg>
+  </offsets>
+  </model>
+
+</PropertyList>
