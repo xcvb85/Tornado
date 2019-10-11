@@ -43,4 +43,11 @@
 			</default>
 		</menubar>
 	</sim>
+   <nasal>
+      <rmu>
+         <file>Aircraft/Tornado/Models/Instruments/ehdd/rdr.nas</file>
+         <file>Aircraft/Tornado/Models/Instruments/ehdd/EHDD.nas</file>
+         <file>Aircraft/Tornado/Models/Instruments/hud/hud.nas</file>
+      </rmu>
+   </nasal>
 </PropertyList>

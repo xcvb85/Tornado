@@ -1,5 +1,6 @@
 # Panavia Tornado System Libraries
 aircraft.livery.init("Aircraft/Tornado/Models/IDSliveries/");
+var Tmp=0;
 
 var doMagicStartup = func {
 	setprop("/controls/engines/engine[0]/starter", "true");
@@ -19,12 +20,15 @@ var aglgears = func {
 
 	settimer(aglgears, 0.01);
 }
-aglgears();
+#aglgears();
 
-var wingSweep = func {
-    if(arg[0] == 0) { return; }
-    # Hard-coded flaps movement in 3 equal steps:
-    val = 0.25 * arg[0] + getprop("/controls/flight/wing-sweep");
-    if(val > 1) { val = 1 } elsif(val < 0) { val = 0 }
-    setprop("/controls/flight/wing-sweep", val);
+var wingSweep = func(direction) {
+	Tmp = getprop("fdm/jsbsim/fcs/wing-sweep-cmd") + direction;
+	if(Tmp > 2) {
+		Tmp = 2;
+	}
+	if(Tmp < 0) {
+		Tmp = 0;
+	}
+	setprop("fdm/jsbsim/fcs/wing-sweep-cmd", Tmp);
 }

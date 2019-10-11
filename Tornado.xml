@@ -34,58 +34,56 @@
     CL-max:        1
     CD-0:          0.024
     K:             0.12
-
 -->
 
  <metrics>
-   <wingarea  unit="FT2">  286.00 </wingarea>
-   <wingspan  unit="FT" >   40.00 </wingspan>
-   <wing_incidence>          2.00 </wing_incidence>
-   <chord     unit="FT" >    7.15 </chord>
-   <htailarea unit="FT2">   57.20 </htailarea>
-   <htailarm  unit="FT" >   18.60 </htailarm>
-   <vtailarea unit="FT2">   61.48 </vtailarea>
-   <vtailarm  unit="FT" >   24.60 </vtailarm>
-   <location name="AERORP" unit="IN">
-     <x> 388.80 </x>
-     <y>   0.00 </y>
-     <z>   0.00 </z>
+   <wingarea  unit="M2">  47.28 </wingarea>
+   <wingspan  unit="M" >  16.22 </wingspan>
+   <wing_incidence>        0.00 </wing_incidence>
+   <chord     unit="M" >   3.37 </chord>
+   <htailarea unit="FT2"> 57.20 </htailarea>
+   <htailarm  unit="FT" > 18.60 </htailarm>
+   <vtailarea unit="FT2"> 61.48 </vtailarea>
+   <vtailarm  unit="FT" > 24.60 </vtailarm>
+   <location name="AERORP" unit="M">
+     <x> 10.0 </x>
+     <y>  0.0 </y>
+     <z> -0.3 </z>
    </location>
-   <location name="EYEPOINT" unit="IN">
-     <x> 129.60 </x>
-     <y>   0.00 </y>
-     <z>  38.00 </z>
+   <location name="EYEPOINT" unit="M">
+     <x> 4.0 </x>
+     <y> 0.0 </y>
+     <z> 0.7 </z>
    </location>
-   <location name="VRP" unit="IN">
-     <x>315</x>
-     <y>0</y>
-     <z>30</z>
+   <location name="VRP" unit="M">
+     <x> 8.0 </x>
+     <y> 0.0 </y>
+     <z> 0.8 </z>
    </location>
  </metrics>
 
  <mass_balance>
-		<ixx unit="SLUG*FT2">     40000 </ixx>
-		<iyy unit="SLUG*FT2">    120000 </iyy>
-		<izz unit="SLUG*FT2">    150000 </izz>
-   <emptywt unit="LBS" >     30620 </emptywt>
-   <location name="CG" unit="IN">
-     <x> 388.80 </x>
-     <y>   0.00 </y>
-     <z> -16.20 </z>
+   <ixx unit="SLUG*FT2">  40000 </ixx>
+   <iyy unit="SLUG*FT2"> 120000 </iyy>
+   <izz unit="SLUG*FT2"> 150000 </izz>
+   <emptywt unit="LBS" >  30620 </emptywt>
+   <location name="CG" unit="M">
+     <x> 9.2 </x>
+     <y> 0.0 </y>
+     <z>-0.3 </z>
    </location>
    <pointmass name="Payload">
     <description> 18308 LBS + full (12772 LBS) fuel should bring model up to entered max weight</description>
     <weight unit="LBS">   9154.0 </weight>
-    <location name="POINTMASS" unit="IN">
-      <x> 388.80 </x>
-      <y>   0.00 </y>
-      <z> -16.20 </z>
+    <location name="POINTMASS" unit="M">
+      <x> 9.2 </x>
+      <y> 0.0 </y>
+      <z>-0.3 </z>
     </location>
   </pointmass> 
  </mass_balance>
 
  <ground_reactions>
-
   <contact type="BOGEY" name="NOSE">
    <location unit="IN">
      <x>  84.24 </x>
@@ -157,11 +155,9 @@
     <spring_coeff unit="LBS/FT">      61700.00 </spring_coeff>
     <damping_coeff unit="LBS/FT/SEC"> 61700.00 </damping_coeff>
   </contact>
-
  </ground_reactions>
 
  <propulsion>
-
    <engine file="RB199-34R">
     <location unit="IN">
       <x> 588.00 </x>
@@ -248,13 +244,10 @@
      <capacity unit="LBS"> 11211 </capacity>
      <contents unit="LBS"> 11211 </contents>
   </tank>
-
  </propulsion>
 
  <flight_control name="FCS: Tornado-Jsb">
-
   <channel name="Pitch">
-
    <summer name="Pitch Trim Sum">
       <input>fcs/elevator-cmd-norm</input>
       <input>fcs/pitch-trim-cmd-norm</input>
@@ -285,11 +278,9 @@
       </range>
       <output>fcs/elevator-pos-norm</output>
    </aerosurface_scale>
-
   </channel>
 
   <channel name="Roll">
-
    <summer name="Roll Trim Sum">
       <input>fcs/aileron-cmd-norm</input>
       <input>fcs/roll-trim-cmd-norm</input>
@@ -342,12 +333,11 @@
       </range>
       <output>fcs/right-aileron-pos-norm</output>
    </aerosurface_scale>
-
   </channel>
 
   <property value="1">fcs/yaw-damper-enable</property>
-  <channel name="Yaw">
 
+  <channel name="Yaw">
    <summer name="Rudder Command Sum">
       <input>fcs/rudder-cmd-norm</input>
       <input>fcs/yaw-trim-cmd-norm</input>
@@ -403,7 +393,6 @@
       </range>
       <output>fcs/rudder-pos-norm</output>
    </aerosurface_scale>
-
   </channel>
 
   <channel name="Flaps">
@@ -438,7 +427,6 @@
       </range>
       <output>fcs/flap-pos-norm</output>
    </aerosurface_scale>
-
   </channel>
 
   <channel name="Landing Gear">
@@ -458,9 +446,7 @@
    </kinematic>
 
   </channel>
-
 	<channel name="Wings">
-
 		<aerosurface_scale name="flap normalization">
 			<input>fcs/wing-sweep-cmd</input>
 			<domain>
@@ -509,41 +495,27 @@
      </traverse>
      <output>fcs/speedbrake-pos-norm</output>
    </kinematic>
-
   </channel>
-
  </flight_control>
 
  <aerodynamics>
-
   <axis name="LIFT">
-	<!-- property value="1">aero/force/lift-coeff</property --> 
-	<function name="aero/force/lift-coeff">
-		<description>Coefficient due to actual wing sweep</description>
-		<sum>
-			<value>1</value>
-			<product>
-				<value>1</value>
-				<property>fcs/wing-sweep</property>
-			</product>
-		</sum>
-	</function>
-
     <function name="aero/force/Lift_alpha">
       <description>Lift due to alpha</description>
       <product>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
-	  <property>aero/force/lift-coeff</property>
-          <table>
-            <independentVar lookup="row">aero/alpha-rad</independentVar>
-            <tableData>
-              -0.20 -1.050
-               0.00  0.530
-               0.26  1.450
-               0.60  0.898
-            </tableData>
-          </table>
+            <table name="Cy">
+                <independentVar lookup="row">aero/alpha-rad</independentVar>
+                <independentVar lookup="column">fcs/wing-sweep</independentVar>
+                <tableData>
+                        0.0   0.5   1.0
+                 0.00   0.0   0.0   0.1
+                 0.17   0.3   0.4   0.5
+                 0.35   0.5   0.7   0.9
+                 0.52   0.8   1.0   1.0
+                </tableData>
+            </table>
       </product>
     </function>
 
@@ -577,54 +549,72 @@
        </product>
     </function>
 
+    <function name="aero/force/debug1">
+            <table name="Cx0">
+                <independentVar lookup="row">velocities/mach</independentVar>
+                <independentVar lookup="column">fcs/wing-sweep</independentVar>
+                <tableData>
+                       0.0     0.5     1.0
+                 0.2   0.021   0.022   0.024
+                 0.4   0.021   0.022   0.024
+                 0.6   0.021   0.023   0.024
+                 0.8   0.022   0.023   0.025
+                 1.0   0.030   0.035   0.040
+                 1.2   0.035   0.045   0.080
+                 1.4   0.032   0.044   0.160
+                </tableData>
+            </table>
+    </function>
+    <function name="aero/force/debug2">
+            <table name="Cxi">
+                <independentVar lookup="row">aero/alpha-rad</independentVar>
+                <independentVar lookup="column">fcs/wing-sweep</independentVar>
+                <tableData>
+                        0.0    0.5    1.0
+                 0.00   0.00   0.00   0.00
+                 0.17   0.03   0.03   0.02
+                 0.35   0.08   0.11   0.15
+                 0.52   0.22   0.28   0.22
+                </tableData>
+            </table>
+    </function>
   </axis>
 
   <axis name="DRAG">
-
     <function name="aero/force/Drag_basic">
        <description>Drag at zero lift</description>
        <product>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
-	  <property>aero/force/lift-coeff</property>
-          <table>
-            <independentVar lookup="row">aero/alpha-rad</independentVar>
-            <tableData>
-             -1.57    0.250
-             -0.26    0.008
-              0.00    0.004
-              0.26    0.006
-              1.57    0.050
-            </tableData>
-          </table>
+          <sum>
+            <!-- <value name="Cx0">0.02</value> -->
+            <table name="Cx0">
+                <independentVar lookup="row">velocities/mach</independentVar>
+                <independentVar lookup="column">fcs/wing-sweep</independentVar>
+                <tableData>
+                       0.0     0.5     1.0
+                 0.2   0.021   0.022   0.024
+                 0.4   0.021   0.022   0.024
+                 0.6   0.021   0.023   0.024
+                 0.8   0.022   0.023   0.025
+                 1.0   0.030   0.035   0.040
+                 1.2   0.035   0.045   0.080
+                 1.4   0.032   0.044   0.160
+                </tableData>
+            </table>
+            <table name="Cxi">
+                <independentVar lookup="row">aero/alpha-rad</independentVar>
+                <independentVar lookup="column">fcs/wing-sweep</independentVar>
+                <tableData>
+                        0.0    0.5    1.0
+                 0.00   0.00   0.00   0.00
+                 0.17   0.03   0.03   0.02
+                 0.35   0.08   0.11   0.15
+                 0.52   0.22   0.28   0.22
+                </tableData>
+            </table>
+          </sum>
        </product>
-    </function>
-
-    <function name="aero/force/Drag_induced">
-       <description>Induced drag</description>
-         <product>
-           <property>aero/qbar-psf</property>
-           <property>metrics/Sw-sqft</property>
-           <property>aero/cl-squared</property>
-           <value>0.03</value>
-         </product>
-    </function>
-
-    <function name="aero/force/Drag_mach">
-       <description>Drag due to mach</description>
-        <product>
-          <property>aero/qbar-psf</property>
-          <property>metrics/Sw-sqft</property>
-          <table>
-            <independentVar lookup="row">velocities/mach</independentVar>
-            <tableData>
-                0.00      0.000
-                0.81      0.000
-                1.10      0.023
-                1.80      0.015
-            </tableData>
-          </table>
-        </product>
     </function>
 
     <function name="aero/force/Drag_flap">

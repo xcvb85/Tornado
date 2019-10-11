@@ -12,8 +12,11 @@
 
 		<sound>
 			<path>Aircraft/Tornado/Sounds/sound.xml</path>
-		</sound>		
+		</sound>
 	</sim>
+	<input>
+		<keyboard include="Systems/keyboard.xml" />
+	</input>
     <fdm>
         <jsbsim>
             <systems>
@@ -29,26 +32,12 @@
                 </electrics>
             </systems>
             <fcs>
-				<wing-sweep-cmd type="int">0</wing-sweep-cmd>
-				<wing-sweep type="double">0.00</wing-sweep>
+                <wing-sweep-cmd type="int">2</wing-sweep-cmd>
+                <wing-sweep type="double">1.0</wing-sweep>
             </fcs>
-
-            <propulsion>
-                <engine n="0">
-                    <augmentation-alight type="float">0</augmentation-alight>
-                </engine>
-                <engine n="1">
-                    <augmentation-alight type="float">0</augmentation-alight>
-                </engine>
-            </propulsion>
         </jsbsim>
     </fdm>
 
-	<controls n="0">
-		<flight n="0">
-			<sweep>1</sweep>
-		</flight>
-	</controls>
 	<nasal>
 		<libraries>
 			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
