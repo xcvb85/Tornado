@@ -5,9 +5,9 @@
 	<sim>
 		<model>
 				<livery>
-					<name type="string">Luftwaffe AG51 Tiger Meet '09</name>
+					<name type="string">RAF 65(R)th Sqdn, 50th Anniv.</name>
 					 <index type="int">1</index>
-					  <texture>IDSliveries/TM09.jpg</texture>
+					  <texture>liveriesADV/stripe65.jpg</texture>
 				</livery>
 		</model>
 	</sim>

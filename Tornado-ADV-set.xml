@@ -1,53 +1,58 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <PropertyList include="Tornado-Common.xml">
    <sim>
-		<description>Panavia Tornado ADV</description>
-		<author>Heiko Schulz (3D external model)</author>
-		<status>pre-alpha</status>
-
-		<startup>
-			<splash-texture>Aircraft/Tornado/splash_adv.png</splash-texture>
-		</startup>
-
-		<model>
-			<path>Aircraft/Tornado/Models/Tornado.xml</path>
-		</model>
-		<model>
-			<name>Cockpit</name>
-			<path>Aircraft/Tornado/Models/Cockpit-ADV.xml</path>
-		</model>
-		<aircraft-type type="int">1</aircraft-type>
-
-		<menubar>
-			<default>
-				<menu n="100">
-					<label>Tornado ADV</label>
-					<enabled type="bool">true</enabled>
-					<item>
-						<label>Select Livery</label>
-						<binding>
-							<command>nasal</command>
-							<script>aircraft.livery.dialog.toggle()</script>
-						</binding>
-					</item>
-					<item>
-						<label>Magic Startup</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							libraries.doMagicStartup();
-							</script>
-						</binding>
-					</item>
-				</menu>
-			</default>
-		</menubar>
-	</sim>
+      <description>Panavia Tornado ADV</description>
+      <author>Heiko Schulz (3D external model)</author>
+      <status>pre-alpha</status>
+      <rating>
+         <FDM type="int">1</FDM>
+         <systems type="int">1</systems>
+         <cockpit type="int">1</cockpit>
+         <model type="int">5</model>
+      </rating>
+      <startup>
+         <splash-texture>Aircraft/Tornado/splash_adv.png</splash-texture>
+      </startup>
+      <model>
+         <path>Aircraft/Tornado/Models/Tornado.xml</path>
+      </model>
+      <model>
+         <name>Cockpit</name>
+         <path>Aircraft/Tornado/Models/Cockpit-ADV.xml</path>
+      </model>
+      <aircraft-type type="int">1</aircraft-type>
+      <menubar>
+         <default>
+            <menu n="100">
+               <label>Tornado ADV</label>
+               <enabled type="bool">true</enabled>
+               <item>
+                  <label>Select Livery</label>
+                  <binding>
+                     <command>nasal</command>
+                     <script>aircraft.livery.dialog.toggle()</script>
+                  </binding>
+               </item>
+               <item>
+                  <label>Magic Startup</label>
+                  <binding>
+                     <command>nasal</command>
+                     <script>libraries.doMagicStartup();</script>
+                  </binding>
+               </item>
+            </menu>
+         </default>
+      </menubar>
+   </sim>
    <nasal>
+      <libraries>
+         <file>Aircraft/Tornado/Nasal/librariesADV.nas</file>
+      </libraries>
       <rmu>
          <file>Aircraft/Tornado/Models/Instruments/ehdd/rdr.nas</file>
-         <file>Aircraft/Tornado/Models/Instruments/ehdd/EHDD.nas</file>
+         <file>Aircraft/Tornado/Models/Instruments/ehdd/ehdd.nas</file>
          <file>Aircraft/Tornado/Models/Instruments/hud/hud.nas</file>
       </rmu>
    </nasal>
 </PropertyList>
+

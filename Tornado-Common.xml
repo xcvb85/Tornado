@@ -37,10 +37,4 @@
             </fcs>
         </jsbsim>
     </fdm>
-
-	<nasal>
-		<libraries>
-			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
-		</libraries>
-	</nasal>
 </PropertyList>

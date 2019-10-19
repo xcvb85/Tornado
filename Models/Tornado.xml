@@ -56,7 +56,8 @@
       <object-name>Fuselage</object-name>
       <object-name>rudder</object-name>
       <object-name>Fuselage_back</object-name>
-      <object-name>Radom</object-name>
+      <object-name>RadomADV</object-name>
+      <object-name>RadomIDS</object-name>
       <object-name>Fuselage2</object-name>
       <object-name>leftaileron</object-name>
       <object-name>rightaileron</object-name>
@@ -525,6 +526,26 @@
    </animation>
 
    <!--gear animation-->
+   <!-- Gear disapears when raised -->
+   <animation>
+      <type>select</type>
+      <object-name>Cylinder.001</object-name>
+      <object-name>fronttyre</object-name>
+      <object-name>tyrer</object-name>
+      <object-name>tyrel</object-name>
+      <object-name>Cylinder.002</object-name>
+      <object-name>Cylinder.006</object-name>
+      <object-name>Cylinder.007</object-name>
+      <object-name>Cylinder.004</object-name>
+      <object-name>Plane.013</object-name>
+      <object-name>Plane</object-name>
+      <object-name>Plane.010</object-name>
+      <object-name>Plane.011</object-name>
+      <condition>
+         <property>gear/gear[0]/position-norm</property>
+      </condition>
+   </animation>
+
    <!--front gear-->
    <animation>
       <type>translate</type>
@@ -552,11 +573,11 @@
       <interpolation>
          <entry>
             <ind>0.0</ind>
-            <dep>94.0</dep>
+            <dep>110.0</dep>
          </entry>
          <entry>
             <ind>0.25</ind>
-            <dep>94.0</dep>
+            <dep>110.0</dep>
          </entry>
          <entry>
             <ind>0.75</ind>
@@ -568,9 +589,9 @@
          </entry>
       </interpolation>
       <center>
-         <x-m>-4.16</x-m>
+         <x-m>-4.149</x-m>
          <y-m>0</y-m>
-         <z-m>-1.58</z-m>
+         <z-m>-1.478</z-m>
       </center>
       <axis>
          <x>0</x>
@@ -1454,10 +1475,44 @@
       </axis>
    </animation>
 
+ <model>
+  <name>nozzleLeft</name>
+  <path>Aircraft/Tornado/Models/nozzle.xml</path>
+  <offsets>
+   <x-m> 6.00</x-m>
+   <y-m>-0.52</y-m>
+   <z-m>-0.81</z-m>
+  </offsets>
+ </model>
+ <model>
+  <name>nozzleRight</name>
+  <path>Aircraft/Tornado/Models/nozzle.xml</path>
+  <offsets>
+   <x-m> 6.00</x-m>
+   <y-m> 0.52</y-m>
+   <z-m>-0.81</z-m>
+  </offsets>
+ </model>
+    <model>
+        <nopreview/>
+        <path>Effects/Engines/AfterBurner.xml</path>
+        <offsets>
+            <x-m> 6.00</x-m>
+            <y-m>-0.52</y-m>
+            <z-m>-0.81</z-m>
+        </offsets>
+        <overlay>
+            <params>
+                <augmentation-alight>sim/multiplay/generic/float[16]</augmentation-alight>
+                <augmentation-ignition>sim/multiplay/generic/float[8]</augmentation-ignition>
+            </params>
+        </overlay>
+    </model>
+
    <!-- push-back -->
    <model>
       <name>Pushback</name>
-      <path>Models\Airport\Pushback\Military.xml</path>
+      <path>Models/Airport/Pushback/Military.xml</path>
       <offsets>
          <x-m>-4.2</x-m>
          <y-m>0</y-m>

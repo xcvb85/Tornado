@@ -5,9 +5,9 @@
 	<sim>
 		<model>
 				<livery>
-					<name type="string">Marinefliegergeschwader MFG 2 (45th Anniv.)</name>
+					<name type="string">Marineflieger</name>
 					 <index type="int">1</index>
-					  <texture>IDSliveries/mfg2.jpg</texture>
+					  <texture>liveriesIDS/marineflieger.jpg</texture>
 				</livery>
 	<Tornado>
 	<FuelHose type="bool">true</FuelHose>

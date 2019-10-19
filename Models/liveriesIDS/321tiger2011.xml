@@ -5,9 +5,9 @@
 	<sim>
 		<model>
 				<livery>
-					<name type="string">MRCA Prototype P-09 (Aeronautica Militare)</name>
+					<name type="string">321 Tigers (Tiger Meet 2011)</name>
 					 <index type="int">1</index>
-					  <texture>IDSliveries/mrca3.jpg</texture>
+					  <texture>liveriesIDS/321tiger2011.jpg</texture>
 				</livery>
 		</model>
 	</sim>

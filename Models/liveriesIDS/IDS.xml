@@ -5,9 +5,9 @@
 	<sim>
 		<model>
 				<livery>
-					<name type="string">Luftwaffe, Flug AG51</name>
+					<name type="string">IDS</name>
 					 <index type="int">1</index>
-					  <texture>IDSliveries/flug51.jpg</texture>
+					  <texture>IDS.jpg</texture>
 				</livery>
 	<Tornado>
 	<FuelHose type="bool">true</FuelHose>

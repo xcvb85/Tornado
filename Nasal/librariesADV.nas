@@ -1,4 +1,5 @@
 # Panavia Tornado System Libraries
+aircraft.livery.init("Aircraft/Tornado/Models/liveriesADV/");
 var Tmp=0;
 
 var doMagicStartup = func {

@@ -5,10 +5,9 @@
 	<sim>
 		<model>
 				<livery>
-					<name type="string">IDS</name>
+					<name type="string">Aeronautica Militaire, TTTE</name>
 					 <index type="int">1</index>
-					  <texture>IDS.jpg</texture>
-					  <texture-pilot>IDSliveries/fighter_pilot.png</texture-pilot>
+					  <texture>liveriesIDS/ItalianTTTE.jpg</texture>
 				</livery>
 	<Tornado>
 	<FuelHose type="bool">true</FuelHose>

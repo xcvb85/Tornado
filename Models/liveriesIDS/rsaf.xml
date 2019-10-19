@@ -5,9 +5,9 @@
 	<sim>
 		<model>
 				<livery>
-					<name type="string">321 Tigers (Tiger Meet 2011)</name>
+					<name type="string">Royal Saudi Air Force</name>
 					 <index type="int">1</index>
-					  <texture>IDSliveries/321tiger2011.jpg</texture>
+					  <texture>liveriesIDS/rsaf.jpg</texture>
 				</livery>
 		</model>
 	</sim>

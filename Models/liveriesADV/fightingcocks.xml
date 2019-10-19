@@ -7,8 +7,7 @@
 				<livery>
 					<name type="string">RAF 43rd Sqdn, "Fighting Cocks"</name>
 					 <index type="int">1</index>
-					  <texture>F3liveries/fightingcocks.jpg</texture>
-					  <texture-pilot>F3liveries/RAFpilot.png</texture-pilot>
+					  <texture>liveriesADV/fightingcocks.jpg</texture>
 				</livery>
 		</model>
 	</sim>
