@@ -24,6 +24,17 @@
   </model>
 
  <model>
+  <name>PWCP</name>
+  <path>Aircraft/Tornado/Models/Instruments/pwcp/pwcp.ac</path>
+  <offsets>
+   <x-m>-4.854</x-m>
+   <y-m>-0.248</y-m>
+   <z-m>-0.455</z-m>
+   <pitch-deg>-10.0</pitch-deg>
+  </offsets>
+  </model>
+
+ <model>
   <name>ASI</name>
   <path>Aircraft/Tornado/Models/Instruments/asi/asi.xml</path>
   <offsets>
