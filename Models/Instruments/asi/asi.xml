@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
-
 <PropertyList>
-
 	<name>ASI</name>
 	<path>asi.ac</path>
 
@@ -39,38 +37,6 @@
 
 	<animation>
 		<type>rotate</type>
-		<object-name>safe-speed-bug</object-name>
-		<property>sim/model/f-14b/instrumentation/airspeed-indicator/safe-speed-limit-bug</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>40</ind><dep>16</dep></entry>
-			<entry><ind>75</ind><dep>31</dep></entry>
-			<entry><ind>100</ind><dep>45</dep></entry>
-			<entry><ind>117</ind><dep>61</dep></entry>
-			<entry><ind>135</ind><dep>75</dep></entry>
-			<entry><ind>150</ind><dep>90</dep></entry>
-			<entry><ind>170</ind><dep>104</dep></entry>
-			<entry><ind>185</ind><dep>120</dep></entry>
-			<entry><ind>200</ind><dep>134</dep></entry>
-			<entry><ind>250</ind><dep>156</dep></entry>
-			<entry><ind>300</ind><dep>180</dep></entry>
-			<entry><ind>350</ind><dep>204</dep></entry>
-			<entry><ind>400</ind><dep>224</dep></entry>
-			<entry><ind>500</ind><dep>251</dep></entry>
-			<entry><ind>600</ind><dep>280</dep></entry>
-			<entry><ind>700</ind><dep>305</dep></entry>
-			<entry><ind>800</ind><dep>332</dep></entry>
-			<entry><ind>850</ind><dep>345</dep></entry>
-		</interpolation>
-		<axis>
-			<x>-1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>rotate</type>
 		<object-name>mach-scale</object-name>
 		<property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
 		<interpolation>
@@ -100,7 +66,6 @@
 			<z>0</z>
 		</axis>
 	</animation>
-
 	<animation>
 		<type>rotate</type>
 		<object-name>mach-scale</object-name>
@@ -119,77 +84,88 @@
 		</axis>
 	</animation>
 
-<!-- Air Speed Indicator's Bug Setting -->
 	<animation>
-		<name>asi-bug-left-fine</name>
-		<type>pick</type>
-		<visible>true</visible>
-		<object-name>asi-bug-left</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>true</repeatable>
-			<interval-sec>0.2</interval-sec>
-			<binding>
-				<command>property-adjust</command>
-				<property>sim/model/f-14b/instrumentation/airspeed-indicator/safe-speed-limit-bug</property>
-				<step>-10</step>
-				<min>225</min>
-			</binding>
-		</action>
+		<type>rotate</type>
+		<object-name>safe-speed-bug</object-name>
+		<property>instrumentation/airspeed-indicator/safe-speed-limit-bug</property>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
 	</animation>
 	<animation>
-		<name>asi-bug-left-coarse</name>
-		<type>pick</type>
-		<visible>true</visible>
-		<object-name>asi-bug-left</object-name>
-		<action>
-			<button>1</button>
-			<repeatable>true</repeatable>
-			<interval-sec>0.2</interval-sec>
-			<binding>
-				<command>property-adjust</command>
-				<property>sim/model/f-14b/instrumentation/airspeed-indicator/safe-speed-limit-bug</property>
-				<step>-50</step>
-				<min>225</min>
-			</binding>
-		</action>
+		<type>rotate</type>
+		<object-name>knob</object-name>
+		<property>instrumentation/airspeed-indicator/safe-speed-limit-bug</property>
+		<factor>60</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.0345</y-m>
+			<z-m>-0.0326</z-m>
+		</center>
 	</animation>
-
-	<animation>
-		<name>asi-bug-right-fine</name>
-		<type>pick</type>
-		<visible>true</visible>
-		<object-name>asi-bug-right</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>true</repeatable>
-			<interval-sec>0.2</interval-sec>
-			<binding>
-				<command>property-adjust</command>
-				<property>sim/model/f-14b/instrumentation/airspeed-indicator/safe-speed-limit-bug</property>
-				<step>10</step>
-				<max>850</max>
-			</binding>
-		</action>
-	</animation>
-	<animation>
-		<name>asi-bug-right-coarse</name>
-		<type>pick</type>
-		<visible>true</visible>
-		<object-name>asi-bug-right</object-name>
-		<action>
-			<button>1</button>
-			<repeatable>true</repeatable>
-			<interval-sec>0.2</interval-sec>
-			<binding>
-				<command>property-adjust</command>
-				<property>sim/model/f-14b/instrumentation/airspeed-indicator/safe-speed-limit-bug</property>
-				<step>50</step>
-				<max>850</max>
-			</binding>
-		</action>
-	</animation>
-
+ <animation>
+  <type>pick</type>
+  <object-name>knob</object-name>
+  <action>
+    <name>small decrease</name>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/airspeed-indicator/safe-speed-limit-bug</property>
+      <step>-1</step>
+      <min>0</min>
+      <max>360</max>
+      <wrap>1</wrap>
+    </binding>
+  </action>
+  <action>
+    <name>large decrease</name>
+    <button>1</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/airspeed-indicator/safe-speed-limit-bug</property>
+      <step>-5</step>
+      <min>0</min>
+      <max>360</max>
+      <wrap>1</wrap>
+    </binding>
+  </action>
+  <action>
+    <name>small decrease (scrollwheel)</name>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/airspeed-indicator/safe-speed-limit-bug</property>
+      <step>-1</step>
+      <min>0</min>
+      <max>360</max>
+      <wrap>1</wrap>
+    </binding>
+  </action>
+  <action>
+    <name>small increase (scrollwheel)</name>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/airspeed-indicator/safe-speed-limit-bug</property>
+      <step>1</step>
+      <min>0</min>
+      <max>360</max>
+      <wrap>1</wrap>
+    </binding>
+  </action>
+ </animation>
 
 	<!-- Lightning -->
 	<animation>
