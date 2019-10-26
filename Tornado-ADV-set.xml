@@ -17,7 +17,11 @@
          <path>Aircraft/Tornado/Models/Tornado.xml</path>
       </model>
       <model>
-         <name>Cockpit</name>
+         <name>Cockpit-Common</name>
+         <path>Aircraft/Tornado/Models/Cockpit-Common.xml</path>
+      </model>
+      <model>
+         <name>Cockpit-ADV</name>
          <path>Aircraft/Tornado/Models/Cockpit-ADV.xml</path>
       </model>
       <aircraft-type type="int">1</aircraft-type>
@@ -48,11 +52,10 @@
       <libraries>
          <file>Aircraft/Tornado/Nasal/librariesADV.nas</file>
       </libraries>
-      <rmu>
+      <efis>
          <file>Aircraft/Tornado/Models/Instruments/ehdd/rdr.nas</file>
          <file>Aircraft/Tornado/Models/Instruments/ehdd/ehdd.nas</file>
-         <file>Aircraft/Tornado/Models/Instruments/hud/hud.nas</file>
-      </rmu>
+      </efis>
    </nasal>
 </PropertyList>
 
