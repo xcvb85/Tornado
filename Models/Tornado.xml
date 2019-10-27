@@ -1458,14 +1458,37 @@
   <name>nozzleLeft</name>
   <path>Aircraft/Tornado/Models/nozzle.xml</path>
   <offsets>
-   <x-m> 6.00</x-m>
+   <x-m> 5.95</x-m>
    <y-m>-0.52</y-m>
    <z-m>-0.81</z-m>
   </offsets>
  </model>
  <model>
+  <path>Effects/afterburner.xml</path>
+  <condition>
+   <property>sim/multiplay/generic/bool[1]</property>
+  </condition>
+  <offsets>
+   <x-m> 6.00</x-m>
+   <y-m>-0.52</y-m>
+   <z-m>-0.81</z-m>
+  </offsets>
+ </model>
+
+ <model>
   <name>nozzleRight</name>
   <path>Aircraft/Tornado/Models/nozzle.xml</path>
+  <offsets>
+   <x-m> 5.95</x-m>
+   <y-m> 0.52</y-m>
+   <z-m>-0.81</z-m>
+  </offsets>
+ </model>
+ <model>
+  <path>Effects/afterburner.xml</path>
+  <condition>
+   <property>sim/multiplay/generic/bool[2]</property>
+  </condition>
   <offsets>
    <x-m> 6.00</x-m>
    <y-m> 0.52</y-m>
