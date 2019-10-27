@@ -50,6 +50,7 @@
    </sim>
    <nasal>
       <libraries>
+         <file>Aircraft/Tornado/Nasal/libraries.nas</file>
          <file>Aircraft/Tornado/Nasal/librariesADV.nas</file>
       </libraries>
       <efis>

@@ -276,7 +276,7 @@
       <interpolation>
          <entry>
             <ind>0.0</ind>
-            <dep>-36.0</dep>
+            <dep>0</dep>
          </entry>
          <entry>
             <ind>0.5</ind>
@@ -284,7 +284,7 @@
          </entry>
          <entry>
             <ind>1.0</ind>
-            <dep>0</dep>
+            <dep>-36.0</dep>
          </entry>
       </interpolation>
       <center>
@@ -340,7 +340,7 @@
       <interpolation>
          <entry>
             <ind>0.0</ind>
-            <dep>36</dep>
+            <dep>0</dep>
          </entry>
          <entry>
             <ind>0.5</ind>
@@ -348,7 +348,7 @@
          </entry>
          <entry>
             <ind>1.0</ind>
-            <dep>0</dep>
+            <dep>36</dep>
          </entry>
       </interpolation>
       <center>
@@ -370,7 +370,7 @@
       <interpolation>
          <entry>
             <ind>0.0</ind>
-            <dep>36</dep>
+            <dep>0</dep>
          </entry>
          <entry>
             <ind>0.5</ind>
@@ -378,7 +378,7 @@
          </entry>
          <entry>
             <ind>1.0</ind>
-            <dep>0</dep>
+            <dep>36</dep>
          </entry>
       </interpolation>
       <center>
@@ -408,7 +408,7 @@
       <interpolation>
          <entry>
             <ind>0.0</ind>
-            <dep>36</dep>
+            <dep>0</dep>
          </entry>
          <entry>
             <ind>0.5</ind>
@@ -416,7 +416,7 @@
          </entry>
          <entry>
             <ind>1.0</ind>
-            <dep>0</dep>
+            <dep>36</dep>
          </entry>
       </interpolation>
       <center>
@@ -472,7 +472,7 @@
       <interpolation>
          <entry>
             <ind>0.0</ind>
-            <dep>-36</dep>
+            <dep>0</dep>
          </entry>
          <entry>
             <ind>0.5</ind>
@@ -480,7 +480,7 @@
          </entry>
          <entry>
             <ind>1.0</ind>
-            <dep>0</dep>
+            <dep>-36</dep>
          </entry>
       </interpolation>
       <center>
@@ -502,7 +502,7 @@
       <interpolation>
          <entry>
             <ind>0.0</ind>
-            <dep>-36</dep>
+            <dep>0</dep>
          </entry>
          <entry>
             <ind>0.5</ind>
@@ -510,7 +510,7 @@
          </entry>
          <entry>
             <ind>1.0</ind>
-            <dep>0</dep>
+            <dep>-36</dep>
          </entry>
       </interpolation>
       <center>

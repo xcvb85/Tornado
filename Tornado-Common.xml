@@ -32,8 +32,7 @@
                 </electrics>
             </systems>
             <fcs>
-                <wing-sweep-cmd type="int">2</wing-sweep-cmd>
-                <wing-sweep type="double">1.0</wing-sweep>
+                <wing-sweep-cmd type="double">0</wing-sweep-cmd>
             </fcs>
         </jsbsim>
     </fdm>

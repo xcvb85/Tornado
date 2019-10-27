@@ -1,5 +1,6 @@
 # Panavia Tornado System Libraries
-var Tmp=0;
+var SweepAngles=[25,33,45,58,63,67]; #25=fully forward
+var Sweep=0;
 
 var doMagicStartup = func {
 	setprop("/controls/engines/engine[0]/starter", "true");
@@ -22,12 +23,13 @@ var aglgears = func {
 #aglgears();
 
 var wingSweep = func(direction) {
-	Tmp = getprop("fdm/jsbsim/fcs/wing-sweep-cmd") + direction;
-	if(Tmp > 2) {
-		Tmp = 2;
+	Sweep += direction;
+
+	if(Sweep > 5) {
+		Sweep = 5;
 	}
-	if(Tmp < 0) {
-		Tmp = 0;
+	if(Sweep < 0) {
+		Sweep = 0;
 	}
-	setprop("fdm/jsbsim/fcs/wing-sweep-cmd", Tmp);
+	setprop("fdm/jsbsim/fcs/wing-sweep-cmd", (SweepAngles[Sweep]-25)/42.0);
 }
