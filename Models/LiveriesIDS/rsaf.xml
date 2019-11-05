@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name type="string">Royal Saudi Air Force</name>
+				<texture>LiveriesIDS/rsaf.jpg</texture>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>

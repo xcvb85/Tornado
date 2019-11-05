@@ -1,47 +1,45 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-   <sim include="Systems/views.xml">
+	<sim include="Systems/views.xml">
 		<flight-model>jsb</flight-model>
 		<aero>Tornado</aero>
-
 		<flaps>
 			<setting>0.0</setting>
-			<setting>0.5</setting> 
-			<setting>1.0</setting> 
+			<setting>0.5</setting>
+			<setting>1.0</setting>
 		</flaps>
-
 		<sound>
 			<path>Aircraft/Tornado/Sounds/sound.xml</path>
 		</sound>
-        <multiplay>
-            <generic>
-                <float n="1" type="double" alias="/engines/engine[0]/nozzle-pos-norm"/>
-                <bool n="1" type="bool" alias="/engines/engine[0]/augmentation"/>
-                <float n="2" type="double" alias="/engines/engine[1]/nozzle-pos-norm"/>
-                <bool n="2" type="bool" alias="/engines/engine[1]/augmentation"/>
-            </generic>
-        </multiplay>
+		<multiplay>
+			<generic>
+				<float n="1" type="double" alias="/engines/engine[0]/nozzle-pos-norm" />
+				<bool n="1" type="bool" alias="/engines/engine[0]/augmentation" />
+				<float n="2" type="double" alias="/engines/engine[1]/nozzle-pos-norm" />
+				<bool n="2" type="bool" alias="/engines/engine[1]/augmentation" />
+			</generic>
+		</multiplay>
 	</sim>
 	<input>
 		<keyboard include="Systems/keyboard.xml" />
 	</input>
-    <fdm>
-        <jsbsim>
-            <systems>
-                <hook>
-                    <tailhook-cmd-norm type="bool">false</tailhook-cmd-norm>
-                </hook>
-                <hydraulics>
-                    <flight-system-psi type="float">0</flight-system-psi>
-                    <combined-system-psi type="float">0</combined-system-psi>
-                </hydraulics>
-                <electrics>
-                    <ac-right-main-bus type="float">0</ac-right-main-bus>
-                </electrics>
-            </systems>
-            <fcs>
-                <wing-sweep-cmd type="double">0</wing-sweep-cmd>
-            </fcs>
-        </jsbsim>
-    </fdm>
+	<fdm>
+		<jsbsim>
+			<systems>
+				<hook>
+					<tailhook-cmd-norm type="bool">false</tailhook-cmd-norm>
+				</hook>
+				<hydraulics>
+					<flight-system-psi type="float">0</flight-system-psi>
+					<combined-system-psi type="float">0</combined-system-psi>
+				</hydraulics>
+				<electrics>
+					<ac-right-main-bus type="float">0</ac-right-main-bus>
+				</electrics>
+			</systems>
+			<fcs>
+				<wing-sweep-cmd type="double">0</wing-sweep-cmd>
+			</fcs>
+		</jsbsim>
+	</fdm>
 </PropertyList>

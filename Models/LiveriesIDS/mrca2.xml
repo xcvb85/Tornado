@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name type="string">MRCA Prototype P-04 (Luftwaffe)</name>
+				<texture>LiveriesIDS/mrca2.jpg</texture>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>

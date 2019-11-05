@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name type="string">Farewell Flight Camo</name>
+				<texture>LiveriesIDS/2019Farewell_Camo.jpg</texture>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>

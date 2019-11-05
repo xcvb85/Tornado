@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name type="string">Aeronautica Militaire, TTTE</name>
+				<texture>LiveriesIDS/ItalianTTTE.jpg</texture>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>

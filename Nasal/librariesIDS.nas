@@ -1,2 +1,2 @@
 # Panavia Tornado System Libraries
-aircraft.livery.init("Aircraft/Tornado/Models/liveriesIDS/");
+aircraft.livery.init("Aircraft/Tornado/Models/LiveriesIDS/");

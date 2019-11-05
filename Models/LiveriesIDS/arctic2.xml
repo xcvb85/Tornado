@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name type="string">RAF 2nd Sqdn. "Arctic Paint"</name>
+				<texture>LiveriesIDS/arctic2.jpg</texture>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>

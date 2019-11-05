@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name type="string">ADV</name>
+				<texture>Tornado.jpg</texture>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>

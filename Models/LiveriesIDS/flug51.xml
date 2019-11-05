@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name type="string">Luftwaffe, Flug AG51</name>
+				<texture>LiveriesIDS/flug51.jpg</texture>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>

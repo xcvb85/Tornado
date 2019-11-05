@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<model>
+		<name>Cockpit-Common</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Cockpit-Common.xml</path>
+	</model>
+	<model>
+		<name>Electronic Head Down Display</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Instruments/ehdd/ehdd.ac</path>
+		<offsets>
+			<x-m>-4.845</x-m>
+			<y-m>0.000</y-m>
+			<z-m>-0.575</z-m>
+			<pitch-deg>-25.0</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>Pilots Weapon Control Panel</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Instruments/pwcp/pwcp.ac</path>
+		<offsets>
+			<x-m>-4.854</x-m>
+			<y-m>-0.248</y-m>
+			<z-m>-0.455</z-m>
+			<pitch-deg>-10.0</pitch-deg>
+		</offsets>
+	</model>
+</PropertyList>

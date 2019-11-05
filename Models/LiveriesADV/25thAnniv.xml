@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name type="string">Tornado RAF Service 25th Anniv.</name>
+				<texture>LiveriesADV/25thAnniv.jpg</texture>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>

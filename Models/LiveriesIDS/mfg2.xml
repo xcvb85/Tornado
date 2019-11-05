@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name type="string">Marinefliegergeschwader MFG 2 (45th Anniv.)</name>
+				<texture>LiveriesIDS/mfg2.jpg</texture>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>

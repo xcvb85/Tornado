@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name type="string">RAF 43rd Sqdn, 90th Anniv. Black</name>
+				<texture>LiveriesADV/fightingcocks3.jpg</texture>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>

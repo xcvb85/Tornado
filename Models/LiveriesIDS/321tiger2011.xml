@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name type="string">321 Tigers (Tiger Meet 2011)</name>
+				<texture>LiveriesIDS/321tiger2011.jpg</texture>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>
