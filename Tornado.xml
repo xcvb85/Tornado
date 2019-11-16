@@ -492,11 +492,12 @@
                 <independentVar lookup="row">aero/alpha-deg</independentVar>
                 <independentVar lookup="column">fcs/wing-sweep</independentVar>
                 <tableData>
-                      0.0    0.5    1.0
-                  0   0.08   0.02   0.02
-                 10   0.50   0.38   0.28
-                 20   0.88   0.72   0.52
-                 30   1.01   1.00   0.83
+                      0.0    1.0
+                -10  -0.45  -0.19
+                  0   0.10   0.07
+                 10   0.66   0.33
+                 20   1.17   0.57
+                 30   1.60   0.77
                 </tableData>
             </table>
       </product>
@@ -546,24 +547,25 @@
                 <independentVar lookup="column">fcs/wing-sweep</independentVar>
                 <tableData>
                        0.0     0.5     1.0
-                 0.2   0.024   0.022   0.021
-                 0.4   0.024   0.022   0.021
-                 0.6   0.024   0.023   0.021
-                 0.8   0.025   0.023   0.022
-                 1.0   0.040   0.035   0.030
-                 1.2   0.080   0.045   0.035
-                 1.4   0.160   0.044   0.032
+                 0.2   0.024   0.014   0.010
+                 0.4   0.024   0.014   0.010
+                 0.6   0.024   0.014   0.010
+                 0.8   0.028   0.015   0.012
+                 1.0   0.030   0.018   0.014
+                 1.2   0.030   0.016   0.013
+                 1.4   0.027   0.015   0.012
                 </tableData>
             </table>
             <table name="Cxi">
                 <independentVar lookup="row">aero/alpha-deg</independentVar>
                 <independentVar lookup="column">fcs/wing-sweep</independentVar>
                 <tableData>
-                      0.0     0.5     1.0
-                  0   0.001   0.001   0.000
-                 10   0.025   0.022   0.015
-                 20   0.130   0.115   0.085
-                 30   0.275   0.240   0.165
+                      0.0     1.0
+                -10   0.023   0.012
+                  0   0.001   0.000
+                 10   0.034   0.018
+                 20   0.115   0.066
+                 30   0.222   0.135
                 </tableData>
             </table>
           </sum>
@@ -714,7 +716,7 @@
            <property>metrics/Sw-sqft</property>
            <property>metrics/cbarw-ft</property>
            <property>aero/alpha-rad</property>
-           <value>-0.3</value>
+           <value>-0.1</value>
        </product>
     </function>
 
