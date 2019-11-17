@@ -52,6 +52,7 @@
 		<efis>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/ehdd/rdr.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/ehdd/ehdd.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud.nas</file>
 		</efis>
 	</nasal>
 </PropertyList>
