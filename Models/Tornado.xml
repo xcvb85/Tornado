@@ -105,11 +105,12 @@
 
    <!-- fuselage reflection -->
    <effect>
-      <inherits-from>Aircraft/Tornado/Models/Effects/reflect</inherits-from>
+      <inherits-from>Aircraft/Tornado/Models/Effects/fuselage/tornado-fuselage</inherits-from>
       <object-name>Fuselage</object-name>
       <object-name>rudder</object-name>
       <object-name>Fuselage_back</object-name>
-      <object-name>Radom</object-name>
+      <object-name>RadomADV</object-name>
+      <object-name>RadomIDS</object-name>
       <object-name>Fuselage2</object-name>
       <object-name>leftaileron</object-name>
       <object-name>rightaileron</object-name>
