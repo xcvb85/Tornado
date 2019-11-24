@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<path>aoa.ac</path>
+	<animation>
+		<type>scale</type>
+		<object-name>Scale</object-name>
+		<property>orientation/alpha-deg</property>
+		<x-min>1.0</x-min>
+		<y-min>1.0</y-min>
+		<z-min>0.0</z-min>
+		<z-max>1.0</z-max>
+		<x-factor>0.0</x-factor>
+		<y-factor>0.0</y-factor>
+		<z-factor>0.027</z-factor>
+		<z-offset>0.17</z-offset>
+	</animation>
+</PropertyList>

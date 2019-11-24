@@ -31,6 +31,16 @@
   </offsets>
  </model>
 
+ <model>
+  <name>Angle of attack</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/aoa/aoa.xml</path>
+  <offsets>
+   <x-m>-4.707</x-m>
+   <y-m>-0.137</y-m>
+   <z-m>-0.250</z-m>
+  </offsets>
+ </model>
+
 <!-- <model>
   <name>Undercarriage Position Indicator</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/uci/uci.xml</path>
