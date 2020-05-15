@@ -814,7 +814,8 @@
 
  </aerodynamics>
 
- <external_reactions>
- </external_reactions>
-
+ <output name="/tmp/jsbsim.csv" type="CSV" rate="10">
+          <property>aero/alpha-deg</property>
+          <property>velocities/mach</property>
+ </output>
 </fdm_config>
