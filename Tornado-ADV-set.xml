@@ -2,8 +2,13 @@
 <PropertyList include="Tornado-Common.xml">
 	<sim>
 		<description>Panavia Tornado ADV</description>
+<<<<<<< HEAD
 		<variant-of>Tornado-IDS</variant-of>
 		<author>Heiko Schulz (3D external model)</author>
+=======
+ 		<variant-of>Tornado-IDS</variant-of>
+ 		<author>Heiko Schulz (3D external model)</author>
+>>>>>>> master
 		<status>pre-alpha</status>
 		<rating>
 			<FDM type="int">1</FDM>

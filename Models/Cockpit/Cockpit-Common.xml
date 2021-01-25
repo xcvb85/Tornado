@@ -64,6 +64,17 @@
  </model>
 
  <model>
+  <name>ADI</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/adi/adi.ac</path>
+  <offsets>
+   <x-m>-4.825</x-m>
+   <y-m>-0.150</y-m>
+   <z-m>-0.510</z-m>
+   <pitch-deg>-10.0</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
   <name>Altimeter</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/altimeter/f14-altimeter.xml</path>
   <offsets>
