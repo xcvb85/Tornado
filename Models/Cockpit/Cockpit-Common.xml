@@ -25,9 +25,10 @@
   <name>Head Up Display</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud.ac</path>
   <offsets>
-   <x-m>-4.845</x-m>
+   <x-m>-4.800</x-m>
    <y-m> 0.000</y-m>
-   <z-m>-0.340</z-m>
+   <z-m>-0.284</z-m>
+   <pitch-deg>-10.0</pitch-deg>
   </offsets>
  </model>
 
