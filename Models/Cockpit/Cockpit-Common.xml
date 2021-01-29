@@ -42,17 +42,37 @@
   </offsets>
  </model>
 
-<!-- <model>
+ <model>
   <name>Undercarriage Position Indicator</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/uci/uci.xml</path>
   <offsets>
-   <x-m>-4.846</x-m>
-   <y-m>-0.350</y-m>
-   <z-m>-0.490</z-m>
+   <x-m>-4.850</x-m>
+   <y-m>-0.334</y-m>
+   <z-m>-0.470</z-m>
    <pitch-deg>-10.0</pitch-deg>
   </offsets>
- </model>-->
+ </model>
 
+  <model>
+  <name>VSI</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/vsi/vsi.xml</path>
+  <offsets>
+   <x-m>-4.835</x-m>
+   <y-m>-0.337</y-m>
+   <z-m>-0.528</z-m>
+   <pitch-deg>-10.0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount.ac</path>
+  <offsets>
+   <x-m>-4.835</x-m>
+   <y-m>-0.337</y-m>
+   <z-m>-0.528</z-m>
+   <pitch-deg>-10.0</pitch-deg>
+  </offsets>
+ </model>
+ 
  <model>
   <name>Air Speed Indicator</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/asi/asi.xml</path>
@@ -82,26 +102,6 @@
    <x-m>-4.819</x-m>
    <y-m>-0.255</y-m>
    <z-m>-0.630</z-m>
-   <pitch-deg>-10.0</pitch-deg>
-  </offsets>
- </model>
-
- <model>
-  <name>VSI</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/vsi/vsi.xml</path>
-  <offsets>
-   <x-m>-4.835</x-m>
-   <y-m>-0.337</y-m>
-   <z-m>-0.528</z-m>
-   <pitch-deg>-10.0</pitch-deg>
-  </offsets>
- </model>
- <model>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount.ac</path>
-  <offsets>
-   <x-m>-4.835</x-m>
-   <y-m>-0.337</y-m>
-   <z-m>-0.528</z-m>
    <pitch-deg>-10.0</pitch-deg>
   </offsets>
  </model>

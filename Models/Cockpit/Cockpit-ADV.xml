@@ -18,9 +18,9 @@
 		<name>Pilots Weapon Control Panel</name>
 		<path>Aircraft/Tornado/Models/Cockpit/Instruments/pwcp/pwcp.ac</path>
 		<offsets>
-			<x-m>-4.854</x-m>
-			<y-m>-0.248</y-m>
-			<z-m>-0.455</z-m>
+			<x-m>-4.855</x-m>
+			<y-m>-0.233</y-m>
+			<z-m>-0.443</z-m>
 			<pitch-deg>-10.0</pitch-deg>
 		</offsets>
 	</model>

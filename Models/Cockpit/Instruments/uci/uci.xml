@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<name>UCI</name>
+	<path>uci.ac</path>
+	<animation>
+		<type>rotate</type>
+		<object-name>knob</object-name>
+		<property>instrumentation/uc-indicator/brightness</property>
+		<factor>-180</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>knob</object-name>
+		<action>
+			<name>small decrease</name>
+			<button>0</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/uc-indicator/brightness</property>
+				<step>-0.1</step>
+				<min>0.5</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<name>large decrease</name>
+			<button>1</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/uc-indicator/brightness</property>
+				<step>-0.1</step>
+				<min>0.5</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<name>small decrease (scrollwheel)</name>
+			<button>3</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/uc-indicator/brightness</property>
+				<step>0.1</step>
+				<min>0.5</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<name>small increase (scrollwheel)</name>
+			<button>4</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/uc-indicator/brightness</property>
+				<step>-0.1</step>
+				<min>0.5</min>
+				<max>1</max>
+			</binding>
+		</action>
+	</animation>
+	<!-- Lightning -->
+	<animation>
+		<object-name>lightsRed</object-name>
+		<type>material</type>
+		<emission>
+			<factor-prop>instrumentation/uc-indicator/brightness</factor-prop>
+			<red>1.0</red>
+			<green>0.0</green>
+			<blue>0.0</blue>
+		</emission>
+	</animation>
+	<animation>
+		<object-name>lightsGreen</object-name>
+		<type>material</type>
+		<condition>
+<!--			<greater-than>
+				<property>/fdm/jsbsim/systems/electrics/ac-essential-bus1</property>
+				<value>0</value>
+			</greater-than> -->
+			<not>
+				<property>sim/rendering/rembrandt/enabled</property>
+			</not>
+		</condition>
+		<emission>
+			<factor-prop>instrumentation/uc-indicator/brightness</factor-prop>
+			<red>0.0</red>
+			<green>1.0</green>
+			<blue>0.0</blue>
+		</emission>
+	</animation>
+</PropertyList>
