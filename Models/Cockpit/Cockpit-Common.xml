@@ -64,7 +64,7 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
   <offsets>
    <x-m>-4.835</x-m>
    <y-m>-0.337</y-m>
@@ -117,7 +117,7 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
   <offsets>
    <x-m>-4.836</x-m>
    <y-m> 0.266</y-m>
@@ -127,7 +127,7 @@
  </model>
 
  <model>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
   <offsets>
    <x-m>-4.815</x-m>
    <y-m> 0.140</y-m>
@@ -136,7 +136,7 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
   <offsets>
    <x-m>-4.815</x-m>
    <y-m> 0.203</y-m>
@@ -145,7 +145,7 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
   <offsets>
    <x-m>-4.825</x-m>
    <y-m> 0.140</y-m>
@@ -154,7 +154,7 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
   <offsets>
    <x-m>-4.825</x-m>
    <y-m> 0.203</y-m>
@@ -163,7 +163,7 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
   <offsets>
    <x-m>-4.836</x-m>
    <y-m> 0.140</y-m>
@@ -172,7 +172,7 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
   <offsets>
    <x-m>-4.836</x-m>
    <y-m> 0.203</y-m>
@@ -180,4 +180,16 @@
    <pitch-deg>-10.0</pitch-deg>
   </offsets>
  </model>
+<!--
+  <model>
+  <name>Quickstart Panel</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/quickstart/quickstart.ac</path>
+  <offsets>
+   <x-m>-4.745</x-m>
+   <y-m> 0.0</y-m>
+   <z-m>-0.977</z-m>
+   <pitch-deg>-10.0</pitch-deg>
+  </offsets>
+ </model>
+ -->
 </PropertyList>
