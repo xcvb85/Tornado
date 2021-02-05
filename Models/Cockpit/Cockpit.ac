@@ -21,7 +21,7 @@ MATERIAL "_0111_SlateGray" rgb 0.439 0.502 0.565  amb 0.800 0.800 0.800  emis 0.
 MATERIAL "GlareshieldLabels" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.250 0.250 0.250  shi 64 trans 0.000
 OBJECT world
 name "Blender_exporter_v3.3__Cockpit.ac"
-kids 75
+kids 76
 OBJECT poly
 name "alt1.coolfail.lampbody.003"
 data 31
@@ -70235,6 +70235,26 @@ refs 4
 4 0.011017 0.654075
 0 0.011017 0.606169
 2 0.215975 0.606169
+kids 0
+OBJECT poly
+name "Plane"
+data 5
+Plane
+crease 40.0
+texture "glareshield-panels.jpg"
+numvert 4
+-4.89347 -0.47026 0.11656
+-4.85299 -0.69983 0.11656
+-4.89347 -0.47026 -0.11656
+-4.85299 -0.69983 -0.11656
+numsurf 1
+SURF 0X0
+mat 2
+refs 4
+0 0.718282 0.470251
+1 0.895596 0.470251
+3 0.895596 0.647564
+2 0.718282 0.647564
 kids 0
 OBJECT poly
 name "ptt.body"
