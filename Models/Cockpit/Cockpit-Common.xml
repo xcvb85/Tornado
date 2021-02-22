@@ -32,6 +32,39 @@
   </offsets>
  </model>
 
+ <!--
+  <model>
+  <name>Cover</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover1.ac</path>
+  <offsets>
+   <x-m>-4.669</x-m>
+   <y-m>-0.125</y-m>
+   <z-m>-0.275</z-m>
+   <pitch-deg>70.0</pitch-deg>
+  </offsets>
+ </model>
+  <model>
+  <name>Cover</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover1.ac</path>
+  <offsets>
+   <x-m>-4.596</x-m>
+   <y-m>-0.420</y-m>
+   <z-m>-0.514</z-m>
+   <pitch-deg>70.0</pitch-deg>
+  </offsets>
+ </model>
+  <model>
+  <name>Cover</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover2.ac</path>
+  <offsets>
+   <x-m>-4.596</x-m>
+   <y-m>-0.396</y-m>
+   <z-m>-0.514</z-m>
+   <pitch-deg>70.0</pitch-deg>
+  </offsets>
+ </model>
+ -->
+ 
  <model>
   <name>Angle of attack</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/aoa/aoa.xml</path>
