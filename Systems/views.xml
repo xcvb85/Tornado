@@ -7,7 +7,7 @@
    <config>
     <pitch-offset-deg>0.99</pitch-offset-deg>
     <x-offset-m archive="y">0.0</x-offset-m>
-    <y-offset-m archive="y">-0.2</y-offset-m>
+    <y-offset-m archive="y">-0.18</y-offset-m>
     <z-offset-m archive="y">-4.2</z-offset-m>
    </config>
   </view>
