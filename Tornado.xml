@@ -12,16 +12,16 @@
  </fileheader>
 
  <metrics>
-   <wingarea  unit="M2">  47.60 </wingarea>
+   <wingarea  unit="M2">  26.60 </wingarea>
    <wingspan  unit="M" >  13.91 </wingspan>
    <wing_incidence>        0.00 </wing_incidence>
-   <chord     unit="M" >   3.30 </chord>
+   <chord     unit="M" >   5.00 </chord>
    <htailarea unit="M2">  10.00 </htailarea>
    <htailarm  unit="M" >   5.00 </htailarm>
    <vtailarea unit="M2">   8.50 </vtailarea>
    <vtailarm  unit="M" >   6.00 </vtailarm>
    <location name="AERORP" unit="M">
-     <x>  0.3 </x>
+     <x>  0.5 </x>
      <y>  0.0 </y>
      <z>  0.0 </z>
    </location>
@@ -216,7 +216,6 @@
  
  <flight_control file="Systems/jsb-controls"/>
  <aerodynamics file="Tornado-aerodynamics.xml"/>
-
 <!--
 <output name="/tmp/tornado.csv" type="CSV" rate="10">
                         <property>aero/force/LIFT</property>

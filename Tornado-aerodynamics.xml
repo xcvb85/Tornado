@@ -2,6 +2,7 @@
 <aerodynamics>
    <function name="aero/coefficients/Cla">
       <description>Lift due to alpha</description>
+      <product>
       <table name="Cy">
          <independentVar lookup="row">aero/alpha-deg</independentVar>
          <independentVar lookup="column">fcs/wing-sweep</independentVar>
@@ -18,19 +19,7 @@
           30   1.46   1.15   0.69
          </tableData>
       </table>
-   </function>
-   <function name="aero/coefficients/Cle">
-      <description>Lift due to Elevator Deflection</description>
-      <product>
-          <property>fcs/elevator-pos-rad</property>
-          <value>0.2</value>
-      </product>
-   </function>
-   <function name="aero/coefficients/Clf">
-      <description>Lift due to flaps</description>
-      <product>
-          <property>fcs/flap-pos-deg</property>
-          <value>0.01</value>
+      <value>1.2</value>
       </product>
    </function>
    <function name="aero/coefficients/Clm">
@@ -44,14 +33,46 @@
            0.4   0.001   0.001   0.000
            0.6   0.006   0.003   0.000
            0.8   0.014   0.006   0.000
-           1.0   0.014   0.003   0.000
-           1.2   0.014  -0.004   0.000
-           1.4   0.014  -0.010  -0.002
-           1.6   0.014  -0.016  -0.004
-           1.8   0.014  -0.021  -0.007
-           2.0   0.014  -0.026  -0.009
+           1.0   0.006   0.003   0.000
+           1.2  -0.006  -0.004   0.000
+           1.4  -0.014  -0.010  -0.002
+           1.6  -0.014  -0.016  -0.004
+           1.8  -0.014  -0.021  -0.007
+           2.0  -0.014  -0.026  -0.009
          </tableData>
       </table>
+   </function>
+   <function name="aero/coefficients/Clf">
+      <description>Lift due to flaps</description>
+      <product>
+          <property>fcs/flap-pos-deg</property>
+          <value>0.01</value>
+      </product>
+   </function>
+   <function name="aero/coefficients/Clg">
+       <description>Delta Lift due to ground effect</description>
+       <table>
+           <independentVar lookup="row">position/h-agl-ft</independentVar>
+           <tableData>
+              0   0.080
+              3   0.063
+              5   0.053
+              7   0.044
+             10   0.031
+             13   0.021
+             16   0.013
+             20   0.005
+             23   0.002
+             25   0.000
+           </tableData>
+       </table>
+   </function>
+   <function name="aero/coefficients/Cle">
+      <description>Lift due to Elevator Deflection</description>
+      <product>
+          <property>fcs/elevator-pos-rad</property>
+          <value>0.1</value>
+      </product>
    </function>
 
     <function name="aero/coefficients/Cd0">
@@ -250,12 +271,16 @@
                 <description>LIFT Force</description>
                 <product>
                     <property>aero/qbar-psf</property>
-                    <property>metrics/Sw-sqft</property>
+                    <sum>
+                        <property>metrics/Sw-sqft</property>
+                        <property>metrics/Sh-sqft</property>
+                    </sum>
                     <sum>
                         <property>aero/coefficients/Cla</property>
-                        <!--<property>aero/coefficients/Cle</property>-->
-                        <property>aero/coefficients/Clf</property>
                         <property>aero/coefficients/Clm</property>
+                        <property>aero/coefficients/Clf</property>
+                        <!--<property>aero/coefficients/Clg</property>-->
+                        <property>aero/coefficients/Cle</property>
                     </sum>
                 </product>
             </function>
@@ -265,7 +290,10 @@
                 <description>DRAG Force</description>
                 <product>
                     <property>aero/qbar-psf</property>
-                    <property>metrics/Sw-sqft</property>
+                    <sum>
+                        <property>metrics/Sw-sqft</property>
+                        <property>metrics/Sh-sqft</property>
+                    </sum>
                     <sum>
                         <property>aero/coefficients/Cd0</property>
                         <property>aero/coefficients/Cda</property>
@@ -281,7 +309,10 @@
                 <description>SIDE Force</description>
                 <product>
                     <property>aero/qbar-psf</property>
-                    <property>metrics/Sw-sqft</property>
+                    <sum>
+                        <property>metrics/Sw-sqft</property>
+                        <property>metrics/Sh-sqft</property>
+                    </sum>
                     <property>aero/coefficients/Csb</property>
                 </product>
             </function>
@@ -291,7 +322,10 @@
                 <description>ROLL Moment</description>
                 <product>
                     <property>aero/qbar-psf</property>
-                    <property>metrics/Sw-sqft</property>
+                    <sum>
+                        <property>metrics/Sw-sqft</property>
+                        <property>metrics/Sh-sqft</property>
+                    </sum>
                     <property>metrics/bw-ft</property>
                     <sum>
                         <property>aero/coefficients/Cra</property>
@@ -305,7 +339,10 @@
                 <description>PITCH Moment</description>
                 <product>
                     <property>aero/qbar-psf</property>
-                    <property>metrics/Sw-sqft</property>
+                    <sum>
+                        <property>metrics/Sw-sqft</property>
+                        <property>metrics/Sh-sqft</property>
+                    </sum>
                     <property>metrics/cbarw-ft</property>
                     <sum>
                         <property>aero/coefficients/Cpd</property>
@@ -320,7 +357,10 @@
                 <description>YAW Moment</description>
                 <product>
                     <property>aero/qbar-psf</property>
-                    <property>metrics/Sw-sqft</property>
+                    <sum>
+                        <property>metrics/Sw-sqft</property>
+                        <property>metrics/Sh-sqft</property>
+                    </sum>
                     <property>metrics/bw-ft</property>
                     <sum>
                         <property>aero/coefficients/Cyb</property>
