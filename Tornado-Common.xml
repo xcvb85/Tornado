@@ -8,6 +8,9 @@
 			<setting>0.5</setting>
 			<setting>1.0</setting>
 		</flaps>
+		<instrumentation>
+			<path>Aircraft/Tornado/Systems/instrumentation.xml</path>
+		</instrumentation>
 		<sound>
 			<path>Aircraft/Tornado/Sounds/sound.xml</path>
 		</sound>

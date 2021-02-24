@@ -4,6 +4,11 @@
 	<animation>
 		<type>scale</type>
 		<object-name>Scale</object-name>
+		<condition>
+			<not>
+				<property>gear/gear/wow</property>
+			</not>
+		</condition>
 		<property>orientation/alpha-deg</property>
 		<x-min>1.0</x-min>
 		<y-min>1.0</y-min>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<path>temp.ac</path>
+	<animation>
+		<name>needle</name>
+		<type>rotate</type>
+		<object-name>needle</object-name>
+		<property>engines/engine[0]/egt-degf</property>
+		<interpolation>
+			<entry><ind>32.0</ind><dep>-125.0</dep></entry>
+			<entry><ind>1832.0</ind><dep>125.0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+</PropertyList>
