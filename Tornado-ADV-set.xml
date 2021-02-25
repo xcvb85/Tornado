@@ -49,12 +49,15 @@
 		<libraries>
 			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
 			<file>Aircraft/Tornado/Nasal/librariesADV.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud.nas</file>
 		</libraries>
 		<efis>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/ehdd/rdr.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/ehdd/ehdd.nas</file>
-
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/Framework.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/rdr.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/plan.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/nav.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/softkeys.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/TVTAB.nas</file>
 		</efis>
 	</nasal>
 </PropertyList>
