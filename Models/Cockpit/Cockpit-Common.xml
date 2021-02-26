@@ -138,8 +138,18 @@
    <pitch-deg>-10.0</pitch-deg>
   </offsets>
  </model>
-
- 
+<!--
+ <model>
+  <name>HSI</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/hsi/hsi.ac</path>
+  <offsets>
+   <x-m>-4.715</x-m>
+   <y-m>-0.149</y-m>
+   <z-m>-0.613</z-m>
+   <pitch-deg>-10.0</pitch-deg>
+  </offsets>
+ </model>
+--> 
  <model>
   <name>Radar Homing Warning Receiver</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/rhwr/rhwr.ac</path>
@@ -249,10 +259,9 @@
   </offsets>
  </model>
 
- <!--
  <model>
   <name>Nozzle Indicator</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/rpm/rpm.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/nozzle/nozzle1.xml</path>
   <offsets>
    <x-m>-4.715</x-m>
    <y-m> 0.140</y-m>
@@ -260,12 +269,21 @@
    <pitch-deg>-10.0</pitch-deg>
   </offsets>
  </model>
- -->
  <model>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
   <offsets>
    <x-m>-4.715</x-m>
    <y-m> 0.140</y-m>
+   <z-m>-0.643</z-m>
+   <pitch-deg>-10.0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>Nozzle Indicator</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/nozzle/nozzle2.xml</path>
+  <offsets>
+   <x-m>-4.715</x-m>
+   <y-m> 0.203</y-m>
    <z-m>-0.643</z-m>
    <pitch-deg>-10.0</pitch-deg>
   </offsets>
