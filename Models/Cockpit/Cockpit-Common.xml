@@ -32,7 +32,6 @@
   </offsets>
  </model>
 
- <!--
   <model>
   <name>Cover</name>
   <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover1.ac</path>
@@ -63,7 +62,6 @@
    <pitch-deg>70.0</pitch-deg>
   </offsets>
  </model>
- -->
  
  <model>
   <name>Angle of attack</name>
@@ -82,6 +80,26 @@
    <x-m>-4.750</x-m>
    <y-m>-0.334</y-m>
    <z-m>-0.470</z-m>
+   <pitch-deg>-10.0</pitch-deg>
+  </offsets>
+ </model>
+
+  <model>
+  <name>Radar ALT</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/ralt/ralt.xml</path>
+  <offsets>
+   <x-m>-4.745</x-m>
+   <y-m>-0.275</y-m>
+   <z-m>-0.466</z-m>
+   <pitch-deg>-10.0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
+  <offsets>
+   <x-m>-4.745</x-m>
+   <y-m>-0.275</y-m>
+   <z-m>-0.466</z-m>
    <pitch-deg>-10.0</pitch-deg>
   </offsets>
  </model>
@@ -121,7 +139,7 @@
   <name>ADI</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/adi/adi.xml</path>
   <offsets>
-   <x-m>-4.725</x-m>
+   <x-m>-4.742</x-m>
    <y-m>-0.150</y-m>
    <z-m>-0.510</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -149,7 +167,7 @@
    <pitch-deg>-10.0</pitch-deg>
   </offsets>
  </model>
---> 
+ -->
  <model>
   <name>Radar Homing Warning Receiver</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/rhwr/rhwr.ac</path>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<path>ralt.ac</path>
+	<animation>
+		<name>needle</name>
+		<type>rotate</type>
+		<object-name>needle</object-name>
+		<property>instrumentation/radar-altimeter/radar-altitude-ft</property>
+		<interpolation>
+			<entry><ind>0.0</ind><dep>180.0</dep></entry>
+			<entry><ind>16.4</ind><dep>-20.0</dep></entry>
+			<entry><ind>164.8</ind><dep>-50.0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+</PropertyList>

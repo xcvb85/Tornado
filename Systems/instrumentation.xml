@@ -48,6 +48,10 @@ file, these values will be used (they are hardcoded).
     <static-pressure>/systems/static/pressure-inhg</static-pressure>
   </altimeter>
 
+  <radar-altimeter>
+    <limit-bug type="double">164</limit-bug>
+  </radar-altimeter>
+
   <attitude-indicator>
     <name>attitude-indicator</name>
     <number>0</number>
