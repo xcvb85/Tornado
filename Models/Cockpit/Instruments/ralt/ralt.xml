@@ -5,11 +5,12 @@
 		<name>needle</name>
 		<type>rotate</type>
 		<object-name>needle</object-name>
-		<property>instrumentation/radar-altimeter/radar-altitude-ft</property>
+		<property>position/altitude-agl-ft</property>
 		<interpolation>
-			<entry><ind>0.0</ind><dep>180.0</dep></entry>
-			<entry><ind>16.4</ind><dep>-20.0</dep></entry>
-			<entry><ind>164.8</ind><dep>-50.0</dep></entry>
+			<entry><ind>0.0</ind><dep>-200.0</dep></entry>
+			<entry><ind>8.6</ind><dep>-180.0</dep></entry>
+			<entry><ind>25.0</ind><dep>80.0</dep></entry>
+			<entry><ind>174</ind><dep>140.0</dep></entry>
 		</interpolation>
 		<axis>
 			<x>-1</x>
