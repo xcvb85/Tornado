@@ -101,7 +101,7 @@
 
   <model>
   <name>Cover</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover1.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover1.xml</path>
   <offsets>
    <x-m>-4.669</x-m>
    <y-m>-0.125</y-m>
@@ -111,7 +111,7 @@
  </model>
   <model>
   <name>Cover</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover1.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover2.xml</path>
   <offsets>
    <x-m>-4.596</x-m>
    <y-m>-0.420</y-m>
@@ -121,7 +121,7 @@
  </model>
   <model>
   <name>Cover</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover2.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover3.xml</path>
   <offsets>
    <x-m>-4.596</x-m>
    <y-m>-0.396</y-m>
