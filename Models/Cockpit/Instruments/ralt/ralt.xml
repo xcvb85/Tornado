@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<path>ralt.ac</path>
+	<animation>
+		<name>needle</name>
+		<type>rotate</type>
+		<object-name>needle</object-name>
+		<property>position/altitude-agl-ft</property>
+		<interpolation>
+			<entry><ind>0.0</ind><dep>-200.0</dep></entry>
+			<entry><ind>8.6</ind><dep>-180.0</dep></entry>
+			<entry><ind>25.0</ind><dep>80.0</dep></entry>
+			<entry><ind>174</ind><dep>140.0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+</PropertyList>

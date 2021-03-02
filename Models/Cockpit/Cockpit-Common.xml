@@ -1,6 +1,73 @@
 <PropertyList>
  <path>Aircraft/Tornado/Models/Cockpit/Cockpit.ac</path>
 
+ <animation>
+  <object-name>flaps</object-name>
+  <type>rotate</type>
+  <property>fdm/jsbsim/fcs/flap-cmd-norm</property>
+  <factor>-25</factor>
+  <center>
+   <x-m>-4.48</x-m>
+   <y-m> 0.00</y-m>
+   <z-m>-1.10</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <object-name>throttleL</object-name>
+  <type>rotate</type>
+  <property>fdm/jsbsim/fcs/throttle-cmd-norm</property>
+  <factor>-25</factor>
+  <center>
+   <x-m>-4.48</x-m>
+   <y-m> 0.00</y-m>
+   <z-m>-1.10</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <object-name>throttleR</object-name>
+  <type>rotate</type>
+  <property>fdm/jsbsim/fcs/throttle-cmd-norm[1]</property>
+  <factor>-25</factor>
+  <center>
+   <x-m>-4.48</x-m>
+   <y-m> 0.00</y-m>
+   <z-m>-1.10</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <object-name>sweep</object-name>
+  <type>rotate</type>
+  <property>fdm/jsbsim/fcs/wing-sweep-cmd</property>
+  <factor>-25</factor>
+  <center>
+   <x-m>-4.48</x-m>
+   <y-m> 0.00</y-m>
+   <z-m>-1.10</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
  <model>
   <name>Pilot Seat</name>
   <path>Aircraft/Tornado/Models/Cockpit/seat.ac</path>
@@ -32,10 +99,9 @@
   </offsets>
  </model>
 
- <!--
   <model>
   <name>Cover</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover1.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover1.xml</path>
   <offsets>
    <x-m>-4.669</x-m>
    <y-m>-0.125</y-m>
@@ -45,7 +111,7 @@
  </model>
   <model>
   <name>Cover</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover1.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover2.xml</path>
   <offsets>
    <x-m>-4.596</x-m>
    <y-m>-0.420</y-m>
@@ -55,7 +121,7 @@
  </model>
   <model>
   <name>Cover</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover2.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover3.xml</path>
   <offsets>
    <x-m>-4.596</x-m>
    <y-m>-0.396</y-m>
@@ -63,7 +129,6 @@
    <pitch-deg>70.0</pitch-deg>
   </offsets>
  </model>
- -->
  
  <model>
   <name>Angle of attack</name>
@@ -82,6 +147,26 @@
    <x-m>-4.750</x-m>
    <y-m>-0.334</y-m>
    <z-m>-0.470</z-m>
+   <pitch-deg>-10.0</pitch-deg>
+  </offsets>
+ </model>
+
+  <model>
+  <name>Radar ALT</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/ralt/ralt.xml</path>
+  <offsets>
+   <x-m>-4.745</x-m>
+   <y-m>-0.275</y-m>
+   <z-m>-0.466</z-m>
+   <pitch-deg>-10.0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
+  <offsets>
+   <x-m>-4.745</x-m>
+   <y-m>-0.275</y-m>
+   <z-m>-0.466</z-m>
    <pitch-deg>-10.0</pitch-deg>
   </offsets>
  </model>
@@ -121,7 +206,7 @@
   <name>ADI</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/adi/adi.xml</path>
   <offsets>
-   <x-m>-4.725</x-m>
+   <x-m>-4.742</x-m>
    <y-m>-0.150</y-m>
    <z-m>-0.510</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -149,7 +234,7 @@
    <pitch-deg>-10.0</pitch-deg>
   </offsets>
  </model>
---> 
+ -->
  <model>
   <name>Radar Homing Warning Receiver</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/rhwr/rhwr.ac</path>
