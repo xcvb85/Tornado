@@ -90,7 +90,7 @@
 
  <model>
   <name>Head Up Display</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud.xml</path>
   <offsets>
    <x-m>-4.700</x-m>
    <y-m> 0.000</y-m>
