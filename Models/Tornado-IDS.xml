@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-   <path>Aircraft/Tornado/Models/Tornado.ac</path>
-	<animation>
-		<type>select</type>
-		<object-name>RadomIDS</object-name>
-		<object-name>EndNibIDS</object-name>
-		<condition>
-			<less-than>
-				<property>sim/aircraft-type</property>
-				<value>1</value>
-			</less-than>
-		</condition>
-	</animation>
-	<animation>
-		<type>select</type>
-		<object-name>RadomADV</object-name>
-		<object-name>EndNibADV</object-name>
-		<condition>
-			<property>sim/aircraft-type</property>
-			<value>1</value>
-		</condition>
-	</animation>
+   <path>Aircraft/Tornado/Models/Tornado-IDS.ac</path>
 
    <animation>
       <type>select</type>

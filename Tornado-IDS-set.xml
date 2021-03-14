@@ -8,7 +8,7 @@
 			<splash-texture>Aircraft/Tornado/splash_ids.png</splash-texture>
 		</startup>
 		<model>
-			<path>Aircraft/Tornado/Models/Tornado.xml</path>
+			<path>Aircraft/Tornado/Models/Tornado-IDS.xml</path>
 		</model>
 		<model>
 			<name>Cockpit-IDS</name>

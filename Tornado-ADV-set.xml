@@ -15,7 +15,7 @@
 			<splash-texture>Aircraft/Tornado/splash_adv.png</splash-texture>
 		</startup>
 		<model>
-			<path>Aircraft/Tornado/Models/Tornado.xml</path>
+			<path>Aircraft/Tornado/Models/Tornado-ADV.xml</path>
 		</model>
 		<model>
 			<name>Cockpit-ADV</name>
