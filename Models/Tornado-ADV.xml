@@ -184,10 +184,10 @@
       <property>surface-positions/rudder-pos-norm</property>
       <factor>-12.0</factor>
       <axis>
-         <x1-m>5.621</x1-m>
+         <x1-m>6.321</x1-m>
          <y1-m>0.0</y1-m>
          <z1-m>0.193</z1-m>
-         <x2-m>6.841</x2-m>
+         <x2-m>7.541</x2-m>
          <y2-m>0.0</y2-m>
          <z2-m>1.628</z2-m>
       </axis>
@@ -269,7 +269,7 @@
          </entry>
       </interpolation>
       <center>
-         <x-m>-0.165</x-m>
+         <x-m>-0.865</x-m>
          <y-m>1.729</y-m>
          <z-m>1.025</z-m>
       </center>
@@ -285,8 +285,8 @@
       <property>surface-positions/spoiler-pos-norm</property>
       <factor>-45</factor>
       <center>
-         <x-m>1.35</x-m>
-         <y-m>2.45384</y-m>
+         <x-m>2.05</x-m>
+         <y-m>2.454</y-m>
          <z-m>-0.6</z-m>
       </center>
       <axis>
@@ -333,7 +333,7 @@
          </entry>
       </interpolation>
       <center>
-         <x-m>0.9175</x-m>
+         <x-m>1.6175</x-m>
          <y-m>3.075</y-m>
          <z-m>-0.711</z-m>
       </center>
@@ -363,7 +363,7 @@
          </entry>
       </interpolation>
       <center>
-         <x-m>1.813</x-m>
+         <x-m>2.513</x-m>
          <y-m>5.810</y-m>
          <z-m>-0.711</z-m>
       </center>
@@ -401,7 +401,7 @@
          </entry>
       </interpolation>
       <center>
-         <x-m>-0.165</x-m>
+         <x-m>-0.865</x-m>
          <y-m>-1.729</y-m>
          <z-m>1.025</z-m>
       </center>
@@ -417,8 +417,8 @@
       <property>surface-positions/left-spoiler-pos-norm</property>
       <factor>-45</factor>
       <center>
-         <x-m>1.35</x-m>
-         <y-m>-2.45384</y-m>
+         <x-m>2.05</x-m>
+         <y-m>-2.454</y-m>
          <z-m>-0.6</z-m>
       </center>
       <axis>
@@ -465,7 +465,7 @@
          </entry>
       </interpolation>
       <center>
-         <x-m>0.9175</x-m>
+         <x-m>1.6175</x-m>
          <y-m>-3.075</y-m>
          <z-m>-0.711</z-m>
       </center>
@@ -495,7 +495,7 @@
          </entry>
       </interpolation>
       <center>
-         <x-m>1.813</x-m>
+         <x-m>2.513</x-m>
          <y-m>-5.810</y-m>
          <z-m>-0.711</z-m>
       </center>
@@ -717,7 +717,7 @@
          </entry>
       </interpolation>
       <axis>
-         <x1-m>1.366</x1-m>
+         <x1-m>2.066</x1-m>
          <y1-m>-1.177</y1-m>
          <z1-m>-1.158</z1-m>
          <x2-m>-0.694</x2-m>
@@ -750,7 +750,7 @@
          </entry>
       </interpolation>
       <axis>
-         <x1-m>1.366</x1-m>
+         <x1-m>2.066</x1-m>
          <y1-m>1.177</y1-m>
          <z1-m>-1.158</z1-m>
          <x2-m>-0.694</x2-m>
@@ -785,14 +785,14 @@
          </entry>
       </interpolation>
       <center>
-         <x-m>0.996</x-m>
+         <x-m>1.696</x-m>
          <y-m>-0.897</y-m>
          <z-m>-1.435</z-m>
       </center>
       <axis>
-         <x />
-         <y>0</y>
-         <z>1</z>
+        <x>0</x>
+        <y>0</y>
+        <z>1</z>
       </axis>
    </animation>
    <animation>
@@ -821,7 +821,7 @@
          </entry>
       </interpolation>
       <center>
-         <x-m>6.104</x-m>
+         <x-m>6.804</x-m>
          <y-m>-1.427</y-m>
          <z-m>-1.688</z-m>
       </center>
@@ -857,12 +857,12 @@
          </entry>
       </interpolation>
       <center>
-         <x-m>0.996</x-m>
+         <x-m>1.696</x-m>
          <y-m>0.897</y-m>
          <z-m>-1.435</z-m>
       </center>
       <axis>
-         <x />
+         <x>0</x>
          <y>0</y>
          <z>1</z>
       </axis>
@@ -893,7 +893,7 @@
          </entry>
       </interpolation>
       <center>
-         <x-m>6.104</x-m>
+         <x-m>6.804</x-m>
          <y-m>1.427</y-m>
          <z-m>-1.688</z-m>
       </center>
@@ -926,7 +926,7 @@
          </entry>
       </interpolation>
       <center>
-         <x-m>1.428</x-m>
+         <x-m>2.128</x-m>
          <y-m>0.923</y-m>
          <z-m>-1.137</z-m>
       </center>
@@ -959,7 +959,7 @@
          </entry>
       </interpolation>
       <center>
-         <x-m>0.356</x-m>
+         <x-m>1.056</x-m>
          <y-m>1.035</y-m>
          <z-m>-1.179</z-m>
       </center>
@@ -992,7 +992,7 @@
          </entry>
       </interpolation>
       <center>
-         <x-m>1.428</x-m>
+         <x-m>2.128</x-m>
          <y-m>-0.923</y-m>
          <z-m>-1.137</z-m>
       </center>
@@ -1025,7 +1025,7 @@
          </entry>
       </interpolation>
       <center>
-         <x-m>0.418</x-m>
+         <x-m>1.118</x-m>
          <y-m>-0.976</y-m>
          <z-m>-1.251</z-m>
       </center>
@@ -1059,9 +1059,9 @@
       <property>gear/gear[1]/rollspeed-ms</property>
       <factor>30</factor>
       <center>
-         <x-m>1.02437</x-m>
-         <y-m>-1.52152</y-m>
-         <z-m>-2.59568</z-m>
+         <x-m> 1.724</x-m>
+         <y-m> 0.0</y-m>
+         <z-m>-2.596</z-m>
       </center>
       <axis>
          <x>0</x>
@@ -1075,9 +1075,9 @@
       <property>gear/gear[2]/rollspeed-ms</property>
       <factor>30</factor>
       <center>
-         <x-m>1.02437</x-m>
-         <y-m>1.02437</y-m>
-         <z-m>-2.59568</z-m>
+         <x-m> 1.724</x-m>
+         <y-m> 0.0</y-m>
+         <z-m>-2.596</z-m>
       </center>
       <axis>
          <x>0</x>
@@ -1196,7 +1196,7 @@
       <factor>40</factor>
       <offset-deg>0</offset-deg>
       <center>
-         <x-m>2.28037</x-m>
+         <x-m>2.98037</x-m>
          <y-m>-4.088591</y-m>
          <z-m>-0.797369</z-m>
       </center>
@@ -1213,7 +1213,7 @@
       <factor>0.3</factor>
       <offset-deg>0</offset-deg>
       <center>
-         <x-m>2.28037</x-m>
+         <x-m>2.98037</x-m>
          <y-m>-4.088591</y-m>
          <z-m>-0.797369</z-m>
       </center>
@@ -1439,7 +1439,7 @@
   <name>nozzleLeft</name>
   <path>Aircraft/Tornado/Models/nozzle.xml</path>
   <offsets>
-   <x-m> 5.95</x-m>
+   <x-m> 6.65</x-m>
    <y-m>-0.52</y-m>
    <z-m>-0.81</z-m>
   </offsets>
@@ -1450,7 +1450,7 @@
    <property>sim/multiplay/generic/bool[1]</property>
   </condition>
   <offsets>
-   <x-m> 6.00</x-m>
+   <x-m> 6.70</x-m>
    <y-m>-0.52</y-m>
    <z-m>-0.81</z-m>
   </offsets>
@@ -1460,7 +1460,7 @@
   <name>nozzleRight</name>
   <path>Aircraft/Tornado/Models/nozzle.xml</path>
   <offsets>
-   <x-m> 5.95</x-m>
+   <x-m> 6.65</x-m>
    <y-m> 0.52</y-m>
    <z-m>-0.81</z-m>
   </offsets>
@@ -1471,7 +1471,7 @@
    <property>sim/multiplay/generic/bool[2]</property>
   </condition>
   <offsets>
-   <x-m> 6.00</x-m>
+   <x-m> 6.70</x-m>
    <y-m> 0.52</y-m>
    <z-m>-0.81</z-m>
   </offsets>
