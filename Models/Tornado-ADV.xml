@@ -2,6 +2,12 @@
 <PropertyList>
    <path>Aircraft/Tornado/Models/Tornado-ADV.ac</path>
 
+  <!-- Stores -->
+  <model>
+    <name>Stores</name>
+    <path>Aircraft/Tornado/Models/Stores/Stores.xml</path>
+  </model>
+
    <animation>
       <type>select</type>
       <object-name>pilot</object-name>
@@ -252,6 +258,8 @@
       <object-name>rightinner_pylon</object-name>
       <object-name>rightinnerwingtank</object-name>
       <object-name>spoilerright</object-name>
+      <object-name>AIM-9 Missile 3</object-name>
+      <object-name>AIM-9 Missile 4</object-name>
       <name>rightvapour</name>
       <property>fdm/jsbsim/fcs/wing-sweep</property>
       <interpolation>
@@ -303,7 +311,7 @@
       <max-deg>0</max-deg>
       <factor>50</factor>
       <center>
-         <x-m>1.35</x-m>
+         <x-m>2.05</x-m>
          <y-m>2.45384</y-m>
          <z-m>-0.6</z-m>
       </center>
@@ -317,6 +325,8 @@
       <type>rotate</type>
       <object-name>rightinner_pylon</object-name>
       <object-name>rightinnerwingtank</object-name>
+      <object-name>AIM-9 Missile 3</object-name>
+      <object-name>AIM-9 Missile 4</object-name>
       <property>fdm/jsbsim/fcs/wing-sweep</property>
       <interpolation>
          <entry>
@@ -384,6 +394,8 @@
       <object-name>leftinner_pylon</object-name>
       <object-name>leftinnerwingtank</object-name>
       <object-name>spoilerleft</object-name>
+      <object-name>AIM-9 Missile 1</object-name>
+      <object-name>AIM-9 Missile 2</object-name>
       <name>leftvapour</name>
       <property>fdm/jsbsim/fcs/wing-sweep</property>
       <interpolation>
@@ -435,7 +447,7 @@
       <max-deg>0</max-deg>
       <factor>-50</factor>
       <center>
-         <x-m>1.35</x-m>
+         <x-m>2.05</x-m>
          <y-m>-2.45384</y-m>
          <z-m>-0.6</z-m>
       </center>
@@ -449,6 +461,8 @@
       <type>rotate</type>
       <object-name>leftinner_pylon</object-name>
       <object-name>leftinnerwingtank</object-name>
+      <object-name>AIM-9 Missile 1</object-name>
+      <object-name>AIM-9 Missile 2</object-name>
       <property>fdm/jsbsim/fcs/wing-sweep</property>
       <interpolation>
          <entry>
