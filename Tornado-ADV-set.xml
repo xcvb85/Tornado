@@ -90,6 +90,11 @@
 				<lbs>425</lbs>
 				<weight-lb>425</weight-lb>
 			</opt>
+			<opt>
+				<name>AIM-120</name>
+				<lbs>335</lbs>
+				<weight-lb>335</weight-lb>
+			</opt>
 		</weight>
 		<weight n="3">
 			<name>Central pylon (#4)</name>
@@ -104,6 +109,11 @@
 				<name>RB-71</name>
 				<lbs>425</lbs>
 				<weight-lb>425</weight-lb>
+			</opt>
+			<opt>
+				<name>AIM-120</name>
+				<lbs>335</lbs>
+				<weight-lb>335</weight-lb>
 			</opt>
 		</weight>
 		<weight n="4">
@@ -120,6 +130,11 @@
 				<lbs>425</lbs>
 				<weight-lb>425</weight-lb>
 			</opt>
+			<opt>
+				<name>AIM-120</name>
+				<lbs>335</lbs>
+				<weight-lb>335</weight-lb>
+			</opt>
 		</weight>
 		<weight n="5">
 			<name>Central pylon (#6)</name>
@@ -134,6 +149,11 @@
 				<name>RB-71</name>
 				<lbs>425</lbs>
 				<weight-lb>425</weight-lb>
+			</opt>
+			<opt>
+				<name>AIM-120</name>
+				<lbs>335</lbs>
+				<weight-lb>335</weight-lb>
 			</opt>
 		</weight>
 		<weight n="6">

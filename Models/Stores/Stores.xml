@@ -39,6 +39,7 @@
 			</equals>
 		</condition>
 	</animation>
+
 	<!-- Center -->
 	<model>
 		<name>Skyflash Missile 1</name>
@@ -116,6 +117,83 @@
 			</equals>
 		</condition>
 	</animation>
+	<model>
+		<name>AIM-120 Missile 1</name>
+		<path>Aircraft/Tornado/Models/Stores/AIM-120/AIM-120.xml</path>
+		<offsets>
+			<x-m>-2.30</x-m>
+			<y-m>-0.45</y-m>
+			<z-m>-1.75</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>AIM-120 Missile 1</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>payload/weight[2]/selected</property>
+				<value>AIM-120</value>
+			</equals>
+		</condition>
+	</animation>
+	<model>
+		<name>AIM-120 Missile 2</name>
+		<path>Aircraft/Tornado/Models/Stores/AIM-120/AIM-120.xml</path>
+		<offsets>
+			<x-m>1.50</x-m>
+			<y-m>-0.35</y-m>
+			<z-m>-1.75</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>AIM-120 Missile 2</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>payload/weight[3]/selected</property>
+				<value>AIM-120</value>
+			</equals>
+		</condition>
+	</animation>
+	<model>
+		<name>AIM-120 Missile 3</name>
+		<path>Aircraft/Tornado/Models/Stores/AIM-120/AIM-120.xml</path>
+		<offsets>
+			<x-m>0.50</x-m>
+			<y-m>0.35</y-m>
+			<z-m>-1.75</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>AIM-120 Missile 3</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>payload/weight[4]/selected</property>
+				<value>AIM-120</value>
+			</equals>
+		</condition>
+	</animation>
+	<model>
+		<name>AIM-120 Missile 4</name>
+		<path>Aircraft/Tornado/Models/Stores/AIM-120/AIM-120.xml</path>
+		<offsets>
+			<x-m>-3.30</x-m>
+			<y-m>0.45</y-m>
+			<z-m>-1.75</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>AIM-120 Missile 4</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>payload/weight[5]/selected</property>
+				<value>AIM-120</value>
+			</equals>
+		</condition>
+	</animation>
+
 	<!-- Right side -->
 	<model>
 		<name>AIM-9 Missile 3</name>
