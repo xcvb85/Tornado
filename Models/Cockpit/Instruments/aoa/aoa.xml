@@ -2,6 +2,16 @@
 <PropertyList>
 	<path>aoa.ac</path>
 	<animation>
+		<type>select</type>
+		<object-name>Plane</object-name>
+		<condition>
+			<less-than>
+				<property>systems/electrical/ElBus/Voltage</property>
+				<value>24</value>
+			</less-than>
+		</condition>
+	</animation>
+	<animation>
 		<type>scale</type>
 		<object-name>Scale</object-name>
 		<condition>

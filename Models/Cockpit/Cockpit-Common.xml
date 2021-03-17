@@ -90,7 +90,7 @@
 
  <model>
   <name>Head Up Display</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud.xml</path>
   <offsets>
    <x-m>-4.700</x-m>
    <y-m> 0.000</y-m>
@@ -130,6 +130,37 @@
   </offsets>
  </model>
  
+  <model>
+  <name>Korry</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Buttons/korry.ac</path>
+  <offsets>
+   <x-m>-4.753</x-m>
+   <y-m>-0.318</y-m>
+   <z-m>-0.444</z-m>
+   <pitch-deg>-10.0</pitch-deg>
+  </offsets>
+ </model>
+  <model>
+  <name>Korry</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Buttons/korry.ac</path>
+  <offsets>
+   <x-m>-4.749</x-m>
+   <y-m>-0.225</y-m>
+   <z-m>-0.462</z-m>
+   <pitch-deg>-10.0</pitch-deg>
+  </offsets>
+ </model>
+  <model>
+  <name>Korry</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Buttons/korry.ac</path>
+  <offsets>
+   <x-m>-4.745</x-m>
+   <y-m>-0.220</y-m>
+   <z-m>-0.484</z-m>
+   <pitch-deg>-10.0</pitch-deg>
+  </offsets>
+ </model>
+ 
  <model>
   <name>Angle of attack</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/aoa/aoa.xml</path>
@@ -144,9 +175,9 @@
   <name>Undercarriage Position Indicator</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/uci/uci.xml</path>
   <offsets>
-   <x-m>-4.750</x-m>
+   <x-m>-4.745</x-m>
    <y-m>-0.334</y-m>
-   <z-m>-0.470</z-m>
+   <z-m>-0.484</z-m>
    <pitch-deg>-10.0</pitch-deg>
   </offsets>
  </model>
@@ -175,18 +206,18 @@
   <name>VSI</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/vsi/vsi.xml</path>
   <offsets>
-   <x-m>-4.735</x-m>
+   <x-m>-4.732</x-m>
    <y-m>-0.337</y-m>
-   <z-m>-0.528</z-m>
+   <z-m>-0.542</z-m>
    <pitch-deg>-10.0</pitch-deg>
   </offsets>
  </model>
  <model>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
   <offsets>
-   <x-m>-4.735</x-m>
+   <x-m>-4.732</x-m>
    <y-m>-0.337</y-m>
-   <z-m>-0.528</z-m>
+   <z-m>-0.542</z-m>
    <pitch-deg>-10.0</pitch-deg>
   </offsets>
  </model>
@@ -234,7 +265,7 @@
    <pitch-deg>-10.0</pitch-deg>
   </offsets>
  </model>
- -->
+-->
  <model>
   <name>Radar Homing Warning Receiver</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/rhwr/rhwr.ac</path>

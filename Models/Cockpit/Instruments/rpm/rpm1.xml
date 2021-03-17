@@ -2,6 +2,16 @@
 <PropertyList>
 	<path>rpm.ac</path>
 	<animation>
+		<type>select</type>
+		<object-name>Plane</object-name>
+		<condition>
+			<less-than>
+				<property>systems/electrical/ElBus/Voltage</property>
+				<value>24</value>
+			</less-than>
+		</condition>
+	</animation>
+	<animation>
 		<name>needle</name>
 		<type>rotate</type>
 		<object-name>needle</object-name>

@@ -8,7 +8,7 @@
 		<object-name>off-flag</object-name>
 		<condition>
 			<less-than>
-				<property>systems/electrical/outputs/adi</property>
+				<property>systems/electrical/ElBus/Voltage</property>
 				<value>24</value>
 			</less-than>
 		</condition>
