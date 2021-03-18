@@ -4,7 +4,7 @@
 		<model>
 			<livery>
 				<name type="string">Luftwaffe, Flug AG51</name>
-				<texture>LiveriesIDS/flug51.jpg</texture>
+				<texture>Tornado-IDS.jpg</texture>
 			</livery>
 		</model>
 	</sim>

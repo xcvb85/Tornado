@@ -4,7 +4,7 @@
 		<model>
 			<livery>
 				<name type="string">RAF 111th Sqdn, 90th Anniv.</name>
-				<texture>LiveriesADV/111.jpg</texture>
+				<texture>Tornado-ADV.jpg</texture>
 			</livery>
 		</model>
 	</sim>
