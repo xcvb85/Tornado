@@ -1,25 +1,24 @@
 var HUDInstance = {};
 
 var PageEnum = {
-    dir:0
+	dir:0
 };
 
 var HUD = {
 	new: func(group, instance) {
 		var m = {parents:[HUD], Pages:{}};
 		m.Instance = instance;
-		m.knob = 0;
-		m.knob1 = 0;
 
 		m.PageSbs = canvas_sbs.new(group.createChild('group'), instance);
 		m.Pages[PageEnum.dir] = canvas_dir.new(group.createChild('group'), instance);
 
-		setlistener("instrumentation/hud["~m.Instance~"]/page", func {
-			var page = getprop("instrumentation/hud["~m.Instance~"]/page");
-			m.ActivatePage(page);
-		}, 1);
+		m.swMode = props.globals.getNode("instrumentation/hud/swMode");
+		m.swSbs = props.globals.getNode("instrumentation/hud/swSbs");
 
-		m.ActivatePage(PageEnum.dir);
+		m.PageSbs.hide();
+		m.ActivatePage();
+		m.Timer = maketimer(0.2, m, m.Update);
+		m.Timer.start();
 		return m;
 	},
 	ActivatePage: func(input = -1)
@@ -34,19 +33,23 @@ var HUD = {
 			}
 		}
 	},
-	BtClick: func(input = -1) {
-	},
-	Knob: func(input = -1) {
+	Update: func()
+	{
+		if(me.swMode.getValue()) {
+			me.ActivatePage(0);
+		}
+		else {
+			me.ActivatePage();
+		}
+
+		if(me.swSbs.getValue()) {
+			me.PageSbs.show();
+		}
+		else {
+			me.PageSbs.hide();
+		}
 	}
 };
-
-var hudBtClick = func(input = -1) {
-	HUDInstance.BtClick(input);
-}
-
-var hudKnob = func(input = -1) {
-	HUDInstance.Knob(input);
-}
 
 ###### Main #####
 var hudListener = setlistener("/sim/signals/fdm-initialized", func () {
