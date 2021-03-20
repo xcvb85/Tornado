@@ -1,6 +1,17 @@
 <?xml version="1.0"?>
 <PropertyList>
 	<path>hud.ac</path>
+
+	<model>
+		<name>Panel</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Instruments/hud/panel.ac</path>
+		<offsets>
+			<x-m> 0.181</x-m>
+			<y-m>-0.084</y-m>
+			<z-m>-0.086</z-m>
+		</offsets>
+	</model>
+
 	<animation>
 		<type>select</type>
 		<object-name>HUD_Screen</object-name>
