@@ -2,6 +2,11 @@
 <PropertyList>
 	<path>hud.ac</path>
 
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/hud</inherits-from>
+		<object-name>HUD_Screen</object-name>
+    </effect>
+
 	<model>
 		<name>Panel</name>
 		<path>Aircraft/Tornado/Models/Cockpit/Instruments/hud/panel.ac</path>
