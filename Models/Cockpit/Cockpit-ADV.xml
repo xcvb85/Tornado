@@ -16,7 +16,7 @@
 	</model>
 	<model>
 		<name>Electronic Head Down Display</name>
-		<path>Aircraft/Tornado/Models/Cockpit/Instruments/ehdd/ehdd.ac</path>
+		<path>Aircraft/Tornado/Models/Cockpit/Instruments/ehdd/ehdd.xml</path>
 		<offsets>
 			<x-m>-4.730</x-m>
 			<y-m>0.000</y-m>
@@ -38,7 +38,7 @@
 		<object-name>TVTAB</object-name>
 		<type>select</type>
 	    <condition>
-			<property>instrumentation/tvtab/visible</property>
+			<property>instrumentation/ehdd/swTVTAB</property>
 		</condition>
     </animation>
 </PropertyList>
