@@ -1,0 +1,190 @@
+<PropertyList>
+ <path>Aircraft/Tornado/Models/Cockpit/Parts/navigator.ac</path>
+ <model>
+  <name>Joystick</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Parts/joystick.ac</path>
+  <offsets>
+   <x-m>-2.820</x-m>
+   <y-m> 0.000</y-m>
+   <z-m>-1.100</z-m>
+   <heading-deg>30.0</heading-deg>
+  </offsets>
+ </model>
+ <animation>
+  <type>rotate</type>
+  <object-name>Joystick</object-name>
+  <property>controls/flight/elevator</property>
+  <interpolation>
+   <entry><ind>-1.0</ind><dep> 14.0</dep></entry>
+   <entry><ind> 0.0</ind><dep>  0.0</dep></entry>
+   <entry><ind> 1.0</ind><dep> -7.0</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>-2.820</x-m>
+   <y-m> 0.000</y-m>
+   <z-m>-1.100</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>Joystick</object-name>
+  <property>controls/flight/aileron</property>
+  <interpolation>
+   <entry><ind>-1.0</ind><dep> -10.5</dep></entry>
+   <entry><ind> 0.0</ind><dep>   0.0</dep></entry>
+   <entry><ind> 1.0</ind><dep>  10.5</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>-2.820</x-m>
+   <y-m> 0.000</y-m>
+   <z-m>-1.100</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y> 0</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <model>
+  <name>Throttle</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Parts/throttle.xml</path>
+  <offsets>
+   <x-m>-2.720</x-m>
+   <y-m>-0.411</y-m>
+   <z-m>-0.729</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>TV-Tab 1</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/tvtab1.xml</path>
+  <offsets>
+   <x-m>-2.930</x-m>
+   <y-m> 0.010</y-m>
+   <z-m>-0.265</z-m>
+   <pitch-deg>-5.0</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>TV-Tab 2</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/tvtab1.ac</path>
+  <offsets>
+   <x-m>-2.930</x-m>
+   <y-m> 0.237</y-m>
+   <z-m>-0.265</z-m>
+   <pitch-deg>-5.0</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>RPM Indicator</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/rpm/rpm1.xml</path>
+  <offsets>
+   <x-m>-2.970</x-m>
+   <y-m> 0.090</y-m>
+   <z-m>-0.385</z-m>
+  </offsets>
+ </model>
+  <model>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
+  <offsets>
+   <x-m>-2.970</x-m>
+   <y-m> 0.090</y-m>
+   <z-m>-0.385</z-m>
+  </offsets>
+ </model>
+ <model>
+  <name>RPM Indicator</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/rpm/rpm2.xml</path>
+  <offsets>
+   <x-m>-2.970</x-m>
+   <y-m> 0.155</y-m>
+   <z-m>-0.385</z-m>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
+  <offsets>
+   <x-m>-2.970</x-m>
+   <y-m> 0.155</y-m>
+   <z-m>-0.385</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Temp Indicator</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/temp/temp1.xml</path>
+  <offsets>
+   <x-m>-2.970</x-m>
+   <y-m> 0.090</y-m>
+   <z-m>-0.450</z-m>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
+  <offsets>
+   <x-m>-2.970</x-m>
+   <y-m> 0.090</y-m>
+   <z-m>-0.450</z-m>
+  </offsets>
+ </model>
+ <model>
+  <name>Temp Indicator</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/temp/temp2.xml</path>
+  <offsets>
+   <x-m>-2.970</x-m>
+   <y-m> 0.155</y-m>
+   <z-m>-0.450</z-m>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
+  <offsets>
+   <x-m>-2.970</x-m>
+   <y-m> 0.155</y-m>
+   <z-m>-0.450</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Nozzle Indicator</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/nozzle/nozzle1.xml</path>
+  <offsets>
+   <x-m>-2.970</x-m>
+   <y-m> 0.090</y-m>
+   <z-m>-0.515</z-m>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
+  <offsets>
+   <x-m>-2.970</x-m>
+   <y-m> 0.090</y-m>
+   <z-m>-0.515</z-m>
+  </offsets>
+ </model>
+ <model>
+  <name>Nozzle Indicator</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/nozzle/nozzle2.xml</path>
+  <offsets>
+   <x-m>-2.970</x-m>
+   <y-m> 0.155</y-m>
+   <z-m>-0.515</z-m>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
+  <offsets>
+   <x-m>-2.970</x-m>
+   <y-m> 0.155</y-m>
+   <z-m>-0.515</z-m>
+  </offsets>
+ </model>
+</PropertyList>

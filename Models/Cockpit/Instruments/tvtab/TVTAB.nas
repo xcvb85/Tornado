@@ -222,6 +222,7 @@ tvTabListener = setlistener("/sim/signals/fdm-initialized", func () {
 		"view": [310, 250],
 		"mipmapping": 1
 	});
+	tvTav1Canvas.addPlacement({"node": "TVTAB1.screen"});
 	tvTav1Canvas.addPlacement({"node": "EHDD.screen"});
 	TvTab1Instance = TVTAB.new(tvTav1Canvas.createGroup(), 0);
 
