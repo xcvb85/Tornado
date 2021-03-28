@@ -1,0 +1,71 @@
+<PropertyList>
+ <path>Aircraft/Tornado/Models/Cockpit/Parts/throttle.ac</path>
+
+ <animation>
+  <object-name>flaps</object-name>
+  <type>rotate</type>
+  <property>fdm/jsbsim/fcs/flap-cmd-norm</property>
+  <factor>-25</factor>
+  <center>
+   <x-m> 0.00</x-m>
+   <y-m> 0.00</y-m>
+   <z-m>-0.30</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <object-name>throttleL</object-name>
+  <type>rotate</type>
+  <property>fdm/jsbsim/fcs/throttle-cmd-norm</property>
+  <factor>-25</factor>
+  <center>
+   <x-m> 0.00</x-m>
+   <y-m> 0.00</y-m>
+   <z-m>-0.30</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <object-name>throttleR</object-name>
+  <type>rotate</type>
+  <property>fdm/jsbsim/fcs/throttle-cmd-norm[1]</property>
+  <factor>-25</factor>
+  <center>
+   <x-m> 0.00</x-m>
+   <y-m> 0.00</y-m>
+   <z-m>-0.30</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <object-name>sweep</object-name>
+  <type>rotate</type>
+  <property>fdm/jsbsim/fcs/wing-sweep-cmd</property>
+  <factor>-25</factor>
+  <center>
+   <x-m> 0.00</x-m>
+   <y-m> 0.00</y-m>
+   <z-m>-0.30</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

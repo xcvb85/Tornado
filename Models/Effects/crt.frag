@@ -17,6 +17,14 @@ vec2 distort(vec2 position)
 	return position;
 }
 
+vec3 rdrNoise(vec2 position, vec3 texel)
+{
+	float offset = 0.01*sin(10*position.y+100.0*osg_SimulationTime)*cos(100*position.y-100.0*osg_SimulationTime);
+	texel.g += texture2D(BaseTex, vec2(position.x+offset, position.y)).b;
+	texel.g = clamp(texel.g, 0.0, 1.0);
+	return texel;
+}
+
 vec3 flickering(vec2 position, vec3 texel)
 {
 	texel *= 0.5+0.5*(1-mod(10.0*osg_SimulationTime+position.y, 1.0));
@@ -32,7 +40,8 @@ void main()
 		vec2 position = distort(gl_TexCoord[0].xy);
 
 		if(position.x > 0.0 && position.y > 0.0 && position.x < 1.0 && position.y < 1.0) {
-			texel = texture2D(BaseTex, position).rgb;
+			texel = vec3(texture2D(BaseTex, position).rg, 0.0);
+			texel = rdrNoise(position, texel);
 			texel = flickering(position, texel);
 		}
 	}
