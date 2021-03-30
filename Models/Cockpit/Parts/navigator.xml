@@ -88,7 +88,7 @@
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/rpm/rpm1.xml</path>
   <offsets>
    <x-m>-2.970</x-m>
-   <y-m> 0.090</y-m>
+   <y-m> 0.135</y-m>
    <z-m>-0.385</z-m>
   </offsets>
  </model>
@@ -96,7 +96,7 @@
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
   <offsets>
    <x-m>-2.970</x-m>
-   <y-m> 0.090</y-m>
+   <y-m> 0.135</y-m>
    <z-m>-0.385</z-m>
   </offsets>
  </model>
@@ -105,7 +105,7 @@
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/rpm/rpm2.xml</path>
   <offsets>
    <x-m>-2.970</x-m>
-   <y-m> 0.155</y-m>
+   <y-m> 0.200</y-m>
    <z-m>-0.385</z-m>
   </offsets>
  </model>
@@ -113,7 +113,7 @@
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
   <offsets>
    <x-m>-2.970</x-m>
-   <y-m> 0.155</y-m>
+   <y-m> 0.200</y-m>
    <z-m>-0.385</z-m>
   </offsets>
  </model>
@@ -123,7 +123,7 @@
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/temp/temp1.xml</path>
   <offsets>
    <x-m>-2.970</x-m>
-   <y-m> 0.090</y-m>
+   <y-m> 0.135</y-m>
    <z-m>-0.450</z-m>
   </offsets>
  </model>
@@ -131,7 +131,7 @@
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
   <offsets>
    <x-m>-2.970</x-m>
-   <y-m> 0.090</y-m>
+   <y-m> 0.135</y-m>
    <z-m>-0.450</z-m>
   </offsets>
  </model>
@@ -140,7 +140,7 @@
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/temp/temp2.xml</path>
   <offsets>
    <x-m>-2.970</x-m>
-   <y-m> 0.155</y-m>
+   <y-m> 0.200</y-m>
    <z-m>-0.450</z-m>
   </offsets>
  </model>
@@ -148,7 +148,7 @@
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
   <offsets>
    <x-m>-2.970</x-m>
-   <y-m> 0.155</y-m>
+   <y-m> 0.200</y-m>
    <z-m>-0.450</z-m>
   </offsets>
  </model>
@@ -158,7 +158,7 @@
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/nozzle/nozzle1.xml</path>
   <offsets>
    <x-m>-2.970</x-m>
-   <y-m> 0.090</y-m>
+   <y-m> 0.135</y-m>
    <z-m>-0.515</z-m>
   </offsets>
  </model>
@@ -166,7 +166,7 @@
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
   <offsets>
    <x-m>-2.970</x-m>
-   <y-m> 0.090</y-m>
+   <y-m> 0.135</y-m>
    <z-m>-0.515</z-m>
   </offsets>
  </model>
@@ -175,7 +175,7 @@
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/nozzle/nozzle2.xml</path>
   <offsets>
    <x-m>-2.970</x-m>
-   <y-m> 0.155</y-m>
+   <y-m> 0.200</y-m>
    <z-m>-0.515</z-m>
   </offsets>
  </model>
@@ -183,7 +183,7 @@
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
   <offsets>
    <x-m>-2.970</x-m>
-   <y-m> 0.155</y-m>
+   <y-m> 0.200</y-m>
    <z-m>-0.515</z-m>
   </offsets>
  </model>
