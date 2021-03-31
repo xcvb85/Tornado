@@ -1,60 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-<path>ehdd.ac</path>
+	<path>ehdd.ac</path>
 
 	<effect>
 		<inherits-from>Aircraft/Tornado/Models/Effects/crt</inherits-from>
-		<object-name>EHDD.screen</object-name>
+		<object-name>EHDD1.screen</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/crt</inherits-from>
+		<object-name>EHDD2.screen</object-name>
 	</effect>
 
-<!--#########  Screens ########## -->
-<!--
-    <animation>
-	<type>material</type>
-	<object-name>RMU1.screen</object-name>
-	<ambient>
-		<red>1</red>
-		<green>1</green>
-		<blue>1</blue>
-		<factor-prop>systems/electrical/outputs/rmu</factor-prop>
-	</ambient>
-	<diffuse>
-		<red>1</red>
-		<green>1</green>
-		<blue>1</blue>
-		<factor-prop>systems/electrical/outputs/rmu</factor-prop>
-	</diffuse>
-	<emission>
-		<red>1</red>
-		<green>1</green>
-		<blue>1</blue>
-		<factor-prop>systems/electrical/outputs/rmu</factor-prop>
-	</emission>
-    </animation>
--->
-
 	<animation>
-        <type>pick</type>
-		<object-name>Cube.001</object-name>
+		<type>pick</type>
+		<object-name>BTX2</object-name>
 		<visible>true</visible>
 		<action>
 			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>instrumentation/ehdd/swTVTAB</property>
+				<property>instrumentation/ehdd/swX2</property>
 			</binding>
 		</action>
 	</animation>
-    <animation>
-	<type>translate</type>
-	<object-name>Cube.001</object-name>
-	<property>instrumentation/ehdd/swTVTAB</property>
-	<factor>0.0016</factor>
-	<axis>
-		<x>-1</x>
-		<y> 0</y>
-		<z> 0</z>
-	</axis>
-    </animation>
+	<animation>
+		<type>translate</type>
+		<object-name>BTX2</object-name>
+		<property>instrumentation/ehdd/swX2</property>
+		<factor>0.0016</factor>
+		<axis>
+			<x>-1</x>
+			<y> 0</y>
+			<z> 0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>EHDD1.screen</object-name>
+		<condition>
+			<less-than>
+				<property>instrumentation/ehdd/knob0</property>
+				<value>2</value>
+			</less-than>
+		</condition>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>KN0</object-name>
+		<property>instrumentation/ehdd/knob0</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>100</dep></entry>
+			<entry><ind>2</ind><dep>45</dep></entry>
+		</interpolation>
+		<center>
+			<x-m> 0.0000</x-m>
+			<y-m> 0.0568</y-m>
+			<z-m>-0.0563</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>KN0</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable>true</repeatable>
+			<interval-sec>0.1</interval-sec>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/ehdd/knob0</property>
+				<mask>integer</mask>
+				<min>0</min>
+				<max>2</max>
+				<step>1</step>
+				<resolution>1</resolution>
+			</binding>
+		</action>
+		<action>
+			<button>4</button>
+			<repeatable>true</repeatable>
+			<interval-sec>0.1</interval-sec>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/ehdd/knob0</property>
+				<mask>integer</mask>
+				<min>0</min>
+				<max>2</max>
+				<step>-1</step>
+				<resolution>1</resolution>
+			</binding>
+		</action>
+	</animation>
 </PropertyList>

@@ -46,6 +46,7 @@
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud.nas</file>
 		</libraries>
 		<efis>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/rpmd/moving-map.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/Framework.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/rdr.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/plan.nas</file>
