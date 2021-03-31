@@ -63,7 +63,7 @@
 
  <model>
   <name>TV-Tab 1</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/tvtab1.xml</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/tvtab1adv.xml</path>
   <offsets>
    <x-m>-2.930</x-m>
    <y-m> 0.010</y-m>
@@ -74,7 +74,7 @@
 
  <model>
   <name>TV-Tab 2</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/tvtab1.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/tvtab2adv.xml</path>
   <offsets>
    <x-m>-2.930</x-m>
    <y-m> 0.237</y-m>

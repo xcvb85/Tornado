@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-<path>tvtab1.ac</path>
+<path>tvtab1adv.ac</path>
 
 <!--#########  Upper Buttons ########## -->
 
@@ -24,7 +24,7 @@
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(0)</script>
+			<script>efis.tvTavBtClick(0, 0)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -59,7 +59,7 @@
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(1)</script>
+			<script>efis.tvTavBtClick(0, 1)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -94,7 +94,7 @@
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(2)</script>
+			<script>efis.tvTavBtClick(0, 2)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -129,7 +129,7 @@
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(3)</script>
+			<script>efis.tvTavBtClick(0, 3)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -164,7 +164,7 @@
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(4)</script>
+			<script>efis.tvTavBtClick(0, 4)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -199,7 +199,7 @@
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(5)</script>
+			<script>efis.tvTavBtClick(0, 5)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -234,7 +234,7 @@
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(6)</script>
+			<script>efis.tvTavBtClick(0, 6)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -269,7 +269,7 @@
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(7)</script>
+			<script>efis.tvTavBtClick(0, 7)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -304,7 +304,7 @@
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(8)</script>
+			<script>efis.tvTavBtClick(0, 8)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -339,7 +339,7 @@
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(9)</script>
+			<script>efis.tvTavBtClick(0, 9)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -376,7 +376,7 @@
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(10)</script>
+			<script>efis.tvTavBtClick(0, 10)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -411,7 +411,7 @@
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(11)</script>
+			<script>efis.tvTavBtClick(0, 11)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -428,7 +428,7 @@
 
     <animation>
 	<type>translate</type>
-	<object-name>TAB1FA</object-name>
+	<object-name>TAB1F</object-name>
 	<property>instrumentation/tvtab[0]/bt12</property>
 	<factor>0.0016</factor>
 	<axis>
@@ -439,14 +439,14 @@
     </animation>
     <animation>
         <type>pick</type>
-        <object-name>TAB1FA</object-name>
+        <object-name>TAB1F</object-name>
         <visible>true</visible>
         <action>
           <button>0</button>
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(12)</script>
+			<script>efis.tvTavBtClick(0, 12)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -463,7 +463,7 @@
 
     <animation>
 	<type>translate</type>
-	<object-name>TAB1AK</object-name>
+	<object-name>TAB1CLR</object-name>
 	<property>instrumentation/tvtab[0]/bt13</property>
 	<factor>0.0016</factor>
 	<axis>
@@ -474,14 +474,14 @@
     </animation>
     <animation>
         <type>pick</type>
-        <object-name>TAB1AK</object-name>
+        <object-name>TAB1CLR</object-name>
         <visible>true</visible>
         <action>
           <button>0</button>
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(13)</script>
+			<script>efis.tvTavBtClick(0, 13)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -498,7 +498,7 @@
 
     <animation>
 	<type>translate</type>
-	<object-name>TAB1LV</object-name>
+	<object-name>TAB1AK</object-name>
 	<property>instrumentation/tvtab[0]/bt14</property>
 	<factor>0.0016</factor>
 	<axis>
@@ -509,14 +509,14 @@
     </animation>
     <animation>
         <type>pick</type>
-        <object-name>TAB1LV</object-name>
+        <object-name>TAB1AK</object-name>
         <visible>true</visible>
         <action>
           <button>0</button>
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(14)</script>
+			<script>efis.tvTavBtClick(0, 14)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -533,7 +533,7 @@
 
     <animation>
 	<type>translate</type>
-	<object-name>TAB1WZ</object-name>
+	<object-name>TAB1LW</object-name>
 	<property>instrumentation/tvtab[0]/bt15</property>
 	<factor>0.0016</factor>
 	<axis>
@@ -544,14 +544,14 @@
     </animation>
     <animation>
         <type>pick</type>
-        <object-name>TAB1WZ</object-name>
+        <object-name>TAB1LW</object-name>
         <visible>true</visible>
         <action>
           <button>0</button>
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(15)</script>
+			<script>efis.tvTavBtClick(0, 15)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -586,7 +586,7 @@
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(16)</script>
+			<script>efis.tvTavBtClick(0, 16)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -603,7 +603,7 @@
 
     <animation>
 	<type>translate</type>
-	<object-name>TAB1TVM</object-name>
+	<object-name>TAB1VAS</object-name>
 	<property>instrumentation/tvtab[0]/bt17</property>
 	<factor>0.0016</factor>
 	<axis>
@@ -614,14 +614,14 @@
     </animation>
     <animation>
         <type>pick</type>
-        <object-name>TAB1TVM</object-name>
+        <object-name>TAB1VAS</object-name>
         <visible>true</visible>
         <action>
           <button>0</button>
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(17)</script>
+			<script>efis.tvTavBtClick(0, 17)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -638,7 +638,7 @@
 
     <animation>
 	<type>translate</type>
-	<object-name>TAB1RCN</object-name>
+	<object-name>TAB1RDR</object-name>
 	<property>instrumentation/tvtab[0]/bt18</property>
 	<factor>0.0016</factor>
 	<axis>
@@ -649,14 +649,14 @@
     </animation>
     <animation>
         <type>pick</type>
-        <object-name>TAB1RCN</object-name>
+        <object-name>TAB1RDR</object-name>
         <visible>true</visible>
         <action>
           <button>0</button>
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(18)</script>
+			<script>efis.tvTavBtClick(0, 18)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -691,7 +691,7 @@
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(19)</script>
+			<script>efis.tvTavBtClick(0, 19)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -726,7 +726,7 @@
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(20)</script>
+			<script>efis.tvTavBtClick(0, 20)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>
@@ -761,7 +761,7 @@
           <repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>efis.tvTav1BtClick(21)</script>
+			<script>efis.tvTavBtClick(0, 21)</script>
 		</binding>
 		<binding>
 			<command>property-toggle</command>

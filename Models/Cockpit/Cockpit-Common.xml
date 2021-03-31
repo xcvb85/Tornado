@@ -2,11 +2,6 @@
  <path>Aircraft/Tornado/Models/Cockpit/Parts/Cockpit.ac</path>
 
  <model>
-  <name>Navigator Panel</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Parts/navigator.xml</path>
- </model>
-
- <model>
   <name>Throttle</name>
   <path>Aircraft/Tornado/Models/Cockpit/Parts/throttle.xml</path>
   <offsets>
