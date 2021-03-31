@@ -79,10 +79,10 @@ var toggleScale = func {
   }
   zoom = zooms[zoom_curr];
   M2TEX = 1/(meterPerPixel[zoom]*math.cos(getprop('/position/latitude-deg')*D2R));
-  setprop("jaguar/displays/scale", zoom_curr);
+  setprop("tornado/displays/scale", zoom_curr);
 }
 
-var maps_base = getprop("/sim/fg-home") ~ '/cache/mapsJaguar';
+var maps_base = getprop("/sim/fg-home") ~ '/cache/mapsTornado';
 
 # max zoom 18
 # light_all,
@@ -113,7 +113,7 @@ var tiles = setsize([], num_tiles[0]);
 var last_tile = [-1,-1];
 var last_type = type;
 var last_zoom = zoom;
-var lastLiveMap = getprop("jaguar/displays/live-map");
+var lastLiveMap = getprop("tornado/displays/live-map");
 var lastDay   = TRUE;
 
 # stuff
@@ -345,11 +345,11 @@ var MM = {
 		}
 
 		if (me.off == TRUE) {
-			setprop("jaguar/avionics/brightness-mm", 0);
+			setprop("tornado/avionics/brightness-mm", 0);
 			settimer(func{me.loop();},0.5);
 			return;
 		} else {
-			setprop("jaguar/avionics/brightness-mm", me.brightness);
+			setprop("tornado/avionics/brightness-mm", me.brightness);
 			#setprop("ja37/avionics/cursor-on", cursorOn);
 		}
 		if (me.day == TRUE) {
@@ -631,7 +631,7 @@ var MM = {
 			}
 		}
 
-		me.liveMap = getprop("jaguar/displays/live-map");
+		me.liveMap = getprop("tornado/displays/live-map");
 		me.zoomed = zoom != last_zoom;
 		if(me.center_tile_int[0] != last_tile[0] or me.center_tile_int[1] != last_tile[1] or type != last_type or me.zoomed or me.liveMap != lastLiveMap or lastDay != me.day)  {
 			for(var x = 0; x < num_tiles[0]; x += 1) {
@@ -668,7 +668,7 @@ var MM = {
 					      	  		})
 					          #.done(func {print('received image ' ~ img_path); tile.set("src", img_path);})
 					          .fail(func (r) {#print('Failed to get image ' ~ img_path ~ ' ' ~ r.status ~ ': ' ~ r.reason);
-					          				tile.set("src", "Aircraft/Jaguar-GR1/Models/MovingMap/emptyTile.png");
+					          				tile.set("src", "Aircraft/Tornado/Models/Cockpit/Instruments/rpmd/emptyTile.png");
 					      					tile.update();
 					      					});
 					    } elsif (io.stat(img_path) != nil) {# cached image found, reusing
@@ -677,7 +677,7 @@ var MM = {
 					      	tile.update();
 					    } else {
 					    	# internet not allowed, so noise tile shown
-					    	tile.set("src", "Aircraft/Jaguar-GR1/Models/MovingMap/noiseTile.png");
+					    	tile.set("src", "Aircraft/Tornado/Models/Cockpit/Instruments/rpmd/noiseTile.png");
 					      	tile.update();
 					    }
 					})();

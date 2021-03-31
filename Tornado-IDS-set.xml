@@ -38,6 +38,12 @@
 			</default>
 		</menubar>
 	</sim>
+	<tornado>
+		<displays>
+		<live-map type="bool">true</live-map>
+		<scale type="int">0</scale>
+		</displays>
+	</tornado>
 	<nasal>
 		<libraries>
 			<file>Aircraft/Tornado/Nasal/libraries.nas</file>

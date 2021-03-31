@@ -10,7 +10,7 @@
 	</model>
 	<model>
 		<name>RPMD</name>
-		<path>Aircraft/Tornado/Models/Cockpit/Instruments/rpmd/rpmd.ac</path>
+		<path>Aircraft/Tornado/Models/Cockpit/Instruments/rpmd/rpmd.xml</path>
 		<offsets>
 			<x-m>-4.745</x-m>
 			<y-m>0.000</y-m>
