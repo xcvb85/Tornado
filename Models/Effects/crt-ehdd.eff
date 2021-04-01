@@ -15,6 +15,9 @@
 		<display-enabled type="int">
 			<use>systems/electrical/outputs/ehdd</use>
 		</display-enabled>
+		<display-zoom type="int">
+			<use>instrumentation/ehdd/btX2</use>
+		</display-zoom>
 	</parameters>
 
 	<technique n="5">
@@ -76,6 +79,11 @@
 				<name>display_enabled</name>
 				<type>int</type>
 				<value><use>display-enabled</use></value>
+			</uniform>
+			<uniform>
+				<name>display_zoom</name>
+				<type>int</type>
+				<value><use>display-zoom</use></value>
 			</uniform>
 		</pass>
 	</technique>

@@ -15,7 +15,7 @@
 		<object-name>EHDD1.screen</object-name>
 		<condition>
 			<less-than>
-				<property>instrumentation/ehdd/knob0</property>
+				<property>instrumentation/ehdd/serviceable</property>
 				<value>2</value>
 			</less-than>
 		</condition>
