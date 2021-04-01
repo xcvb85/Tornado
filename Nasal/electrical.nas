@@ -269,7 +269,7 @@ var Consumer = {
     new: func(name, current, minVoltage) {
         obj = { parents : [Consumer],
             Devices: [],
-            Connected: props.globals.initNode("instrumentation/" ~ name ~ "/serviceable", 0, "BOOL"),
+            Connected: props.globals.initNode("instrumentation/" ~ name ~ "/serviceable", 0, "INT"),
             Running: props.globals.initNode(ELNode ~ "outputs/" ~ name, 0, "DOUBLE"),
             Current: current,
             MinVoltage: minVoltage,
@@ -399,10 +399,16 @@ var battery = Battery.new("Battery");
 var generator1 = Generator.new("Generator1", "/engines/engine[0]/running", 28.5);
 var generator2 = Generator.new("Generator2", "/engines/engine[1]/running", 28.5);
 #var apu = APU.new("APU", "/engines/engine[2]/running", 28.5);
+var ehdd = Consumer.new("ehdd", 4, 18.1);
+var tvtab1 = Consumer.new("tvtab1", 4, 17.9);
+var tvtab2 = Consumer.new("tvtab2", 4, 18.0);
 elBus.append(battery);
 elBus.append(generator1);
 elBus.append(generator2);
 #elBus.append(apu);
+elBus.append(ehdd);
+elBus.append(tvtab1);
+elBus.append(tvtab2);
 
 # no separate switch
 setprop("instrumentation/hud/serviceable", 1);

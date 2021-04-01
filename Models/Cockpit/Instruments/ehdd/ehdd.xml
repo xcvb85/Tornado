@@ -1,40 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>ehdd.ac</path>
-
 	<effect>
-		<inherits-from>Aircraft/Tornado/Models/Effects/crt</inherits-from>
+		<inherits-from>Aircraft/Tornado/Models/Effects/crt-ehdd</inherits-from>
 		<object-name>EHDD1.screen</object-name>
 	</effect>
 	<effect>
-		<inherits-from>Aircraft/Tornado/Models/Effects/crt</inherits-from>
+		<inherits-from>Aircraft/Tornado/Models/Effects/crt-ehdd</inherits-from>
 		<object-name>EHDD2.screen</object-name>
 	</effect>
-
-	<animation>
-		<type>pick</type>
-		<object-name>BTX2</object-name>
-		<visible>true</visible>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>instrumentation/ehdd/swX2</property>
-			</binding>
-		</action>
-	</animation>
-	<animation>
-		<type>translate</type>
-		<object-name>BTX2</object-name>
-		<property>instrumentation/ehdd/swX2</property>
-		<factor>0.0016</factor>
-		<axis>
-			<x>-1</x>
-			<y> 0</y>
-			<z> 0</z>
-		</axis>
-	</animation>
 
 	<animation>
 		<type>select</type>
@@ -46,10 +20,36 @@
 			</less-than>
 		</condition>
 	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>btX2</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/ehdd/btX2</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>btX2</object-name>
+		<property>instrumentation/ehdd/btX2</property>
+		<factor>0.0016</factor>
+		<axis>
+			<x>-1</x>
+			<y> 0</y>
+			<z> 0</z>
+		</axis>
+	</animation>
+
 	<animation>
 		<type>rotate</type>
 		<object-name>KN0</object-name>
-		<property>instrumentation/ehdd/knob0</property>
+		<property>instrumentation/ehdd/serviceable</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>100</dep></entry>
 			<entry><ind>2</ind><dep>45</dep></entry>
@@ -76,7 +76,7 @@
 			<interval-sec>0.1</interval-sec>
 			<binding>
 				<command>property-adjust</command>
-				<property>instrumentation/ehdd/knob0</property>
+				<property>instrumentation/ehdd/serviceable</property>
 				<mask>integer</mask>
 				<min>0</min>
 				<max>2</max>
@@ -90,7 +90,7 @@
 			<interval-sec>0.1</interval-sec>
 			<binding>
 				<command>property-adjust</command>
-				<property>instrumentation/ehdd/knob0</property>
+				<property>instrumentation/ehdd/serviceable</property>
 				<mask>integer</mask>
 				<min>0</min>
 				<max>2</max>
