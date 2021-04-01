@@ -38,6 +38,12 @@
 			</default>
 		</menubar>
 	</sim>
+	<tornado>
+		<displays>
+		<live-map type="bool">true</live-map>
+		<scale type="int">0</scale>
+		</displays>
+	</tornado>
 	<nasal>
 		<libraries>
 			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
@@ -47,5 +53,14 @@
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/sbs.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/dir.nas</file>
 		</libraries>
+		<efis>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/rpmd/moving-map.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/Framework.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/rdr.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/plan.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/nav.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/softkeys.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/TVTAB_IDS.nas</file>
+		</efis>
 	</nasal>
 </PropertyList>

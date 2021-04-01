@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<model>
+		<name>Navigator Panel</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Parts/navigator_adv.xml</path>
+	</model>
+	<model>
 		<name>Cockpit-Common</name>
 		<path>Aircraft/Tornado/Models/Cockpit/Cockpit-Common.xml</path>
 	</model>
@@ -24,21 +28,4 @@
 			<pitch-deg>-25.0</pitch-deg>
 		</offsets>
 	</model>
-	<model>
-		<name>TVTAB</name>
-		<path>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/tvtab1.xml</path>
-		<offsets>
-			<x-m>-4.710</x-m>
-			<y-m>0.000</y-m>
-			<z-m>-0.650</z-m>
-			<pitch-deg>-10.0</pitch-deg>
-		</offsets>
-	</model>
-	<animation>
-		<object-name>TVTAB</object-name>
-		<type>select</type>
-	    <condition>
-			<property>instrumentation/ehdd/swTVTAB</property>
-		</condition>
-    </animation>
 </PropertyList>

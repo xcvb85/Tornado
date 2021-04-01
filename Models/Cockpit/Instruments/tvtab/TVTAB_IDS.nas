@@ -1,5 +1,4 @@
-var TvTab1Instance = {};
-var TvTab2Instance = {};
+var TvTabInstances = [{}, {}];
 
 var tvTabListener = 0;
 
@@ -149,63 +148,63 @@ var TVTAB = {
 };
 
 var bak = 0;
-var tvTav1BtClick = func(input = -1) {
+var tvTavBtClick = func(index = 0, input = -1) {
 
 	if (input < 10) {
-		TvTab1Instance.BtClick(input);
+		TvTabInstances[index].BtClick(input);
 	}
 	else {
 		if (input == 10) {
-			TvTab1Instance.ActivatePage(0, 0); #PLN
-			TvTab1Instance.ActivateMenu(5);
+			TvTabInstances[index].ActivatePage(0, 0); #PLN
+			TvTabInstances[index].ActivateMenu(5);
 		}
 		else if (input == 11) {
-			TvTab1Instance.ActivatePage(1, 0); #NAV
-			TvTab1Instance.ActivateMenu(6);
+			TvTabInstances[index].ActivatePage(1, 0); #NAV
+			TvTabInstances[index].ActivateMenu(6);
 		}
 		else if (input == 12) {
-			TvTab1Instance.ActivatePage(2, 0); #FA
-			TvTab1Instance.ActivateMenu(7);
+			TvTabInstances[index].ActivatePage(2, 0); #FA
+			TvTabInstances[index].ActivateMenu(7);
 		}
 		else if (input == 13) {
-			if (TvTab1Instance.GetActiveMenu() > 3) {
-				bak = TvTab1Instance.GetActiveMenu();
-				TvTab1Instance.ActivateMenu(1); #A-K
+			if (TvTabInstances[index].GetActiveMenu() > 3) {
+				bak = TvTabInstances[index].GetActiveMenu();
+				TvTabInstances[index].ActivateMenu(1); #A-K
 			}
 			else {
-				TvTab1Instance.ActivateMenu(bak);
+				TvTabInstances[index].ActivateMenu(bak);
 			}
 		}
 		else if (input == 14) {
-			if (TvTab1Instance.GetActiveMenu() > 3) {
-				bak = TvTab1Instance.GetActiveMenu();
-				TvTab1Instance.ActivateMenu(2); #L-V
+			if (TvTabInstances[index].GetActiveMenu() > 3) {
+				bak = TvTabInstances[index].GetActiveMenu();
+				TvTabInstances[index].ActivateMenu(2); #L-V
 			}
 			else {
-				TvTab1Instance.ActivateMenu(bak);
+				TvTabInstances[index].ActivateMenu(bak);
 			}
 		}
 		else if (input == 15) {
-			if (TvTab1Instance.GetActiveMenu() > 3) {
-				bak = TvTab1Instance.GetActiveMenu();
-				TvTab1Instance.ActivateMenu(3); #W-Z
+			if (TvTabInstances[index].GetActiveMenu() > 3) {
+				bak = TvTabInstances[index].GetActiveMenu();
+				TvTabInstances[index].ActivateMenu(3); #W-Z
 			}
 			else {
-				TvTab1Instance.ActivateMenu(bak);
+				TvTabInstances[index].ActivateMenu(bak);
 			}
 		}
 		else if (input == 20) {
-			if (TvTab1Instance.GetActiveMenu() > 3) {
-				bak = TvTab1Instance.GetActiveMenu();
-				TvTab1Instance.ActivateMenu(0); #0-9
+			if (TvTabInstances[index].GetActiveMenu() > 3) {
+				bak = TvTabInstances[index].GetActiveMenu();
+				TvTabInstances[index].ActivateMenu(0); #0-9
 			}
 			else {
-				TvTab1Instance.ActivateMenu(bak);
+				TvTabInstances[index].ActivateMenu(bak);
 			}
 		}
 		else if (input == 21) {
-			if (TvTab1Instance.GetActiveMenu() < 4) {
-				TvTab1Instance.ActivateMenu(bak); #Enter
+			if (TvTabInstances[index].GetActiveMenu() < 4) {
+				TvTabInstances[index].ActivateMenu(bak); #Enter
 			}
 		}
 	}
@@ -222,8 +221,17 @@ tvTabListener = setlistener("/sim/signals/fdm-initialized", func () {
 		"view": [310, 250],
 		"mipmapping": 1
 	});
-	tvTav1Canvas.addPlacement({"node": "EHDD.screen"});
-	TvTab1Instance = TVTAB.new(tvTav1Canvas.createGroup(), 0);
+	var tvTav2Canvas = canvas.new({
+		"name": "TVTAB1",
+		"size": [512, 512],
+		"view": [310, 250],
+		"mipmapping": 1
+	});
+
+	tvTav1Canvas.addPlacement({"node": "TVTAB1.screen"});
+	tvTav2Canvas.addPlacement({"node": "TVTAB2.screen"});
+	TvTabInstances[0] = TVTAB.new(tvTav1Canvas.createGroup(), 0);
+	TvTabInstances[1] = TVTAB.new(tvTav2Canvas.createGroup(), 0);
 
 	removelistener(tvTabListener);
 });

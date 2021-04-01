@@ -202,7 +202,7 @@
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/plan.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/nav.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/softkeys.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/TVTAB.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/TVTAB_ADV.nas</file>
 		</efis>
 	</nasal>
 </PropertyList>
