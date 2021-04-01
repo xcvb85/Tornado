@@ -1,23 +1,8 @@
-
-var (width,height) = (512,512);
-
+var (width, height) = (512, 512);
 
 var FALSE = 0;
 var TRUE = 1;
 
-
-#var window = canvas.Window.new([height, height],"dialog")
-#					.set('x', width*2.75)
-#                   .set('title', "TI display");
-#var gone = 0;
-#window.del = func() {
-#  print("Cleaning up window:","TI","\n");
-  #update_timer.stop();
-#  gone = TRUE;
-#
-#  call(canvas.Window.del, [], me);
-#};
-#var root = window.getCanvas(1).createGroup();
 var mycanvas = nil;
 var root = nil;
 var setupCanvas = func {
@@ -30,8 +15,6 @@ var setupCanvas = func {
 	});
 	root = mycanvas.createGroup();
 	root.set("font", "LiberationFonts/LiberationMono-Regular.ttf");
-	#window.getCanvas(1).setColorBackground(0.3, 0.3, 0.3, 1.0);
-	#window.getCanvas(1).addPlacement({"node": "ti_screen", "texture": "ti.png"});
 	mycanvas.setColorBackground(0, 0, 0, 1.0);
 	mycanvas.addPlacement({"node": "RPMD.screen"});
 }
@@ -56,19 +39,6 @@ var zooms      = [10, 11];
 var zoomLevels = [100, 50];
 var zoom_curr  = 0;
 var zoom = zooms[zoom_curr];
-# display width = 0.3 meter
-# 381 pixels = 0.300 meter   1270 pixels/meter = 1:1
-# so at setting 800:1   1 meter = 800 meter    meter/pixel= 1270/800 = 1.58
-#cos = 0.63
-#print("200   = "~200000/1270);
-#print("400   = "~400000/1270);
-#print("800   = "~800000/1270);
-#print("1.6   = "~1600000/1270);
-#print("3.2   = "~3200000/1270);
-#print("");
-#for(i=0;i<20;i+=1) {
-#	print(i~"  ="~meterPerPixel[i]*math.cos(65*D2R)~" m/px");
-#}
 
 var M2TEX = 1/(meterPerPixel[zoom]*math.cos(getprop('/position/latitude-deg')*D2R));
 
@@ -84,14 +54,6 @@ var toggleScale = func {
 
 var maps_base = getprop("/sim/fg-home") ~ '/cache/mapsTornado';
 
-# max zoom 18
-# light_all,
-# dark_all,
-# light_nolabels,
-# light_only_labels,
-# dark_nolabels,
-# dark_only_labels
-
 var makeUrl =
   string.compileTemplate('https://b.tile.openstreetmap.org/{z}/{x}/{y}.png');
 var makePath =
@@ -99,16 +61,12 @@ var makePath =
 var num_tiles = [5, 5];# must be uneven, 5x5 will ensure we never see edge of map tiles when canvas is 512px high.
 
 var center_tile_offset = [(num_tiles[0] - 1) / 2,(num_tiles[1] - 1) / 2];#(width/tile_size)/2,(height/tile_size)/2];
-#  (num_tiles[0] - 1) / 2,
-#  (num_tiles[1] - 1) / 2
-#];
 
 ##
 # initialize the map by setting up
 # a grid of raster images
 
 var tiles = setsize([], num_tiles[0]);
-
 
 var last_tile = [-1,-1];
 var last_type = type;
@@ -201,33 +159,9 @@ var MM = {
 		me.rootRealCenter = root.createChild("group")
 			.setTranslation(width/2,height/2)
 			.set("z-index", 10);
-			
-		# own symbol
-		me.selfSymbol = me.rootCenter.createChild("path")
-			  .moveTo(0, 0)
-			  .lineTo(0, 2)
-		      .moveTo(0, -16)
-		      .lineTo(11, 8)
-		      .lineTo(-11, 8)
-		      .lineTo(0, -16)
-		      .setColor(COLOR_RED)
-		      .set("z-index", 10)
-		      .setStrokeLineWidth(w*2);
 
 		me.ppGrp = me.rootCenter.createChild("group")
 			.set("z-index", 2);
-
-	    # threat circles
-#	    me.threats = [];
-#	    for (var i = 0; i < maxThreats; i += 1) {
-#	    	append(me.threats, me.radar_group.createChild("path")
-#	               .moveTo(-100, 0)
-#	               .arcSmallCW(100, 100, 0, 200, 0)
-#	               .arcSmallCW(100, 100, 0, -200, 0)
-#	               .setStrokeLineWidth(w)
-#	               .hide()
-#	               .setColor(COLOR_RED));
-#	    }
 
 	    # route symbols
 	    me.steerpoint = [];
@@ -237,8 +171,6 @@ var MM = {
 	    
 	    me.steerPoly = me.rootCenter.createChild("group")
 	    			.set("z-index", 6);
-
-
 	},
 
 	new: func {
@@ -333,8 +265,6 @@ var MM = {
 	#
 	########################################################################################################
 	########################################################################################################
-
-
 
 	loop: func {
 

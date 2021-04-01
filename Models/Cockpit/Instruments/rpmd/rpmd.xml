@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>rpmd.ac</path>
-
 	<effect>
 		<inherits-from>Aircraft/Tornado/Models/Effects/rpmd</inherits-from>
 		<object-name>RPMD.screen</object-name>
 	</effect>
+	<animation>
+		<type>pick</type>
+		<object-name>group_874</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/ehdd/serviceable</property>
+			</binding>
+		</action>
+	</animation>
 </PropertyList>
