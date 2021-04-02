@@ -16,9 +16,9 @@
 		</sound>
 		<multiplay>
 			<generic>
-				<float n="1" type="double" alias="/engines/engine[0]/nozzle-pos-norm" />
+				<float n="1" type="double" alias="/engines/engine[0]/n2" />
 				<bool n="1" type="bool" alias="/engines/engine[0]/augmentation" />
-				<float n="2" type="double" alias="/engines/engine[1]/nozzle-pos-norm" />
+				<float n="2" type="double" alias="/engines/engine[1]/n2" />
 				<bool n="2" type="bool" alias="/engines/engine[1]/augmentation" />
 			</generic>
 		</multiplay>

@@ -1459,7 +1459,7 @@
   </offsets>
  </model>
  <model>
-  <path>Effects/afterburner.xml</path>
+  <path>Aircraft/Tornado/Models/Effects/afterburner/afterburner.xml</path>
   <condition>
    <property>sim/multiplay/generic/bool[1]</property>
   </condition>
@@ -1480,7 +1480,7 @@
   </offsets>
  </model>
  <model>
-  <path>Effects/afterburner.xml</path>
+  <path>Aircraft/Tornado/Models/Effects/afterburner/afterburner.xml</path>
   <condition>
    <property>sim/multiplay/generic/bool[2]</property>
   </condition>

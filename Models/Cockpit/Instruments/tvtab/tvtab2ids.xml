@@ -2,7 +2,7 @@
 <PropertyList>
 	<path>tvtab2ids.ac</path>
 	<effect>
-		<inherits-from>Aircraft/Tornado/Models/Effects/crt-tvtab2</inherits-from>
+		<inherits-from>Aircraft/Tornado/Models/Effects/displays/crt-tvtab2</inherits-from>
 		<object-name>TVTAB2.screen</object-name>
 	</effect>
 	<!--#########  Upper Buttons ########## -->

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<name>crt-ehdd</name>
+	<name>crt-tvtab2</name>
 	<inherits-from>Effects/model-default</inherits-from>
 	<parameters>
 		<!-- Dirt -->
@@ -13,11 +13,8 @@
 			<internal-format>normalized</internal-format>
 		</texture>
 		<display-enabled type="int">
-			<use>systems/electrical/outputs/ehdd</use>
+			<use>systems/electrical/outputs/tvtab2</use>
 		</display-enabled>
-		<display-zoom type="int">
-			<use>instrumentation/ehdd/btX2</use>
-		</display-zoom>
 	</parameters>
 
 	<technique n="5">
@@ -62,7 +59,7 @@
 			</texture-unit>
 
 			<program>
-				<fragment-shader>Aircraft/Tornado/Models/Effects/crt.frag</fragment-shader>
+				<fragment-shader>Aircraft/Tornado/Models/Effects/displays/crt.frag</fragment-shader>
 			</program>
 
 			<uniform>
@@ -79,11 +76,6 @@
 				<name>display_enabled</name>
 				<type>int</type>
 				<value><use>display-enabled</use></value>
-			</uniform>
-			<uniform>
-				<name>display_zoom</name>
-				<type>int</type>
-				<value><use>display-zoom</use></value>
 			</uniform>
 		</pass>
 	</technique>
