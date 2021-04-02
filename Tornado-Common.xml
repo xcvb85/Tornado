@@ -3,6 +3,37 @@
 	<sim include="Systems/views.xml">
 		<flight-model>jsb</flight-model>
 		<aero>Tornado</aero>
+		<help>
+			<title>Panavia Tornado</title>
+			<key>
+				<name>b</name>
+				<desc>apply all brakes</desc>
+			</key>
+			<key>
+				<name>B</name>
+				<desc>toggle parking brake</desc>
+			</key>
+			<key>
+				<name>d/D</name>
+				<desc>open/close canopy</desc>
+			</key>
+			<key>
+				<name>g/G</name>
+				<desc>gear up/down</desc>
+			</key>
+			<key>
+				<name>&gt;</name>
+				<desc>wing sweep aft</desc>
+			</key>
+			<key>
+				<name>&lt;</name>
+				<desc>wing sweep forward</desc>
+			</key>
+			<key>
+				<name>[ ]</name>
+				<desc>flaps up/down</desc>
+			</key>
+		</help>
 		<flaps>
 			<setting>0.0</setting>
 			<setting>0.5</setting>

@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-            <key n="60">
-                <name>&lt;</name>
-                <desc>Decrease Sweep</desc>
-                <binding>
-                    <command>nasal</command>
-                    <script>libraries.wingSweep(-1)</script>
-                </binding>
-            </key>
-            <key n="62">
-                <name>&gt;</name>
-                <desc>Increase Sweep</desc>
-                <binding>
-                    <command>nasal</command>
-                    <script>libraries.wingSweep(1)</script>
-                </binding>
-            </key>
+	<key n="60">
+		<name>&lt;</name>
+		<desc>Decrease Sweep</desc>
+		<binding>
+			<command>nasal</command>
+			<script>libraries.wingSweep(-1)</script>
+		</binding>
+	</key>
+	<key n="62">
+		<name>&gt;</name>
+		<desc>Increase Sweep</desc>
+		<binding>
+			<command>nasal</command>
+			<script>libraries.wingSweep(1)</script>
+		</binding>
+	</key>
+	<key n="68">
+		<name>D</name>
+		<desc>close-canopy</desc>
+		<binding>
+			<command>property-assign</command>
+			<property>sim/model/canopy-positions/Canopy/position-norm</property>
+			<value>0</value>
+		</binding>
+	</key>
+	<key n="100">
+		<name>d</name>
+		<desc>canopy</desc>
+		<binding>
+			<command>property-assign</command>
+			<property>sim/model/canopy-positions/Canopy/position-norm</property>
+			<value>1</value>
+		</binding>
+	</key>
 </PropertyList>
