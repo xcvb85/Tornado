@@ -198,13 +198,23 @@
          <z2-m>1.628</z2-m>
       </axis>
    </animation>
-   <animation>
-      <type>rotate</type>
-      <object-name>leftaileron</object-name>
-      <property>surface-positions/left-taileron-pos-norm</property>
-      <factor>5.0</factor>
+  <animation>
+    <type>rotate</type>
+    <object-name>leftaileron</object-name>
+    <expression>
+      <sum>
+        <product>
+          <property>surface-positions/right-aileron-pos-norm</property>
+          <value>6</value>
+        </product>
+        <product>
+          <property>surface-positions/elevator-pos-norm</property>
+          <value>25</value>
+        </product>
+      </sum>
+    </expression>
       <center>
-         <x-m>5.021</x-m>
+         <x-m>5.721</x-m>
          <y-m>0</y-m>
          <z-m>-0.911</z-m>
       </center>
@@ -213,14 +223,24 @@
          <y>1</y>
          <z>0</z>
       </axis>
-   </animation>
-   <animation>
-      <type>rotate</type>
-      <object-name>rightaileron</object-name>
-      <property>surface-positions/right-taileron-pos-norm</property>
-      <factor>5.0</factor>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>rightaileron</object-name>
+    <expression>
+      <sum>
+        <product>
+          <property>surface-positions/right-aileron-pos-norm</property>
+          <value>-6</value>
+        </product>
+        <product>
+          <property>surface-positions/elevator-pos-norm</property>
+          <value>25</value>
+        </product>
+      </sum>
+    </expression>
       <center>
-         <x-m>5.021</x-m>
+         <x-m>5.721</x-m>
          <y-m>0</y-m>
          <z-m>-0.911</z-m>
       </center>
@@ -229,7 +249,7 @@
          <y>1</y>
          <z>0</z>
       </axis>
-   </animation>
+  </animation>
 
    <!-- no shadows -->
    <animation>
