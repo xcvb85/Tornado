@@ -10,7 +10,8 @@ var TVTAB = {
 		# create pages
 		append(m.Pages, canvas_plan.new(group.createChild('group'))); #0
 		append(m.Pages, canvas_nav.new(group.createChild('group'))); #1
-		append(m.Pages, canvas_rdr.new(group.createChild('group'))); #2
+		append(m.Pages, canvas_fa.new(group.createChild('group'))); #2
+		append(m.Pages, canvas_empty.new(group.createChild('group'))); #3
 
 		m.SkInstance = canvas_softkeys.new(group.createChild('group'));
 
@@ -165,6 +166,14 @@ var tvTavBtClick = func(index = 0, input = -1) {
 		else if (input == 12) {
 			TvTabInstances[index].ActivatePage(2, 0); #FA
 			TvTabInstances[index].ActivateMenu(7);
+		}
+		else if (input == 17) {
+			TvTabInstances[index].ActivatePage(3, 0); #TVM - Missile TV
+			TvTabInstances[index].ActivateMenu(4);
+		}
+		else if (input == 18) {
+			TvTabInstances[index].ActivatePage(3, 0); #RCN - RECCE camera
+			TvTabInstances[index].ActivateMenu(4);
 		}
 		else if (input == 13) {
 			if (TvTabInstances[index].GetActiveMenu() > 3) {

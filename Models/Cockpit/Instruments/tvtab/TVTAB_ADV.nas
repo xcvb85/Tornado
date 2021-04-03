@@ -11,6 +11,7 @@ var TVTAB = {
 		append(m.Pages, canvas_plan.new(group.createChild('group'))); #0
 		append(m.Pages, canvas_nav.new(group.createChild('group'))); #1
 		append(m.Pages, canvas_rdr.new(group.createChild('group'))); #2
+		append(m.Pages, canvas_empty.new(group.createChild('group'))); #3
 
 		m.SkInstance = canvas_softkeys.new(group.createChild('group'));
 
@@ -101,7 +102,7 @@ var TVTAB = {
 		m.Menus[6].AddItem(SkItem.new(8, m, "NFX"));
 		m.Menus[6].AddItem(SkItem.new(9, m, "4/1"));
 
-		m.Menus[7].AddItem(SkItem.new(0, m, "LL")); #FA
+		m.Menus[7].AddItem(SkItem.new(0, m, "LL")); #RDR
 		m.Menus[7].AddItem(SkItem.new(1, m, "ML"));
 		m.Menus[7].AddItem(SkItem.new(2, m, "ATTK"));
 		m.Menus[7].AddItem(SkItem.new(4, m, "POS"));
@@ -163,7 +164,15 @@ var tvTavBtClick = func(index = 0, input = -1) {
 			TvTabInstances[index].ActivateMenu(6);
 		}
 		else if (input == 12) {
-			TvTabInstances[index].ActivatePage(2, 0); #FA
+			TvTabInstances[index].ActivatePage(3, 0); #F
+			TvTabInstances[index].ActivateMenu(4);
+		}
+		else if (input == 17) {
+			TvTabInstances[index].ActivatePage(3, 0); #VAS
+			TvTabInstances[index].ActivateMenu(4);
+		}
+		else if (input == 18) {
+			TvTabInstances[index].ActivatePage(2, 0); #RDR
 			TvTabInstances[index].ActivateMenu(7);
 		}
 		else if (input == 13) {
