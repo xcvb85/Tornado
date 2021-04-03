@@ -534,7 +534,8 @@
       <object-name>Fupperstrut</object-name>
       <object-name>fronttyre</object-name>
       <property>gear/gear[0]/compression-norm</property>
-      <factor>1.0</factor>
+      <factor>0.4</factor>
+      <offset-m>0.1</offset-m>
       <axis>
          <x>0.1</x>
          <y>0</y>
