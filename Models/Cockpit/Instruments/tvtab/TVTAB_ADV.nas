@@ -1,4 +1,4 @@
-var TvTabInstances = [{}, {}];
+var TvTabInstances = [];
 
 var tvTabListener = 0;
 
@@ -241,8 +241,7 @@ tvTabListener = setlistener("/sim/signals/fdm-initialized", func () {
 	tvTav2Canvas.addPlacement({"node": "TVTAB2.screen"});
 	tvTav1Canvas.addPlacement({"node": "EHDD1.screen"});
 	tvTav2Canvas.addPlacement({"node": "EHDD2.screen"});
-	TvTabInstances[0] = TVTAB.new(tvTav1Canvas.createGroup(), 0);
-	TvTabInstances[1] = TVTAB.new(tvTav2Canvas.createGroup(), 0);
-
+	append(TvTabInstances, TVTAB.new(tvTav1Canvas.createGroup(), 0));
+	append(TvTabInstances, TVTAB.new(tvTav2Canvas.createGroup(), 0));
 	removelistener(tvTabListener);
 });

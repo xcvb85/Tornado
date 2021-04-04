@@ -1,0 +1,34 @@
+# See: http://wiki.flightgear.org/MapStructure
+# Class things:
+var name = 'WPT_to';
+var parents = [DotSym];
+var __self__ = caller(0)[0];
+DotSym.makeinstance( name, __self__ );
+
+SymbolLayer.get(name).df_style = { # style to use by default
+	line_width: 3,
+	scale_factor: 1,
+	font: "Helvetica.txf",
+	font_size: 28,
+	font_color: [0,1,0],
+	active_color: [0,1,0],
+	inactive_color: [0,1,0]
+};
+
+var element_type = "group"; # we want a group, becomes "me.element"
+var active = nil;
+
+var init = func {
+	if(me.model.idx > 87) {
+		me.text = me.newText("X", me.style.font_color)
+			.setTranslation(5, 0)
+			.setScale(me.style.scale_factor);
+	}
+	else {
+		me.text = me.newText(chr(me.model.idx+65), me.style.font_color)
+			.setTranslation(5, 0)
+			.setScale(me.style.scale_factor);
+	}
+	me.draw();
+};
+var draw = func;
