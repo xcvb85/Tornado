@@ -554,7 +554,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>TAB1ON</object-name>
-		<property>instrumentation/tvtab1/serviceable</property>
+		<property>instrumentation/tvtab1/Connected</property>
 		<factor>0.0016</factor>
 		<axis>
 			<x>-1</x>
@@ -571,7 +571,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>instrumentation/tvtab1/serviceable</property>
+				<property>instrumentation/tvtab1/Connected</property>
 			</binding>
 		</action>
 	</animation>
@@ -579,10 +579,7 @@
 		<object-name>TAB1ON</object-name>
 		<type>material</type>
 		<condition>
-			<greater-than>
-				<property>systems/electrical/outputs/tvtab1</property>
-				<value>0</value>
-			</greater-than>
+			<property>systems/electrical/outputs/tvtab1</property>
 		</condition>
 		<emission>
 			<red>1.0</red>
