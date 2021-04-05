@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <PropertyList>
 	<path>nozzle.ac</path>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/lm1</inherits-from>
+		<object-name>needle</object-name>
+		<object-name>BG</object-name>
+	</effect>
 	<animation>
 		<type>select</type>
 		<object-name>Plane</object-name>

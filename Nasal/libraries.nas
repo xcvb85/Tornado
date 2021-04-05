@@ -9,6 +9,7 @@ var doMagicStartup = func {
 	setprop("instrumentation/ehdd/serviceable", "1");
 	setprop("instrumentation/tvtab1/serviceable", "1");
 	setprop("instrumentation/tvtab2/serviceable", "1");
+	setprop("sim/model/lightmap/instruments/factor", "1");
 	settimer(func {
 		setprop("controls/engines/engine[0]/cutoff", "false");
 		setprop("controls/engines/engine[1]/cutoff", "false");
