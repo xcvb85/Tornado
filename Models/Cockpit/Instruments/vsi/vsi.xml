@@ -6,16 +6,6 @@
 		<object-name>face</object-name>
 		<object-name>needle</object-name>
 	</effect>
-	<animation>
-		<type>select</type>
-		<object-name>vsi</object-name>
-		<condition>
-			<equals>
-				<property>sim/current-view/name</property>
-				<value>Cockpit View</value>
-			</equals>
-		</condition>
-	</animation>
 
 	<animation>
 		<name>needle</name>
@@ -42,70 +32,4 @@
 			<z>0</z>
 		</axis>
 	</animation>
-
-	<!-- lighting -->
-	<animation>
-		<object-name>mount</object-name>
-		<type>material</type>
-        <condition>
-            <greater-than>
-                <property>/fdm/jsbsim/systems/electrics/ac-essential-bus1</property>
-                <value>0</value>
-            </greater-than>
-            <not>
-                <property>sim/rendering/rembrandt/enabled</property>
-            </not>
-        </condition>
-        <emission>
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-		</emission>
-	</animation>
-	 <animation>
-		<object-name>face</object-name> 
-		<type>material</type>
-         <condition>
-             <greater-than>
-                 <property>/fdm/jsbsim/systems/electrics/ac-essential-bus1</property>
-                 <value>0</value>
-             </greater-than>
-             <not>
-                 <property>sim/rendering/rembrandt/enabled</property>
-             </not>
-         </condition>
-         <emission>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-		</emission>
-	</animation>
-	<animation>
-		<object-name>needle-w</object-name> 
-		<type>material</type>
-        <condition>
-            <greater-than>
-                <property>/fdm/jsbsim/systems/electrics/ac-essential-bus1</property>
-                <value>0</value>
-            </greater-than>
-            <not>
-                <property>sim/rendering/rembrandt/enabled</property>
-            </not>
-        </condition>
-        <emission>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-		</emission>
-	</animation>
-
-	<animation>
-		<type>range</type>
-		<min-m>0</min-m>
-		<max-m>50</max-m>
-	</animation>
-
 </PropertyList>

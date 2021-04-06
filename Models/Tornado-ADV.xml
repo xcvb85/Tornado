@@ -57,12 +57,10 @@
       <object-name>spoilerleft</object-name>
       <object-name>slatleft</object-name>
       <object-name>leftinner_pylon</object-name>
-      <object-name>leftouter_pylon</object-name>
       <object-name>flaps.R</object-name>
       <object-name>spoilerright</object-name>
       <object-name>slatright</object-name>
       <object-name>rightinner_pylon</object-name>
-      <object-name>rightouter_pylon</object-name>
       <object-name>maingeardoor_right</object-name>
       <object-name>maingeardoor_left</object-name>
       <object-name>pylon.R</object-name>
@@ -76,9 +74,6 @@
       <object-name>frontgeardoor1</object-name>
       <object-name>Canopy</object-name>
       <object-name>Windscreen</object-name>
-      <object-name>FuelHoseCover1</object-name>
-      <object-name>FuelHoseCover2</object-name>
-      <object-name>FuelHoseCover</object-name>
       <object-name>airintake1r</object-name>
       <object-name>airintake2r</object-name>
       <object-name>airintake1l</object-name>
@@ -110,12 +105,10 @@
       <object-name>spoilerleft</object-name>
       <object-name>slatleft</object-name>
       <object-name>leftinner_pylon</object-name>
-      <object-name>leftouter_pylon</object-name>
       <object-name>flaps.R</object-name>
       <object-name>spoilerright</object-name>
       <object-name>slatright</object-name>
       <object-name>rightinner_pylon</object-name>
-      <object-name>rightouter_pylon</object-name>
       <object-name>maingeardoor_right</object-name>
       <object-name>maingeardoor_left</object-name>
       <object-name>pylon.R</object-name>
@@ -129,9 +122,6 @@
       <object-name>frontgeardoor1</object-name>
       <object-name>Canopy</object-name>
       <object-name>Windscreen</object-name>
-      <object-name>FuelHoseCover1</object-name>
-      <object-name>FuelHoseCover2</object-name>
-      <object-name>FuelHoseCover</object-name>
       <object-name>airintake1r</object-name>
       <object-name>airintake2r</object-name>
       <object-name>airintake1l</object-name>
@@ -251,21 +241,6 @@
       </axis>
   </animation>
 
-   <!-- no shadows -->
-   <animation>
-      <type>noshadow</type>
-      <object-name>markings</object-name>
-      <object-name>left_flame</object-name>
-      <object-name>left_internal_flame</object-name>
-      <object-name>right_flame</object-name>
-      <object-name>right_internal_flame</object-name>
-      <object-name>red_light</object-name>
-      <object-name>green_light</object-name>
-      <object-name>lhcondensation cone</object-name>
-      <object-name>rhcondensation cone</object-name>
-      <object-name>cockpit</object-name>
-   </animation>
-
    <!-- wing sweep tornado 25(neutral), 45, 67 degrees-->
    <animation>
       <type>rotate</type>
@@ -274,7 +249,6 @@
       <object-name>greenlight1</object-name>
       <object-name>flaps.R</object-name>
       <object-name>slatright</object-name>
-      <object-name>rightouter_pylon</object-name>
       <object-name>rightinner_pylon</object-name>
       <object-name>rightinnerwingtank</object-name>
       <object-name>spoilerright</object-name>
@@ -375,42 +349,11 @@
    </animation>
    <animation>
       <type>rotate</type>
-      <name>rightvapour</name>
-      <object-name>rightouter_pylon</object-name>
-      <property>fdm/jsbsim/fcs/wing-sweep</property>
-      <interpolation>
-         <entry>
-            <ind>0.0</ind>
-            <dep>0</dep>
-         </entry>
-         <entry>
-            <ind>0.5</ind>
-            <dep>18</dep>
-         </entry>
-         <entry>
-            <ind>1.0</ind>
-            <dep>36</dep>
-         </entry>
-      </interpolation>
-      <center>
-         <x-m>2.513</x-m>
-         <y-m>5.810</y-m>
-         <z-m>-0.711</z-m>
-      </center>
-      <axis>
-         <x>0</x>
-         <y>0</y>
-         <z>1</z>
-      </axis>
-   </animation>
-   <animation>
-      <type>rotate</type>
       <object-name>sweepwing.L</object-name>
       <object-name>flaps.L</object-name>
       <object-name>navlight.L</object-name>
       <object-name>redlight1</object-name>
       <object-name>slatleft</object-name>
-      <object-name>leftouter_pylon</object-name>
       <object-name>leftinner_pylon</object-name>
       <object-name>leftinnerwingtank</object-name>
       <object-name>spoilerleft</object-name>
@@ -501,36 +444,6 @@
       <center>
          <x-m>1.6175</x-m>
          <y-m>-3.075</y-m>
-         <z-m>-0.711</z-m>
-      </center>
-      <axis>
-         <x>0</x>
-         <y>0</y>
-         <z>1</z>
-      </axis>
-   </animation>
-   <animation>
-      <type>rotate</type>
-      <name>leftvapour</name>
-      <object-name>leftouter_pylon</object-name>
-      <property>fdm/jsbsim/fcs/wing-sweep</property>
-      <interpolation>
-         <entry>
-            <ind>0.0</ind>
-            <dep>0</dep>
-         </entry>
-         <entry>
-            <ind>0.5</ind>
-            <dep>-18</dep>
-         </entry>
-         <entry>
-            <ind>1.0</ind>
-            <dep>-36</dep>
-         </entry>
-      </interpolation>
-      <center>
-         <x-m>2.513</x-m>
-         <y-m>-5.810</y-m>
          <z-m>-0.711</z-m>
       </center>
       <axis>
@@ -1325,26 +1238,6 @@
       </axis>
    </animation>
    <animation>
-      <type>select</type>
-      <object-name>lhcondensation cone</object-name>
-      <condition>
-         <greater-than>
-            <property>orientation/alpha-deg</property>
-            <value>9.0</value>
-         </greater-than>
-      </condition>
-   </animation>
-   <animation>
-      <type>select</type>
-      <object-name>rhcondensation cone</object-name>
-      <condition>
-         <greater-than>
-            <property>orientation/alpha-deg</property>
-            <value>9.0</value>
-         </greater-than>
-      </condition>
-   </animation>
-   <animation>
       <type>rotate</type>
       <object-name>Speedbrake.L</object-name>
       <object-name>Speedbrake.L.i</object-name>
@@ -1361,83 +1254,6 @@
          <x>0.0</x>
          <y>1.0</y>
          <z>0</z>
-      </axis>
-   </animation>
-
-   <!-- fuel hose animation -->
-   <animation>
-      <type>rotate</type>
-      <object-name>FuelHoseCover2</object-name>
-      <object-name>FuelHoseCover1</object-name>
-      <object-name>FuelHose1</object-name>
-      <object-name>FuelHose2</object-name>
-      <property>sim/model/FuelHose-positions/FuelHose/position-norm</property>
-      <interpolation>
-         <entry>
-            <ind>0</ind>
-            <dep>0</dep>
-         </entry>
-         <entry>
-            <ind>1</ind>
-            <dep>-20</dep>
-         </entry>
-      </interpolation>
-      <center>
-         <x-m>-3.729328</x-m>
-         <y-m>0.639756</y-m>
-         <z-m>-0.487807</z-m>
-      </center>
-      <axis>
-         <x>-0.009003</x>
-         <y>-0.103702</y>
-         <z>0.047597</z>
-      </axis>
-   </animation>
-   <animation>
-      <type>rotate</type>
-      <object-name>FuelHoseStrut</object-name>
-      <property>sim/model/FuelHose-positions/FuelHose/position-norm</property>
-      <interpolation>
-         <entry>
-            <ind>0</ind>
-            <dep>0</dep>
-         </entry>
-         <entry>
-            <ind>1</ind>
-            <dep>-45</dep>
-         </entry>
-      </interpolation>
-      <center>
-         <x-m>-5.525937</x-m>
-         <y-m>0.525273</y-m>
-         <z-m>-0.691142</z-m>
-      </center>
-      <axis>
-         <x>-0.00649</x>
-         <y>0.072702</y>
-         <z>-0.035352</z>
-      </axis>
-   </animation>
-   <animation>
-      <type>translate</type>
-      <object-name>FuelHoseCover1</object-name>
-      <object-name>FuelHose1</object-name>
-      <property>sim/model/FuelHose-positions/FuelHose/position-norm</property>
-      <interpolation>
-         <entry>
-            <ind>0</ind>
-            <dep>0</dep>
-         </entry>
-         <entry>
-            <ind>1</ind>
-            <dep>-0.5</dep>
-         </entry>
-      </interpolation>
-      <offset-m>0.682335</offset-m>
-      <axis>
-         <x>0.677154</x>
-         <y>0.043596</y>
-         <z>0.071721</z>
       </axis>
    </animation>
 
