@@ -2,10 +2,33 @@
 <PropertyList>
  <path>Aircraft/Tornado/Models/Cockpit/Parts/Cockpit.ac</path>
 
- <model>
-  <name>lights</name>
-  <path>Aircraft/Tornado/Models/Cockpit/lights.xml</path>
- </model>
+	<model>
+		<name>lights1</name>
+		<path>Aircraft/Tornado/Models/Effects/lights/cockpit-light1.xml</path>
+		<offsets>
+			<x-m>-4.3</x-m>
+			<y-m>-0.3</y-m>
+			<z-m>-0.5</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>lights2</name>
+		<path>Aircraft/Tornado/Models/Effects/lights/cockpit-light1.xml</path>
+		<offsets>
+			<x-m>-4.3</x-m>
+			<y-m> 0.3</y-m>
+			<z-m>-0.5</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>lights3</name>
+		<path>Aircraft/Tornado/Models/Effects/lights/cockpit-light2.xml</path>
+		<offsets>
+			<x-m>-4.5</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.8</z-m>
+		</offsets>
+	</model>
 
  <model>
   <name>Throttle</name>

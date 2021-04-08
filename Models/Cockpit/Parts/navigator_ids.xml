@@ -2,6 +2,24 @@
 <PropertyList>
 	<path>Aircraft/Tornado/Models/Cockpit/Parts/navigator.ac</path>
 	<model>
+		<name>lights1</name>
+		<path>Aircraft/Tornado/Models/Effects/lights/cockpit-light1.xml</path>
+		<offsets>
+			<x-m>-2.3</x-m>
+			<y-m>-0.3</y-m>
+			<z-m>-0.5</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>lights2</name>
+		<path>Aircraft/Tornado/Models/Effects/lights/cockpit-light1.xml</path>
+		<offsets>
+			<x-m>-2.3</x-m>
+			<y-m> 0.3</y-m>
+			<z-m>-0.5</z-m>
+		</offsets>
+	</model>
+	<model>
 		<name>TV-Tab 1</name>
 		<path>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/tvtab1ids.xml</path>
 		<offsets>
