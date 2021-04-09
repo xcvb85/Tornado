@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <PropertyList>
 	<path>nozzle.ac</path>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/lm1</inherits-from>
+		<object-name>needle</object-name>
+		<object-name>BG</object-name>
+	</effect>
 	<animation>
 		<type>select</type>
 		<object-name>Plane</object-name>
@@ -15,10 +20,12 @@
 		<name>needle</name>
 		<type>rotate</type>
 		<object-name>needle</object-name>
-		<property>engines/engine[0]/nozzle-pos-norm</property>
+		<property>engines/engine[0]/n2</property>
 		<interpolation>
-			<entry><ind>0.0</ind><dep>-145.0</dep></entry>
-			<entry><ind>1.0</ind><dep>125.0</dep></entry>
+			<entry><ind>  0</ind><dep>-145</dep></entry>
+			<entry><ind>  5</ind><dep> -45</dep></entry>
+			<entry><ind> 95</ind><dep> -45</dep></entry>
+			<entry><ind>100</ind><dep> 125</dep></entry>
 		</interpolation>
 		<axis>
 			<x>-1</x>

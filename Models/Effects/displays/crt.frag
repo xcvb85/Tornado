@@ -6,12 +6,14 @@ uniform sampler2D BaseTex;
 uniform sampler2D DirtTex;
 
 uniform int display_enabled;
+uniform int display_zoom;
 
 float DISTORTION = 0.03;
 
-vec2 distort(vec2 position)
+vec2 distort(vec2 position, float zoom)
 {
 	position = vec2(2.0 * position - 1.0);
+	position *= zoom;
 	position = position /(1.0 - DISTORTION * length(position));
 	position =(position + 1.0) * 0.5;
 	return position;
@@ -37,7 +39,14 @@ void main()
 	vec3 dirt = texture2D(DirtTex, gl_TexCoord[0].xy).rgb;
 
 	if(display_enabled > 0) {
-		vec2 position = distort(gl_TexCoord[0].xy);
+		vec2 position = gl_TexCoord[0].xy;
+
+		if(display_zoom > 0) {
+			position = distort(position, 0.5);
+		}
+		else {
+			position = distort(position, 1.0);
+		}
 
 		if(position.x > 0.0 && position.y > 0.0 && position.x < 1.0 && position.y < 1.0) {
 			texel = vec3(texture2D(BaseTex, position).rg, 0.0);

@@ -2,7 +2,7 @@
 <PropertyList>
 	<path>rpmd.ac</path>
 	<effect>
-		<inherits-from>Aircraft/Tornado/Models/Effects/rpmd</inherits-from>
+		<inherits-from>Aircraft/Tornado/Models/Effects/displays/rpmd</inherits-from>
 		<object-name>RPMD.screen</object-name>
 	</effect>
 	<animation>

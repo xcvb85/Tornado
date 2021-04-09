@@ -39,8 +39,7 @@
 			</texture-unit>
 
 			<program>
-				<vertex-shader>Shaders/reflect.vert</vertex-shader>
-				<fragment-shader>Aircraft/Tornado/Models/Effects/hud.frag</fragment-shader>
+				<fragment-shader>Aircraft/Tornado/Models/Effects/hud/hud.frag</fragment-shader>
 			</program>
 
 			<uniform>

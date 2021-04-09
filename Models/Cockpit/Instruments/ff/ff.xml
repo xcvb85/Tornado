@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <PropertyList>
 	<path>ff.ac</path>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/lm1</inherits-from>
+		<object-name>BG</object-name>
+		<object-name>Ring</object-name>
+	</effect>
 	<animation>
 		<name>needle_l</name>
 		<type>rotate</type>

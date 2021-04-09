@@ -3,7 +3,7 @@
 	<path>hud.ac</path>
 
 	<effect>
-		<inherits-from>Aircraft/Tornado/Models/Effects/hud</inherits-from>
+		<inherits-from>Aircraft/Tornado/Models/Effects/hud/hud</inherits-from>
 		<object-name>HUD_Screen</object-name>
     </effect>
 

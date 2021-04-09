@@ -266,61 +266,60 @@ var Bus = {
 
 ##########################################################################################################
 var Consumer = {
-    new: func(name, current, minVoltage) {
-        obj = { parents : [Consumer],
-            Devices: [],
-            Connected: props.globals.initNode("instrumentation/" ~ name ~ "/serviceable", 0, "INT"),
-            Running: props.globals.initNode(ELNode ~ "outputs/" ~ name, 0, "DOUBLE"),
-            Current: current,
-            MinVoltage: minVoltage,
-            Tmp: 0,
-            i: 0
-        };
-        return obj;
-    },
-    append: func(device) {
-        me.Tmp = size(me.Devices);
-        setsize(me.Devices, me.Tmp+1);
-        me.Devices[me.Tmp] = device;
-    },
-    getCurrent: func {
-        if(me.Running.getValue() < 24 or !me.Connected.getValue()) {
-            return 0;
-        }
-
-	me.Tmp = me.Current;
-	for(me.i=0; me.i<size(me.Devices); me.i+=1) {
-		me.Tmp += me.Devices[me.i].getCurrent();
+	new: func(name, current, minVoltage) {
+		obj = { parents : [Consumer],
+			Devices: [],
+			Connected: props.globals.initNode("instrumentation/" ~ name ~ "/Connected", 0, "INT"),
+			Running: props.globals.initNode(ELNode ~ "outputs/" ~ name, 0, "BOOL"),
+			Current: current,
+			MinVoltage: minVoltage,
+			Tmp: 0,
+			i: 0
+		};
+		return obj;
+	},
+	append: func(device) {
+		me.Tmp = size(me.Devices);
+		setsize(me.Devices, me.Tmp+1);
+		me.Devices[me.Tmp] = device;
+	},
+	getCurrent: func {
+		if(!me.Running.getValue()) {
+			return 0;
+		}
+		me.Tmp = me.Current;
+		for(me.i=0; me.i<size(me.Devices); me.i+=1) {
+			me.Tmp += me.Devices[me.i].getCurrent();
+		}
+		return me.Tmp;
+	},
+	getVoltage: func {
+		return 0;
+	},
+	setCurrent: func(current) {
+	},
+	setVoltage: func(voltage) {
+		if(me.Connected.getValue()) {
+			if(voltage < me.MinVoltage) {
+				me.Running.setValue(0);
+				for(me.i=0; me.i<size(me.Devices); me.i+=1) {
+					me.Devices[me.i].setVoltage(0);
+				}
+			}
+			else {
+				me.Running.setValue(1);
+				for(me.i=0; me.i<size(me.Devices); me.i+=1) {
+					me.Devices[me.i].setVoltage(voltage);
+				}
+			}
+		}
+		else {
+			me.Running.setValue(0);
+			for(me.i=0; me.i<size(me.Devices); me.i+=1) {
+				me.Devices[me.i].setVoltage(0);
+			}
+		}
 	}
-        return me.Tmp;
-    },
-    getVoltage: func {
-        return 0;
-    },
-    setCurrent: func(current) {
-    },
-    setVoltage: func(voltage) {
-        if(me.Connected.getValue()) {
-            if(voltage < me.MinVoltage) {
-                me.Running.setValue(0);
-                for(me.i=0; me.i<size(me.Devices); me.i+=1) {
-                    me.Devices[me.i].setVoltage(0);
-                }
-            }
-            else {
-                me.Running.setValue(24);
-                for(me.i=0; me.i<size(me.Devices); me.i+=1) {
-                    me.Devices[me.i].setVoltage(voltage);
-                }
-            }
-        }
-        else {
-            me.Running.setValue(0);
-            for(me.i=0; me.i<size(me.Devices); me.i+=1) {
-                me.Devices[me.i].setVoltage(0);
-            }
-        }
-    }
 };
 
 ##########################################################################################################
@@ -399,16 +398,14 @@ var battery = Battery.new("Battery");
 var generator1 = Generator.new("Generator1", "/engines/engine[0]/running", 28.5);
 var generator2 = Generator.new("Generator2", "/engines/engine[1]/running", 28.5);
 #var apu = APU.new("APU", "/engines/engine[2]/running", 28.5);
-var ehdd = Consumer.new("ehdd", 4, 18.1);
-var tvtab1 = Consumer.new("tvtab1", 4, 17.9);
-var tvtab2 = Consumer.new("tvtab2", 4, 18.0);
 elBus.append(battery);
 elBus.append(generator1);
 elBus.append(generator2);
 #elBus.append(apu);
-elBus.append(ehdd);
-elBus.append(tvtab1);
-elBus.append(tvtab2);
+elBus.append(Consumer.new("ehdd", 4, 18.1));
+elBus.append(Consumer.new("tvtab1", 4, 17.9));
+elBus.append(Consumer.new("tvtab2", 4, 18.0));
+elBus.append(Consumer.new("cockpit_lights", 4, 18.1));
 
 # no separate switch
 setprop("instrumentation/hud/serviceable", 1);

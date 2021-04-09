@@ -1,5 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
  <path>Aircraft/Tornado/Models/Cockpit/Parts/Cockpit.ac</path>
+
+	<model>
+		<name>lights1</name>
+		<path>Aircraft/Tornado/Models/Effects/lights/cockpit-light1.xml</path>
+		<offsets>
+			<x-m>-4.3</x-m>
+			<y-m>-0.3</y-m>
+			<z-m>-0.5</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>lights2</name>
+		<path>Aircraft/Tornado/Models/Effects/lights/cockpit-light1.xml</path>
+		<offsets>
+			<x-m>-4.3</x-m>
+			<y-m> 0.3</y-m>
+			<z-m>-0.5</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>lights3</name>
+		<path>Aircraft/Tornado/Models/Effects/lights/cockpit-light2.xml</path>
+		<offsets>
+			<x-m>-4.5</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.8</z-m>
+		</offsets>
+	</model>
 
  <model>
   <name>Throttle</name>
@@ -140,9 +169,9 @@
  
   <model>
   <name>Korry</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Buttons/korry.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Buttons/korry1.xml</path>
   <offsets>
-   <x-m>-4.753</x-m>
+   <x-m>-4.752</x-m>
    <y-m>-0.318</y-m>
    <z-m>-0.444</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -201,7 +230,7 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
   <offsets>
    <x-m>-4.745</x-m>
    <y-m>-0.275</y-m>
@@ -221,7 +250,7 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
   <offsets>
    <x-m>-4.732</x-m>
    <y-m>-0.337</y-m>
@@ -296,7 +325,7 @@
   </offsets>
  </model>
   <model>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
   <offsets>
    <x-m>-4.736</x-m>
    <y-m> 0.140</y-m>
@@ -315,7 +344,7 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
   <offsets>
    <x-m>-4.736</x-m>
    <y-m> 0.203</y-m>
@@ -335,7 +364,7 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
   <offsets>
    <x-m>-4.736</x-m>
    <y-m> 0.266</y-m>
@@ -355,7 +384,7 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
   <offsets>
    <x-m>-4.725</x-m>
    <y-m> 0.140</y-m>
@@ -374,7 +403,7 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
   <offsets>
    <x-m>-4.725</x-m>
    <y-m> 0.203</y-m>
@@ -394,7 +423,7 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
   <offsets>
    <x-m>-4.715</x-m>
    <y-m> 0.140</y-m>
@@ -413,7 +442,7 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
   <offsets>
    <x-m>-4.715</x-m>
    <y-m> 0.203</y-m>
