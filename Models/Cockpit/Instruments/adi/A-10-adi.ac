@@ -1,9 +1,10 @@
 AC3Db
 MATERIAL "ac3dmat1.001" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.000 0.000 0.000  shi 64 trans 0.000
 MATERIAL "ac3dmat13.001" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.000 0.000 0.000  shi 64 trans 0.000
+MATERIAL "Glass" rgb 0.640 0.640 0.640  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.154 0.154 0.154  shi 64 trans 0.800
 OBJECT world
-name "Blender_exporter_v3.3__adi.ac"
-kids 1
+name "Blender_exporter_v3.3__A-10-adi.ac"
+kids 2
 OBJECT group
 name "adi"
 kids 3
@@ -9340,4 +9341,23 @@ refs 3
 20 0.548273 0.699291
 15 0.541519 0.687409
 14 0.572639 0.687414
+kids 0
+OBJECT poly
+name "glass"
+data 9
+Plane.010
+crease 40.0
+numvert 4
+0.00516 0.04859 0.04859
+0.00516 -0.04859 0.04859
+0.00516 0.04859 -0.04859
+0.00516 -0.04859 -0.04859
+numsurf 1
+SURF 0X0
+mat 2
+refs 4
+0 0 0
+1 1 0
+3 1 1
+2 0 1
 kids 0
