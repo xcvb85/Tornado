@@ -5,7 +5,14 @@
 		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/lm1</inherits-from>
 		<object-name>BG</object-name>
 		<object-name>needle</object-name>
-		<object-name>Plane.001</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/lm2</inherits-from>
+		<object-name>flag</object-name>
+		<object-name>indicator</object-name>
+		<object-name>drum-1</object-name>
+		<object-name>drum-2</object-name>
+		<object-name>drum-3</object-name>
 	</effect>
 	<animation>
 		<type>select</type>
@@ -24,7 +31,7 @@
 		<bias>-32</bias>
 		<factor>0.00026</factor>
 		<offset>0</offset>
-		<step>10000</step>
+		<step>1000</step>
 		<axis>
 			<x>1</x>
 			<y>0</y>

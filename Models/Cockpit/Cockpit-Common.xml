@@ -137,6 +137,17 @@
  </model>
 
   <model>
+  <name>G-Meter</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/gmeter/gmeter.xml</path>
+  <offsets>
+   <x-m>-4.550</x-m>
+   <y-m> 0.094</y-m>
+   <z-m>-0.200</z-m>
+   <pitch-deg>-5.0</pitch-deg>
+  </offsets>
+ </model>
+ 
+  <model>
   <name>Cover</name>
   <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover1.xml</path>
   <offsets>
