@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>rpm.ac</path>
 	<effect>
@@ -9,11 +9,11 @@
 	</effect>
 	<animation>
 		<type>select</type>
-		<object-name>Plane</object-name>
+		<object-name>flag</object-name>
 		<condition>
 			<less-than>
 				<property>systems/electrical/ElBus/Voltage</property>
-				<value>24</value>
+				<value>1</value>
 			</less-than>
 		</condition>
 	</animation>
@@ -23,13 +23,55 @@
 		<object-name>needle</object-name>
 		<property>engines/engine[1]/n1</property>
 		<interpolation>
-			<entry><ind>0.0</ind><dep>-125.0</dep></entry>
-			<entry><ind>120.0</ind><dep>125.0</dep></entry>
+			<entry>
+				<ind>0.0</ind>
+				<dep>-125.0</dep>
+			</entry>
+			<entry>
+				<ind>120.0</ind>
+				<dep>125.0</dep>
+			</entry>
 		</interpolation>
 		<axis>
 			<x>-1</x>
 			<y>0</y>
 			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>drum-1</object-name>
+		<property>engines/engine[1]/n1</property>
+		<factor>0.1</factor>
+		<offset>0</offset>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>drum-2</object-name>
+		<property>engines/engine[1]/n1</property>
+		<factor>0.01</factor>
+		<offset>0</offset>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>drum-3</object-name>
+		<property>engines/engine[1]/n1</property>
+		<factor>0.001</factor>
+		<offset>0</offset>
+		<step>100</step>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
 		</axis>
 	</animation>
 </PropertyList>

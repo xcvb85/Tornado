@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>temp.ac</path>
 	<effect>
@@ -9,13 +9,26 @@
 	</effect>
 	<animation>
 		<type>select</type>
-		<object-name>Plane</object-name>
+		<object-name>flag</object-name>
 		<condition>
 			<less-than>
 				<property>systems/electrical/ElBus/Voltage</property>
-				<value>24</value>
+				<value>1</value>
 			</less-than>
 		</condition>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>indicator</object-name>
+		<property>engines/engine[1]/egt-degf</property>
+		<bias>-32</bias>
+		<factor>0.00026</factor>
+		<offset>0</offset>
+		<step>10000</step>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+		</axis>
 	</animation>
 	<animation>
 		<name>needle</name>
@@ -23,13 +36,58 @@
 		<object-name>needle</object-name>
 		<property>engines/engine[1]/egt-degf</property>
 		<interpolation>
-			<entry><ind>32.0</ind><dep>-125.0</dep></entry>
-			<entry><ind>1832.0</ind><dep>125.0</dep></entry>
+			<entry>
+				<ind>32.0</ind>
+				<dep>-125.0</dep>
+			</entry>
+			<entry>
+				<ind>1832.0</ind>
+				<dep>125.0</dep>
+			</entry>
 		</interpolation>
 		<axis>
 			<x>-1</x>
 			<y>0</y>
 			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>drum-1</object-name>
+		<property>engines/engine[1]/egt-degf</property>
+		<bias>-32</bias>
+		<factor>0.005556</factor>
+		<offset>0</offset>
+		<step>18</step>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>drum-2</object-name>
+		<property>engines/engine[1]/egt-degf</property>
+		<bias>-32</bias>
+		<factor>0.0005556</factor>
+		<offset>0</offset>
+		<step>180</step>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>drum-3</object-name>
+		<property>engines/engine[1]/egt-degf</property>
+		<bias>-32</bias>
+		<factor>0.00005556</factor>
+		<offset>0</offset>
+		<step>1800</step>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
 		</axis>
 	</animation>
 </PropertyList>
