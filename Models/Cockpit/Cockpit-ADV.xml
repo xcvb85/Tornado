@@ -22,9 +22,9 @@
 		<name>Electronic Head Down Display</name>
 		<path>Aircraft/Tornado/Models/Cockpit/Instruments/ehdd/ehdd.xml</path>
 		<offsets>
-			<x-m>-4.730</x-m>
+			<x-m>-4.720</x-m>
 			<y-m>0.000</y-m>
-			<z-m>-0.600</z-m>
+			<z-m>-0.580</z-m>
 			<pitch-deg>-25.0</pitch-deg>
 		</offsets>
 	</model>

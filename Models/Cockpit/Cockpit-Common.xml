@@ -129,18 +129,26 @@
   <name>Head Up Display</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud.xml</path>
   <offsets>
-   <x-m>-4.700</x-m>
+   <x-m>-4.770</x-m>
    <y-m> 0.000</y-m>
    <z-m>-0.265</z-m>
-   <pitch-deg>-5.0</pitch-deg>
+   <pitch-deg>-10.0</pitch-deg>
   </offsets>
  </model>
-
+ <model>
+  <name>Angle of attack</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/aoa/aoa.xml</path>
+  <offsets>
+   <x-m>-4.620</x-m>
+   <y-m>-0.120</y-m>
+   <z-m>-0.250</z-m>
+  </offsets>
+ </model>
   <model>
   <name>G-Meter</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/gmeter/gmeter.xml</path>
   <offsets>
-   <x-m>-4.550</x-m>
+   <x-m>-4.620</x-m>
    <y-m> 0.094</y-m>
    <z-m>-0.200</z-m>
    <pitch-deg>-5.0</pitch-deg>
@@ -206,16 +214,6 @@
    <y-m>-0.220</y-m>
    <z-m>-0.484</z-m>
    <pitch-deg>-10.0</pitch-deg>
-  </offsets>
- </model>
- 
- <model>
-  <name>Angle of attack</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/aoa/aoa.xml</path>
-  <offsets>
-   <x-m>-4.607</x-m>
-   <y-m>-0.137</y-m>
-   <z-m>-0.250</z-m>
   </offsets>
  </model>
 
