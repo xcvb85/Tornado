@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>cover1.ac</path>
+	<model>
+		<name>switch</name>
+		<path>switch1.ac</path>
+	</model>
 	<animation>
 		<object-name>cover</object-name>
 		<type>rotate</type>
 		<property>instrumentation/buttons/cover3</property>
 		<factor>-90</factor>
 		<center>
-			<x-m>0.000</x-m>
-			<y-m>0.000</y-m>
-			<z-m>0.006</z-m>
+			<x-m>-0.015</x-m>
+			<y-m> 0.000</y-m>
+			<z-m> 0.006</z-m>
 		</center>
 		<axis>
 			<x>0</x>

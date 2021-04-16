@@ -12,7 +12,7 @@
 		<name>RPMD</name>
 		<path>Aircraft/Tornado/Models/Cockpit/Instruments/rpmd/rpmd.xml</path>
 		<offsets>
-			<x-m>-4.735</x-m>
+			<x-m>-4.835</x-m>
 			<y-m>0.000</y-m>
 			<z-m>-0.570</z-m>
 			<pitch-deg>-10.0</pitch-deg>
