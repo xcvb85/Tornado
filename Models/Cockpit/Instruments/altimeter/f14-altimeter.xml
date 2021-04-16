@@ -18,16 +18,14 @@ a synchro overrides the barometric mechanism and positions the pointer to true a
 		<object-name>drum-2</object-name>
 		<object-name>drum-3</object-name>
 	</effect>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/glass</inherits-from>
+		<object-name>glass</object-name>
+	</effect>
 
     <animation>
         <type>rotate</type>
         <object-name>needle</object-name>
-        <!--<condition>
-            <greater-than>
-                <property>fdm/jsbsim/systems/electrics/ac-essential-bus1</property>
-                <value>0</value>
-            </greater-than>
-        </condition>-->
         <property>instrumentation/altimeter/indicated-altitude-ft</property>
         <factor>0.36</factor>
         <!--<center>
@@ -40,19 +38,12 @@ a synchro overrides the barometric mechanism and positions the pointer to true a
             <y>0</y>
             <z>0</z>
         </axis>
-
     </animation>
 
     <!-- altimeter drum counter -->
     <animation>
         <type>textranslate</type>
         <object-name>drum-1</object-name>
-        <!--<condition>
-            <greater-than>
-                <property>fdm/jsbsim/systems/electrics/ac-essential-bus1</property>
-                <value>0</value>
-            </greater-than>
-        </condition>-->
         <property>instrumentation/altimeter/indicated-altitude-ft</property>
         <factor>0.001</factor>
         <offset>-100</offset>
@@ -68,12 +59,6 @@ a synchro overrides the barometric mechanism and positions the pointer to true a
     <animation>
         <type>textranslate</type>
         <object-name>drum-2</object-name>
-        <!--<condition>
-            <greater-than>
-                <property>fdm/jsbsim/systems/electrics/ac-essential-bus1</property>
-                <value>0</value>
-            </greater-than>
-        </condition>-->
         <property>instrumentation/altimeter/indicated-altitude-ft</property>
         <factor>0.0001</factor>
         <offset>-1000</offset>
@@ -89,12 +74,6 @@ a synchro overrides the barometric mechanism and positions the pointer to true a
     <animation>
         <type>textranslate</type>
         <object-name>drum-3</object-name>
-        <!--<condition>
-            <greater-than>
-                <property>fdm/jsbsim/systems/electrics/ac-essential-bus1</property>
-                <value>0</value>
-            </greater-than>
-        </condition>-->
         <property>instrumentation/altimeter/indicated-altitude-ft</property>
         <factor>0.00001</factor>
         <offset>-10000</offset>

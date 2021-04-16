@@ -12,9 +12,9 @@
             <internal-format>normalized</internal-format>
         </texture>
         <light-radius type="float">13</light-radius>
-        <lightmap-enabled type="int">1</lightmap-enabled>
+        <lightmap-enabled type="int"><use>systems/electrical/outputs/cockpit_lights</use></lightmap-enabled>
         <lightmap-multi type="int">1</lightmap-multi>
-        <lightmap-factor type="float" n="0"><use>systems/electrical/outputs/cockpit_lights</use></lightmap-factor>
+        <lightmap-factor type="float" n="0">1</lightmap-factor>
         <lightmap-color type="vec3d" n="0"> 1 .95 0.85 </lightmap-color>
         <lightmap-factor type="float" n="1">0</lightmap-factor>
         <lightmap-color type="vec3d" n="1"> 0.0 0.0 0.0 </lightmap-color>

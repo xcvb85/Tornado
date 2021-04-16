@@ -6,13 +6,17 @@
 		<object-name>needle</object-name>
 		<object-name>BG</object-name>
 	</effect>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/lm2</inherits-from>
+		<object-name>Circle</object-name>
+	</effect>
 	<animation>
 		<type>select</type>
 		<object-name>Plane</object-name>
 		<condition>
 			<less-than>
 				<property>systems/electrical/ElBus/Voltage</property>
-				<value>24</value>
+				<value>1</value>
 			</less-than>
 		</condition>
 	</animation>

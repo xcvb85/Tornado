@@ -6,7 +6,7 @@
 		<name>lights1</name>
 		<path>Aircraft/Tornado/Models/Effects/lights/cockpit-light1.xml</path>
 		<offsets>
-			<x-m>-4.3</x-m>
+			<x-m>-4.4</x-m>
 			<y-m>-0.3</y-m>
 			<z-m>-0.5</z-m>
 		</offsets>
@@ -15,7 +15,7 @@
 		<name>lights2</name>
 		<path>Aircraft/Tornado/Models/Effects/lights/cockpit-light1.xml</path>
 		<offsets>
-			<x-m>-4.3</x-m>
+			<x-m>-4.4</x-m>
 			<y-m> 0.3</y-m>
 			<z-m>-0.5</z-m>
 		</offsets>
@@ -24,7 +24,7 @@
 		<name>lights3</name>
 		<path>Aircraft/Tornado/Models/Effects/lights/cockpit-light2.xml</path>
 		<offsets>
-			<x-m>-4.5</x-m>
+			<x-m>-4.6</x-m>
 			<y-m> 0.0</y-m>
 			<z-m>-0.8</z-m>
 		</offsets>
@@ -34,9 +34,9 @@
   <name>Throttle</name>
   <path>Aircraft/Tornado/Models/Cockpit/Parts/throttle.xml</path>
   <offsets>
-   <x-m>-4.497</x-m>
+   <x-m>-4.597</x-m>
    <y-m>-0.415</y-m>
-   <z-m>-0.809</z-m>
+   <z-m>-0.790</z-m>
   </offsets>
  </model>
 
@@ -129,20 +129,39 @@
   <name>Head Up Display</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud.xml</path>
   <offsets>
-   <x-m>-4.700</x-m>
+   <x-m>-4.870</x-m>
    <y-m> 0.000</y-m>
    <z-m>-0.265</z-m>
+   <pitch-deg>-10.0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <name>Angle of attack</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/aoa/aoa.xml</path>
+  <offsets>
+   <x-m>-4.700</x-m>
+   <y-m>-0.120</y-m>
+   <z-m>-0.230</z-m>
+  </offsets>
+ </model>
+  <model>
+  <name>G-Meter</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/gmeter/gmeter.xml</path>
+  <offsets>
+   <x-m>-4.720</x-m>
+   <y-m> 0.094</y-m>
+   <z-m>-0.200</z-m>
    <pitch-deg>-5.0</pitch-deg>
   </offsets>
  </model>
-
+ 
   <model>
   <name>Cover</name>
   <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover1.xml</path>
   <offsets>
-   <x-m>-4.669</x-m>
+   <x-m>-4.700</x-m>
    <y-m>-0.125</y-m>
-   <z-m>-0.275</z-m>
+   <z-m>-0.265</z-m>
    <pitch-deg>70.0</pitch-deg>
   </offsets>
  </model>
@@ -150,20 +169,22 @@
   <name>Cover</name>
   <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover2.xml</path>
   <offsets>
-   <x-m>-4.596</x-m>
-   <y-m>-0.420</y-m>
-   <z-m>-0.514</z-m>
-   <pitch-deg>70.0</pitch-deg>
+   <x-m>-4.65</x-m>
+   <y-m>-0.42</y-m>
+   <z-m>-0.50</z-m>
+   <pitch-deg>-80.0</pitch-deg>
+   <heading-deg>180.0</heading-deg>
   </offsets>
  </model>
   <model>
   <name>Cover</name>
   <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover3.xml</path>
   <offsets>
-   <x-m>-4.596</x-m>
-   <y-m>-0.396</y-m>
-   <z-m>-0.514</z-m>
-   <pitch-deg>70.0</pitch-deg>
+   <x-m>-4.65</x-m>
+   <y-m>-0.40</y-m>
+   <z-m>-0.50</z-m>
+   <pitch-deg>-80.0</pitch-deg>
+   <heading-deg>180.0</heading-deg>
   </offsets>
  </model>
  
@@ -171,7 +192,7 @@
   <name>Korry</name>
   <path>Aircraft/Tornado/Models/Cockpit/Buttons/korry1.xml</path>
   <offsets>
-   <x-m>-4.752</x-m>
+   <x-m>-4.852</x-m>
    <y-m>-0.318</y-m>
    <z-m>-0.444</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -181,7 +202,7 @@
   <name>Korry</name>
   <path>Aircraft/Tornado/Models/Cockpit/Buttons/korry.ac</path>
   <offsets>
-   <x-m>-4.749</x-m>
+   <x-m>-4.849</x-m>
    <y-m>-0.225</y-m>
    <z-m>-0.462</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -191,20 +212,10 @@
   <name>Korry</name>
   <path>Aircraft/Tornado/Models/Cockpit/Buttons/korry.ac</path>
   <offsets>
-   <x-m>-4.745</x-m>
+   <x-m>-4.845</x-m>
    <y-m>-0.220</y-m>
    <z-m>-0.484</z-m>
    <pitch-deg>-10.0</pitch-deg>
-  </offsets>
- </model>
- 
- <model>
-  <name>Angle of attack</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/aoa/aoa.xml</path>
-  <offsets>
-   <x-m>-4.607</x-m>
-   <y-m>-0.137</y-m>
-   <z-m>-0.250</z-m>
   </offsets>
  </model>
 
@@ -212,7 +223,7 @@
   <name>Undercarriage Position Indicator</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/uci/uci.xml</path>
   <offsets>
-   <x-m>-4.745</x-m>
+   <x-m>-4.845</x-m>
    <y-m>-0.334</y-m>
    <z-m>-0.484</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -223,7 +234,7 @@
   <name>Radar ALT</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/ralt/ralt.xml</path>
   <offsets>
-   <x-m>-4.745</x-m>
+   <x-m>-4.845</x-m>
    <y-m>-0.275</y-m>
    <z-m>-0.466</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -232,7 +243,7 @@
  <model>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
   <offsets>
-   <x-m>-4.745</x-m>
+   <x-m>-4.845</x-m>
    <y-m>-0.275</y-m>
    <z-m>-0.466</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -243,7 +254,7 @@
   <name>VSI</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/vsi/vsi.xml</path>
   <offsets>
-   <x-m>-4.732</x-m>
+   <x-m>-4.832</x-m>
    <y-m>-0.337</y-m>
    <z-m>-0.542</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -252,7 +263,7 @@
  <model>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
   <offsets>
-   <x-m>-4.732</x-m>
+   <x-m>-4.832</x-m>
    <y-m>-0.337</y-m>
    <z-m>-0.542</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -263,7 +274,7 @@
   <name>Air Speed Indicator</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/asi/asi.xml</path>
   <offsets>
-   <x-m>-4.732</x-m>
+   <x-m>-4.832</x-m>
    <y-m>-0.255</y-m>
    <z-m>-0.540</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -274,7 +285,7 @@
   <name>ADI</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/adi/adi.xml</path>
   <offsets>
-   <x-m>-4.742</x-m>
+   <x-m>-4.842</x-m>
    <y-m>-0.150</y-m>
    <z-m>-0.510</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -285,7 +296,7 @@
   <name>Altimeter</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/altimeter/f14-altimeter.xml</path>
   <offsets>
-   <x-m>-4.719</x-m>
+   <x-m>-4.819</x-m>
    <y-m>-0.255</y-m>
    <z-m>-0.630</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -296,7 +307,7 @@
   <name>HSI</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/hsi/hsi.ac</path>
   <offsets>
-   <x-m>-4.715</x-m>
+   <x-m>-4.815</x-m>
    <y-m>-0.149</y-m>
    <z-m>-0.613</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -307,7 +318,7 @@
   <name>Radar Homing Warning Receiver</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/rhwr/rhwr.ac</path>
   <offsets>
-   <x-m>-4.760</x-m>
+   <x-m>-4.860</x-m>
    <y-m> 0.200</y-m>
    <z-m>-0.420</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -318,7 +329,7 @@
   <name>RPM Indicator</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/rpm/rpm1.xml</path>
   <offsets>
-   <x-m>-4.736</x-m>
+   <x-m>-4.836</x-m>
    <y-m> 0.140</y-m>
    <z-m>-0.519</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -327,7 +338,7 @@
   <model>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
   <offsets>
-   <x-m>-4.736</x-m>
+   <x-m>-4.836</x-m>
    <y-m> 0.140</y-m>
    <z-m>-0.519</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -337,7 +348,7 @@
   <name>RPM Indicator</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/rpm/rpm2.xml</path>
   <offsets>
-   <x-m>-4.736</x-m>
+   <x-m>-4.836</x-m>
    <y-m> 0.203</y-m>
    <z-m>-0.519</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -346,7 +357,7 @@
  <model>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
   <offsets>
-   <x-m>-4.736</x-m>
+   <x-m>-4.836</x-m>
    <y-m> 0.203</y-m>
    <z-m>-0.519</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -357,7 +368,7 @@
   <name>Fuel Flow Indicator</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/ff/ff.xml</path>
   <offsets>
-   <x-m>-4.736</x-m>
+   <x-m>-4.836</x-m>
    <y-m> 0.266</y-m>
    <z-m>-0.519</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -366,7 +377,7 @@
  <model>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
   <offsets>
-   <x-m>-4.736</x-m>
+   <x-m>-4.836</x-m>
    <y-m> 0.266</y-m>
    <z-m>-0.519</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -377,7 +388,7 @@
   <name>Temp Indicator</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/temp/temp1.xml</path>
   <offsets>
-   <x-m>-4.725</x-m>
+   <x-m>-4.825</x-m>
    <y-m> 0.140</y-m>
    <z-m>-0.581</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -386,7 +397,7 @@
  <model>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
   <offsets>
-   <x-m>-4.725</x-m>
+   <x-m>-4.825</x-m>
    <y-m> 0.140</y-m>
    <z-m>-0.581</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -396,7 +407,7 @@
   <name>Temp Indicator</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/temp/temp2.xml</path>
   <offsets>
-   <x-m>-4.725</x-m>
+   <x-m>-4.825</x-m>
    <y-m> 0.203</y-m>
    <z-m>-0.581</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -405,7 +416,7 @@
  <model>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
   <offsets>
-   <x-m>-4.725</x-m>
+   <x-m>-4.825</x-m>
    <y-m> 0.203</y-m>
    <z-m>-0.581</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -416,7 +427,7 @@
   <name>Nozzle Indicator</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/nozzle/nozzle1.xml</path>
   <offsets>
-   <x-m>-4.715</x-m>
+   <x-m>-4.815</x-m>
    <y-m> 0.140</y-m>
    <z-m>-0.643</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -425,7 +436,7 @@
  <model>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
   <offsets>
-   <x-m>-4.715</x-m>
+   <x-m>-4.815</x-m>
    <y-m> 0.140</y-m>
    <z-m>-0.643</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -435,7 +446,7 @@
   <name>Nozzle Indicator</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/nozzle/nozzle2.xml</path>
   <offsets>
-   <x-m>-4.715</x-m>
+   <x-m>-4.815</x-m>
    <y-m> 0.203</y-m>
    <z-m>-0.643</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -444,7 +455,7 @@
  <model>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
   <offsets>
-   <x-m>-4.715</x-m>
+   <x-m>-4.815</x-m>
    <y-m> 0.203</y-m>
    <z-m>-0.643</z-m>
    <pitch-deg>-10.0</pitch-deg>
@@ -455,7 +466,7 @@
   <name>Quickstart Panel</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/quickstart/quickstart.ac</path>
   <offsets>
-   <x-m>-4.745</x-m>
+   <x-m>-4.845</x-m>
    <y-m> 0.0</y-m>
    <z-m>-0.977</z-m>
    <pitch-deg>-10.0</pitch-deg>
