@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>korry.ac</path>
+	<animation>
+		<type>translate</type>
+		<object-name>button</object-name>
+		<property>instrumentation/cockpit_lights/Connected</property>
+		<factor>0.0016</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>button</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/cockpit_lights/Connected</property>
+			</binding>
+		</action>
+	</animation>
+</PropertyList>

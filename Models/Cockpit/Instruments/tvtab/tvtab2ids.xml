@@ -2,7 +2,7 @@
 <PropertyList>
 	<path>tvtab2ids.ac</path>
 	<effect>
-		<inherits-from>Aircraft/Tornado/Models/Effects/displays/crt-tvtab2</inherits-from>
+		<inherits-from>Aircraft/Tornado/Models/Effects/displays/tvtab2</inherits-from>
 		<object-name>TVTAB2.screen</object-name>
 	</effect>
 	<!--#########  Upper Buttons ########## -->
@@ -554,7 +554,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>TAB2ON</object-name>
-		<property>instrumentation/tvtab2/serviceable</property>
+		<property>instrumentation/tvtab2/Connected</property>
 		<factor>0.0016</factor>
 		<axis>
 			<x>-1</x>
@@ -571,7 +571,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>instrumentation/tvtab2/serviceable</property>
+				<property>instrumentation/tvtab2/Connected</property>
 			</binding>
 		</action>
 	</animation>
@@ -579,10 +579,7 @@
 		<object-name>TAB2ON</object-name>
 		<type>material</type>
 		<condition>
-			<greater-than>
-				<property>systems/electrical/outputs/tvtab2</property>
-				<value>0</value>
-			</greater-than>
+			<property>systems/electrical/outputs/tvtab2</property>
 		</condition>
 		<emission>
 			<red>1.0</red>

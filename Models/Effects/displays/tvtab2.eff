@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<name>crt-ehdd</name>
+	<name>crt-tvtab2</name>
 	<inherits-from>Effects/model-default</inherits-from>
 	<parameters>
 		<!-- Dirt -->
@@ -12,12 +12,17 @@
 			<wrap-t>clamp</wrap-t>
 			<internal-format>normalized</internal-format>
 		</texture>
+		<texture n="6">
+			<image>Aircraft/Tornado/Models/Effects/displays/scanlines.png</image>
+			<type>2d</type>
+			<filter>linear-mipmap-linear</filter>
+			<wrap-s>repeat</wrap-s>
+			<wrap-t>repeat</wrap-t>
+			<internal-format>normalized</internal-format>
+		</texture>
 		<display-enabled type="int">
-			<use>systems/electrical/outputs/ehdd</use>
+			<use>systems/electrical/outputs/tvtab2</use>
 		</display-enabled>
-		<display-zoom type="int">
-			<use>instrumentation/ehdd/btX2</use>
-		</display-zoom>
 	</parameters>
 
 	<technique n="5">
@@ -60,9 +65,19 @@
 				<wrap-t><use>texture[4]/wrap-t</use></wrap-t>
 				<internal-format><use>texture[4]/internal-format</use></internal-format>
 			</texture-unit>
+			<!-- scanline texture unit-->
+			<texture-unit>
+				<unit>3</unit>
+				<image><use>texture[6]/image</use></image>
+				<type><use>texture[6]/type</use></type>
+				<filter><use>texture[6]/filter</use></filter>
+				<wrap-s><use>texture[6]/wrap-s</use></wrap-s>
+				<wrap-t><use>texture[6]/wrap-t</use></wrap-t>
+				<internal-format><use>texture[6]/internal-format</use></internal-format>
+			</texture-unit>
 
 			<program>
-				<fragment-shader>Aircraft/Tornado/Models/Effects/displays/crt.frag</fragment-shader>
+				<fragment-shader>Aircraft/Tornado/Models/Effects/displays/raster-crt.frag</fragment-shader>
 			</program>
 
 			<uniform>
@@ -76,14 +91,14 @@
 				<value type="int">1</value>
 			</uniform>
 			<uniform>
+				<name>Scanlines</name>
+				<type>sampler-2d</type>
+				<value type="int">3</value>
+			</uniform>
+			<uniform>
 				<name>display_enabled</name>
 				<type>int</type>
 				<value><use>display-enabled</use></value>
-			</uniform>
-			<uniform>
-				<name>display_zoom</name>
-				<type>int</type>
-				<value><use>display-zoom</use></value>
 			</uniform>
 		</pass>
 	</technique>
