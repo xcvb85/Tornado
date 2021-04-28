@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<light>
+		<name>my-spotlight1</name>
+		<type>spot</type>
+		<position>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</position>
+		<direction>
+			<x>-1.0</x>
+			<y> 0.0</y>
+			<z> 0.1</z>
+		</direction>
+		<ambient>
+			<r>0.0</r>
+			<g>0.0</g>
+			<b>0.0</b>
+			<a>1</a>
+		</ambient>
+		<diffuse>
+			<r>1.0</r>
+			<g>0.1</g>
+			<b>0.0</b>
+			<a>1</a>
+		</diffuse>
+		<specular>
+			<r>0.2</r>
+			<g>0.2</g>
+			<b>0.2</b>
+			<a>1</a>
+		</specular>
+		<attenuation>
+			<c>1.0</c>
+			<l>0.5</l>
+			<q>1.5</q>
+		</attenuation>
+		<spot-exponent>5</spot-exponent>
+		<spot-cutoff>60</spot-cutoff>
+		<range-m>0.6</range-m>
+		<dim-factor>
+			<property>systems/electrical/outputs/cockpit_lights</property>
+		</dim-factor>
+	</light>
+</PropertyList>
