@@ -57,6 +57,29 @@ var SkMenuPageActivateItem = {
 	}
 };
 
+# item which changes menu
+var SkScratchpadActivateItem = {
+	new: func(id, device, title, text) {
+		var m = {parents: [SkScratchpadActivateItem, SkItem.new(id, device, title)]};
+		m.Text = text;
+		return m;
+	},
+	Activate: func {
+		me.Device.ActivateScratchpad(me.Text, me.Id);
+	}
+};
+
+# item which returns a character
+var SkCharItem = {
+	new: func(id, device, title) {
+		var m = {parents: [SkCharItem, SkItem.new(id, device, title)]};
+		return m;
+	},
+	Activate: func {
+		me.Device.SetCharacter(me.Title);
+	}
+};
+
 # item with dynamic content
 var SkMutableItem = {
 	new: func(id, device, path, format="%s", decoration=0) {
@@ -118,7 +141,7 @@ var SkMenu = {
 	},
 	ActivateItem: func(index) {
 		if(me.Items[index] != nil) {
-			me.Items[index].Activate();
+			return me.Items[index].Activate();
 		}
 	},
 	GetItem: func(index) {
@@ -194,12 +217,23 @@ var Device = {
 			}
 		}
 	},
+	ActivateScratchpad: func(input, softkey) {
+		me.Menus[me.SkFrameMenu].ResetDecoration();
+		me.SkFrameMenu = me.ActiveMenu;
+		me.Menus[me.SkFrameMenu].SetDecoration(softkey);
+
+		me.SkInstance.setText(input);
+		me.UpdateMenu();
+	},
 	GetActiveMenu: func {
 		return me.ActiveMenu;
 	},
 	# input: 0=back, 1=sk1...5=sk5
 	BtClick: func(input = -1) {
 		me.Menus[me.ActiveMenu].ActivateItem(input);
+	},
+	SetCharacter: func(input = -1) {
+		me.SkInstance.setCharacter(input);
 	},
 	UpdateMenu: func() {
 		# copy sk names to array

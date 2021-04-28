@@ -18,7 +18,7 @@ var canvas_nav = {
 			m[key] = canvasGroup.getElementById(key);
 		}
 		m.north.setDrawMode(canvas.Text.TEXT + canvas.Text.FILLEDBOUNDINGBOX);
-		m.north.setColor(0,0,0).setColorFill(0,255,0);
+		m.north.setColor(0,255,0).setColorFill(0,0,0);
 		m.kalman.hide();
 		m.timer = maketimer(0.1, m, m.update);
 		return m;

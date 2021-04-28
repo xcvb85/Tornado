@@ -1,6 +1,7 @@
 var TvTabInstances = [{}, {}];
 
 var tvTabListener = 0;
+var plnInUse = 1; # 0=free, 1=left, 2=right
 
 var TVTAB = {
 	new: func(group, instance)
@@ -13,7 +14,7 @@ var TVTAB = {
 		append(m.Pages, canvas_fa.new(group.createChild('group'))); #2
 		append(m.Pages, canvas_empty.new(group.createChild('group'))); #3
 
-		m.SkInstance = canvas_softkeys.new(group.createChild('group'));
+		m.SkInstance = canvas_overlay.new(group.createChild('group'));
 
 		# create menus
 		append(m.Menus, SkMenu.new(0, m, ""));
@@ -29,47 +30,47 @@ var TVTAB = {
 		append(m.Menus, SkMenu.new(10, m, ""));
 
 		# create softkeys
-		m.Menus[0].AddItem(SkItem.new(0, m, "0"));
-		m.Menus[0].AddItem(SkItem.new(1, m, "1"));
-		m.Menus[0].AddItem(SkItem.new(2, m, "2"));
-		m.Menus[0].AddItem(SkItem.new(3, m, "3"));
-		m.Menus[0].AddItem(SkItem.new(4, m, "4"));
-		m.Menus[0].AddItem(SkItem.new(5, m, "5"));
-		m.Menus[0].AddItem(SkItem.new(6, m, "6"));
-		m.Menus[0].AddItem(SkItem.new(7, m, "7"));
-		m.Menus[0].AddItem(SkItem.new(8, m, "8"));
-		m.Menus[0].AddItem(SkItem.new(9, m, "9"));
+		m.Menus[0].AddItem(SkCharItem.new(0, m, "0"));
+		m.Menus[0].AddItem(SkCharItem.new(1, m, "1"));
+		m.Menus[0].AddItem(SkCharItem.new(2, m, "2"));
+		m.Menus[0].AddItem(SkCharItem.new(3, m, "3"));
+		m.Menus[0].AddItem(SkCharItem.new(4, m, "4"));
+		m.Menus[0].AddItem(SkCharItem.new(5, m, "5"));
+		m.Menus[0].AddItem(SkCharItem.new(6, m, "6"));
+		m.Menus[0].AddItem(SkCharItem.new(7, m, "7"));
+		m.Menus[0].AddItem(SkCharItem.new(8, m, "8"));
+		m.Menus[0].AddItem(SkCharItem.new(9, m, "9"));
 
-		m.Menus[1].AddItem(SkItem.new(0, m, "A"));
-		m.Menus[1].AddItem(SkItem.new(1, m, "B"));
-		m.Menus[1].AddItem(SkItem.new(2, m, "C"));
-		m.Menus[1].AddItem(SkItem.new(3, m, "D"));
-		m.Menus[1].AddItem(SkItem.new(4, m, "E"));
-		m.Menus[1].AddItem(SkItem.new(5, m, "F"));
-		m.Menus[1].AddItem(SkItem.new(6, m, "G"));
-		m.Menus[1].AddItem(SkItem.new(7, m, "H"));
-		m.Menus[1].AddItem(SkItem.new(8, m, "J"));
-		m.Menus[1].AddItem(SkItem.new(9, m, "K"));
+		m.Menus[1].AddItem(SkCharItem.new(0, m, "A"));
+		m.Menus[1].AddItem(SkCharItem.new(1, m, "B"));
+		m.Menus[1].AddItem(SkCharItem.new(2, m, "C"));
+		m.Menus[1].AddItem(SkCharItem.new(3, m, "D"));
+		m.Menus[1].AddItem(SkCharItem.new(4, m, "E"));
+		m.Menus[1].AddItem(SkCharItem.new(5, m, "F"));
+		m.Menus[1].AddItem(SkCharItem.new(6, m, "G"));
+		m.Menus[1].AddItem(SkCharItem.new(7, m, "H"));
+		m.Menus[1].AddItem(SkCharItem.new(8, m, "J"));
+		m.Menus[1].AddItem(SkCharItem.new(9, m, "K"));
 
-		m.Menus[2].AddItem(SkItem.new(0, m, "L"));
-		m.Menus[2].AddItem(SkItem.new(1, m, "M"));
-		m.Menus[2].AddItem(SkItem.new(2, m, "N"));
-		m.Menus[2].AddItem(SkItem.new(3, m, "P"));
-		m.Menus[2].AddItem(SkItem.new(4, m, "Q"));
-		m.Menus[2].AddItem(SkItem.new(5, m, "R"));
-		m.Menus[2].AddItem(SkItem.new(6, m, "S"));
-		m.Menus[2].AddItem(SkItem.new(7, m, "T"));
-		m.Menus[2].AddItem(SkItem.new(8, m, "U"));
-		m.Menus[2].AddItem(SkItem.new(9, m, "V"));
+		m.Menus[2].AddItem(SkCharItem.new(0, m, "L"));
+		m.Menus[2].AddItem(SkCharItem.new(1, m, "M"));
+		m.Menus[2].AddItem(SkCharItem.new(2, m, "N"));
+		m.Menus[2].AddItem(SkCharItem.new(3, m, "P"));
+		m.Menus[2].AddItem(SkCharItem.new(4, m, "Q"));
+		m.Menus[2].AddItem(SkCharItem.new(5, m, "R"));
+		m.Menus[2].AddItem(SkCharItem.new(6, m, "S"));
+		m.Menus[2].AddItem(SkCharItem.new(7, m, "T"));
+		m.Menus[2].AddItem(SkCharItem.new(8, m, "U"));
+		m.Menus[2].AddItem(SkCharItem.new(9, m, "V"));
 
-		m.Menus[3].AddItem(SkItem.new(0, m, "W"));
-		m.Menus[3].AddItem(SkItem.new(1, m, "X"));
-		m.Menus[3].AddItem(SkItem.new(2, m, "Y"));
-		m.Menus[3].AddItem(SkItem.new(3, m, "Z"));
-		m.Menus[3].AddItem(SkItem.new(4, m, "0"));
-		m.Menus[3].AddItem(SkItem.new(5, m, "ERAZ"));
-		m.Menus[3].AddItem(SkItem.new(8, m, "+"));
-		m.Menus[3].AddItem(SkItem.new(9, m, "-"));
+		m.Menus[3].AddItem(SkCharItem.new(0, m, "W"));
+		m.Menus[3].AddItem(SkCharItem.new(1, m, "X"));
+		m.Menus[3].AddItem(SkCharItem.new(2, m, "Y"));
+		m.Menus[3].AddItem(SkCharItem.new(3, m, "Z"));
+		m.Menus[3].AddItem(SkCharItem.new(4, m, "0"));
+		m.Menus[3].AddItem(SkCharItem.new(5, m, "ERAZ"));
+		m.Menus[3].AddItem(SkCharItem.new(8, m, "+"));
+		m.Menus[3].AddItem(SkCharItem.new(9, m, "-"));
 
 		m.Menus[4].AddItem(SkItem.new(0, m, "WS"));
 		m.Menus[4].AddItem(SkItem.new(1, m, "WPT"));
@@ -156,24 +157,32 @@ var tvTavBtClick = func(index = 0, input = -1) {
 	}
 	else {
 		if (input == 10) {
-			TvTabInstances[index].ActivatePage(0, 0); #PLN
-			TvTabInstances[index].ActivateMenu(5);
+			if(plnInUse == 0)
+			{
+				TvTabInstances[index].ActivatePage(0, 0); #PLN
+				TvTabInstances[index].ActivateMenu(5);
+				plnInUse = index+1;
+			}
 		}
 		else if (input == 11) {
 			TvTabInstances[index].ActivatePage(1, 0); #NAV
 			TvTabInstances[index].ActivateMenu(6);
+			if(index+1 == plnInUse) plnInUse = 0;
 		}
 		else if (input == 12) {
 			TvTabInstances[index].ActivatePage(2, 0); #FA
 			TvTabInstances[index].ActivateMenu(7);
+			if(index+1 == plnInUse) plnInUse = 0;
 		}
 		else if (input == 17) {
 			TvTabInstances[index].ActivatePage(3, 0); #TVM - Missile TV
 			TvTabInstances[index].ActivateMenu(4);
+			if(index+1 == plnInUse) plnInUse = 0;
 		}
 		else if (input == 18) {
 			TvTabInstances[index].ActivatePage(3, 0); #RCN - RECCE camera
 			TvTabInstances[index].ActivateMenu(4);
+			if(index+1 == plnInUse) plnInUse = 0;
 		}
 		else if (input == 13) {
 			if (TvTabInstances[index].GetActiveMenu() > 3) {
@@ -243,4 +252,5 @@ tvTabListener = setlistener("/sim/signals/fdm-initialized", func () {
 	TvTabInstances[1] = TVTAB.new(tvTav2Canvas.createGroup(), 0);
 
 	removelistener(tvTabListener);
+	tvTavBtClick(1, 11);
 });

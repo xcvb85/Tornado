@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>gmeter.ac</path>
+	<animation>
+		<name>needle</name>
+		<type>rotate</type>
+		<object-name>needle</object-name>
+		<property>fdm/jsbsim/accelerations/a-pilot-z-ft_sec2</property>
+		<interpolation>
+			<entry>
+				<ind>129</ind>
+				<dep>-120</dep>
+			</entry>
+			<entry>
+				<ind>-290</ind>
+				<dep>180</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0.00</x-m>
+			<y-m>0.03</y-m>
+			<z-m>0.03</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+</PropertyList>

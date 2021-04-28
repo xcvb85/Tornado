@@ -1,6 +1,6 @@
 # See: http://wiki.flightgear.org/MapStructure
 # Class things:
-var name = 'APT_to';
+var name = 'APS_to';
 var parents = [DotSym];
 var __self__ = caller(0)[0];
 DotSym.makeinstance( name, __self__ );
@@ -11,16 +11,18 @@ var text_apt = nil;
 
 # add the draw routine from airports-nd.draw here
 var init = func {
-	var icon_apt = me.element.createChild("path", name ~ " icon" )
-		.moveTo(-7, -7)
-		.lineTo(7, -7)
-		.lineTo(7, 7)
-		.lineTo(-7, 7)
-		.close()
-		.setColor(me.layer.style.color_default)
+	var icon_apt = me.element.createChild("path", "icon" )
+		.moveTo(0,-50)
+		.lineTo(0,-14)
+		.arcSmallCW(7,7,0,0,14)
+		.arcSmallCW(7,7,0,0,-14)
+		.setColor([0,1,0])
 		.setStrokeLineWidth(me.layer.style.line_width);
 
 	# FIXME: this applies scale to the whole group, better do this separately for each element?
 	me.element.setScale(me.layer.style.scale_factor);
 };
-var draw = func;
+
+var draw = func {
+	me.element.setRotation((getprop("/orientation/heading-deg")-me.layer.map.getHdg())*D2R);
+};

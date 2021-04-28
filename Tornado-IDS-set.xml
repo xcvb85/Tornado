@@ -59,7 +59,7 @@
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/nav.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/fa.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/empty.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/softkeys.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/overlay.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/TVTAB_IDS.nas</file>
 		</efis>
 	</nasal>

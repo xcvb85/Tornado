@@ -1,0 +1,34 @@
+# See: http://wiki.flightgear.org/MapStructure
+# Class things:
+var name = 'APS_to';
+var parents = [SymbolLayer.Controller];
+var __self__ = caller(0)[0];
+var lon = props.globals.getNode("position/longitude-deg");
+var lat = props.globals.getNode("position/latitude-deg");
+var hdg = props.globals.getNode("orientation/heading-magnetic-deg");
+var coord = geo.Coord.new();
+
+SymbolLayer.Controller.add(name, __self__);
+SymbolLayer.add(name, {
+	parents: [SingleSymbolLayer],
+	type: name, # Symbol type
+	df_controller: __self__, # controller to use by default -- this one
+	df_style: {},
+});
+
+var getPosCoord = func {
+	coord.set_latlon(lat.getValue(), lon.getValue(), hdg.getValue());
+	coord.update = func getPosCoord();
+	return coord;
+};
+
+# N.B.: if used, this SymbolLayer should be updated every frame
+# by the Map Controller, or as often as the position is changed.
+var new = func(layer) {
+	var __model = getPosCoord();
+	return {
+		parents: [__self__],
+		_model: __model,
+	};
+};
+var del = func;
