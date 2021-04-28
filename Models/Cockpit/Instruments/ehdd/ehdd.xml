@@ -15,7 +15,7 @@
 		<object-name>EHDD1.screen</object-name>
 		<condition>
 			<less-than>
-				<property>instrumentation/ehdd/serviceable</property>
+				<property>instrumentation/ehdd/Connected</property>
 				<value>2</value>
 			</less-than>
 		</condition>
@@ -49,7 +49,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>KN0</object-name>
-		<property>instrumentation/ehdd/serviceable</property>
+		<property>instrumentation/ehdd/Connected</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>100</dep></entry>
 			<entry><ind>2</ind><dep>45</dep></entry>
@@ -76,7 +76,7 @@
 			<interval-sec>0.1</interval-sec>
 			<binding>
 				<command>property-adjust</command>
-				<property>instrumentation/ehdd/serviceable</property>
+				<property>instrumentation/ehdd/Connected</property>
 				<mask>integer</mask>
 				<min>0</min>
 				<max>2</max>
@@ -90,7 +90,7 @@
 			<interval-sec>0.1</interval-sec>
 			<binding>
 				<command>property-adjust</command>
-				<property>instrumentation/ehdd/serviceable</property>
+				<property>instrumentation/ehdd/Connected</property>
 				<mask>integer</mask>
 				<min>0</min>
 				<max>2</max>

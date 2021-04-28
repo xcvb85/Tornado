@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>gmeter.ac</path>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/lm1</inherits-from>
+		<object-name>BG</object-name>
+		<object-name>needle</object-name>
+	</effect>
 	<animation>
 		<name>needle</name>
 		<type>rotate</type>

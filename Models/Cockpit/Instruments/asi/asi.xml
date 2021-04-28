@@ -2,6 +2,14 @@
 <PropertyList>
 	<name>ASI</name>
 	<path>asi.ac</path>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/lm1</inherits-from>
+		<object-name>bkg.001</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/lm2</inherits-from>
+		<object-name>face</object-name>
+	</effect>
 
 	<animation>
 		<type>rotate</type>
@@ -166,112 +174,4 @@
     </binding>
   </action>
  </animation>
-
-	<!-- Lightning -->
-	<animation>
-		<object-name>mount</object-name>
-		<type>material</type>
-		<condition>
-			<greater-than>
-				<property>/fdm/jsbsim/systems/electrics/ac-essential-bus1</property>
-				<value>0</value>
-			</greater-than>
-            <not><property>sim/rendering/rembrandt/enabled</property></not>
-        </condition>
-		<emission>
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-		</emission>
-	</animation>
-	<animation>
-		<object-name>knob</object-name>
-		<type>material</type>
-		<condition>
-			<greater-than>
-				<property>/fdm/jsbsim/systems/electrics/ac-essential-bus1</property>
-				<value>0</value>
-			</greater-than>
-<not><property>sim/rendering/rembrandt/enabled</property></not></condition>
-		<emission>
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-		</emission>
-	</animation>
-
-	<animation>
-		<object-name>face</object-name>
-		<type>material</type>
-		<condition>
-			<greater-than>
-				<property>/fdm/jsbsim/systems/electrics/ac-essential-bus1</property>
-				<value>0</value>
-			</greater-than>
-            <not><property>sim/rendering/rembrandt/enabled</property></not></condition>
-		<emission>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-		</emission>
-	</animation>
-
-	<animation>
-		<object-name>mach-scale</object-name>
-		<type>material</type>
-		<condition>
-			<greater-than>
-				<property>/fdm/jsbsim/systems/electrics/ac-essential-bus1</property>
-				<value>0</value>
-			</greater-than>
-<not><property>sim/rendering/rembrandt/enabled</property></not></condition>
-		<emission>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-		</emission>
-	</animation>
-
-	<animation>
-		<object-name>bkg</object-name>
-		<type>material</type>
-		<condition>			<greater-than>
-				<property>/fdm/jsbsim/systems/electrics/ac-essential-bus1</property>
-				<value>0</value>
-			</greater-than>
-<not><property>sim/rendering/rembrandt/enabled</property></not></condition>
-		<emission>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-		</emission>
-	</animation>
-
-	<animation>
-		<object-name>safe-speed-bug</object-name>
-		<type>material</type>
-		<condition>			<greater-than>
-				<property>/fdm/jsbsim/systems/electrics/ac-essential-bus1</property>
-				<value>0</value>
-			</greater-than>
-<not><property>sim/rendering/rembrandt/enabled</property></not></condition>
-		<emission>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-		</emission>
-	</animation>
-
-	<animation>
-		<type>range</type>
-		<min-m>0</min-m>
-		<max-m>50</max-m>
-	</animation>
-
 </PropertyList>
