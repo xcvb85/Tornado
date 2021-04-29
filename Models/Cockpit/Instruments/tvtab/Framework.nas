@@ -59,13 +59,13 @@ var SkMenuPageActivateItem = {
 
 # item which changes menu
 var SkScratchpadActivateItem = {
-	new: func(id, device, title, text) {
+	new: func(id, device, title, index) {
 		var m = {parents: [SkScratchpadActivateItem, SkItem.new(id, device, title)]};
-		m.Text = text;
+		m.Index = index;
 		return m;
 	},
 	Activate: func {
-		me.Device.ActivateScratchpad(me.Text, me.Id);
+		me.Device.ActivateScratchpad(me.Index, me.Id);
 	}
 };
 
@@ -222,7 +222,7 @@ var Device = {
 		me.SkFrameMenu = me.ActiveMenu;
 		me.Menus[me.SkFrameMenu].SetDecoration(softkey);
 
-		me.SkInstance.setText(input);
+		me.SkInstance.setScratchpad(input);
 		me.UpdateMenu();
 	},
 	GetActiveMenu: func {

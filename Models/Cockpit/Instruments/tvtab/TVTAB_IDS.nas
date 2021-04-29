@@ -1,7 +1,7 @@
 var TvTabInstances = [{}, {}];
 
 var tvTabListener = 0;
-var plnInUse = 1; # 0=free, 1=left, 2=right
+var plnInUse = 0; # 0=free, 1=left, 2=right
 
 var TVTAB = {
 	new: func(group, instance)
@@ -95,7 +95,7 @@ var TVTAB = {
 		m.Menus[5].AddItem(SkItem.new(9, m, "IM"));
 
 		m.Menus[6].AddItem(SkSwitchItem.new(0, m, "WS", "instrumentation/switch1")); #NAV
-		m.Menus[6].AddItem(SkItem.new(1, m, "WPT", 0));
+		m.Menus[6].AddItem(SkScratchpadActivateItem.new(1, m, "WPT", 1));
 		m.Menus[6].AddItem(SkItem.new(2, m, "FXPT", 0));
 		m.Menus[6].AddItem(SkSwitchItem.new(4, m, "POS", "instrumentation/switch2"));
 		m.Menus[6].AddItem(SkSwitchItem.new(6, m, "MKR", "instrumentation/switch3"));
@@ -143,8 +143,6 @@ var TVTAB = {
 		m.Menus[10].AddItem(SkItem.new(8, m, "INSR"));
 		m.Menus[10].AddItem(SkItem.new(9, m, "FLW"));
 
-		m.ActivatePage(0, 0);
-		m.ActivateMenu(4);
 		return m;
 	}
 };
@@ -252,5 +250,6 @@ tvTabListener = setlistener("/sim/signals/fdm-initialized", func () {
 	TvTabInstances[1] = TVTAB.new(tvTav2Canvas.createGroup(), 0);
 
 	removelistener(tvTabListener);
+	tvTavBtClick(0, 10);
 	tvTavBtClick(1, 11);
 });
