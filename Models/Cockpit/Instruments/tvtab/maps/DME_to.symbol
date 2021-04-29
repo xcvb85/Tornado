@@ -1,6 +1,6 @@
 # See: http://wiki.flightgear.org/MapStructure
 # Class things:
-var name = 'APT_to';
+var name = 'DME_to';
 var parents = [DotSym];
 var __self__ = caller(0)[0];
 DotSym.makeinstance( name, __self__ );
@@ -17,15 +17,13 @@ var init = func {
 		.lineTo( 8, 8)
 		.lineTo(-8, 8)
 		.close()
+		.moveTo( 0, 8)
+		.lineTo( 0,-8)
+		.moveTo(-8, 0)
+		.lineTo( 0, 8)
+		.lineTo( 8, 0)
 		.setColor(me.layer.style.color_default)
 		.setStrokeLineWidth(me.layer.style.line_width);
-	var text_apt = me.element.createChild("text", name ~ " label")
-		.setDrawMode( canvas.Text.TEXT )
-		.setTranslation(-47,14)
-		.setText(me.model.id[0]+me.model.id[1]+me.model.id[2]+me.model.id[3]-260)
-		.setFont("Helvetica.txf")
-		.setColor(me.layer.style.label_font_color)
-		.setFontSize(28);
 
 	# FIXME: this applies scale to the whole group, better do this separately for each element?
 	me.element.setScale(me.layer.style.scale_factor);
