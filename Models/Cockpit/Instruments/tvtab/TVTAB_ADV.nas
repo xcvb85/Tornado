@@ -1,7 +1,7 @@
 var TvTabInstances = [];
 
 var tvTabListener = 0;
-var plnInUse = 1; # 0=free, 1=left, 2=right
+var plnInUse = 0; # 0=free, 1=left, 2=right
 
 var TVTAB = {
 	new: func(group, instance)
@@ -59,8 +59,8 @@ var TVTAB = {
 		m.Menus[2].AddItem(SkCharItem.new(8, m, "U"));
 		m.Menus[2].AddItem(SkCharItem.new(9, m, "W"));
 
-		m.Menus[3].AddItem(SkScratchpadActivateItem.new(0, m, "WS", "0:0:0"));
-		m.Menus[3].AddItem(SkScratchpadActivateItem.new(1, m, "WPT", "1:1:1"));
+		m.Menus[3].AddItem(SkItem.new(0, m, "WS"));
+		m.Menus[3].AddItem(SkScratchpadActivateItem.new(1, m, "WPT", 1));
 		m.Menus[3].AddItem(SkSwitchItem.new(2, m, "FXPT", "instrumentation/switch1"));
 #		m.Menus[3].AddItem(SkItem.new(2, m, "FXPT"));
 		m.Menus[3].AddItem(SkItem.new(3, m, "TGT"));
@@ -114,6 +114,9 @@ var tvTavBtClick = func(index = 0, input = -1) {
 	}
 	else {
 		if (input == 10) {
+			if(plnInUse == index+1) {
+				TvTabInstances[index].ActivateMenu(4);
+			}
 			if(plnInUse == 0)
 			{
 				TvTabInstances[index].ActivatePage(0, 0); #PLN
@@ -142,7 +145,7 @@ var tvTavBtClick = func(index = 0, input = -1) {
 			if(index+1 == plnInUse) plnInUse = 0;
 		}
 		else if (input == 14) {
-			if (TvTabInstances[index].GetActiveMenu() > 3) {
+			if (TvTabInstances[index].GetActiveMenu() != 1) {
 				bak = TvTabInstances[index].GetActiveMenu();
 				TvTabInstances[index].ActivateMenu(1); #A-K
 			}
@@ -151,7 +154,7 @@ var tvTavBtClick = func(index = 0, input = -1) {
 			}
 		}
 		else if (input == 15) {
-			if (TvTabInstances[index].GetActiveMenu() > 3) {
+			if (TvTabInstances[index].GetActiveMenu() != 2) {
 				bak = TvTabInstances[index].GetActiveMenu();
 				TvTabInstances[index].ActivateMenu(2); #L-W
 			}
@@ -160,7 +163,7 @@ var tvTavBtClick = func(index = 0, input = -1) {
 			}
 		}
 		else if (input == 20) {
-			if (TvTabInstances[index].GetActiveMenu() > 3) {
+			if (TvTabInstances[index].GetActiveMenu() != 0) {
 				bak = TvTabInstances[index].GetActiveMenu();
 				TvTabInstances[index].ActivateMenu(0); #0-9
 			}
@@ -169,9 +172,7 @@ var tvTavBtClick = func(index = 0, input = -1) {
 			}
 		}
 		else if (input == 21) {
-			if (TvTabInstances[index].GetActiveMenu() < 4) {
-				TvTabInstances[index].ActivateMenu(bak); #Enter
-			}
+			TvTabInstances[index].SetCharacter("\n"); #Enter
 		}
 	}
 }
@@ -201,5 +202,6 @@ tvTabListener = setlistener("/sim/signals/fdm-initialized", func () {
 	append(TvTabInstances, TVTAB.new(tvTav1Canvas.createGroup(), 0));
 	append(TvTabInstances, TVTAB.new(tvTav2Canvas.createGroup(), 0));
 	removelistener(tvTabListener);
+	tvTavBtClick(0, 10);
 	tvTavBtClick(1, 11);
 });

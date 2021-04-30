@@ -621,6 +621,31 @@
 			</mod-up>
 		</action>
 	</animation>
+<!--
+	<animation>
+		<object-name>TAB1TVM</object-name>
+		<type>material</type>
+		<condition>
+			<property>systems/electrical/outputs/tvtab1</property>
+		</condition>
+		<emission>
+			<red>0.0</red>
+			<green>0.31</green>
+			<blue>0.27</blue>
+		</emission>
+	</animation>
+	-->
+	<animation>
+		<type>translate</type>
+		<object-name>TAB1TVM</object-name>
+		<property>instrumentation/tvtab1/bt17</property>
+		<factor>0.0016</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>TAB1RCN</object-name>

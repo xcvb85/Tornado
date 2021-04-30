@@ -228,7 +228,7 @@ var Device = {
 	GetActiveMenu: func {
 		return me.ActiveMenu;
 	},
-	# input: 0=back, 1=sk1...5=sk5
+	# input:
 	BtClick: func(input = -1) {
 		me.Menus[me.ActiveMenu].ActivateItem(input);
 	},

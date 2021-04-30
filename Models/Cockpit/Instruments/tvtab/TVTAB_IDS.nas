@@ -155,8 +155,10 @@ var tvTavBtClick = func(index = 0, input = -1) {
 	}
 	else {
 		if (input == 10) {
-			if(plnInUse == 0)
-			{
+			if(plnInUse == index+1) {
+				TvTabInstances[index].ActivateMenu(5);
+			}
+			if(plnInUse == 0) {
 				TvTabInstances[index].ActivatePage(0, 0); #PLN
 				TvTabInstances[index].ActivateMenu(5);
 				plnInUse = index+1;
@@ -183,7 +185,7 @@ var tvTavBtClick = func(index = 0, input = -1) {
 			if(index+1 == plnInUse) plnInUse = 0;
 		}
 		else if (input == 13) {
-			if (TvTabInstances[index].GetActiveMenu() > 3) {
+			if (TvTabInstances[index].GetActiveMenu() != 1) {
 				bak = TvTabInstances[index].GetActiveMenu();
 				TvTabInstances[index].ActivateMenu(1); #A-K
 			}
@@ -192,7 +194,7 @@ var tvTavBtClick = func(index = 0, input = -1) {
 			}
 		}
 		else if (input == 14) {
-			if (TvTabInstances[index].GetActiveMenu() > 3) {
+			if (TvTabInstances[index].GetActiveMenu() != 2) {
 				bak = TvTabInstances[index].GetActiveMenu();
 				TvTabInstances[index].ActivateMenu(2); #L-V
 			}
@@ -201,7 +203,7 @@ var tvTavBtClick = func(index = 0, input = -1) {
 			}
 		}
 		else if (input == 15) {
-			if (TvTabInstances[index].GetActiveMenu() > 3) {
+			if (TvTabInstances[index].GetActiveMenu() != 3) {
 				bak = TvTabInstances[index].GetActiveMenu();
 				TvTabInstances[index].ActivateMenu(3); #W-Z
 			}
@@ -210,7 +212,7 @@ var tvTavBtClick = func(index = 0, input = -1) {
 			}
 		}
 		else if (input == 20) {
-			if (TvTabInstances[index].GetActiveMenu() > 3) {
+			if (TvTabInstances[index].GetActiveMenu() != 0) {
 				bak = TvTabInstances[index].GetActiveMenu();
 				TvTabInstances[index].ActivateMenu(0); #0-9
 			}
@@ -219,9 +221,7 @@ var tvTavBtClick = func(index = 0, input = -1) {
 			}
 		}
 		else if (input == 21) {
-			if (TvTabInstances[index].GetActiveMenu() < 4) {
-				TvTabInstances[index].ActivateMenu(bak); #Enter
-			}
+			TvTabInstances[index].SetCharacter("\n"); #Enter
 		}
 	}
 }
