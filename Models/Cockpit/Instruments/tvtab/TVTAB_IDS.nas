@@ -13,6 +13,7 @@ var TVTAB = {
 		append(m.Pages, canvas_nav.new(group.createChild('group'))); #1
 		append(m.Pages, canvas_fa.new(group.createChild('group'))); #2
 		append(m.Pages, canvas_empty.new(group.createChild('group'))); #3
+		append(m.Pages, canvas_eqm.new(group.createChild('group'))); #4
 
 		m.SkInstance = canvas_overlay.new(group.createChild('group'));
 
@@ -28,6 +29,7 @@ var TVTAB = {
 		append(m.Menus, SkMenu.new(8, m, ""));
 		append(m.Menus, SkMenu.new(9, m, ""));
 		append(m.Menus, SkMenu.new(10, m, ""));
+		append(m.Menus, SkMenu.new(11, m, ""));
 
 		# create softkeys
 		m.Menus[0].AddItem(SkCharItem.new(0, m, "0"));
@@ -124,7 +126,7 @@ var TVTAB = {
 		m.Menus[8].AddItem(SkItem.new(9, m, "IM"));
 
 		m.Menus[9].AddItem(SkItem.new(0, m, "K")); #DATA
-		m.Menus[9].AddItem(SkItem.new(1, m, "GTF"));
+		m.Menus[9].AddItem(SkMenuPageActivateItem.new(1, m, "GTF", 11, 4));
 		m.Menus[9].AddItem(SkItem.new(2, m, "TIME"));
 		m.Menus[9].AddItem(SkItem.new(3, m, "TOT"));
 		m.Menus[9].AddItem(SkItem.new(4, m, "ALT"));
@@ -143,6 +145,13 @@ var TVTAB = {
 		m.Menus[10].AddItem(SkItem.new(8, m, "INSR"));
 		m.Menus[10].AddItem(SkItem.new(9, m, "FLW"));
 
+		m.Menus[11].AddItem(SkItem.new(3, m, "IFM"));
+		m.Menus[11].AddItem(SkItem.new(4, m, "IDD"));
+		m.Menus[11].AddItem(SkItem.new(5, m, "OFP"));
+		m.Menus[11].AddItem(SkItem.new(6, m, "SSD"));
+		m.Menus[11].AddItem(SkItem.new(7, m, "TST"));
+		m.Menus[11].AddItem(SkItem.new(8, m, "ACC"));
+
 		return m;
 	}
 };
@@ -155,10 +164,7 @@ var tvTavBtClick = func(index = 0, input = -1) {
 	}
 	else {
 		if (input == 10) {
-			if(plnInUse == index+1) {
-				TvTabInstances[index].ActivateMenu(5);
-			}
-			if(plnInUse == 0) {
+			if(plnInUse == 0 or plnInUse == index+1) {
 				TvTabInstances[index].ActivatePage(0, 0); #PLN
 				TvTabInstances[index].ActivateMenu(5);
 				plnInUse = index+1;

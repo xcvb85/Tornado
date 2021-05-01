@@ -13,6 +13,7 @@ var TVTAB = {
 		append(m.Pages, canvas_nav.new(group.createChild('group'))); #1
 		append(m.Pages, canvas_rdr.new(group.createChild('group'))); #2
 		append(m.Pages, canvas_empty.new(group.createChild('group'))); #3
+		append(m.Pages, canvas_eqm.new(group.createChild('group'))); #4
 
 		m.SkInstance = canvas_overlay.new(group.createChild('group'));
 
