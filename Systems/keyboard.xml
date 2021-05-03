@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
+	<key n="2">
+		<name>Ctrl-B</name>
+		<desc>Toggle speedbrake</desc>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/flight/speedbrake</property>
+		</binding>
+	</key>
 	<key n="60">
 		<name>&lt;</name>
 		<desc>Decrease Sweep</desc>
@@ -32,6 +40,14 @@
 			<command>property-assign</command>
 			<property>sim/model/canopy-positions/Canopy/position-norm</property>
 			<value>1</value>
+		</binding>
+	</key>
+	<key n="127">
+		<name>Delete</name>
+		<desc>Toggle Reversers</desc>
+		<binding>
+			<command>nasal</command>
+			<script>libraries.togglereverser()</script>
 		</binding>
 	</key>
 </PropertyList>

@@ -14,6 +14,10 @@
 				<desc>toggle parking brake</desc>
 			</key>
 			<key>
+				<name>Ctrl+b</name>
+				<desc>toggle speedbrake</desc>
+			</key>
+			<key>
 				<name>d/D</name>
 				<desc>open/close canopy</desc>
 			</key>
@@ -32,6 +36,10 @@
 			<key>
 				<name>[ ]</name>
 				<desc>flaps up/down</desc>
+			</key>
+			<key>
+				<name>Del</name>
+				<desc>thrust reverser</desc>
 			</key>
 		</help>
 		<flaps>
@@ -54,6 +62,14 @@
 			</generic>
 		</multiplay>
 	</sim>
+	<engines>
+		<engine n="0">
+			<reverser-pos-norm type="double">0</reverser-pos-norm>
+		</engine>
+		<engine n="1">
+			<reverser-pos-norm type="double">0</reverser-pos-norm>
+		</engine>
+	</engines>
 	<input>
 		<keyboard include="Systems/keyboard.xml" />
 	</input>

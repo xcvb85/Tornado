@@ -109,7 +109,7 @@
        <description>Drag due to speedbrakes</description>
          <product>
            <property>fcs/speedbrake-pos-norm</property>
-           <value>0.021</value>
+           <value>0.1</value>
          </product>
     </function>
     <function name="aero/coefficients/Cds">
