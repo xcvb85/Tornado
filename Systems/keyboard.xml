@@ -2,7 +2,7 @@
 <PropertyList>
 	<key n="2">
 		<name>Ctrl-B</name>
-		<desc>Toggle speedbrake</desc>
+		<desc>Toggle Speedbrake</desc>
 		<binding>
 			<command>property-toggle</command>
 			<property>controls/flight/speedbrake</property>
@@ -26,7 +26,7 @@
 	</key>
 	<key n="68">
 		<name>D</name>
-		<desc>close-canopy</desc>
+		<desc>Close Canopy</desc>
 		<binding>
 			<command>property-assign</command>
 			<property>sim/model/canopy-positions/Canopy/position-norm</property>
@@ -35,11 +35,27 @@
 	</key>
 	<key n="100">
 		<name>d</name>
-		<desc>canopy</desc>
+		<desc>Open Canopy</desc>
 		<binding>
 			<command>property-assign</command>
 			<property>sim/model/canopy-positions/Canopy/position-norm</property>
 			<value>1</value>
+		</binding>
+	</key>
+	<key n="76">
+		<name>L</name>
+		<desc>Cockpit Light</desc>
+		<binding>
+			<command>property-toggle</command>
+			<property>instrumentation/cockpit_lights/Connected</property>
+		</binding>
+	</key>
+	<key n="108">
+		<name>l</name>
+		<desc>Landing Light</desc>
+		<binding>
+			<command>property-toggle</command>
+			<property>instrumentation/landing_lights/Connected</property>
 		</binding>
 	</key>
 	<key n="127">

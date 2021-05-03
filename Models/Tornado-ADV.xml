@@ -1262,7 +1262,7 @@
 		<property>surface-positions/speedbrake-pos-norm</property>
 		<factor>-50</factor>
 		<center>
-			<x-m>3.2</x-m>
+			<x-m>3.9</x-m>
 			<y-m>0.0</y-m>
 			<z-m>-0.42</z-m>
 		</center>

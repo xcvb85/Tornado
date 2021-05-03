@@ -405,6 +405,7 @@ elBus.append(generator2);
 elBus.append(Consumer.new("ehdd", 4, 18.1));
 elBus.append(Consumer.new("tvtab1", 4, 17.9));
 elBus.append(Consumer.new("tvtab2", 4, 18.0));
+elBus.append(Consumer.new("landing_lights", 4, 18.1));
 elBus.append(Consumer.new("cockpit_lights", 4, 18.1));
 
 # no separate switch

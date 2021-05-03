@@ -26,6 +26,14 @@
 				<desc>gear up/down</desc>
 			</key>
 			<key>
+				<name>l</name>
+				<desc>landing lights</desc>
+			</key>
+			<key>
+				<name>L</name>
+				<desc>cockpit lights</desc>
+			</key>
+			<key>
 				<name>&gt;</name>
 				<desc>wing sweep aft</desc>
 			</key>

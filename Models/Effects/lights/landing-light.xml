@@ -40,7 +40,7 @@
 		<spot-cutoff>20</spot-cutoff>
 		<range-m>200</range-m>
 		<dim-factor>
-			<property>gear/gear/position-norm</property>
+			<property>systems/electrical/outputs/landing_lights</property>
 		</dim-factor>
 	</light>
 </PropertyList>
