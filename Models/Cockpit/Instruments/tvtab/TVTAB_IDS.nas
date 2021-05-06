@@ -96,7 +96,7 @@ var TVTAB = {
 		m.Menus[5].AddItem(SkItem.new(8, m, "FUEL"));
 		m.Menus[5].AddItem(SkItem.new(9, m, "IM"));
 
-		m.Menus[6].AddItem(SkSwitchItem.new(0, m, "WS", "instrumentation/switch1")); #NAV
+		m.Menus[6].AddItem(SkScratchpadActivateItem.new(1, m, "WS", 0)); #NAV
 		m.Menus[6].AddItem(SkScratchpadActivateItem.new(1, m, "WPT", 1));
 		m.Menus[6].AddItem(SkItem.new(2, m, "FXPT", 0));
 		m.Menus[6].AddItem(SkSwitchItem.new(4, m, "POS", "instrumentation/switch2"));

@@ -55,6 +55,18 @@
 -->
 
  <model>
+  <name>Panels</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Parts/warning.ac</path>
+  <offsets>
+   <x-m>-4.748</x-m>
+   <y-m> 0.299</y-m>
+   <z-m>-0.795</z-m>
+   <pitch-deg>-17</pitch-deg>
+   <heading-deg>-3</heading-deg>
+  </offsets>
+ </model>
+
+ <model>
   <name>Pilot Seat</name>
   <path>Aircraft/Tornado/Models/Cockpit/Parts/seat.ac</path>
   <offsets>
