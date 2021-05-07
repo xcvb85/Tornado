@@ -1,0 +1,21 @@
+<PropertyList>
+ <path>Aircraft/Tornado/Models/Cockpit/Parts/panels_right.ac</path>
+	<model>
+		<name>cover1</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Buttons/cover2.ac</path>
+		<offsets>
+			<x-m>0.360</x-m>
+			<y-m>0.097</y-m>
+			<z-m>0.008</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>cover1</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Buttons/cover2.ac</path>
+		<offsets>
+			<x-m>0.360</x-m>
+			<y-m>0.043</y-m>
+			<z-m>0.008</z-m>
+		</offsets>
+	</model>
+</PropertyList>

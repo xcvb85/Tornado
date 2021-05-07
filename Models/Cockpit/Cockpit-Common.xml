@@ -40,22 +40,32 @@
   </offsets>
  </model>
 
-<!--
  <model>
   <name>Panels</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Parts/panels_right.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Parts/panels_right.xml</path>
   <offsets>
-   <x-m>-4.650</x-m>
-   <y-m> 0.348</y-m>
-   <z-m>-0.858</z-m>
+   <x-m>-4.750</x-m>
+   <y-m> 0.310</y-m>
+   <z-m>-0.838</z-m>
    <pitch-deg>-2.5</pitch-deg>
-   <roll-deg>14.0</roll-deg>
+   <roll-deg>12.0</roll-deg>
   </offsets>
  </model>
--->
 
  <model>
-  <name>Panels</name>
+  <name>Gear Lever</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Parts/lever.xml</path>
+  <offsets>
+   <x-m>-4.762</x-m>
+   <y-m>-0.328</y-m>
+   <z-m>-0.743</z-m>
+   <pitch-deg>-17</pitch-deg>
+   <heading-deg>3</heading-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Warning Panel</name>
   <path>Aircraft/Tornado/Models/Cockpit/Parts/warning.ac</path>
   <offsets>
    <x-m>-4.748</x-m>
