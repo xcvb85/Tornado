@@ -4,7 +4,7 @@
 		<description>Panavia Tornado ADV</description>
 		<variant-of>Tornado-IDS</variant-of>
 		<author>Heiko Schulz (3D external model)</author>
-		<long-description>The Panavia Tornado Air Defence Variant (ADV) is the interceptor version of the Tornado, developed for the Royal Air Force to shoot down Soviet bombers flying over the North Sea from a great distance. It was introduced in 1985.</long-description>
+		<long-description>The Panavia Tornado Air Defence Variant (ADV) is the interceptor version of the Tornado. It was developed for the Royal Air Force to shoot down Soviet bombers flying over the North Sea from a great distance. It was introduced in 1985.</long-description>
 		<status>beta</status>
 		<rating>
 			<FDM type="int">3</FDM>

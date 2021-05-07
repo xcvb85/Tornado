@@ -1,6 +1,17 @@
 <?xml version="1.0"?>
 <PropertyList>
 	<path>hud.ac</path>
+
+	<model>
+		<name>Panel</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Instruments/hud/panel_ids.ac</path>
+	</model>
+
+	<model>
+		<name>Camera</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Instruments/hud/camera_ids.ac</path>
+	</model>
+
 	<animation>
 		<type>select</type>
 		<object-name>HUD_Screen</object-name>
@@ -10,5 +21,193 @@
 				<value>20</value>
 			</greater-than>
 		</condition>
+	</animation>
+
+	<animation>
+        <type>pick</type>
+		<object-name>Cylinder.005</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/hud/swMode</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Cylinder.005</object-name>
+		<property>instrumentation/hud/swMode</property>
+		<factor>-45</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.0215</y-m>
+			<z-m>0.063</z-m>
+		</center>
+	</animation>
+
+	<animation>
+        <type>pick</type>
+		<object-name>Cylinder.004</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/hud/swSbs</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Cylinder.004</object-name>
+		<property>instrumentation/hud/swSbs</property>
+		<factor>-45</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.1356</y-m>
+			<z-m>0.0637</z-m>
+		</center>
+	</animation>
+
+	<animation>
+        <type>pick</type>
+		<object-name>Sphere</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/hud/swVV</property>
+                <value>0.5</value>
+                <value>1.0</value>  
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Sphere</object-name>
+		<property>instrumentation/hud/swVV</property>
+		<factor>-40</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.006</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.067</z-m>
+		</center>
+	</animation>
+
+	<animation>
+        <type>pick</type>
+		<object-name>Sphere.001</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/hud/swMach</property>
+                <value>0.5</value>
+                <value>1.0</value>  
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Sphere.001</object-name>
+		<property>instrumentation/hud/swMach</property>
+		<factor>-40</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.006</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.067</z-m>
+		</center>
+	</animation>
+
+	<animation>
+        <type>pick</type>
+		<object-name>Sphere.002</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/hud/swAlt</property>
+                <value>0.5</value>
+                <value>1.0</value>  
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Sphere.002</object-name>
+		<property>instrumentation/hud/swAlt</property>
+		<factor>-40</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.006</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.067</z-m>
+		</center>
+	</animation>
+
+	<animation>
+        <type>pick</type>
+		<object-name>Sphere.003</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/hud/swHeading</property>
+                <value>0.5</value>
+                <value>1.0</value>  
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Sphere.003</object-name>
+		<property>instrumentation/hud/swHeading</property>
+		<factor>-40</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.006</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.067</z-m>
+		</center>
 	</animation>
 </PropertyList>
