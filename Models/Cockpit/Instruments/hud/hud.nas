@@ -40,6 +40,10 @@ var HUD = {
 	{
 		if(me.swMode.getValue()) {
 			me.Hud.show();
+			me.Hud.update();
+			if(me.ActivePage >= 0) {
+				me.Pages[me.ActivePage].update();
+			}
 		}
 		else {
 			me.Hud.hide();
@@ -50,11 +54,6 @@ var HUD = {
 		}
 		else {
 			me.Sbs.hide();
-		}
-
-		me.Hud.update();
-		if(me.ActivePage >= 0) {
-			me.Pages[me.ActivePage].update();
 		}
 	}
 };
