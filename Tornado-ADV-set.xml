@@ -4,7 +4,7 @@
 		<description>Panavia Tornado ADV</description>
 		<variant-of>Tornado-IDS</variant-of>
 		<author>Heiko Schulz (3D external model)</author>
-		<long-description>The Panavia Tornado Air Defence Variant (ADV) is the interceptor version of the Tornado, developed for the Royal Air Force to shoot down Soviet bombers flying over the North Sea from a great distance. It was introduced in 1985.</long-description>
+		<long-description>The Panavia Tornado Air Defence Variant (ADV) is the interceptor version of the Tornado. It was developed for the Royal Air Force to shoot down Soviet bombers flying over the North Sea from a great distance. It was introduced in 1985.</long-description>
 		<status>beta</status>
 		<rating>
 			<FDM type="int">3</FDM>
@@ -188,7 +188,20 @@
 			</opt>
 		</weight>
 	</payload>
+
 	<nasal>
+        <vector>
+            <file>Aircraft/Tornado/Nasal/vector.nas</file>
+        </vector>
+        <rcs>
+            <file>Aircraft/Tornado/Nasal/rcs.nas</file>
+        </rcs>
+        <radardist>
+            <file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
+        </radardist>
+        <awg_9>
+            <file>Aircraft/Tornado/Nasal/awg_9.nas</file>
+        </awg_9>
 		<libraries>
 			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
 			<file>Aircraft/Tornado/Nasal/librariesADV.nas</file>
@@ -196,6 +209,7 @@
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud.nas</file>
 		</libraries>
 		<efis>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/rhwr/TEWS_main.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/maps/loader.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/Framework.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/rdr.nas</file>
