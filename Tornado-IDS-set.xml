@@ -52,6 +52,18 @@
 		</displays>
 	</tornado>
 	<nasal>
+        <vector>
+            <file>Aircraft/Tornado/Nasal/vector.nas</file>
+        </vector>
+        <rcs>
+            <file>Aircraft/Tornado/Nasal/rcs.nas</file>
+        </rcs>
+        <radardist>
+            <file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
+        </radardist>
+        <awg_9>
+            <file>Aircraft/Tornado/Nasal/awg_9.nas</file>
+        </awg_9>
 		<libraries>
 			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
 			<file>Aircraft/Tornado/Nasal/librariesIDS.nas</file>
@@ -62,6 +74,7 @@
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud.nas</file>
 		</libraries>
 		<efis>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/rhwr/TEWS_main.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/rpmd/moving-map.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/maps/loader.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/Framework.nas</file>

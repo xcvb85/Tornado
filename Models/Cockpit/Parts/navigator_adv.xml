@@ -20,6 +20,10 @@
 		</offsets>
 	</model>
 	<model>
+		<name>Handles</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Parts/handles.ac</path>
+	</model>
+	<model>
 		<name>TV-Tab 1</name>
 		<path>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/tvtab1adv.xml</path>
 		<offsets>

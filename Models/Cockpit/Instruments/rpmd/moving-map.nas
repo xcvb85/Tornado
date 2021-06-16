@@ -17,6 +17,7 @@ var setupCanvas = func {
 	root.set("font", "LiberationFonts/LiberationMono-Regular.ttf");
 	mycanvas.setColorBackground(0, 0, 0, 1.0);
 	mycanvas.addPlacement({"node": "RPMD.screen"});
+	mycanvas.addPlacement({"node": "CRPMD.screen"});
 }
 var (center_x, center_y) = (width/2,height/2);
 
