@@ -297,7 +297,7 @@
 -->
  <model>
   <name>Radar Homing Warning Receiver</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/rhwr/rhwr.ac</path>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/rhwr/rhwr.xml</path>
   <offsets>
    <x-m>-4.860</x-m>
    <y-m> 0.200</y-m>

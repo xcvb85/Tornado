@@ -67,6 +67,7 @@
 				<bool n="1" type="bool" alias="/engines/engine[0]/augmentation" />
 				<float n="2" type="double" alias="/engines/engine[1]/n2" />
 				<bool n="2" type="bool" alias="/engines/engine[1]/augmentation" />
+        <int type="int" n="2">  0 </int>
 			</generic>
 		</multiplay>
 	</sim>
