@@ -19,14 +19,15 @@ var MenuEnum = {
 	SEC:  8,
 	DL1:  9,
 	DL2: 10,
-	GRH: 11,
-	UTL: 12,
-	TWS: 13,
-	PLS: 14,
-	AWS: 15,
-	RDS: 16,
-	LCK: 17,
-	RDE: 18,
+	GRS: 11,
+	GRE: 12,
+	UTL: 13,
+	TWS: 14,
+	PLS: 15,
+	AWS: 16,
+	RDS: 17,
+	LCK: 18,
+	RDE: 19,
 };
 
 var tvTabListener = 0;
@@ -57,7 +58,8 @@ var TVTAB = {
 		append(m.Menus, SkMenu.new(MenuEnum.SEC, m, "SEC"));
 		append(m.Menus, SkMenu.new(MenuEnum.DL1, m, "DL1"));
 		append(m.Menus, SkMenu.new(MenuEnum.DL2, m, "DL2"));
-		append(m.Menus, SkMenu.new(MenuEnum.GRH, m, "GRPH"));
+		append(m.Menus, SkMenu.new(MenuEnum.GRS, m, "GRPH"));
+		append(m.Menus, SkMenu.new(MenuEnum.GRE, m, "GRPH"));
 		append(m.Menus, SkMenu.new(MenuEnum.UTL, m, ""));
 		append(m.Menus, SkMenu.new(MenuEnum.TWS, m, ""));
 		append(m.Menus, SkMenu.new(MenuEnum.PLS, m, ""));
@@ -110,7 +112,7 @@ var TVTAB = {
 		m.Menus[MenuEnum.IOQ].AddItem(SkItem.new(9, m, "L2"));
 
 		m.Menus[MenuEnum.TAB].AddItem(SkItem.new(0, m, "PAGE"));
-		m.Menus[MenuEnum.TAB].AddItem(SkItem.new(1, m, "GPWS"));
+		m.Menus[MenuEnum.TAB].AddItem(SkMenuActivateItem.new(1, m, "GPWS", MenuEnum.GWS));
 		m.Menus[MenuEnum.TAB].AddItem(SkItem.new(2, m, "VOC"));
 		m.Menus[MenuEnum.TAB].AddItem(SkItem.new(3, m, "AFB"));
 		m.Menus[MenuEnum.TAB].AddItem(SkItem.new(4, m, "FUEL"));
@@ -136,8 +138,8 @@ var TVTAB = {
 
 		m.Menus[MenuEnum.PRI].AddItem(SkItem.new(0, m, "TRK"));
 		m.Menus[MenuEnum.PRI].AddItem(SkItem.new(1, m, "NVPT"));
-		m.Menus[MenuEnum.PRI].AddItem(SkItem.new(2, m, "GRPH"));
-		m.Menus[MenuEnum.PRI].AddItem(SkItem.new(3, m, "SEC"));
+		m.Menus[MenuEnum.PRI].AddItem(SkMenuActivateItem.new(2, m, "GRPH", MenuEnum.GRS));
+		m.Menus[MenuEnum.PRI].AddItem(SkMenuActivateItem.new(3, m, "SEC", MenuEnum.SEC));
 		m.Menus[MenuEnum.PRI].AddItem(SkItem.new(4, m, "FUEL"));
 		m.Menus[MenuEnum.PRI].AddItem(SkItem.new(5, m, "SURV"));
 		m.Menus[MenuEnum.PRI].AddItem(SkItem.new(6, m, "HDG"));
@@ -178,15 +180,25 @@ var TVTAB = {
 		m.Menus[MenuEnum.DL2].AddItem(SkItem.new(8, m, "REL"));
 		m.Menus[MenuEnum.DL2].AddItem(SkMenuActivateItem.new(9, m, "PRIM", MenuEnum.PRI));
 
-		m.Menus[MenuEnum.GRH].AddItem(SkItem.new(0, m, "RTE"));
-		m.Menus[MenuEnum.GRH].AddItem(SkItem.new(1, m, "LINE"));
-		m.Menus[MenuEnum.GRH].AddItem(SkItem.new(2, m, "COAS"));
-		m.Menus[MenuEnum.GRH].AddItem(SkItem.new(3, m, "DLRT"));
-		m.Menus[MenuEnum.GRH].AddItem(SkItem.new(4, m, "NTH"));
-		m.Menus[MenuEnum.GRH].AddItem(SkItem.new(5, m, "EDIT"));
-		m.Menus[MenuEnum.GRH].AddItem(SkItem.new(6, m, "SCAN"));
-		m.Menus[MenuEnum.GRH].AddItem(SkItem.new(7, m, "GMKR"));
-		m.Menus[MenuEnum.GRH].AddItem(SkMenuActivateItem.new(9, m, "PRIM", MenuEnum.PRI));
+		m.Menus[MenuEnum.GRS].AddItem(SkItem.new(0, m, "RTE"));
+		m.Menus[MenuEnum.GRS].AddItem(SkItem.new(1, m, "LINE"));
+		m.Menus[MenuEnum.GRS].AddItem(SkItem.new(2, m, "COAS"));
+		m.Menus[MenuEnum.GRS].AddItem(SkItem.new(3, m, "DLRT"));
+		m.Menus[MenuEnum.GRS].AddItem(SkItem.new(4, m, "NTH"));
+		m.Menus[MenuEnum.GRS].AddItem(SkMenuActivateItem.new(5, m, "EDIT", MenuEnum.GRE));
+		m.Menus[MenuEnum.GRS].AddItem(SkItem.new(6, m, "SCAN"));
+		m.Menus[MenuEnum.GRS].AddItem(SkItem.new(7, m, "GMKR"));
+		m.Menus[MenuEnum.GRS].AddItem(SkMenuActivateItem.new(9, m, "PRIM", MenuEnum.PRI));
+
+		m.Menus[MenuEnum.GRE].AddItem(SkItem.new(0, m, "RTE"));
+		m.Menus[MenuEnum.GRE].AddItem(SkItem.new(1, m, "LINE"));
+		m.Menus[MenuEnum.GRE].AddItem(SkItem.new(2, m, "COAS"));
+		m.Menus[MenuEnum.GRE].AddItem(SkItem.new(3, m, "DLRT"));
+		m.Menus[MenuEnum.GRE].AddItem(SkItem.new(4, m, "NTH"));
+		m.Menus[MenuEnum.GRE].AddItem(SkItem.new(5, m, "EDIT"));
+		m.Menus[MenuEnum.GRE].AddItem(SkItem.new(6, m, "SCAN"));
+		m.Menus[MenuEnum.GRE].AddItem(SkItem.new(7, m, "GMKR"));
+		m.Menus[MenuEnum.GRE].AddItem(SkMenuActivateItem.new(9, m, "PRIM", MenuEnum.PRI));
 
 		m.Menus[MenuEnum.UTL].AddItem(SkItem.new(0, m, "DATA"));
 		m.Menus[MenuEnum.UTL].AddItem(SkItem.new(1, m, "PGNS"));
@@ -196,7 +208,7 @@ var TVTAB = {
 		m.Menus[MenuEnum.UTL].AddItem(SkItem.new(5, m, "ALOC"));
 		m.Menus[MenuEnum.UTL].AddItem(SkItem.new(6, m, "MVG"));
 		m.Menus[MenuEnum.UTL].AddItem(SkItem.new(7, m, "TTG"));
-		m.Menus[MenuEnum.UTL].AddItem(SkItem.new(8, m, "IOQ"));
+		m.Menus[MenuEnum.UTL].AddItem(SkMenuActivateItem.new(8, m, "IOQ", MenuEnum.IOQ));
 		m.Menus[MenuEnum.UTL].AddItem(SkItem.new(9, m, "DL1"));
 
 		m.Menus[MenuEnum.TWS].AddItem(SkItem.new(0, m, "DCL"));
@@ -259,7 +271,7 @@ var TVTAB = {
 };
 
 var bak = 0;
-var tvTavBtClick = func(index = 0, input = -1) {
+var tvTabBtClick = func(index = 0, input = -1) {
 
 	if (input < 10) {
 		TvTabInstances[index].BtClick(input);
