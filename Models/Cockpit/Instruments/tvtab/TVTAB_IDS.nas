@@ -165,28 +165,28 @@ var tvTavBtClick = func(index = 0, input = -1) {
 	else {
 		if (input == 10) {
 			if(plnInUse == 0 or plnInUse == index+1) {
-				TvTabInstances[index].ActivatePage(0, 0); #PLN
+				TvTabInstances[index].ActivatePage(0); #PLN
 				TvTabInstances[index].ActivateMenu(5);
 				plnInUse = index+1;
 			}
 		}
 		else if (input == 11) {
-			TvTabInstances[index].ActivatePage(1, 0); #NAV
+			TvTabInstances[index].ActivatePage(1); #NAV
 			TvTabInstances[index].ActivateMenu(6);
 			if(index+1 == plnInUse) plnInUse = 0;
 		}
 		else if (input == 12) {
-			TvTabInstances[index].ActivatePage(2, 0); #FA
+			TvTabInstances[index].ActivatePage(2); #FA
 			TvTabInstances[index].ActivateMenu(7);
 			if(index+1 == plnInUse) plnInUse = 0;
 		}
 		else if (input == 17) {
-			TvTabInstances[index].ActivatePage(3, 0); #TVM - Missile TV
+			TvTabInstances[index].ActivatePage(3); #TVM - Missile TV
 			TvTabInstances[index].ActivateMenu(4);
 			if(index+1 == plnInUse) plnInUse = 0;
 		}
 		else if (input == 18) {
-			TvTabInstances[index].ActivatePage(3, 0); #RCN - RECCE camera
+			TvTabInstances[index].ActivatePage(3); #RCN - RECCE camera
 			TvTabInstances[index].ActivateMenu(4);
 			if(index+1 == plnInUse) plnInUse = 0;
 		}

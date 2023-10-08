@@ -202,7 +202,7 @@ var Device = {
 		me.Softkeys[0] = me.Menus[id].GetTitle();
 		me.UpdateMenu();
 	},
-	ActivatePage: func(page, softkey) {
+	ActivatePage: func(page) {
 		me.Menus[me.SkFrameMenu].ResetDecoration();
 		me.SkFrameMenu = me.ActiveMenu;
 
