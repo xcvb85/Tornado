@@ -10,6 +10,10 @@
 		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/lm2</inherits-from>
 		<object-name>face</object-name>
 	</effect>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/glass</inherits-from>
+		<object-name>glass</object-name>
+	</effect>
 
 	<animation>
 		<type>rotate</type>

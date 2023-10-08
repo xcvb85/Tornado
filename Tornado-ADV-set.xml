@@ -210,6 +210,8 @@
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_fd.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_base.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/sbs.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/dir.nas</file>
 		</libraries>
 		<efis>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/rhwr/TEWS_main.nas</file>

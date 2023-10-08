@@ -290,8 +290,6 @@ var MM = {
 		}
 		me.whereIsMap();#must be before mapUpdate
 		me.updateMap();
-		me.showSteerPoints();
-		#me.showPoly();#must be under showSteerPoints
 		#me.updateMapNames();
 		
 		me.twoHz = !me.twoHz;
@@ -333,57 +331,6 @@ var MM = {
 			makePath = string.compileTemplate(maps_base ~ '/cartoL/{z}/{x}/{y}.png');
 		}
 	},
-	
-	createSteerpoint: func (wp) {
-		#TODO: double check that it can only increase by 1 from max
-		if (wp > me.steerPointMax) {
-	   		var stGrp = me.rootCenter.createChild("group").setTranslation(2000, 2000);
-	   		
-			append(me.steerpointSymbol, stGrp.createChild("path")
-			   .set("z-index", 6)
-	           .moveTo(-10, -10)
-	           .vert(20)
-	           .horiz(20)
-	           .vert(-20)
-	           .horiz(-20)
-	           .setStrokeLineWidth(w*2)
-	           .setColor(COLOR_RED));
-			append(me.steerpoint, stGrp);
-			me.steerPointMax += 1;
-		}
-	},
-
-	showSteerPoints: func {
-		# steerpoints on map
-		me.steerRot = -me.input.heading.getValue()*D2R;
-
-		me.wpIndex = -1;
-		me.steerCounter = 0;
-		me.curr_plan = flightplan();
-		if (me.curr_plan != nil) {
-			me.points = me.curr_plan.getPlanSize();
-			for (var wp = 0; wp < me.points; wp += 1) {
-				# wp      = local index inside a polygon
-				# wpIndex = global index for use with canvas elements
-				
-				if (me.points > wp) {
-	  				me.wpIndex += 1;
-	  				me.node = me.curr_plan.getWP(wp);
-	  				me.createSteerpoint(me.wpIndex);
-					me.lat_wp = me.node.wp_lat;
-	  				me.lon_wp = me.node.wp_lon;
-					me.texCoord = me.laloToTexel(me.lat_wp, me.lon_wp);
-					me.steerpoint[me.wpIndex].set("z-index", 5);
-					me.steerpoint[me.wpIndex].setTranslation(me.texCoord[0], me.texCoord[1]);
-					me.steerpoint[me.wpIndex].show();		
-				}
-	  		}
-	  	}
-	  	me.wpIndex += 1;
-	  	for (me.j = me.wpIndex;me.j<=me.steerPointMax;me.j+=1) {
-	  		me.steerpoint[me.j].hide();
-	  	}
-  	},
 
   	laloToTexel: func (la, lo) {
 		me.coord = geo.Coord.new();
@@ -429,50 +376,6 @@ var MM = {
   		me.coordSelf.apply_course_distance(me.headAngle, me.mDist);
 
   		return [me.coordSelf.lat(), me.coordSelf.lon()];
-  	},
-
-  	showPoly: func {
-  		# route/area polygon
-  		#
-  		# current leg is shown and next legs if less than 20Km away.
-  		# If main menu MISSION-DATA is enabled, then show all legs.
-  		# tyrk color if editing that polygon, else dark tyrk. White for currently edited leg (soon).
-  		#
-  		# me.poly contain all points in both all routes and areas.
-  		if (me.showSteers == TRUE and me.showSteerPoly == TRUE and size(me.poly) > 1) {
-  			me.steerPoly.removeAllChildren();
-  			me.prevLeg = nil;
-  			me.firstLeg = nil;
-  			foreach(leg; me.poly) {
-  				if (me.prevLeg != nil and leg[2] == TRUE) {
-  					me.steerPoly.createChild("path")
-  						.moveTo(me.prevLeg[0], me.prevLeg[1])
-  						.lineTo(leg[0], leg[1])
-  						.setColor(leg[3])
-  						.set("z-index", leg[4])
-  						.setStrokeLineWidth(w);
-  				}
-  				me.prevLeg = leg;
-  				if (leg[5] == -1) {
-  					# first leg in area
-  					me.firstLeg = leg;
-  				} elsif (leg[5] == 1) {
-  					# last leg in area
-  					# close the area
-  					me.steerPoly.createChild("path")
-  						.moveTo(leg[0], leg[1])
-  						.lineTo(me.firstLeg[0], me.firstLeg[1])
-  						.setColor(me.firstLeg[3])
-  						.set("z-index", me.firstLeg[4])
-  						.setStrokeLineWidth(w);
-  				}
-  				me.lastLeg = leg;
-  			}
-  			me.steerPoly.update();
-  			me.steerPoly.show();
-  		} else {
-  			me.steerPoly.hide();
-  		}
   	},
 
 
