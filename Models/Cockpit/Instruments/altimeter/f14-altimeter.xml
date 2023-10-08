@@ -18,6 +18,10 @@ a synchro overrides the barometric mechanism and positions the pointer to true a
 		<object-name>drum-2</object-name>
 		<object-name>drum-3</object-name>
 	</effect>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/glass</inherits-from>
+		<object-name>glass</object-name>
+	</effect>
 
     <animation>
         <type>rotate</type>

@@ -8,6 +8,10 @@
 		<object-name>flag</object-name>
 		<object-name>scale</object-name>
 	</effect>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/glass</inherits-from>
+		<object-name>glass</object-name>
+	</effect>
 	<animation>
 		<type>select</type>
 		<object-name>flag</object-name>

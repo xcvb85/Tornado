@@ -140,7 +140,11 @@
   <name>Cover</name>
   <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover1.xml</path>
   <offsets>
+<<<<<<< HEAD
    <x-m>-4.735</x-m>
+=======
+   <x-m>-4.700</x-m>
+>>>>>>> hud
    <y-m>-0.125</y-m>
    <z-m>-0.265</z-m>
    <pitch-deg>70.0</pitch-deg>
@@ -150,9 +154,15 @@
   <name>Cover</name>
   <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover2.xml</path>
   <offsets>
+<<<<<<< HEAD
    <x-m>-4.685</x-m>
    <y-m>-0.420</y-m>
    <z-m>-0.500</z-m>
+=======
+   <x-m>-4.65</x-m>
+   <y-m>-0.42</y-m>
+   <z-m>-0.50</z-m>
+>>>>>>> hud
    <pitch-deg>-80.0</pitch-deg>
    <heading-deg>180.0</heading-deg>
   </offsets>
@@ -161,9 +171,15 @@
   <name>Cover</name>
   <path>Aircraft/Tornado/Models/Cockpit/Buttons/cover3.xml</path>
   <offsets>
+<<<<<<< HEAD
    <x-m>-4.685</x-m>
    <y-m>-0.400</y-m>
    <z-m>-0.500</z-m>
+=======
+   <x-m>-4.65</x-m>
+   <y-m>-0.40</y-m>
+   <z-m>-0.50</z-m>
+>>>>>>> hud
    <pitch-deg>-80.0</pitch-deg>
    <heading-deg>180.0</heading-deg>
   </offsets>
