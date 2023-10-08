@@ -182,7 +182,7 @@ var TVTAB = {
 
 		m.Menus[MenuEnum.GRS].AddItem(SkItem.new(0, m, "RTE"));
 		m.Menus[MenuEnum.GRS].AddItem(SkItem.new(1, m, "LINE"));
-		m.Menus[MenuEnum.GRS].AddItem(SkItem.new(2, m, "COAS"));
+		m.Menus[MenuEnum.GRS].AddItem(SkSwitchItem.new(2, m, "COAS", "instrumentation/coas"));
 		m.Menus[MenuEnum.GRS].AddItem(SkItem.new(3, m, "DLRT"));
 		m.Menus[MenuEnum.GRS].AddItem(SkItem.new(4, m, "NTH"));
 		m.Menus[MenuEnum.GRS].AddItem(SkMenuActivateItem.new(5, m, "EDIT", MenuEnum.GRE));
@@ -190,7 +190,7 @@ var TVTAB = {
 		m.Menus[MenuEnum.GRS].AddItem(SkItem.new(7, m, "GMKR"));
 		m.Menus[MenuEnum.GRS].AddItem(SkMenuActivateItem.new(9, m, "PRIM", MenuEnum.PRI));
 
-		m.Menus[MenuEnum.GRE].AddItem(SkItem.new(0, m, "RTE"));
+		m.Menus[MenuEnum.GRE].AddItem(SkScratchpadActivateItem.new(0, m, "RTE", 0));
 		m.Menus[MenuEnum.GRE].AddItem(SkItem.new(1, m, "LINE"));
 		m.Menus[MenuEnum.GRE].AddItem(SkItem.new(2, m, "COAS"));
 		m.Menus[MenuEnum.GRE].AddItem(SkItem.new(3, m, "DLRT"));
