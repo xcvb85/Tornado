@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PropertyList>
-	<name>fuselage</name>
+	<name>metal</name>
 	<inherits-from>Effects/model-pbr</inherits-from>
 
   <parameters>
@@ -20,10 +20,15 @@
     </texture>
     <!-- ORM Texture (Occlusion R, Roughness G and Metallic B) -->
     <texture n="2">
-      <type>white</type>
+      <image>Aircraft/Tornado/Models/Effects/fuselage/metal.png</image>
+      <type>2d</type>
+      <filter>linear-mipmap-linear</filter>
+      <wrap-s>clamp</wrap-s>
+      <wrap-t>clamp</wrap-t>
+      <internal-format>normalized</internal-format>
     </texture>
-    <metallic-factor type="float">0.0</metallic-factor>
-    <roughness-factor type="float">0.15</roughness-factor>
+    <metallic-factor type="float">1.0</metallic-factor>
+    <roughness-factor type="float">1.0</roughness-factor>
     <!-- Emissive -->
     <texture n="3">
       <type>white</type>

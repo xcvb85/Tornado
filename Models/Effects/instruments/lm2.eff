@@ -1,26 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PropertyList>
-    <name>lm2</name>
-    <inherits-from>Effects/model-combined-deferred</inherits-from>
-    <parameters>
-        <texture n="3">
-            <image>Aircraft/Tornado/Models/Effects/instruments/lm2.png</image>
-            <type>2d</type>
-            <filter>linear-mipmap-linear</filter>
-            <wrap-s>clamp</wrap-s>
-            <wrap-t>clamp</wrap-t>
-            <internal-format>normalized</internal-format>
-        </texture>
-        <light-radius type="float">13</light-radius>
-        <lightmap-enabled type="int"><use>systems/electrical/outputs/cockpit_lights</use></lightmap-enabled>
-        <lightmap-multi type="int">1</lightmap-multi>
-        <lightmap-factor type="float" n="0">1</lightmap-factor>
-        <lightmap-color type="vec3d" n="0"> 1 .95 0.85 </lightmap-color>
-        <lightmap-factor type="float" n="1">0</lightmap-factor>
-        <lightmap-color type="vec3d" n="1"> 0.0 0.0 0.0 </lightmap-color>
-        <lightmap-factor type="float" n="2">0</lightmap-factor>
-        <lightmap-color type="vec3d" n="2"> 0.0 0.0 0.0 </lightmap-color>
-        <lightmap-factor type="float" n="3">0</lightmap-factor>
-        <lightmap-color type="vec3d" n="3"> 0.0 0.0 0.0 </lightmap-color>
-    </parameters>
+	<name>hud</name>
+	<inherits-from>Effects/model-pbr</inherits-from>
+
+  <parameters>
+    <!-- Base Color -->
+    <texture n="0">
+      <type>white</type>
+    </texture>
+    <base-color-factor type="vec4d">1.0 1.0 1.0 1.0</base-color-factor>
+    <!-- Normalmap -->
+    <texture n="1">
+      <type>null-normalmap</type>
+    </texture>
+    <!-- ORM Texture (Occlusion R, Roughness G and Metallic B) -->
+    <texture n="2">
+      <type>white</type>
+    </texture>
+    <metallic-factor type="float">0.0</metallic-factor>
+    <roughness-factor type="float">1.0</roughness-factor>
+    <!-- Emissive -->
+    <texture n="3">
+      <image>Aircraft/Tornado/Models/Effects/instruments/lm2.png</image>
+      <type>2d</type>
+      <filter>linear-mipmap-linear</filter>
+      <wrap-s>clamp</wrap-s>
+      <wrap-t>clamp</wrap-t>
+      <internal-format>normalized</internal-format>
+    </texture>
+    <emissive-factor type="vec3d">1.0 1.0 1.0</emissive-factor>
+    <!-- Double Sided -->
+    <cull-face>back</cull-face>
+    <!-- Whether to flip the texture vertically -->
+    <flip-vertically>false</flip-vertically>
+  </parameters>
 </PropertyList>

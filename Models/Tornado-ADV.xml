@@ -150,6 +150,25 @@
 		<object-name>airintake1l</object-name>
 		<object-name>airintake2l</object-name>
 	</effect>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/glass</inherits-from>
+		<object-name>WindscreenGlass</object-name>
+		<object-name>CanopyGlass</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/fuselage/metal</inherits-from>
+		<object-name>Flowerstrut</object-name>
+		<object-name>Cylinder.004</object-name>
+		<object-name>Cylinder.007</object-name>
+		<object-name>reversersup.L</object-name>
+		<object-name>reversersup.R</object-name>
+		<object-name>reverserdown.L</object-name>
+		<object-name>reverserdown.R</object-name>
+		<object-name>nozzle.L</object-name>
+		<object-name>nozzle.R</object-name>
+		<object-name>blah.004</object-name>
+		<object-name>blah.005</object-name>
+	</effect>
 	<!-- Solid Surfaces for Rembrandt rendering -->
 	<animation>
 		<object-name>Radom</object-name>
