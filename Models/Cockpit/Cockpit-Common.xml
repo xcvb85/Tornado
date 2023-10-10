@@ -403,7 +403,17 @@
    <pitch-deg>-10.0</pitch-deg>
   </offsets>
  </model>
-
+ <model>
+  <name>Fuel Indicator</name>
+  <path>Aircraft/Tornado/Models/Cockpit/Instruments/fuel/fuel.xml</path>
+  <offsets>
+   <x-m>-4.820</x-m>
+   <y-m> 0.266</y-m>
+   <z-m>-0.612</z-m>
+   <pitch-deg>-10.0</pitch-deg>
+  </offsets>
+ </model>
+ 
  <model>
   <name>Nozzle Indicator</name>
   <path>Aircraft/Tornado/Models/Cockpit/Instruments/nozzle/nozzle1.xml</path>
