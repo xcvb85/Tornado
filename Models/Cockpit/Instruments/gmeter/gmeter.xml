@@ -10,6 +10,11 @@
 		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/glass</inherits-from>
 		<object-name>glass</object-name>
 	</effect>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/fuselage/metal</inherits-from>
+		<object-name>screw1</object-name>
+		<object-name>screw2</object-name>
+	</effect>
 	<animation>
 		<name>needle</name>
 		<type>rotate</type>

@@ -11,12 +11,7 @@
     <base-color-factor type="vec4d">1.0 1.0 1.0 1.0</base-color-factor>
     <!-- Normalmap -->
     <texture n="1">
-      <image>Aircraft/Tornado/Models/Effects/fuselage/normalmap.png</image>
-      <type>2d</type>
-      <filter>linear-mipmap-linear</filter>
-      <wrap-s>clamp</wrap-s>
-      <wrap-t>clamp</wrap-t>
-      <internal-format>normalized</internal-format>
+      <type>null-normalmap</type>
     </texture>
     <!-- ORM Texture (Occlusion R, Roughness G and Metallic B) -->
     <texture n="2">

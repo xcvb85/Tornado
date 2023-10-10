@@ -5,4 +5,8 @@
 		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/glass</inherits-from>
 		<object-name>glass</object-name>
 	</effect>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/fuselage/metal</inherits-from>
+		<object-name>screws</object-name>
+	</effect>
 </PropertyList>
