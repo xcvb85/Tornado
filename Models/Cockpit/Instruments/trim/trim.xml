@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>trim.ac</path>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/lm1</inherits-from>
+		<object-name>BG</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/lm2</inherits-from>
+		<object-name>yaw</object-name>
+		<object-name>pitch</object-name>
+		<object-name>roll</object-name>
+	</effect>
+</PropertyList>
