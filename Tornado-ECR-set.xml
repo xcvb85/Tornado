@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList include="Tornado-Common.xml">
+	<sim>
+		<description>Panavia Tornado ECR</description>
+		<variant-of>Tornado-IDS</variant-of>
+		<author>Heiko Schulz (3D external model)</author>
+		<long-description>The Panavia Tornado Electronic Combat Reconnaissance (ECR) is the SEAD version of the Tornado, used by Germany and Italy. Introduction was in 1990.</long-description>
+		<status>beta</status>
+		<rating>
+			<FDM type="int">3</FDM>
+			<systems type="int">1</systems>
+			<cockpit type="int">2</cockpit>
+			<model type="int">5</model>
+		</rating>
+		<model>
+			<path>Aircraft/Tornado/Models/Tornado-IDS.xml</path>
+		</model>
+		<model>
+			<name>Cockpit-IDS</name>
+			<path>Aircraft/Tornado/Models/Cockpit/Cockpit-IDS.xml</path>
+		</model>
+		<aircraft-type type="int">0</aircraft-type>
+		<menubar>
+			<default>
+				<menu n="100">
+					<label>Tornado IDS</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Select Livery</label>
+						<binding>
+							<command>nasal</command>
+							<script>aircraft.livery.dialog.toggle()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Magic Startup</label>
+						<binding>
+							<command>nasal</command>
+							<script>libraries.doMagicStartup();</script>
+						</binding>
+					</item>
+				</menu>
+			</default>
+		</menubar>
+	</sim>
+	<tornado>
+		<displays>
+		<live-map type="bool">true</live-map>
+		<scale type="int">0</scale>
+		</displays>
+	</tornado>
+	<nasal>
+        <vector>
+            <file>Aircraft/Tornado/Nasal/vector.nas</file>
+        </vector>
+        <rcs>
+            <file>Aircraft/Tornado/Nasal/rcs.nas</file>
+        </rcs>
+        <radardist>
+            <file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
+        </radardist>
+        <awg_9>
+            <file>Aircraft/Tornado/Nasal/awg_9.nas</file>
+        </awg_9>
+		<libraries>
+			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
+			<file>Aircraft/Tornado/Nasal/librariesIDS.nas</file>
+			<file>Aircraft/Tornado/Nasal/electrical.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_sbs.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_fd.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_base.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/sbs.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/dir.nas</file>
+		</libraries>
+		<efis>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/rhwr/TEWS_main.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/rpmd/moving-map.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/maps/loader.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/Framework.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/plan.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/nav.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/fa.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/eqm.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/empty.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/overlay.nas</file>
+			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/TVTAB_IDS.nas</file>
+		</efis>
+	</nasal>
+</PropertyList>
