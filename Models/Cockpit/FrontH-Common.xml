@@ -11,7 +11,7 @@
 	</model>
 	<model>
 		<name>Korry</name>
-		<path>Aircraft/Tornado/Models/Cockpit/Buttons/korry.ac</path>
+		<path>Aircraft/Tornado/Models/Cockpit/Buttons/korry2.xml</path>
 		<offsets>
 			<x-m> 0.000</x-m>
 			<y-m>-0.225</y-m>
