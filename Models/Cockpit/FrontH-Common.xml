@@ -97,17 +97,15 @@
 			<z-m>-0.230</z-m>
 		</offsets>
 	</model>
-	<!--
- <model>
-  <name>HSI</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Instruments/hsi/hsi.ac</path>
-  <offsets>
-   <x-m>-4.815</x-m>
-   <y-m>-0.149</y-m>
-   <z-m>-0.213</z-m>
-  </offsets>
- </model>
--->
+	<model>
+		<name>HSI</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Instruments/hsi/hsi.xml</path>
+		<offsets>
+			<x-m> 0.000</x-m>
+			<y-m>-0.149</y-m>
+			<z-m>-0.222</z-m>
+		</offsets>
+	</model>
 	<model>
 		<name>Radar Homing Warning Receiver</name>
 		<path>Aircraft/Tornado/Models/Cockpit/Instruments/rhwr/rhwr.xml</path>

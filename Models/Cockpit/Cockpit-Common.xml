@@ -162,7 +162,7 @@
 		<name>FrontH</name>
 		<path>Aircraft/Tornado/Models/Cockpit/FrontH-Common.xml</path>
 		<offsets>
-			<x-m>-4.855</x-m>
+			<x-m>-4.860</x-m>
 			<y-m> 0.000</y-m>
 			<z-m>-0.400</z-m>
 			<pitch-deg>-10.0</pitch-deg>
