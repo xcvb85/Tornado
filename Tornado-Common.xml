@@ -101,4 +101,5 @@
 			</fcs>
 		</jsbsim>
 	</fdm>
+	<payload include="Systems/payload.xml"/>
 </PropertyList>

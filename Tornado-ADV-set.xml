@@ -46,162 +46,45 @@
 			</default>
 		</menubar>
 	</sim>
-	<payload>
-		<weight n="0">
-			<name>Left wing pylon (#1)</name>
-			<selected>none</selected>
-			<weight-lb alias="fdm/jsbsim/inertia/pointmass-weight-lbs[0]" />
-			<opt>
-				<name>none</name>
-				<lbs>0</lbs>
-				<weight-lb>0</weight-lb>
-			</opt>
-			<opt>
-				<name>AIM-9</name>
-				<lbs>188</lbs>
-				<weight-lb>188</weight-lb>
-			</opt>
-		</weight>
-		<weight n="1">
-			<name>Left wing pylon (#2)</name>
-			<selected>none</selected>
-			<weight-lb alias="fdm/jsbsim/inertia/pointmass-weight-lbs[1]" />
-			<opt>
-				<name>none</name>
-				<lbs>0</lbs>
-				<weight-lb>0</weight-lb>
-			</opt>
-			<opt>
-				<name>AIM-9</name>
-				<lbs>188</lbs>
-				<weight-lb>188</weight-lb>
-			</opt>
-		</weight>
-		<weight n="2">
-			<name>Central pylon (#3)</name>
-			<selected>none</selected>
-			<weight-lb alias="fdm/jsbsim/inertia/pointmass-weight-lbs[2]" />
-			<opt>
-				<name>none</name>
-				<lbs>0</lbs>
-				<weight-lb>0</weight-lb>
-			</opt>
-			<opt>
-				<name>RB-71</name>
-				<lbs>425</lbs>
-				<weight-lb>425</weight-lb>
-			</opt>
-			<opt>
-				<name>AIM-120</name>
-				<lbs>335</lbs>
-				<weight-lb>335</weight-lb>
-			</opt>
-		</weight>
-		<weight n="3">
-			<name>Central pylon (#4)</name>
-			<selected>none</selected>
-			<weight-lb alias="fdm/jsbsim/inertia/pointmass-weight-lbs[3]" />
-			<opt>
-				<name>none</name>
-				<lbs>0</lbs>
-				<weight-lb>0</weight-lb>
-			</opt>
-			<opt>
-				<name>RB-71</name>
-				<lbs>425</lbs>
-				<weight-lb>425</weight-lb>
-			</opt>
-			<opt>
-				<name>AIM-120</name>
-				<lbs>335</lbs>
-				<weight-lb>335</weight-lb>
-			</opt>
-		</weight>
-		<weight n="4">
-			<name>Central pylon (#5)</name>
-			<selected>none</selected>
-			<weight-lb alias="fdm/jsbsim/inertia/pointmass-weight-lbs[4]" />
-			<opt>
-				<name>none</name>
-				<lbs>0</lbs>
-				<weight-lb>0</weight-lb>
-			</opt>
-			<opt>
-				<name>RB-71</name>
-				<lbs>425</lbs>
-				<weight-lb>425</weight-lb>
-			</opt>
-			<opt>
-				<name>AIM-120</name>
-				<lbs>335</lbs>
-				<weight-lb>335</weight-lb>
-			</opt>
-		</weight>
-		<weight n="5">
-			<name>Central pylon (#6)</name>
-			<selected>none</selected>
-			<weight-lb alias="fdm/jsbsim/inertia/pointmass-weight-lbs[5]" />
-			<opt>
-				<name>none</name>
-				<lbs>0</lbs>
-				<weight-lb>0</weight-lb>
-			</opt>
-			<opt>
-				<name>RB-71</name>
-				<lbs>425</lbs>
-				<weight-lb>425</weight-lb>
-			</opt>
-			<opt>
-				<name>AIM-120</name>
-				<lbs>335</lbs>
-				<weight-lb>335</weight-lb>
-			</opt>
-		</weight>
-		<weight n="6">
-			<name>Right wing pylon (#7)</name>
-			<selected>none</selected>
-			<weight-lb alias="fdm/jsbsim/inertia/pointmass-weight-lbs[6]" />
-			<opt>
-				<name>none</name>
-				<lbs>0</lbs>
-				<weight-lb>0</weight-lb>
-			</opt>
-			<opt>
-				<name>AIM-9</name>
-				<lbs>188</lbs>
-				<weight-lb>188</weight-lb>
-			</opt>
-		</weight>
-		<weight n="7">
-			<name>Left wing pylon (#8)</name>
-			<selected>none</selected>
-			<weight-lb alias="fdm/jsbsim/inertia/pointmass-weight-lbs[7]" />
-			<opt>
-				<name>none</name>
-				<lbs>0</lbs>
-				<weight-lb>0</weight-lb>
-			</opt>
-			<opt>
-				<name>AIM-9</name>
-				<lbs>188</lbs>
-				<weight-lb>188</weight-lb>
-			</opt>
-		</weight>
-	</payload>
 
 	<nasal>
-        <vector>
-            <file>Aircraft/Tornado/Nasal/vector.nas</file>
-        </vector>
-        <rcs>
-            <file>Aircraft/Tornado/Nasal/rcs.nas</file>
-        </rcs>
-        <radardist>
-            <file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
-        </radardist>
-        <awg_9>
-            <file>Aircraft/Tornado/Nasal/awg_9.nas</file>
-        </awg_9>
+		<vector>
+			<file>Aircraft/Tornado/Nasal/weapons/vector.nas</file>
+		</vector>
+		<notifications>
+			<file>Aircraft/Tornado/Nasal/weapons/ArmamentNotification.nas</file>
+			<file>Aircraft/Tornado/Nasal/weapons/GeoBridgedTransmitter.nas</file>
+		</notifications>
+		<radardist>
+			<file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
+		</radardist>
+		<rcs>
+			<file>Aircraft/Tornado/Nasal/rcs.nas</file>
+		</rcs>
+		<damage>
+			<file>Aircraft/MiG-23MLD/Nasal/weapons/damage.nas</file>
+		</damage>
+		<ai>
+			<file>Aircraft/MiG-23MLD/Nasal/weapons/AI_list.nas</file>
+		</ai>
+		<view>
+			<file>Aircraft/MiG-23MLD/Nasal/weapons/MissileView.nas</file>
+		</view>
+		<armament>
+			<file>Aircraft/Tornado/Nasal/weapons/missile-code.nas</file><!-- must be before station-manager -->
+		</armament>
+		<stations>
+			<file>Aircraft/Tornado/Nasal/weapons/station-manager.nas</file><!-- must be before fire-control and pylons -->
+		</stations>
+		<fc>
+			<file>Aircraft/Tornado/Nasal/weapons/fire-control.nas</file><!-- must be before pylons -->
+		</fc>
+		<pylons>
+			<file>Aircraft/Tornado/Nasal/weapons/pylons.nas</file>
+		</pylons>
+		<awg_9>
+			<file>Aircraft/Tornado/Nasal/awg_9.nas</file>
+		</awg_9>
 		<libraries>
 			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
 			<file>Aircraft/Tornado/Nasal/librariesADV.nas</file>
