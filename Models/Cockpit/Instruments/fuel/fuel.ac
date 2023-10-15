@@ -8,7 +8,7 @@ OBJECT group
 name "fuel"
 kids 15
 OBJECT poly
-name "bg"
+name "BG"
 data 18
 mount.001.mesh.001
 crease 40.0
