@@ -2,6 +2,7 @@
 <PropertyList include="Tornado-Common.xml">
 	<sim>
 		<description>Panavia Tornado IDS</description>
+        <variant-id type="int">1</variant-id>
 		<author>Heiko Schulz (3D external model)</author>
 		<long-description>The Panavia Tornado Interdiction/Strike (IDS) is the bomber version of the Tornado, developed by UK, Germany and Italy, made for supersonic low-level flights. It has variable-sweep wing and reverse thrust. Introduction was in 1980.</long-description>
 		<status>beta</status>
@@ -52,18 +53,6 @@
 		</displays>
 	</tornado>
 	<nasal>
-        <vector>
-            <file>Aircraft/Tornado/Nasal/vector.nas</file>
-        </vector>
-        <rcs>
-            <file>Aircraft/Tornado/Nasal/rcs.nas</file>
-        </rcs>
-        <radardist>
-            <file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
-        </radardist>
-        <awg_9>
-            <file>Aircraft/Tornado/Nasal/awg_9.nas</file>
-        </awg_9>
 		<libraries>
 			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
 			<file>Aircraft/Tornado/Nasal/librariesIDS.nas</file>

@@ -191,6 +191,52 @@
             <prowl-flight type="string">gyro-pitch</prowl-flight>
             <switch-time-sec type="double">5</switch-time-sec>
         </aim-120>
+        <b61-7>
+            <!--type-id type="int">TBD</type-id-->
+            <short-name type="string">B61-7</short-name>
+            <long-name type="string">B61-7 Inert Training Body</long-name>
+            <fire-msg type="string">Bombs away</fire-msg>
+            <class type="string">GMP</class>
+            <max-fire-range-nm type="double">18</max-fire-range-nm>
+            <min-fire-range-nm type="double">0</min-fire-range-nm>
+            <guidance type="string">unguided</guidance>
+            <navigation type="string">direct</navigation>
+            <loft-altitude type="int"> 0 </loft-altitude>
+            <terrain-follow type="bool">false</terrain-follow>
+            <FCS-field-deg type="int">200</FCS-field-deg>
+            <seeker-field-deg type="int">45</seeker-field-deg>
+            <max-g type="double">1.8</max-g>
+            <thrust-lbf-stage-1 type="double">0</thrust-lbf-stage-1>
+            <thrust-lbf-stage-2 type="double">0</thrust-lbf-stage-2>
+            <stage-1-duration-sec type="double">0</stage-1-duration-sec>
+            <stage-2-duration-sec type="double">0</stage-2-duration-sec>
+            <weight-launch-lbs type="double">765</weight-launch-lbs> <!-- source -->
+            <weight-warhead-lbs type="double">0</weight-warhead-lbs> <!-- Dummy version -->
+            <weight-fuel-lbm type="double">0</weight-fuel-lbm>
+            <drag-coeff type="double">0.125</drag-coeff>
+            <delta-drag-coeff-deploy type="double">20.00</delta-drag-coeff-deploy>
+            <cross-section-sqft type="double">1.1722</cross-section-sqft>
+            <arming-time-sec type="double">1320</arming-time-sec>
+            <min-speed-for-guiding-mach type="double"> 0 </min-speed-for-guiding-mach>
+            <self-destruct-time-sec type="double">1320</self-destruct-time-sec>
+            <all-aspect type="bool">true</all-aspect>
+            <lock-on-sun-deg type="double"> 0 </lock-on-sun-deg>
+            <seeker-angular-speed-dps type="double"> 0 </seeker-angular-speed-dps>
+            <rail type="bool">false</rail>
+            <max-report-distance type="double">3200</max-report-distance>
+            <vol-search type="double"> 0.075 </vol-search>
+            <vol-track type="double"> 0.25 </vol-track>
+            <vol-track-weak type="double"> 0.175 </vol-track-weak>
+            <drop-time type="double">1.5</drop-time>
+            <deploy-time type="double">3</deploy-time>
+            <lateral-dps type="double">20</lateral-dps>
+            <max-pitch-deg type="double">-45</max-pitch-deg>
+            <hit-everything-nearby type="bool">true</hit-everything-nearby>
+            <inert type="bool">true</inert>
+            <ready-time type="double">1320</ready-time>
+            <require-lock-to-fire type="bool">true</require-lock-to-fire>
+            <ejector-speed-fps type="double">15</ejector-speed-fps>
+        </b61-7>
         <mk-82>
             <type-id type="int">32</type-id>
             <short-name type="string">M82</short-name>

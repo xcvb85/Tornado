@@ -4,7 +4,7 @@ var ARM_ARM = 1;
 
 print("** Pylon & fire control system started. **");
 
-var variant = 2; #getprop("/sim/variant-id");
+var variant = getprop("/sim/variant-id");
 var pylon1 = nil; #left outboard
 var pylon2 = nil; #left inboard aim9
 var pylon3 = nil; #left inboard
@@ -43,60 +43,71 @@ var pylonSets = {
     rb71_2:    {name: "2 x Skyflash", content: ["RB-71","RB-71"], fireOrder: [0,1], launcherDragArea: 0.025, launcherMass: 90, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 1},#non wingtip
 
     # A/G weapons
+    a88:       {name: "1 x AGM-88", content: ["AGM-88"], fireOrder: [0], launcherDragArea: 0.06, launcherMass: 340, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 3},
     m82_2:     {name: "2 x MK-82", content: ["MK-82","MK-82"], fireOrder: [0], launcherDragArea: 0.05, launcherMass: 220, launcherJettisonable: 1, showLongTypeInsteadOfCount: 0, category: 3},
     m82air_2:  {name: "2 x MK-82AIR", content: ["MK-82AIR","MK-82AIR"], fireOrder: [0,1], launcherDragArea: 0.075, launcherMass: 313, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 3},
     m83:       {name: "1 x MK-83", content: ["MK-83"], fireOrder: [0], launcherDragArea: 0.075, launcherMass: 470, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 3},
     m84:       {name: "1 x MK-84", content: ["MK-84"], fireOrder: [0], launcherDragArea: 0.05, launcherMass: 220, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 3},
-    a88:       {name: "1 x AGM-88", content: ["AGM-88"], fireOrder: [0], launcherDragArea: 0.06, launcherMass: 340, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 3},
+    b617:      {name: "1 x B61-7", content: ["B61-7"], fireOrder: [0], launcherDragArea: 0.05, launcherMass:220, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 3}
 };
+
+var pylon1set = nil;
+var pylon2set = nil;
+var pylon3set = nil;
+var pylon4set = nil;
+var pylon5set = nil;
+var pylon6set = nil;
+var pylon7set = nil;
+var pylon8set = nil;
+var pylon9set = nil;
 
 if(variant==1) {
     # IDS
-    var pylon1set = [pylonSets.empty, pylonSets.boz107];
-    var pylon2set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
-    var pylon3set = [pylonSets.empty, pylonSets.fueltank1];
-    var pylon4set = [pylonSets.empty, pylonSets.m82_2, pylonSets.m82air_2, pylonSets.m83, pylonSets.m84];
-    var pylon5set = [pylonSets.empty, pylonSets.fueltank2];
-    var pylon6set = [pylonSets.empty, pylonSets.m82_2, pylonSets.m82air_2, pylonSets.m83, pylonSets.m84];
-    var pylon7set = [pylonSets.empty, pylonSets.fueltank3];
-    var pylon8set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
-    var pylon9set = [pylonSets.empty, pylonSets.boz107];
+    pylon1set = [pylonSets.empty, pylonSets.boz107];
+    pylon2set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
+    pylon3set = [pylonSets.empty];#, pylonSets.fueltank1];
+    pylon4set = [pylonSets.empty, pylonSets.m82_2, pylonSets.m82air_2, pylonSets.m83, pylonSets.m84];
+    pylon5set = [pylonSets.empty, pylonSets.b617];#, pylonSets.fueltank2];
+    pylon6set = [pylonSets.empty, pylonSets.m82_2, pylonSets.m82air_2, pylonSets.m83, pylonSets.m84];
+    pylon7set = [pylonSets.empty];#, pylonSets.fueltank3];
+    pylon8set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
+    pylon9set = [pylonSets.empty, pylonSets.boz107];
 }
 else if(variant==2) {
     # ADV
-    var pylon1set = [pylonSets.empty, pylonSets.boz107];
-    var pylon2set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
-    var pylon3set = [pylonSets.empty, pylonSets.fueltank1];
-    var pylon4set = [pylonSets.empty, pylonSets.rb71_2, pylonSets.aim120_2];
-    var pylon5set = [pylonSets.empty, pylonSets.fueltank2];
-    var pylon6set = [pylonSets.empty, pylonSets.rb71_2, pylonSets.aim120_2];
-    var pylon7set = [pylonSets.empty, pylonSets.fueltank3];
-    var pylon8set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
-    var pylon9set = [pylonSets.empty, pylonSets.boz107];
+    pylon1set = [pylonSets.empty, pylonSets.boz107];
+    pylon2set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
+    pylon3set = [pylonSets.empty];#, pylonSets.fueltank1];
+    pylon4set = [pylonSets.empty, pylonSets.rb71_2, pylonSets.aim120_2];
+    pylon5set = [pylonSets.empty];#, pylonSets.fueltank2];
+    pylon6set = [pylonSets.empty, pylonSets.rb71_2, pylonSets.aim120_2];
+    pylon7set = [pylonSets.empty];#, pylonSets.fueltank3];
+    pylon8set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
+    pylon9set = [pylonSets.empty, pylonSets.boz107];
 }
 else {
     # ECR
-    var pylon1set = [pylonSets.empty, pylonSets.boz107];
-    var pylon2set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
-    var pylon3set = [pylonSets.empty, pylonSets.fueltank1, pylonSets.a88];
-    var pylon4set = [pylonSets.empty, pylonSets.a88];
-    var pylon5set = [pylonSets.empty, pylonSets.fueltank2];
-    var pylon6set = [pylonSets.empty, pylonSets.a88];
-    var pylon7set = [pylonSets.empty, pylonSets.fueltank1, pylonSets.a88];
-    var pylon8set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
-    var pylon9set = [pylonSets.empty, pylonSets.boz107];
+    pylon1set = [pylonSets.empty, pylonSets.boz107];
+    pylon2set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
+    pylon3set = [pylonSets.empty, pylonSets.a88];
+    pylon4set = [pylonSets.empty, pylonSets.a88];
+    pylon5set = [pylonSets.empty];#, pylonSets.fueltank2];
+    pylon6set = [pylonSets.empty, pylonSets.a88];
+    pylon7set = [pylonSets.empty, pylonSets.a88];
+    pylon8set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
+    pylon9set = [pylonSets.empty, pylonSets.boz107];
 }
 
 setprop("payload/armament/fire-control/serviceable", 1);
 pylon1 = stations.Pylon.new("Left wing outboard pylon",  0, [4.510, -4.511, -0.100], pylon1set,  0, props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[0]",1),props.globals.getNode("fdm/jsbsim/inertia/pointmass-dragarea-sqft[0]",1),func{return getprop("payload/armament/fire-control/serviceable") and 1;},func{return 1;});
 pylon2 = stations.Pylon.new("Left wing inboard pylon AIM-9",   1, [4.510, -4.511, -0.100], pylon2set,  1, props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[1]",1),props.globals.getNode("fdm/jsbsim/inertia/pointmass-dragarea-sqft[1]",1),func{return getprop("payload/armament/fire-control/serviceable") and 1;},func{return 1;});
-pylon3 = stations.Pylon.new("Left wing inboard pylon",   2, [4.510, -4.511, -0.100], pylon2set,  1, props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[1]",1),props.globals.getNode("fdm/jsbsim/inertia/pointmass-dragarea-sqft[1]",1),func{return getprop("payload/armament/fire-control/serviceable") and 1;},func{return 1;});
-pylon4 = stations.Pylon.new("Left Fuselage",             3, [3.575, -3.309,  0.025], pylon3set,  2, props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[2]",1),props.globals.getNode("fdm/jsbsim/inertia/pointmass-dragarea-sqft[2]",1),func{return getprop("payload/armament/fire-control/serviceable") and 1;},func{return 1;});
-pylon5 = stations.Pylon.new("Center Station",            4, [2.800,  0.000, -0.700], pylon4set,  3, props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[3]",1),props.globals.getNode("fdm/jsbsim/inertia/pointmass-dragarea-sqft[3]",1),func{return getprop("payload/armament/fire-control/serviceable") and 1;},func{return 1;});
-pylon6 = stations.Pylon.new("Right Fuselage",            5, [3.575,  3.309,  0.025], pylon5set,  4, props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[4]",1),props.globals.getNode("fdm/jsbsim/inertia/pointmass-dragarea-sqft[4]",1),func{return getprop("payload/armament/fire-control/serviceable") and 1;},func{return 1;});
-pylon7 = stations.Pylon.new("Right wing inboard pylon",  6, [4.510,  4.511, -0.100], pylon6set,  5, props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[5]",1),props.globals.getNode("fdm/jsbsim/inertia/pointmass-dragarea-sqft[5]",1),func{return getprop("payload/armament/fire-control/serviceable") and 1;},func{return 1;});
-pylon8 = stations.Pylon.new("Right wing inboard pylon AIM-9",  7, [4.510,  4.511, -0.100], pylon6set,  5, props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[5]",1),props.globals.getNode("fdm/jsbsim/inertia/pointmass-dragarea-sqft[5]",1),func{return getprop("payload/armament/fire-control/serviceable") and 1;},func{return 1;});
-pylon9 = stations.Pylon.new("Right wing outboard pylon", 8, [4.510,  4.511, -0.100], pylon7set,  6, props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[6]",1),props.globals.getNode("fdm/jsbsim/inertia/pointmass-dragarea-sqft[6]",1),func{return getprop("payload/armament/fire-control/serviceable") and 1;},func{return 1;});
+pylon3 = stations.Pylon.new("Left wing inboard pylon",   2, [4.510, -4.511, -0.100], pylon3set,  2, props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[1]",1),props.globals.getNode("fdm/jsbsim/inertia/pointmass-dragarea-sqft[1]",1),func{return getprop("payload/armament/fire-control/serviceable") and 1;},func{return 1;});
+pylon4 = stations.Pylon.new("Left Fuselage",             3, [3.575, -3.309,  0.025], pylon4set,  3, props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[2]",1),props.globals.getNode("fdm/jsbsim/inertia/pointmass-dragarea-sqft[2]",1),func{return getprop("payload/armament/fire-control/serviceable") and 1;},func{return 1;});
+pylon5 = stations.Pylon.new("Center Station",            4, [2.800,  0.000, -0.700], pylon5set,  4, props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[3]",1),props.globals.getNode("fdm/jsbsim/inertia/pointmass-dragarea-sqft[3]",1),func{return getprop("payload/armament/fire-control/serviceable") and 1;},func{return 1;});
+pylon6 = stations.Pylon.new("Right Fuselage",            5, [3.575,  3.309,  0.025], pylon6set,  5, props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[4]",1),props.globals.getNode("fdm/jsbsim/inertia/pointmass-dragarea-sqft[4]",1),func{return getprop("payload/armament/fire-control/serviceable") and 1;},func{return 1;});
+pylon7 = stations.Pylon.new("Right wing inboard pylon",  6, [4.510,  4.511, -0.100], pylon7set,  6, props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[5]",1),props.globals.getNode("fdm/jsbsim/inertia/pointmass-dragarea-sqft[5]",1),func{return getprop("payload/armament/fire-control/serviceable") and 1;},func{return 1;});
+pylon8 = stations.Pylon.new("Right wing inboard pylon AIM-9",  7, [4.510,  4.511, -0.100], pylon8set,  7, props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[5]",1),props.globals.getNode("fdm/jsbsim/inertia/pointmass-dragarea-sqft[5]",1),func{return getprop("payload/armament/fire-control/serviceable") and 1;},func{return 1;});
+pylon9 = stations.Pylon.new("Right wing outboard pylon", 8, [4.510,  4.511, -0.100], pylon9set,  8, props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[6]",1),props.globals.getNode("fdm/jsbsim/inertia/pointmass-dragarea-sqft[6]",1),func{return getprop("payload/armament/fire-control/serviceable") and 1;},func{return 1;});
 pylonI = stations.InternalStation.new("Internal gun mount",   9, [pylonSets.mm27], props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[10]", 1));
 
 pylons = [pylon1, pylon2, pylon3, pylon4, pylon5, pylon6, pylon7, pylon8, pylon9, pylonI];

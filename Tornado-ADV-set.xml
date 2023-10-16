@@ -3,6 +3,7 @@
 	<sim>
 		<description>Panavia Tornado ADV</description>
 		<variant-of>Tornado-IDS</variant-of>
+        <variant-id type="int">2</variant-id>
 		<author>Heiko Schulz (3D external model)</author>
 		<long-description>The Panavia Tornado Air Defence Variant (ADV) is the interceptor version of the Tornado. It was developed for the Royal Air Force to shoot down Soviet bombers flying over the North Sea from a great distance. It was introduced in 1985.</long-description>
 		<status>beta</status>
@@ -46,45 +47,7 @@
 			</default>
 		</menubar>
 	</sim>
-
 	<nasal>
-		<vector>
-			<file>Aircraft/Tornado/Nasal/weapons/vector.nas</file>
-		</vector>
-		<notifications>
-			<file>Aircraft/Tornado/Nasal/weapons/ArmamentNotification.nas</file>
-			<file>Aircraft/Tornado/Nasal/weapons/GeoBridgedTransmitter.nas</file>
-		</notifications>
-		<radardist>
-			<file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
-		</radardist>
-		<rcs>
-			<file>Aircraft/Tornado/Nasal/rcs.nas</file>
-		</rcs>
-		<damage>
-			<file>Aircraft/MiG-23MLD/Nasal/weapons/damage.nas</file>
-		</damage>
-		<ai>
-			<file>Aircraft/MiG-23MLD/Nasal/weapons/AI_list.nas</file>
-		</ai>
-		<view>
-			<file>Aircraft/MiG-23MLD/Nasal/weapons/MissileView.nas</file>
-		</view>
-		<armament>
-			<file>Aircraft/Tornado/Nasal/weapons/missile-code.nas</file><!-- must be before station-manager -->
-		</armament>
-		<stations>
-			<file>Aircraft/Tornado/Nasal/weapons/station-manager.nas</file><!-- must be before fire-control and pylons -->
-		</stations>
-		<fc>
-			<file>Aircraft/Tornado/Nasal/weapons/fire-control.nas</file><!-- must be before pylons -->
-		</fc>
-		<pylons>
-			<file>Aircraft/Tornado/Nasal/weapons/pylons.nas</file>
-		</pylons>
-		<awg_9>
-			<file>Aircraft/Tornado/Nasal/awg_9.nas</file>
-		</awg_9>
 		<libraries>
 			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
 			<file>Aircraft/Tornado/Nasal/librariesADV.nas</file>
