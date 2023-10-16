@@ -2,6 +2,7 @@
 <PropertyList include="Tornado-Common.xml">
 	<sim>
 		<description>Panavia Tornado ECR</description>
+		<variant-id type="int">3</variant-id>
 		<variant-of>Tornado-IDS</variant-of>
 		<author>Heiko Schulz (3D external model)</author>
 		<long-description>The Panavia Tornado Electronic Combat Reconnaissance (ECR) is the SEAD version of the Tornado, used by Germany and Italy. Introduction was in 1990.</long-description>
@@ -50,18 +51,6 @@
 		</displays>
 	</tornado>
 	<nasal>
-        <vector>
-            <file>Aircraft/Tornado/Nasal/vector.nas</file>
-        </vector>
-        <rcs>
-            <file>Aircraft/Tornado/Nasal/rcs.nas</file>
-        </rcs>
-        <radardist>
-            <file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
-        </radardist>
-        <awg_9>
-            <file>Aircraft/Tornado/Nasal/awg_9.nas</file>
-        </awg_9>
 		<libraries>
 			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
 			<file>Aircraft/Tornado/Nasal/librariesIDS.nas</file>
