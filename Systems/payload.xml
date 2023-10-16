@@ -191,6 +191,47 @@
             <prowl-flight type="string">gyro-pitch</prowl-flight>
             <switch-time-sec type="double">5</switch-time-sec>
         </aim-120>
+        <agm-88>
+            <type-id type="int">2</type-id>
+            <short-name type="string">AG88</short-name>
+            <long-name type="string">AGM-88B HARM</long-name>
+            <vol-search type="double">0.00</vol-search>
+            <vol-track type="double">1.00</vol-track>
+            <guidance type="string">radiation</guidance>
+            <navigation type="string">APN</navigation>
+            <all-aspect type="bool">true</all-aspect>
+            <max-fire-range-nm type="double">30</max-fire-range-nm>              <!--  -->
+            <FCS-field-deg type="int">80</FCS-field-deg>
+            <seeker-field-deg type="int">80</seeker-field-deg>
+            <max-g type="int">15</max-g>
+            <thrust-lbf-stage-1 type="double">3000</thrust-lbf-stage-1><!-- Boost Sustain 64,000 lbs./sec    630 mps/mach 2+ -->
+            <thrust-lbf-stage-2 type="double">575</thrust-lbf-stage-2>
+            <stage-1-duration-sec type="double">10</stage-1-duration-sec>
+            <stage-2-duration-sec type="double">50</stage-2-duration-sec>
+            <weight-launch-lbs type="double">800</weight-launch-lbs>  <!--  -->
+            <weight-warhead-lbs type="double">143.51</weight-warhead-lbs>   <!--  -->
+            <weight-fuel-lbm type="double">250</weight-fuel-lbm>
+            <drag-coeff type="double">0.25</drag-coeff>
+            <cross-section-sqft type="double">0.53</cross-section-sqft> <!-- 9.84 inch diam -->
+            <arming-time-sec type="double">4.0</arming-time-sec>
+            <min-speed-for-guiding-mach type="double">0.5</min-speed-for-guiding-mach>
+            <self-destruct-time-sec type="double">150</self-destruct-time-sec>
+            <loft-altitude type="int">0</loft-altitude>
+            <min-fire-range-nm type="double">0.25</min-fire-range-nm>
+            <rail type="bool">false</rail>
+            <max-report-distance type="double">65</max-report-distance>
+            <reaquire type="bool">true</reaquire>
+            <lock-on-after-launch type="bool">true</lock-on-after-launch>
+            <auto-switch-target-allowed type="bool">false</auto-switch-target-allowed>
+            <no-common-target type="bool">true</no-common-target>
+            <prowl-flight type="string">gyro-pitch</prowl-flight>
+            <switch-time-sec type="double">30</switch-time-sec>
+            <class type="string">GMA</class>
+            <fire-msg type="string">Magnum</fire-msg>
+            <requires-power-on type="bool">true</requires-power-on>
+            <ready-time type="double">3</ready-time>
+            <power-on-battery-time type="double">1800</power-on-battery-time>
+        </agm-88>
         <b61-7>
             <!--type-id type="int">TBD</type-id-->
             <short-name type="string">B61-7</short-name>

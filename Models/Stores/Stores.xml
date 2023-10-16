@@ -306,4 +306,287 @@
 			</and>
 		</condition>
 	</animation>
+
+	<!-- AGM-88 -->
+	<model>
+		<name>AGM-88 Missile 2</name>
+		<path>Aircraft/Tornado/Models/Stores/AGM-88/AGM-88.xml</path>
+		<offsets>
+			<x-m> 0.00</x-m>
+			<y-m>-0.45</y-m>
+			<z-m>-2.05</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>AGM-88 Missile 2</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-3-type</property>
+					<value>AGM-88</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-3-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>AGM-88 Missile 3</name>
+		<path>Aircraft/Tornado/Models/Stores/AGM-88/AGM-88.xml</path>
+		<offsets>
+			<x-m> 0.00</x-m>
+			<y-m> 0.45</y-m>
+			<z-m>-2.05</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>AGM-88 Missile 3</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-5-type</property>
+					<value>AGM-88</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-5-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+
+	<!-- B61-7 -->
+	<model>
+		<name>B61-7 Bomb</name>
+		<path>Aircraft/Tornado/Models/Stores/B61-7/B61-7.xml</path>
+		<offsets>
+			<x-m> 0.00</x-m>
+			<y-m> 0.00</y-m>
+			<z-m>-2.05</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>B61-7 Bomb</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-4-type</property>
+					<value>B61-7</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-4-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+
+	<!-- MK-82 -->
+	<model>
+		<name>MK-82 Bomb 1</name>
+		<path>Aircraft/Tornado/Models/Stores/MK-82/MK-82.xml</path>
+		<offsets>
+			<x-m>-1.30</x-m>
+			<y-m>-0.45</y-m>
+			<z-m>-2.05</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>MK-82 Bomb 1</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-3-type</property>
+					<value>MK-82</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-3-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>MK-82 Bomb 2</name>
+		<path>Aircraft/Tornado/Models/Stores/MK-82/MK-82.xml</path>
+		<offsets>
+			<x-m> 1.50</x-m>
+			<y-m>-0.45</y-m>
+			<z-m>-2.05</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>MK-82 Bomb 2</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-3-type</property>
+					<value>MK-82</value>
+				</equals>
+				<equals>
+					<property>payload/armament/station/id-3-count</property>
+					<value>2</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>MK-82 Bomb 3</name>
+		<path>Aircraft/Tornado/Models/Stores/MK-82/MK-82.xml</path>
+		<offsets>
+			<x-m>-1.30</x-m>
+			<y-m> 0.45</y-m>
+			<z-m>-2.05</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>MK-82 Bomb 3</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-5-type</property>
+					<value>MK-82</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-5-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>MK-82 Bomb 4</name>
+		<path>Aircraft/Tornado/Models/Stores/MK-82/MK-82.xml</path>
+		<offsets>
+			<x-m> 1.50</x-m>
+			<y-m> 0.45</y-m>
+			<z-m>-2.05</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>MK-82 Bomb 4</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-5-type</property>
+					<value>MK-82</value>
+				</equals>
+				<equals>
+					<property>payload/armament/station/id-5-count</property>
+					<value>2</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+
+	<!-- MK-82 Air -->
+	<model>
+		<name>MK-82 Air Bomb 1</name>
+		<path>Aircraft/Tornado/Models/Stores/MK-82AIR/MK-82AIR.xml</path>
+		<offsets>
+			<x-m>-1.30</x-m>
+			<y-m>-0.45</y-m>
+			<z-m>-2.05</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>MK-82 Air Bomb 1</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-3-type</property>
+					<value>MK-82AIR</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-3-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>MK-82 Air Bomb 2</name>
+		<path>Aircraft/Tornado/Models/Stores/MK-82AIR/MK-82AIR.xml</path>
+		<offsets>
+			<x-m> 1.50</x-m>
+			<y-m>-0.45</y-m>
+			<z-m>-2.05</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>MK-82 Air Bomb 2</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-3-type</property>
+					<value>MK-82AIR</value>
+				</equals>
+				<equals>
+					<property>payload/armament/station/id-3-count</property>
+					<value>2</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>MK-82 Air Bomb 3</name>
+		<path>Aircraft/Tornado/Models/Stores/MK-82AIR/MK-82AIR.xml</path>
+		<offsets>
+			<x-m>-1.30</x-m>
+			<y-m> 0.45</y-m>
+			<z-m>-2.05</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>MK-82 Air Bomb 3</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-5-type</property>
+					<value>MK-82AIR</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-5-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>MK-82 Air Bomb 4</name>
+		<path>Aircraft/Tornado/Models/Stores/MK-82AIR/MK-82AIR.xml</path>
+		<offsets>
+			<x-m> 1.50</x-m>
+			<y-m> 0.45</y-m>
+			<z-m>-2.05</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>MK-82 Air Bomb 4</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-5-type</property>
+					<value>MK-82AIR</value>
+				</equals>
+				<equals>
+					<property>payload/armament/station/id-5-count</property>
+					<value>2</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
 </PropertyList>
