@@ -28,6 +28,11 @@
 			<z-m>-1.6</z-m>
 		</offsets>
 	</model>
+	<!-- Stores -->
+	<model>
+		<name>Stores</name>
+		<path>Aircraft/Tornado/Models/Stores/Stores.xml</path>
+	</model>
 	<animation>
 		<type>select</type>
 		<object-name>pilot</object-name>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>korry.ac</path>
+	<animation>
+		<type>pick</type>
+		<object-name>button</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>libraries.doMagicStartup();</script>
+			</binding>
+		</action>
+	</animation>
+</PropertyList>
