@@ -67,9 +67,13 @@
 				<bool n="1" type="bool" alias="/engines/engine[0]/augmentation" />
 				<float n="2" type="double" alias="/engines/engine[1]/n2" />
 				<bool n="2" type="bool" alias="/engines/engine[1]/augmentation" />
-        <int type="int" n="2">  0 </int>
+				<int type="int" n="2">  0 </int>
 			</generic>
 		</multiplay>
+		<submodels>
+			<serviceable type="bool">true</serviceable>
+			<path>Aircraft/Tornado/Systems/submodels.xml</path>
+		</submodels>
 	</sim>
 	<engines>
 		<engine n="0">
@@ -116,14 +120,19 @@
 		<rcs>
 			<file>Aircraft/Tornado/Nasal/rcs.nas</file>
 		</rcs>
+		<radar_system>
+			<file>Aircraft/Tornado/Nasal/radar/radar-system.nas</file>
+			<file>Aircraft/Tornado/Nasal/radar/rwr-only.nas</file>
+			<file>Aircraft/Tornado/Nasal/radar/rwr.nas</file>
+		</radar_system>
 		<damage>
-			<file>Aircraft/MiG-23MLD/Nasal/weapons/damage.nas</file>
+			<file>Aircraft/Tornado/Nasal/weapons/damage.nas</file>
 		</damage>
 		<ai>
-			<file>Aircraft/MiG-23MLD/Nasal/weapons/AI_list.nas</file>
+			<file>Aircraft/Tornado/Nasal/weapons/AI_list.nas</file>
 		</ai>
 		<view>
-			<file>Aircraft/MiG-23MLD/Nasal/weapons/MissileView.nas</file>
+			<file>Aircraft/Tornado/Nasal/weapons/MissileView.nas</file>
 		</view>
 		<armament>
 			<file>Aircraft/Tornado/Nasal/weapons/missile-code.nas</file><!-- must be before station-manager -->
@@ -137,8 +146,5 @@
 		<pylons>
 			<file>Aircraft/Tornado/Nasal/weapons/pylons.nas</file>
 		</pylons>
-		<awg_9>
-			<file>Aircraft/Tornado/Nasal/awg_9.nas</file>
-		</awg_9>
 	</nasal>
 </PropertyList>

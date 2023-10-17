@@ -33,6 +33,14 @@
 			<value>0</value>
 		</binding>
 	</key>
+	<key n="76">
+		<name>L</name>
+		<desc>Cockpit Light</desc>
+		<binding>
+			<command>property-toggle</command>
+			<property>instrumentation/cockpit_lights/Connected</property>
+		</binding>
+	</key>
 	<key n="100">
 		<name>d</name>
 		<desc>Open Canopy</desc>
@@ -42,13 +50,21 @@
 			<value>1</value>
 		</binding>
 	</key>
-	<key n="76">
-		<name>L</name>
-		<desc>Cockpit Light</desc>
+	<key n="101">
+		<name>e</name>
+		<desc>trigger</desc>
 		<binding>
-			<command>property-toggle</command>
-			<property>instrumentation/cockpit_lights/Connected</property>
+			<command>property-assign</command>
+			<property>controls/armament/trigger</property>
+			<value>1</value>
 		</binding>
+		<mod-up>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/armament/trigger</property>
+				<value>0</value>
+			</binding>
+		</mod-up>
 	</key>
 	<key n="108">
 		<name>l</name>
@@ -56,6 +72,41 @@
 		<binding>
 			<command>property-toggle</command>
 			<property>instrumentation/landing_lights/Connected</property>
+		</binding>
+	</key>
+	<key n="109">
+		<name>m</name>
+		<desc>Masterarm</desc>
+		<binding>
+			<command>nasal</command>
+			<script><![CDATA[
+				setprop("controls/armament/master-arm",!getprop("controls/armament/master-arm"));
+				screen.log.write("Master-arm "~(getprop("controls/armament/master-arm")==0?"OFF":"ON"), 0.5, 0.5, 1);
+				]]></script>
+		</binding>
+	</key>
+	<key n="113">
+		<name>q</name>
+		<desc>Trigger flare release</desc>
+		<binding>
+			<command>property-assign</command>
+			<property>/ai/submodels/submodel[0]/flare-release</property>
+			<value type="bool">true</value>
+		</binding>
+		<mod-up>
+			<binding>
+				<command>property-assign</command>
+				<property>/ai/submodels/submodel[0]/flare-release</property>
+				<value type="bool">false</value>
+			</binding>
+		</mod-up>
+	</key>
+	<key n="119">
+		<name>w</name>
+		<desc>Cycle Weapon Type</desc>
+		<binding>
+			<command>nasal</command>
+			<script>pylons.fcs.cycleLoadedWeapon();</script>
 		</binding>
 	</key>
 	<key n="127">
