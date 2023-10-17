@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+    <path>flare.ac</path>
+    
+    <animation>
+        <type>billboard</type>
+        <spherical>true</spherical>
+    </animation>
+    
+    <animation>
+        <type>dist-scale</type>
+        <object-name>flare</object-name>
+        <object-name>flare_trail</object-name>
+        <interpolation>
+            <entry><ind>0</ind><dep>1.0</dep></entry>
+            <entry><ind>5000</ind><dep>50.0</dep></entry>
+        </interpolation>
+    </animation>
+    
+    <animation>
+        <type>material</type>
+        <object-name>flare</object-name>
+        <emission>
+            <factor-prop>sim/time/elapsed-sec</factor-prop>
+            <offset>1.0</offset>
+            <red>  -0.2</red>
+            <green>-0.2</green>
+            <blue> -0.2</blue>
+        </emission>
+    </animation>
+    
+    <animation>
+        <type>scale</type>
+        <object-name>flare</object-name>
+        <object-name>flare_trail</object-name>
+        <property>/sim/time/sun-angle-rad</property>
+        <x-min>0.700</x-min>
+        <y-min>0.700</y-min>
+        <z-min>0.700</z-min>
+        <x-offset>-1</x-offset>
+        <y-offset>-1</y-offset>
+        <z-offset>-1</z-offset>
+        <x-factor>0.5</x-factor>
+        <y-factor>0.5</y-factor>
+        <z-factor>0.5</z-factor>
+    </animation>
+    
+    <particlesystem>
+        <name>flare-smoke</name>
+        <texture>flare.png</texture>
+        <emissive>true</emissive>
+        <lighting>false</lighting>
+        
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+            <pitch-deg>90</pitch-deg>
+            <roll-deg>90</roll-deg>
+        </offsets>
+        
+        <attach>local</attach>
+        
+        <placer>
+            <type>point</type>
+        </placer>
+        
+        <shooter>
+            <theta-min-deg>-1</theta-min-deg>
+            <theta-max-deg>1</theta-max-deg>
+            <phi-min-deg>-1</phi-min-deg>
+            <phi-max-deg>1</phi-max-deg>
+            <speed-mps>
+                <value>0</value>
+                <spread>0</spread>
+            </speed-mps>
+            <rotation-speed>
+                <x-min-deg-sec>0</x-min-deg-sec>
+                <y-min-deg-sec>0</y-min-deg-sec>
+                <z-min-deg-sec>0</z-min-deg-sec>
+                <x-max-deg-sec>0</x-max-deg-sec>
+                <y-max-deg-sec>0</y-max-deg-sec>
+                <z-max-deg-sec>0</z-max-deg-sec>
+            </rotation-speed>
+        </shooter>
+        
+        <counter>
+            <particles-per-sec>
+                <value>30</value>
+            </particles-per-sec>
+        </counter>
+        
+        <align>billboard</align>
+        
+        <particle>
+            <start>
+                <color>
+                    <red>
+                        <value>1</value>
+                    </red>
+                    <green>
+                        <value>1</value>
+                    </green>
+                    <blue>
+                        <value>1</value>
+                    </blue>
+                    <alpha>
+                        <value>1</value>
+                    </alpha>
+                </color>
+                <size>
+                    <value>0.25</value>
+                </size>
+            </start>
+            <end>
+                <color>
+                    <red>
+                        <value>1</value>
+                    </red>
+                    <green>
+                        <value>1</value>
+                    </green>
+                    <blue>
+                        <value>1</value>
+                    </blue>
+                    <alpha>
+                        <value>0.1</value>
+                    </alpha>
+                </color>
+                <size>
+                    <value>0.1</value>
+                </size>
+            </end>
+            <life-sec>
+                <value>0.7</value>
+            </life-sec>
+            <mass-kg>0.00001</mass-kg>
+            <radius-m>0.015</radius-m>
+        </particle>
+        
+        <program>
+            <fluid>air</fluid>
+            <gravity type="bool">false</gravity>
+            <wind type="bool">true</wind>
+        </program>
+        
+    </particlesystem>
+    
+</PropertyList>

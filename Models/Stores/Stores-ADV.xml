@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<!-- AIM-9 -->
+	<model>
+		<name>AIM-9 Missile 1</name>
+		<path>Aircraft/Tornado/Models/Stores/AIM-9/AIM-9.xml</path>
+		<offsets>
+			<x-m>1.15</x-m>
+			<y-m>-3.33</y-m>
+			<z-m>-0.96</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>AIM-9 Missile 1</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-1-type</property>
+					<value>AIM-9L</value>
+				</equals>
+				<equals>
+					<property>payload/armament/station/id-1-count</property>
+					<value>2</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>AIM-9 Missile 2</name>
+		<path>Aircraft/Tornado/Models/Stores/AIM-9/AIM-9.xml</path>
+		<offsets>
+			<x-m>1.15</x-m>
+			<y-m>-2.85</y-m>
+			<z-m>-0.96</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>AIM-9 Missile 2</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-1-type</property>
+					<value>AIM-9L</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-1-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>AIM-9 Missile 3</name>
+		<path>Aircraft/Tornado/Models/Stores/AIM-9/AIM-9.xml</path>
+		<offsets>
+			<x-m>1.15</x-m>
+			<y-m>3.33</y-m>
+			<z-m>-0.96</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>AIM-9 Missile 3</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-7-type</property>
+					<value>AIM-9L</value>
+				</equals>
+				<equals>
+					<property>payload/armament/station/id-7-count</property>
+					<value>2</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>AIM-9 Missile 4</name>
+		<path>Aircraft/Tornado/Models/Stores/AIM-9/AIM-9.xml</path>
+		<offsets>
+			<x-m>1.15</x-m>
+			<y-m>2.85</y-m>
+			<z-m>-0.96</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>AIM-9 Missile 4</object-name>
+		<type>select</type>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-7-type</property>
+					<value>AIM-9L</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-7-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+
+	<!-- Skyflash -->
+	<model>
+		<name>Skyflash Missile 1</name>
+		<path>Aircraft/Tornado/Models/Stores/RB-71/RB-71.xml</path>
+		<offsets>
+			<x-m>-2.30</x-m>
+			<y-m>-0.45</y-m>
+			<z-m>-1.75</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>Skyflash Missile 1</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-3-type</property>
+					<value>RB-71</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-3-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>Skyflash Missile 2</name>
+		<path>Aircraft/Tornado/Models/Stores/RB-71/RB-71.xml</path>
+		<offsets>
+			<x-m>1.50</x-m>
+			<y-m>-0.35</y-m>
+			<z-m>-1.75</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>Skyflash Missile 2</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-3-type</property>
+					<value>RB-71</value>
+				</equals>
+				<equals>
+					<property>payload/armament/station/id-3-count</property>
+					<value>2</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>Skyflash Missile 3</name>
+		<path>Aircraft/Tornado/Models/Stores/RB-71/RB-71.xml</path>
+		<offsets>
+			<x-m>0.50</x-m>
+			<y-m>0.35</y-m>
+			<z-m>-1.75</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>Skyflash Missile 3</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-5-type</property>
+					<value>RB-71</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-5-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>Skyflash Missile 4</name>
+		<path>Aircraft/Tornado/Models/Stores/RB-71/RB-71.xml</path>
+		<offsets>
+			<x-m>-3.30</x-m>
+			<y-m>0.45</y-m>
+			<z-m>-1.75</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>Skyflash Missile 4</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-5-type</property>
+					<value>RB-71</value>
+				</equals>
+				<equals>
+					<property>payload/armament/station/id-5-count</property>
+					<value>2</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+
+	<!-- AIM-120 -->
+	<model>
+		<name>AIM-120 Missile 1</name>
+		<path>Aircraft/Tornado/Models/Stores/AIM-120/AIM-120.xml</path>
+		<offsets>
+			<x-m>-2.30</x-m>
+			<y-m>-0.45</y-m>
+			<z-m>-1.75</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>AIM-120 Missile 1</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-3-type</property>
+					<value>AIM-120</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-3-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>AIM-120 Missile 2</name>
+		<path>Aircraft/Tornado/Models/Stores/AIM-120/AIM-120.xml</path>
+		<offsets>
+			<x-m>1.50</x-m>
+			<y-m>-0.35</y-m>
+			<z-m>-1.75</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>AIM-120 Missile 2</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-3-type</property>
+					<value>AIM-120</value>
+				</equals>
+				<equals>
+					<property>payload/armament/station/id-3-count</property>
+					<value>2</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>AIM-120 Missile 3</name>
+		<path>Aircraft/Tornado/Models/Stores/AIM-120/AIM-120.xml</path>
+		<offsets>
+			<x-m>0.50</x-m>
+			<y-m>0.35</y-m>
+			<z-m>-1.75</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>AIM-120 Missile 3</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-5-type</property>
+					<value>AIM-120</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-5-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>AIM-120 Missile 4</name>
+		<path>Aircraft/Tornado/Models/Stores/AIM-120/AIM-120.xml</path>
+		<offsets>
+			<x-m>-3.30</x-m>
+			<y-m>0.45</y-m>
+			<z-m>-1.75</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>AIM-120 Missile 4</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-5-type</property>
+					<value>AIM-120</value>
+				</equals>
+				<equals>
+					<property>payload/armament/station/id-5-count</property>
+					<value>2</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+</PropertyList>

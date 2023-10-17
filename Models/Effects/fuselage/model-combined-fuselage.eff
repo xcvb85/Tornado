@@ -1,21 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 The fuselage effect is a modified version of model-combined-deffered.
 Modifications author: Nikolai V. Chr.
 -->
 <PropertyList>
-	<name>Aircraft/Tornado/Models/Effects/fuselage/model-combined-fuselage</name>
+	<name>model-combined-fuselage</name>
 	<inherits-from>Effects/model-combined-deferred</inherits-from>
 	<parameters>
 		<metallic type="float">0.75</metallic><!-- 0-1 -->
 		<ambient-factor type="float">0.75</ambient-factor><!-- 0-1 -->
-		<normalmap-dds-compression-bc3n>0</normalmap-dds-compression-bc3n>
 	</parameters>
 	<!--
 		Textures:
 
 		0 - livery (rgba)
 		1 - autogen. 3D noise
-		2 - normal (rgb) & shininess (a) [Note: shininess is ignored if dds bc3n compression is used]
+		2 - normal (rgb) & shininess (a)
 		3 - light (rgba)
 		4 - reflect map (a) & dirt (rgb)
 		5 - reflect cube map (rgb)
@@ -270,7 +270,7 @@ Modifications author: Nikolai V. Chr.
 				<fragment-shader n="2">Shaders/hazes.frag</fragment-shader>
 				<fragment-shader n="3">Shaders/secondary_lights.frag</fragment-shader>
 				<fragment-shader n="4">Shaders/noise.frag</fragment-shader>
-				<!--<fragment-shader n="5">Shaders/filters-ALS.frag</fragment-shader>-->
+				<fragment-shader n="5">Shaders/filters-ALS.frag</fragment-shader>
 			   </program>
 			   
 			   <uniform>
@@ -337,14 +337,6 @@ Modifications author: Nikolai V. Chr.
 				   <type>int</type>
 				   <value>
 					   <use>normalmap-dds</use>
-				   </value>
-			   </uniform>
-			   
-			   <uniform>
-				   <name>bc3n</name>
-				   <type>int</type>
-				   <value>
-					   <use>normalmap-dds-compression-bc3n</use>
 				   </value>
 			   </uniform>
 			   
@@ -1403,14 +1395,6 @@ Modifications author: Nikolai V. Chr.
 			  <use>normalmap-dds</use>
 			</value>
 		  </uniform>
-		  
-		  <uniform>
-			   <name>bc3n</name>
-			   <type>int</type>
-			   <value>
-				   <use>normalmap-dds-compression-bc3n</use>
-			   </value>
-		   </uniform>
 
 		  <uniform>
 			<name>nmap_tile</name>
@@ -1722,5 +1706,4 @@ Modifications author: Nikolai V. Chr.
 		  </uniform>
 		  </pass>
 		</technique>
-
 </PropertyList>

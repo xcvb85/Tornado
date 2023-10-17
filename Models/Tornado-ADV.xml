@@ -31,7 +31,7 @@
 	<!-- Stores -->
 	<model>
 		<name>Stores</name>
-		<path>Aircraft/Tornado/Models/Stores/Stores.xml</path>
+		<path>Aircraft/Tornado/Models/Stores/Stores-ADV.xml</path>
 	</model>
 	<animation>
 		<type>select</type>
