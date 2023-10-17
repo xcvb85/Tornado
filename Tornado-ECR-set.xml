@@ -17,22 +17,15 @@
 			<path>Aircraft/Tornado/Models/Tornado-IDS.xml</path>
 		</model>
 		<model>
-			<name>Cockpit-IDS</name>
+			<name>Cockpit-ECR</name>
 			<path>Aircraft/Tornado/Models/Cockpit/Cockpit-IDS.xml</path>
 		</model>
 		<aircraft-type type="int">0</aircraft-type>
 		<menubar>
 			<default>
 				<menu n="100">
-					<label>Tornado IDS</label>
+					<label>Tornado ECR</label>
 					<enabled type="bool">true</enabled>
-					<item>
-						<label>Select Livery</label>
-						<binding>
-							<command>nasal</command>
-							<script>aircraft.livery.dialog.toggle()</script>
-						</binding>
-					</item>
 					<item>
 						<label>Magic Startup</label>
 						<binding>
@@ -63,7 +56,6 @@
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/dir.nas</file>
 		</libraries>
 		<efis>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/rhwr/TEWS_main.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/rpmd/moving-map.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/maps/loader.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/Framework.nas</file>
