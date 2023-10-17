@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<!-- AIM-9 -->
+	<!-- AIM-9L -->
 	<model>
-		<name>AIM-9 Missile 1</name>
-		<path>Aircraft/Tornado/Models/Stores/AIM-9/AIM-9.xml</path>
+		<name>AIM-9L Missile 1</name>
+		<path>Aircraft/Tornado/Models/Stores/AIM-9L/AIM-9L.xml</path>
 		<offsets>
 			<x-m>1.15</x-m>
 			<y-m>-3.33</y-m>
@@ -11,7 +11,7 @@
 		</offsets>
 	</model>
 	<animation>
-		<object-name>AIM-9 Missile 1</object-name>
+		<object-name>AIM-9L Missile 1</object-name>
 		<type>select</type>
 		<condition>
 			<and>
@@ -27,8 +27,8 @@
 		</condition>
 	</animation>
 	<model>
-		<name>AIM-9 Missile 2</name>
-		<path>Aircraft/Tornado/Models/Stores/AIM-9/AIM-9.xml</path>
+		<name>AIM-9L Missile 2</name>
+		<path>Aircraft/Tornado/Models/Stores/AIM-9L/AIM-9L.xml</path>
 		<offsets>
 			<x-m>1.15</x-m>
 			<y-m>-2.85</y-m>
@@ -36,7 +36,7 @@
 		</offsets>
 	</model>
 	<animation>
-		<object-name>AIM-9 Missile 2</object-name>
+		<object-name>AIM-9L Missile 2</object-name>
 		<type>select</type>
 		<condition>
 			<and>
@@ -52,8 +52,8 @@
 		</condition>
 	</animation>
 	<model>
-		<name>AIM-9 Missile 3</name>
-		<path>Aircraft/Tornado/Models/Stores/AIM-9/AIM-9.xml</path>
+		<name>AIM-9L Missile 3</name>
+		<path>Aircraft/Tornado/Models/Stores/AIM-9L/AIM-9L.xml</path>
 		<offsets>
 			<x-m>1.15</x-m>
 			<y-m>3.33</y-m>
@@ -61,7 +61,7 @@
 		</offsets>
 	</model>
 	<animation>
-		<object-name>AIM-9 Missile 3</object-name>
+		<object-name>AIM-9L Missile 3</object-name>
 		<type>select</type>
 		<condition>
 			<and>
@@ -77,8 +77,8 @@
 		</condition>
 	</animation>
 	<model>
-		<name>AIM-9 Missile 4</name>
-		<path>Aircraft/Tornado/Models/Stores/AIM-9/AIM-9.xml</path>
+		<name>AIM-9L Missile 4</name>
+		<path>Aircraft/Tornado/Models/Stores/AIM-9L/AIM-9L.xml</path>
 		<offsets>
 			<x-m>1.15</x-m>
 			<y-m>2.85</y-m>
@@ -86,7 +86,7 @@
 		</offsets>
 	</model>
 	<animation>
-		<object-name>AIM-9 Missile 4</object-name>
+		<object-name>AIM-9L Missile 4</object-name>
 		<type>select</type>
 		<type>select</type>
 		<condition>
