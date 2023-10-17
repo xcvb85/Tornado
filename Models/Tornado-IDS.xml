@@ -279,8 +279,8 @@
 		<object-name>rightinner_pylon</object-name>
 		<object-name>rightinnerwingtank</object-name>
 		<object-name>spoilerright</object-name>
-		<object-name>AIM-9 Missile 3</object-name>
-		<object-name>AIM-9 Missile 4</object-name>
+		<object-name>AIM-9L Missile 3</object-name>
+		<object-name>AIM-9L Missile 4</object-name>
 		<name>rightvapour</name>
 		<property>fdm/jsbsim/fcs/wing-sweep</property>
 		<interpolation>
@@ -346,8 +346,8 @@
 		<type>rotate</type>
 		<object-name>rightinner_pylon</object-name>
 		<object-name>rightinnerwingtank</object-name>
-		<object-name>AIM-9 Missile 3</object-name>
-		<object-name>AIM-9 Missile 4</object-name>
+		<object-name>AIM-9L Missile 3</object-name>
+		<object-name>AIM-9L Missile 4</object-name>
 		<property>fdm/jsbsim/fcs/wing-sweep</property>
 		<interpolation>
 			<entry>
@@ -384,8 +384,8 @@
 		<object-name>leftinner_pylon</object-name>
 		<object-name>leftinnerwingtank</object-name>
 		<object-name>spoilerleft</object-name>
-		<object-name>AIM-9 Missile 1</object-name>
-		<object-name>AIM-9 Missile 2</object-name>
+		<object-name>AIM-9L Missile 1</object-name>
+		<object-name>AIM-9L Missile 2</object-name>
 		<name>leftvapour</name>
 		<property>fdm/jsbsim/fcs/wing-sweep</property>
 		<interpolation>
@@ -451,8 +451,8 @@
 		<type>rotate</type>
 		<object-name>leftinner_pylon</object-name>
 		<object-name>leftinnerwingtank</object-name>
-		<object-name>AIM-9 Missile 1</object-name>
-		<object-name>AIM-9 Missile 2</object-name>
+		<object-name>AIM-9L Missile 1</object-name>
+		<object-name>AIM-9L Missile 2</object-name>
 		<property>fdm/jsbsim/fcs/wing-sweep</property>
 		<interpolation>
 			<entry>
