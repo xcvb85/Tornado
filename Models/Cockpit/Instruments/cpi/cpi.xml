@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<!-- control position indicator -->
+	<path>cpi.ac</path>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/lm2</inherits-from>
+		<object-name>bg</object-name>
+		<object-name>flaps</object-name>
+		<object-name>slats</object-name>
+		<object-name>sweep</object-name>
+		<object-name>brakes</object-name>
+	</effect>
+</PropertyList>

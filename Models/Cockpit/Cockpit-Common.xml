@@ -168,6 +168,17 @@
 			<pitch-deg>-10.0</pitch-deg>
 		</offsets>
 	</model>
+	<model>
+		<name>CPI</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Instruments/cpi/cpi.xml</path>
+		<offsets>
+			<x-m>-4.775</x-m>
+			<y-m>-0.420</y-m>
+			<z-m>-0.700</z-m>
+			<yaw-deg>3.0</yaw-deg>
+			<pitch-deg>-16.0</pitch-deg>
+		</offsets>
+	</model>
 	<!--
   <model>
   <name>Quickstart Panel</name>
