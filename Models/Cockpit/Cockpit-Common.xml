@@ -160,7 +160,7 @@
 	</model>
 	<model>
 		<name>FrontH</name>
-		<path>Aircraft/Tornado/Models/Cockpit/FrontH-Common.xml</path>
+		<path>Aircraft/Tornado/Models/Cockpit/FrontUp-Common.xml</path>
 		<offsets>
 			<x-m>-4.860</x-m>
 			<y-m> 0.000</y-m>
