@@ -12,8 +12,9 @@ var doMagicStartup = func {
 	settimer(func {
 		setprop("controls/engines/engine[0]/cutoff", "false");
 		setprop("controls/engines/engine[1]/cutoff", "false");
-		setprop("systems/electrical/Generator1/Connected",1);
-		setprop("systems/electrical/Generator2/Connected",1);
+		setprop("systems/electrical/Generator1/Connected", 1);
+		setprop("systems/electrical/Generator2/Connected", 1);
+		setprop("instrumentation/hud/swMode", 1);
 	}, 5);
 }
 

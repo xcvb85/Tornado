@@ -3,6 +3,7 @@
 	<sim>
 		<description>Panavia Tornado ADV</description>
 		<variant-of>Tornado-IDS</variant-of>
+        <variant-id type="int">2</variant-id>
 		<author>Heiko Schulz (3D external model)</author>
 		<long-description>The Panavia Tornado Air Defence Variant (ADV) is the interceptor version of the Tornado. It was developed for the Royal Air Force to shoot down Soviet bombers flying over the North Sea from a great distance. It was introduced in 1985.</long-description>
 		<status>beta</status>
@@ -23,185 +24,8 @@
 			<path>Aircraft/Tornado/Models/Cockpit/Cockpit-ADV.xml</path>
 		</model>
 		<aircraft-type type="int">1</aircraft-type>
-		<menubar>
-			<default>
-				<menu n="100">
-					<label>Tornado ADV</label>
-					<enabled type="bool">true</enabled>
-					<item>
-						<label>Select Livery</label>
-						<binding>
-							<command>nasal</command>
-							<script>aircraft.livery.dialog.toggle()</script>
-						</binding>
-					</item>
-					<item>
-						<label>Magic Startup</label>
-						<binding>
-							<command>nasal</command>
-							<script>libraries.doMagicStartup();</script>
-						</binding>
-					</item>
-				</menu>
-			</default>
-		</menubar>
 	</sim>
-	<payload>
-		<weight n="0">
-			<name>Left wing pylon (#1)</name>
-			<selected>none</selected>
-			<weight-lb alias="fdm/jsbsim/inertia/pointmass-weight-lbs[0]" />
-			<opt>
-				<name>none</name>
-				<lbs>0</lbs>
-				<weight-lb>0</weight-lb>
-			</opt>
-			<opt>
-				<name>AIM-9</name>
-				<lbs>188</lbs>
-				<weight-lb>188</weight-lb>
-			</opt>
-		</weight>
-		<weight n="1">
-			<name>Left wing pylon (#2)</name>
-			<selected>none</selected>
-			<weight-lb alias="fdm/jsbsim/inertia/pointmass-weight-lbs[1]" />
-			<opt>
-				<name>none</name>
-				<lbs>0</lbs>
-				<weight-lb>0</weight-lb>
-			</opt>
-			<opt>
-				<name>AIM-9</name>
-				<lbs>188</lbs>
-				<weight-lb>188</weight-lb>
-			</opt>
-		</weight>
-		<weight n="2">
-			<name>Central pylon (#3)</name>
-			<selected>none</selected>
-			<weight-lb alias="fdm/jsbsim/inertia/pointmass-weight-lbs[2]" />
-			<opt>
-				<name>none</name>
-				<lbs>0</lbs>
-				<weight-lb>0</weight-lb>
-			</opt>
-			<opt>
-				<name>RB-71</name>
-				<lbs>425</lbs>
-				<weight-lb>425</weight-lb>
-			</opt>
-			<opt>
-				<name>AIM-120</name>
-				<lbs>335</lbs>
-				<weight-lb>335</weight-lb>
-			</opt>
-		</weight>
-		<weight n="3">
-			<name>Central pylon (#4)</name>
-			<selected>none</selected>
-			<weight-lb alias="fdm/jsbsim/inertia/pointmass-weight-lbs[3]" />
-			<opt>
-				<name>none</name>
-				<lbs>0</lbs>
-				<weight-lb>0</weight-lb>
-			</opt>
-			<opt>
-				<name>RB-71</name>
-				<lbs>425</lbs>
-				<weight-lb>425</weight-lb>
-			</opt>
-			<opt>
-				<name>AIM-120</name>
-				<lbs>335</lbs>
-				<weight-lb>335</weight-lb>
-			</opt>
-		</weight>
-		<weight n="4">
-			<name>Central pylon (#5)</name>
-			<selected>none</selected>
-			<weight-lb alias="fdm/jsbsim/inertia/pointmass-weight-lbs[4]" />
-			<opt>
-				<name>none</name>
-				<lbs>0</lbs>
-				<weight-lb>0</weight-lb>
-			</opt>
-			<opt>
-				<name>RB-71</name>
-				<lbs>425</lbs>
-				<weight-lb>425</weight-lb>
-			</opt>
-			<opt>
-				<name>AIM-120</name>
-				<lbs>335</lbs>
-				<weight-lb>335</weight-lb>
-			</opt>
-		</weight>
-		<weight n="5">
-			<name>Central pylon (#6)</name>
-			<selected>none</selected>
-			<weight-lb alias="fdm/jsbsim/inertia/pointmass-weight-lbs[5]" />
-			<opt>
-				<name>none</name>
-				<lbs>0</lbs>
-				<weight-lb>0</weight-lb>
-			</opt>
-			<opt>
-				<name>RB-71</name>
-				<lbs>425</lbs>
-				<weight-lb>425</weight-lb>
-			</opt>
-			<opt>
-				<name>AIM-120</name>
-				<lbs>335</lbs>
-				<weight-lb>335</weight-lb>
-			</opt>
-		</weight>
-		<weight n="6">
-			<name>Right wing pylon (#7)</name>
-			<selected>none</selected>
-			<weight-lb alias="fdm/jsbsim/inertia/pointmass-weight-lbs[6]" />
-			<opt>
-				<name>none</name>
-				<lbs>0</lbs>
-				<weight-lb>0</weight-lb>
-			</opt>
-			<opt>
-				<name>AIM-9</name>
-				<lbs>188</lbs>
-				<weight-lb>188</weight-lb>
-			</opt>
-		</weight>
-		<weight n="7">
-			<name>Left wing pylon (#8)</name>
-			<selected>none</selected>
-			<weight-lb alias="fdm/jsbsim/inertia/pointmass-weight-lbs[7]" />
-			<opt>
-				<name>none</name>
-				<lbs>0</lbs>
-				<weight-lb>0</weight-lb>
-			</opt>
-			<opt>
-				<name>AIM-9</name>
-				<lbs>188</lbs>
-				<weight-lb>188</weight-lb>
-			</opt>
-		</weight>
-	</payload>
-
 	<nasal>
-        <vector>
-            <file>Aircraft/Tornado/Nasal/vector.nas</file>
-        </vector>
-        <rcs>
-            <file>Aircraft/Tornado/Nasal/rcs.nas</file>
-        </rcs>
-        <radardist>
-            <file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
-        </radardist>
-        <awg_9>
-            <file>Aircraft/Tornado/Nasal/awg_9.nas</file>
-        </awg_9>
 		<libraries>
 			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
 			<file>Aircraft/Tornado/Nasal/librariesADV.nas</file>
@@ -214,7 +38,6 @@
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/dir.nas</file>
 		</libraries>
 		<efis>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/rhwr/TEWS_main.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/maps/loader.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/Framework.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/rdr.nas</file>

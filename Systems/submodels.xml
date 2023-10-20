@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+    <!--
+    be very careful inserting submodels. it could mess stuff up.
+    table of contents
+     0 ~ flares left
+     1 ~ flares right
+     2 ~ chaff left
+     3 ~ chaff right
+     4 ~ BK-27 tracer
+     5 ~ BK-27 bullet
+     6 ~ BK-27 tracer
+     7 ~ BK-27 bullet
+    -->
+    <!-- 0 -->
+    <submodel>
+        <name>flaresL</name>
+        <model>Aircraft/Tornado/Models/Stores/flare.xml</model>
+        <trigger>fdm/jsbsim/fcs/flaretrigger</trigger>
+        <speed>700.0</speed>        <!-- ft/sec -->
+        <repeat>true</repeat>
+        <delay>0.25</delay>
+        <count>40</count>
+        <offsets>
+            <x-m> 1.10</x-m>
+            <y-m>-5.00</y-m>
+            <z-m> 0.90</z-m>
+            <pitch-deg>180</pitch-deg>
+        </offsets>
+        <life>5</life>
+        <buoyancy>0</buoyancy>
+        <weight>2.5</weight>
+        <eda>1.0</eda>
+        <cd>1.0</cd>
+        <no-roll>true</no-roll>
+        <wind>true</wind>
+    </submodel>
+    <!-- 1 -->
+    <submodel>
+        <name>flaresR</name>
+        <model>Aircraft/Tornado/Models/Stores/flare.xml</model>
+        <trigger>fdm/jsbsim/fcs/flaretrigger</trigger>
+        <speed>700.0</speed>        <!-- ft/sec -->
+        <repeat>true</repeat>
+        <delay>0.25</delay>
+        <count>40</count>
+        <offsets>
+            <x-m> 1.10</x-m>
+            <y-m> 5.00</y-m>
+            <z-m> 0.90</z-m>
+            <pitch-deg>180</pitch-deg>
+        </offsets>
+        <life>5</life>
+        <buoyancy>0</buoyancy>
+        <weight>2.5</weight>
+        <eda>1.0</eda>
+        <cd>1.0</cd>
+        <no-roll>true</no-roll>
+        <wind>true</wind>
+    </submodel>
+    <!-- 2 -->
+    <submodel>
+        <name>chaffL</name>
+        <model>Aircraft/MiG-21bis/Models/Effects/Chaff/chaff.xml</model>
+        <trigger>fdm/jsbsim/fcs/flaretrigger</trigger>
+        <speed>0.0</speed>        <!-- ft/sec -->
+        <repeat>true</repeat>
+        <delay>0.25</delay>
+        <count>40</count>
+        <offsets>
+            <x-m> 1.10</x-m>
+            <y-m>-0.65</y-m>
+            <z-m> 0.90</z-m>
+            <pitch-deg>180</pitch-deg>
+        </offsets>
+        <life>0.2</life>
+        <buoyancy>30</buoyancy>
+        <weight>0.1</weight>
+        <eda>0.001</eda>
+        <cd>0.0</cd>
+        <no-roll>true</no-roll>
+        <wind>true</wind>
+        <collision>false</collision>
+    </submodel>
+    <!-- 3 -->
+    <submodel>
+        <name>chaffR</name>
+        <model>Aircraft/MiG-21bis/Models/Effects/Chaff/chaff.xml</model>
+        <trigger>fdm/jsbsim/fcs/flaretrigger</trigger>
+        <speed>0.0</speed>        <!-- ft/sec -->
+        <repeat>true</repeat>
+        <delay>0.25</delay>
+        <count>40</count>
+        <offsets>
+            <x-m> 1.10</x-m>
+            <y-m>-0.65</y-m>
+            <z-m> 0.90</z-m>
+            <pitch-deg>180</pitch-deg>
+        </offsets>
+        <life>0.2</life>
+        <buoyancy>30</buoyancy>
+        <weight>0.1</weight>
+        <eda>0.001</eda>
+        <cd>0.0</cd>
+        <no-roll>true</no-roll>
+        <wind>true</wind>
+        <collision>false</collision>
+    </submodel>
+    <!-- 4 -->
+    <submodel>
+        <name>BK-27 Tracer</name>
+        <model>Aircraft/Tornado/Models/Stores/Tracer.xml</model>
+        <trigger>fdm/jsbsim/fcs/guntrigger</trigger>
+        <speed>2350</speed>
+        <repeat>true</repeat>
+        <delay>0.02</delay>
+        <count>260</count>
+        <offsets>
+            <x-m>-3.81</x-m>
+            <y-m> 0.00</y-m>
+            <z-m>-0.95</z-m>
+        </offsets>
+        <life>3.0</life>
+        <wind>false</wind>
+        <weight>0.1069</weight>
+        <cd>0.193</cd>
+        <eda>0.00136354</eda>
+    </submodel>
+    <!-- 5 -->
+    <submodel>
+        <name>BK-27</name>
+        <model>Aircraft/Tornado/Models/Stores/Null.ac</model>
+        <trigger>fdm/jsbsim/fcs/guntrigger</trigger>
+        <speed>2350</speed>
+        <repeat>true</repeat>
+        <delay>0.02</delay><!-- 3000/min = 50/s = 0.02s -->
+        <count>260</count>
+        <offsets>
+            <x-m>-3.81</x-m>
+            <y-m> 0.00</y-m>
+            <z-m>-0.95</z-m>
+        </offsets>
+        <life>3.0</life>
+        <wind>false</wind>
+        <weight>0.1069</weight>
+        <cd>0.193</cd>
+        <eda>0.00136354</eda>
+        <collision>true</collision>
+        <collision-report>sim/ai/aircraft/collision/bullet</collision-report>
+        <impact>true</impact>
+        <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    </submodel>
+    <!-- 6 -->
+    <submodel>
+        <name>BK-27 Tracer</name>
+        <model>Aircraft/Tornado/Models/Stores/Tracer.xml</model>
+        <trigger>fdm/jsbsim/fcs/guntrigger</trigger>
+        <speed>2350</speed>
+        <repeat>true</repeat>
+        <delay>0.02</delay>
+        <count>260</count>
+        <offsets>
+            <x-m>-3.81</x-m>
+            <y-m> 0.00</y-m>
+            <z-m>-0.95</z-m>
+        </offsets>
+        <life>3.0</life>
+        <wind>false</wind>
+        <weight>0.1069</weight>
+        <cd>0.193</cd>
+        <eda>0.00136354</eda>
+    </submodel>
+    <!-- 7 -->
+    <submodel>
+        <name>BK-27</name>
+        <model>Aircraft/Tornado/Models/Stores/Null.ac</model>
+        <trigger>fdm/jsbsim/fcs/guntrigger</trigger>
+        <speed>2350</speed>
+        <repeat>true</repeat>
+        <delay>0.02</delay><!-- 3000/min = 50/s = 0.02s -->
+        <count>260</count>
+        <offsets>
+            <x-m>-3.81</x-m>
+            <y-m> 0.00</y-m>
+            <z-m>-0.95</z-m>
+        </offsets>
+        <life>3.0</life>
+        <wind>false</wind>
+        <weight>0.1069</weight>
+        <cd>0.193</cd>
+        <eda>0.00136354</eda>
+        <collision>true</collision>
+        <collision-report>sim/ai/aircraft/collision/bullet</collision-report>
+        <impact>true</impact>
+        <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    </submodel>
+</PropertyList>

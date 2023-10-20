@@ -31,7 +31,7 @@
 	<!-- Stores -->
 	<model>
 		<name>Stores</name>
-		<path>Aircraft/Tornado/Models/Stores/Stores.xml</path>
+		<path>Aircraft/Tornado/Models/Stores/Stores-ADV.xml</path>
 	</model>
 	<animation>
 		<type>select</type>
@@ -292,8 +292,9 @@
 		<object-name>rightinner_pylon</object-name>
 		<object-name>rightinnerwingtank</object-name>
 		<object-name>spoilerright</object-name>
-		<object-name>AIM-9 Missile 3</object-name>
-		<object-name>AIM-9 Missile 4</object-name>
+		<object-name>AIM-9L Missile 3</object-name>
+		<object-name>AIM-9L Missile 4</object-name>
+		<object-name>BOZ-10X 2</object-name>
 		<name>rightvapour</name>
 		<property>fdm/jsbsim/fcs/wing-sweep</property>
 		<interpolation>
@@ -359,8 +360,8 @@
 		<type>rotate</type>
 		<object-name>rightinner_pylon</object-name>
 		<object-name>rightinnerwingtank</object-name>
-		<object-name>AIM-9 Missile 3</object-name>
-		<object-name>AIM-9 Missile 4</object-name>
+		<object-name>AIM-9L Missile 3</object-name>
+		<object-name>AIM-9L Missile 4</object-name>
 		<property>fdm/jsbsim/fcs/wing-sweep</property>
 		<interpolation>
 			<entry>
@@ -389,6 +390,35 @@
 	</animation>
 	<animation>
 		<type>rotate</type>
+		<object-name>BOZ-10X 2</object-name>
+		<property>fdm/jsbsim/fcs/wing-sweep</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>0.5</ind>
+				<dep>18</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>36</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>2.70</x-m>
+			<y-m>5.89</y-m>
+			<z-m>-1.15</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
 		<object-name>sweepwing.L</object-name>
 		<object-name>flaps.L</object-name>
 		<object-name>navlight.L</object-name>
@@ -397,8 +427,9 @@
 		<object-name>leftinner_pylon</object-name>
 		<object-name>leftinnerwingtank</object-name>
 		<object-name>spoilerleft</object-name>
-		<object-name>AIM-9 Missile 1</object-name>
-		<object-name>AIM-9 Missile 2</object-name>
+		<object-name>AIM-9L Missile 1</object-name>
+		<object-name>AIM-9L Missile 2</object-name>
+		<object-name>BOZ-10X 1</object-name>
 		<name>leftvapour</name>
 		<property>fdm/jsbsim/fcs/wing-sweep</property>
 		<interpolation>
@@ -464,8 +495,8 @@
 		<type>rotate</type>
 		<object-name>leftinner_pylon</object-name>
 		<object-name>leftinnerwingtank</object-name>
-		<object-name>AIM-9 Missile 1</object-name>
-		<object-name>AIM-9 Missile 2</object-name>
+		<object-name>AIM-9L Missile 1</object-name>
+		<object-name>AIM-9L Missile 2</object-name>
 		<property>fdm/jsbsim/fcs/wing-sweep</property>
 		<interpolation>
 			<entry>
@@ -485,6 +516,35 @@
 			<x-m>1.6175</x-m>
 			<y-m>-3.075</y-m>
 			<z-m>-0.711</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>BOZ-10X 1</object-name>
+		<property>fdm/jsbsim/fcs/wing-sweep</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>0.5</ind>
+				<dep>-18</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>-36</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>2.70</x-m>
+			<y-m>-5.89</y-m>
+			<z-m>-1.15</z-m>
 		</center>
 		<axis>
 			<x>0</x>

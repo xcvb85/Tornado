@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>B61-7.ac</path>
+	<animation>
+		<type>select</type>
+		<object-name>B61-7_Dragchute</object-name>
+		<condition>
+			<equals>
+				<value>0</value>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+</PropertyList>

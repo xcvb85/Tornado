@@ -3,53 +3,8 @@
 	<sim include="Systems/views.xml">
 		<flight-model>jsb</flight-model>
 		<aero>Tornado</aero>
-		<help>
-			<title>Panavia Tornado</title>
-			<key>
-				<name>b</name>
-				<desc>apply all brakes</desc>
-			</key>
-			<key>
-				<name>B</name>
-				<desc>toggle parking brake</desc>
-			</key>
-			<key>
-				<name>Ctrl+b</name>
-				<desc>toggle speedbrake</desc>
-			</key>
-			<key>
-				<name>d/D</name>
-				<desc>open/close canopy</desc>
-			</key>
-			<key>
-				<name>g/G</name>
-				<desc>gear up/down</desc>
-			</key>
-			<key>
-				<name>l</name>
-				<desc>landing lights</desc>
-			</key>
-			<key>
-				<name>L</name>
-				<desc>cockpit lights</desc>
-			</key>
-			<key>
-				<name>&gt;</name>
-				<desc>wing sweep aft</desc>
-			</key>
-			<key>
-				<name>&lt;</name>
-				<desc>wing sweep forward</desc>
-			</key>
-			<key>
-				<name>[ ]</name>
-				<desc>flaps up/down</desc>
-			</key>
-			<key>
-				<name>Del</name>
-				<desc>thrust reverser</desc>
-			</key>
-		</help>
+		<menubar include="gui/menubar.xml"/>
+		<help include="gui/help.xml"/>
 		<flaps>
 			<setting>0.0</setting>
 			<setting>0.5</setting>
@@ -67,9 +22,13 @@
 				<bool n="1" type="bool" alias="/engines/engine[0]/augmentation" />
 				<float n="2" type="double" alias="/engines/engine[1]/n2" />
 				<bool n="2" type="bool" alias="/engines/engine[1]/augmentation" />
-        <int type="int" n="2">  0 </int>
+				<int type="int" n="2">  0 </int>
 			</generic>
 		</multiplay>
+		<submodels>
+			<serviceable type="bool">true</serviceable>
+			<path>Aircraft/Tornado/Systems/submodels.xml</path>
+		</submodels>
 	</sim>
 	<engines>
 		<engine n="0">
@@ -98,7 +57,50 @@
 			</systems>
 			<fcs>
 				<wing-sweep-cmd type="double">0</wing-sweep-cmd>
+				<flaretrigger type="bool">0</flaretrigger>
 			</fcs>
 		</jsbsim>
 	</fdm>
+	<payload include="Systems/payload.xml"/>
+	<nasal>
+		<vector>
+			<file>Aircraft/Tornado/Nasal/weapons/vector.nas</file>
+		</vector>
+		<notifications>
+			<file>Aircraft/Tornado/Nasal/weapons/ArmamentNotification.nas</file>
+			<file>Aircraft/Tornado/Nasal/weapons/GeoBridgedTransmitter.nas</file>
+		</notifications>
+		<radardist>
+			<file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
+		</radardist>
+		<rcs>
+			<file>Aircraft/Tornado/Nasal/rcs.nas</file>
+		</rcs>
+		<radar_system>
+			<file>Aircraft/Tornado/Nasal/radar/radar-system.nas</file>
+			<file>Aircraft/Tornado/Nasal/radar/rwr-only.nas</file>
+			<file>Aircraft/Tornado/Nasal/radar/rwr.nas</file>
+		</radar_system>
+		<damage>
+			<file>Aircraft/Tornado/Nasal/weapons/damage.nas</file>
+		</damage>
+		<ai>
+			<file>Aircraft/Tornado/Nasal/weapons/AI_list.nas</file>
+		</ai>
+		<view>
+			<file>Aircraft/Tornado/Nasal/weapons/MissileView.nas</file>
+		</view>
+		<armament>
+			<file>Aircraft/Tornado/Nasal/weapons/missile-code.nas</file><!-- must be before station-manager -->
+		</armament>
+		<stations>
+			<file>Aircraft/Tornado/Nasal/weapons/station-manager.nas</file><!-- must be before fire-control and pylons -->
+		</stations>
+		<fc>
+			<file>Aircraft/Tornado/Nasal/weapons/fire-control.nas</file><!-- must be before pylons -->
+		</fc>
+		<pylons>
+			<file>Aircraft/Tornado/Nasal/weapons/pylons.nas</file>
+		</pylons>
+	</nasal>
 </PropertyList>
