@@ -16,16 +16,16 @@
     <submodel>
         <name>flaresL</name>
         <model>Aircraft/Tornado/Models/Stores/flare.xml</model>
-        <trigger>ai/submodels/submodel[0]/flare-release</trigger>        <!-- ai/submodels/submodel[0]/flare-release -->
+        <trigger>fdm/jsbsim/fcs/flaretrigger</trigger>
         <speed>700.0</speed>        <!-- ft/sec -->
         <repeat>true</repeat>
         <delay>0.25</delay>
         <count>40</count>
         <offsets>
             <x-m> 1.10</x-m>
-            <y-m>-0.65</y-m>
+            <y-m>-5.00</y-m>
             <z-m> 0.90</z-m>
-            <pitch-deg>-90</pitch-deg>
+            <pitch-deg>180</pitch-deg>
         </offsets>
         <life>5</life>
         <buoyancy>0</buoyancy>
@@ -39,16 +39,16 @@
     <submodel>
         <name>flaresR</name>
         <model>Aircraft/Tornado/Models/Stores/flare.xml</model>
-        <trigger>ai/submodels/submodel[0]/flare-release</trigger>        <!-- ai/submodels/submodel[0]/flare-release -->
+        <trigger>fdm/jsbsim/fcs/flaretrigger</trigger>
         <speed>700.0</speed>        <!-- ft/sec -->
         <repeat>true</repeat>
         <delay>0.25</delay>
         <count>40</count>
         <offsets>
             <x-m> 1.10</x-m>
-            <y-m> 0.65</y-m>
+            <y-m> 5.00</y-m>
             <z-m> 0.90</z-m>
-            <pitch-deg>-90</pitch-deg>
+            <pitch-deg>180</pitch-deg>
         </offsets>
         <life>5</life>
         <buoyancy>0</buoyancy>
@@ -62,7 +62,7 @@
     <submodel>
         <name>chaffL</name>
         <model>Aircraft/MiG-21bis/Models/Effects/Chaff/chaff.xml</model>
-        <trigger>fdm/jsbsim/systems/armament/aso2m/chaff-firing-0</trigger>        <!-- ai/submodels/submodel[0]/flare-release -->
+        <trigger>fdm/jsbsim/fcs/flaretrigger</trigger>
         <speed>0.0</speed>        <!-- ft/sec -->
         <repeat>true</repeat>
         <delay>0.25</delay>
@@ -71,7 +71,7 @@
             <x-m> 1.10</x-m>
             <y-m>-0.65</y-m>
             <z-m> 0.90</z-m>
-            <pitch-deg>-90</pitch-deg>
+            <pitch-deg>180</pitch-deg>
         </offsets>
         <life>0.2</life>
         <buoyancy>30</buoyancy>
@@ -86,7 +86,7 @@
     <submodel>
         <name>chaffR</name>
         <model>Aircraft/MiG-21bis/Models/Effects/Chaff/chaff.xml</model>
-        <trigger>fdm/jsbsim/systems/armament/aso2m/chaff-firing-1</trigger>        <!-- ai/submodels/submodel[0]/flare-release -->
+        <trigger>fdm/jsbsim/fcs/flaretrigger</trigger>
         <speed>0.0</speed>        <!-- ft/sec -->
         <repeat>true</repeat>
         <delay>0.25</delay>
@@ -95,7 +95,7 @@
             <x-m> 1.10</x-m>
             <y-m>-0.65</y-m>
             <z-m> 0.90</z-m>
-            <pitch-deg>-90</pitch-deg>
+            <pitch-deg>180</pitch-deg>
         </offsets>
         <life>0.2</life>
         <buoyancy>30</buoyancy>

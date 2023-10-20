@@ -214,8 +214,9 @@
   </tank>
  </propulsion>
  
- <flight_control file="Systems/jsb-controls"/>
- <aerodynamics file="Tornado-aerodynamics.xml"/>
+    <system file="jsb-misc"/>
+    <flight_control file="Systems/jsb-controls"/>
+    <aerodynamics file="Systems/jsb-aerodynamics.xml"/>
 
 <!--
 <output name="/tmp/tornado.csv" type="CSV" rate="10">
