@@ -10,4 +10,8 @@
 		<object-name>sweep</object-name>
 		<object-name>brakes</object-name>
 	</effect>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/glass</inherits-from>
+		<object-name>glass</object-name>
+	</effect>
 </PropertyList>

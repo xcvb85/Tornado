@@ -23,7 +23,7 @@
       <type>white</type>
     </texture>
     <metallic-factor type="float">0.0</metallic-factor>
-    <roughness-factor type="float">0.15</roughness-factor>
+    <roughness-factor type="float">0.25</roughness-factor>
     <!-- Emissive -->
     <texture n="3">
       <type>white</type>
