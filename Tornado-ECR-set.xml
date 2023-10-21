@@ -21,21 +21,6 @@
 			<path>Aircraft/Tornado/Models/Cockpit/Cockpit-IDS.xml</path>
 		</model>
 		<aircraft-type type="int">0</aircraft-type>
-		<menubar>
-			<default>
-				<menu n="100">
-					<label>Tornado ECR</label>
-					<enabled type="bool">true</enabled>
-					<item>
-						<label>Magic Startup</label>
-						<binding>
-							<command>nasal</command>
-							<script>libraries.doMagicStartup();</script>
-						</binding>
-					</item>
-				</menu>
-			</default>
-		</menubar>
 	</sim>
 	<tornado>
 		<displays>
@@ -46,7 +31,7 @@
 	<nasal>
 		<libraries>
 			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
-			<file>Aircraft/Tornado/Nasal/librariesIDS.nas</file>
+			<file>Aircraft/Tornado/Nasal/librariesECR.nas</file>
 			<file>Aircraft/Tornado/Nasal/electrical.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_sbs.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_fd.nas</file>

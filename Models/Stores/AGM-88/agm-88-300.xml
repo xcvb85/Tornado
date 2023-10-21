@@ -8,7 +8,7 @@
 		<object-name>Tail-Fins</object-name>
 		<object-name>Exhaust</object-name>
 		<condition>
-			<property>payload/armament/agm-88/flags/msl-id-600</property>
+			<property>payload/armament/agm-88/flags/msl-id-300</property>
 		</condition>
 	</animation>
 	<model>
@@ -24,7 +24,7 @@
 		<type>select</type>
 		<object-name>flaminghot</object-name>
 		<condition>
-			<property>payload/armament/agm-88/flags/smoke-id-600</property>
+			<property>payload/armament/agm-88/flags/smoke-id-300</property>
 		</condition>
 	</animation>
 	<particlesystem>
@@ -33,7 +33,7 @@
 		<emissive type="bool">false</emissive>
 		<lighting type="bool">false</lighting>
 		<condition>
-			<property>payload/armament/agm-88/flags/smoke-id-600</property>
+			<property>payload/armament/agm-88/flags/smoke-id-300</property>
 		</condition>
 		<attach>world</attach>
 		<placer>
@@ -156,7 +156,7 @@
 		<emissive type="bool">true</emissive>
 		<lighting type="bool">false</lighting>
 		<condition>
-			<property>payload/armament/agm-88/flags/explode-id-600</property>
+			<property>payload/armament/agm-88/flags/explode-id-300</property>
 		</condition>
 		<attach>world</attach>
 		<placer>
@@ -244,7 +244,7 @@
 		<emissive type="bool">true</emissive>
 		<lighting type="bool">false</lighting>
 		<condition>
-			<property>payload/armament/agm-88/flags/explode-id-600</property>
+			<property>payload/armament/agm-88/flags/explode-id-300</property>
 		</condition>
 		<attach>world</attach>
 		<placer>
@@ -333,9 +333,9 @@
 		<lighting type="bool">false</lighting>
 		<condition>
 			<and>
-				<property>payload/armament/agm-88/flags/explode-id-600</property>
+				<property>payload/armament/agm-88/flags/explode-id-300</property>
 				<not>
-					<property>payload/armament/agm-88/flags/explode-water-id-600</property>
+					<property>payload/armament/agm-88/flags/explode-water-id-300</property>
 				</not>
 			</and>
 		</condition>
@@ -459,9 +459,9 @@
 		<lighting type="bool">false</lighting>
 		<condition>
 			<and>
-				<property>payload/armament/agm-88/flags/explode-smoke-id-600</property>
+				<property>payload/armament/agm-88/flags/explode-smoke-id-300</property>
 				<not>
-					<property>payload/armament/agm-88/flags/explode-water-id-600</property>
+					<property>payload/armament/agm-88/flags/explode-water-id-300</property>
 				</not>
 			</and>
 		</condition>
@@ -582,9 +582,9 @@
 		<lighting type="bool">false</lighting>
 		<condition>
 			<and>
-				<property>payload/armament/agm-88/flags/explode-id-600</property>
+				<property>payload/armament/agm-88/flags/explode-id-300</property>
 				<not>
-					<property>payload/armament/agm-88/flags/explode-water-id-600</property>
+					<property>payload/armament/agm-88/flags/explode-water-id-300</property>
 				</not>
 			</and>
 		</condition>
@@ -705,8 +705,8 @@
 		<lighting type="bool">false</lighting>
 		<condition>
 			<and>
-				<property>payload/armament/agm-88/flags/explode-id-600</property>
-				<property>payload/armament/agm-88/flags/explode-water-id-600</property>
+				<property>payload/armament/agm-88/flags/explode-id-300</property>
+				<property>payload/armament/agm-88/flags/explode-water-id-300</property>
 			</and>
 		</condition>
 		<attach>world</attach>
@@ -826,8 +826,8 @@
 		<lighting type="bool">false</lighting>
 		<condition>
 			<and>
-				<property>payload/armament/agm-88/flags/explode-smoke-id-600</property>
-				<property>payload/armament/agm-88/flags/explode-water-id-600</property>
+				<property>payload/armament/agm-88/flags/explode-smoke-id-300</property>
+				<property>payload/armament/agm-88/flags/explode-water-id-300</property>
 			</and>
 		</condition>
 		<attach>world</attach>
