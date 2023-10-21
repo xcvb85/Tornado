@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<model>
+		<name>WAMS EL Panel</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Panels/wamsel.xml</path>
+		<offsets>
+			<x-m> 0.000</x-m>
+			<y-m>-0.358</y-m>
+			<z-m>-0.025</z-m>
+		</offsets>
+	</model>
+	<model>
 		<name>Korry</name>
 		<path>Aircraft/Tornado/Models/Cockpit/Buttons/korry1.xml</path>
 		<offsets>
@@ -14,8 +23,8 @@
 		<path>Aircraft/Tornado/Models/Cockpit/Buttons/korry2.xml</path>
 		<offsets>
 			<x-m> 0.000</x-m>
-			<y-m>-0.225</y-m>
-			<z-m>-0.062</z-m>
+			<y-m>-0.223</y-m>
+			<z-m>-0.061</z-m>
 		</offsets>
 	</model>
 	<model>
@@ -41,16 +50,16 @@
 		<path>Aircraft/Tornado/Models/Cockpit/Instruments/ralt/ralt.xml</path>
 		<offsets>
 			<x-m> 0.000</x-m>
-			<y-m>-0.275</y-m>
-			<z-m>-0.066</z-m>
+			<y-m>-0.270</y-m>
+			<z-m>-0.059</z-m>
 		</offsets>
 	</model>
 	<model>
 		<path>Aircraft/Tornado/Models/Cockpit/Instruments/mount/mount.xml</path>
 		<offsets>
 			<x-m> 0.000</x-m>
-			<y-m>-0.275</y-m>
-			<z-m>-0.066</z-m>
+			<y-m>-0.270</y-m>
+			<z-m>-0.059</z-m>
 		</offsets>
 	</model>
 	<model>
@@ -76,7 +85,7 @@
 		<offsets>
 			<x-m> 0.000</x-m>
 			<y-m>-0.255</y-m>
-			<z-m>-0.140</z-m>
+			<z-m>-0.138</z-m>
 		</offsets>
 	</model>
 	<model>
@@ -111,8 +120,17 @@
 		<path>Aircraft/Tornado/Models/Cockpit/Instruments/rhwr/rhwr.xml</path>
 		<offsets>
 			<x-m> 0.000</x-m>
-			<y-m> 0.190</y-m>
+			<y-m> 0.185</y-m>
 			<z-m>-0.020</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Frequency Panel</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Panels/freq.xml</path>
+		<offsets>
+			<x-m> 0.000</x-m>
+			<y-m> 0.270</y-m>
+			<z-m>-0.080</z-m>
 		</offsets>
 	</model>
 	<model>

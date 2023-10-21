@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<default>
+		<menu n="100">
+			<label>Panavia Tornado</label>
+			<enabled type="bool">true</enabled>
+			<item>
+				<label>Select Livery</label>
+				<binding>
+					<command>nasal</command>
+					<script>aircraft.livery.dialog.toggle()</script>
+				</binding>
+			</item>
+			<item>
+				<label>Configuration</label>
+				<binding>
+					<command>dialog-show</command>
+					<dialog-name>configuration</dialog-name>
+				</binding>
+			</item>
+			<item>
+				<label>Event Log</label>
+				<binding>
+					<command>dialog-show</command>
+					<dialog-name>flightlog</dialog-name>
+				</binding>
+			</item>
+			<item>
+				<label>Autostart</label>
+				<binding>
+					<command>nasal</command>
+					<script>libraries.doMagicStartup();</script>
+				</binding>
+			</item>
+		</menu>
+	</default>
+</PropertyList>

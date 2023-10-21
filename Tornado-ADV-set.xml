@@ -24,28 +24,6 @@
 			<path>Aircraft/Tornado/Models/Cockpit/Cockpit-ADV.xml</path>
 		</model>
 		<aircraft-type type="int">1</aircraft-type>
-		<menubar>
-			<default>
-				<menu n="100">
-					<label>Tornado ADV</label>
-					<enabled type="bool">true</enabled>
-					<item>
-						<label>Select Livery</label>
-						<binding>
-							<command>nasal</command>
-							<script>aircraft.livery.dialog.toggle()</script>
-						</binding>
-					</item>
-					<item>
-						<label>Magic Startup</label>
-						<binding>
-							<command>nasal</command>
-							<script>libraries.doMagicStartup();</script>
-						</binding>
-					</item>
-				</menu>
-			</default>
-		</menubar>
 	</sim>
 	<nasal>
 		<libraries>
