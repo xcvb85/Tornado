@@ -132,6 +132,10 @@ if (fcs!=nil) {
 var refill_cannons = func {
     if(!getprop("payload/armament/msg") or getprop("gear/gear[0]/wow")) {
         # cannons
+        setprop("ai/submodels/submodel[4]/count", 260);
+        setprop("ai/submodels/submodel[5]/count", 260);
+        setprop("ai/submodels/submodel[6]/count", 260);
+        setprop("ai/submodels/submodel[7]/count", 260);
         screen.log.write(msgB, 0.5, 0.5, 1);
     }
     else {
@@ -142,6 +146,10 @@ var refill_cannons = func {
 var refill_cf = func {
     if(!getprop("payload/armament/msg") or getprop("gear/gear[0]/wow")) {
         # chaffs/flares
+        setprop("ai/submodels/submodel[0]/count", 40);
+        setprop("ai/submodels/submodel[1]/count", 40);
+        setprop("ai/submodels/submodel[2]/count", 40);
+        setprop("ai/submodels/submodel[3]/count", 40);
         screen.log.write(msgB, 0.5, 0.5, 1);
     }
     else {
