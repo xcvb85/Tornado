@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+    <name>autopilot</name>
+    <modal type="bool">false</modal>
+    <draggable>true</draggable>
+    <resizable>true</resizable>
+    <layout>vbox</layout>
+    
+    <group>
+        <layout>hbox</layout>
+        <empty>
+            <stretch>1</stretch>
+        </empty>
+        
+        <text>
+            <label>Autopilot</label>
+        </text>
+        
+        <empty>
+            <stretch>1</stretch>
+        </empty>
+        
+        <button>
+            <pref-width>16</pref-width>
+            <pref-height>16</pref-height>
+            <legend></legend>
+            
+            <default>1</default>
+            <keynum>27</keynum>
+            <border>2</border>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+            <binding>
+                <command>dialog-apply</command>
+            </binding>
+        </button>
+    </group>
+    
+    <hrule/>
+    
+    <group>
+        <layout>hbox</layout>
+        <button>
+            <legend>Stabilize</legend>
+            <binding>
+                <command>nasal</command>
+                <script>libraries.ap_stabilize();</script>
+            </binding>
+        </button>
+        
+        <button>
+            <legend>PRMG</legend>
+            <binding>
+                <command>nasal</command>
+                <script>libraries.ap_prmg();</script>
+            </binding>
+        </button>
+        
+        <button>
+            <legend>Disable</legend>
+            <binding>
+                <command>nasal</command>
+                <script>libraries.ap_disable();</script>
+            </binding>
+        </button>
+    </group>
+</PropertyList>

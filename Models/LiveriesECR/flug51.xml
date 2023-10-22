@@ -3,9 +3,10 @@
 	<sim>
 		<model>
 			<livery>
-				<name type="string">321 Tigers (Tiger Meet 2011)</name>
-				<texture>LiveriesIDS/321tiger2011.jpg</texture>
+				<name type="string">Luftwaffe, Flug AG51</name>
+				<texture>Tornado-IDS.jpg</texture>
 			</livery>
 		</model>
+		<flir type="int">1</flir>
 	</sim>
 </PropertyList>

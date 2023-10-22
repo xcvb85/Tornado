@@ -144,7 +144,32 @@
 	</animation>
 
 	<!-- AGM-88 -->
-<!--	<model>
+	<model>
+		<name>AGM-88 Missile 1</name>
+		<path>Aircraft/Tornado/Models/Stores/AGM-88/AGM-88.xml</path>
+		<offsets>
+			<x-m> 0.50</x-m>
+			<y-m>-3.05</y-m>
+			<z-m>-1.30</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>AGM-88 Missile 1</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-2-type</property>
+					<value>AGM-88</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-2-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+	<model>
 		<name>AGM-88 Missile 2</name>
 		<path>Aircraft/Tornado/Models/Stores/AGM-88/AGM-88.xml</path>
 		<offsets>
@@ -193,7 +218,32 @@
 				</greater-than>
 			</and>
 		</condition>
-	</animation>-->
+	</animation>
+	<model>
+		<name>AGM-88 Missile 4</name>
+		<path>Aircraft/Tornado/Models/Stores/AGM-88/AGM-88.xml</path>
+		<offsets>
+			<x-m> 0.50</x-m>
+			<y-m> 3.05</y-m>
+			<z-m>-1.30</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>AGM-88 Missile 4</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-6-type</property>
+					<value>AGM-88</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-6-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
 
 	<!-- B61-7 -->
 	<model>
@@ -422,6 +472,110 @@
 					<property>payload/armament/station/id-5-count</property>
 					<value>2</value>
 				</equals>
+			</and>
+		</condition>
+	</animation>
+
+	<!-- MK-83 -->
+	<model>
+		<name>MK-83 Bomb 1</name>
+		<path>Aircraft/Tornado/Models/Stores/MK-83/MK-83.xml</path>
+		<offsets>
+			<x-m> 0.00</x-m>
+			<y-m>-0.45</y-m>
+			<z-m>-2.05</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>MK-83 Bomb 1</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-3-type</property>
+					<value>MK-83</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-3-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>MK-83 Bomb 2</name>
+		<path>Aircraft/Tornado/Models/Stores/MK-83/MK-83.xml</path>
+		<offsets>
+			<x-m> 0.00</x-m>
+			<y-m> 0.45</y-m>
+			<z-m>-2.05</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>MK-83 Bomb 2</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-5-type</property>
+					<value>MK-83</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-5-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+
+	<!-- MK-84 -->
+	<model>
+		<name>MK-84 Bomb 1</name>
+		<path>Aircraft/Tornado/Models/Stores/MK-84/MK-84.xml</path>
+		<offsets>
+			<x-m> 0.00</x-m>
+			<y-m>-0.45</y-m>
+			<z-m>-2.05</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>MK-84 Bomb 1</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-3-type</property>
+					<value>MK-84</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-3-count</property>
+					<value>0</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+	<model>
+		<name>MK-84 Bomb 2</name>
+		<path>Aircraft/Tornado/Models/Stores/MK-84/MK-84.xml</path>
+		<offsets>
+			<x-m> 0.00</x-m>
+			<y-m> 0.45</y-m>
+			<z-m>-2.05</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>MK-84 Bomb 2</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-5-type</property>
+					<value>MK-84</value>
+				</equals>
+				<greater-than>
+					<property>payload/armament/station/id-5-count</property>
+					<value>0</value>
+				</greater-than>
 			</and>
 		</condition>
 	</animation>

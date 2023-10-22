@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<name>configuration</name>
+	<modal type="bool">false</modal>
+	<draggable>true</draggable>
+	<resizable>true</resizable>
+	<width>230</width>
+	<layout>vbox</layout>
+	<group>
+		<layout>hbox</layout>
+		<empty>
+			<stretch>1</stretch>
+		</empty>
+		<text>
+			<label>Panavia Tornado Configuration</label>
+		</text>
+		<empty>
+			<stretch>1</stretch>
+		</empty>
+		<button>
+			<pref-width>16</pref-width>
+			<pref-height>16</pref-height>
+			<legend />
+			<default>1</default>
+			<keynum>27</keynum>
+			<border>2</border>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+		</button>
+	</group>
+	<hrule />
+	<button>
+		<pref-width>200</pref-width>
+		<legend>Rearm cannons</legend>
+		<binding>
+			<command>nasal</command>
+			<script>pylons.refill_cannons();</script>
+		</binding>
+	</button>
+	<button>
+		<pref-width>200</pref-width>
+		<legend>Refill chaff/flares</legend>
+		<binding>
+			<command>nasal</command>
+			<script>pylons.refill_cf();</script>
+		</binding>
+	</button>
+	<button>
+		<pref-width>200</pref-width>
+		<legend>Default load</legend>
+		<binding>
+			<command>nasal</command>
+			<script>pylons.refill_weapons();</script>
+		</binding>
+	</button>
+	<checkbox>
+		<label>MP Damage</label>
+		<halign>left</halign>
+		<property>payload/armament/msg</property>
+		<live>true</live>
+		<binding>
+			<command>nasal</command>
+				<script>
+					if(getprop("fdm/jsbsim/gear/unit[0]/WOW")) {
+					setprop("payload/armament/msg", !getprop("payload/armament/msg"));
+					}
+				</script>
+		</binding>
+	</checkbox>
+	<empty>
+		<stretch>1</stretch>
+	</empty>
+</PropertyList>

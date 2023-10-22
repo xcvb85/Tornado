@@ -90,13 +90,13 @@
 		<desc>Trigger flare release</desc>
 		<binding>
 			<command>property-assign</command>
-			<property>/ai/submodels/submodel[0]/flare-release</property>
+			<property>fdm/jsbsim/fcs/flaretrigger</property>
 			<value type="bool">true</value>
 		</binding>
 		<mod-up>
 			<binding>
 				<command>property-assign</command>
-				<property>/ai/submodels/submodel[0]/flare-release</property>
+				<property>fdm/jsbsim/fcs/flaretrigger</property>
 				<value type="bool">false</value>
 			</binding>
 		</mod-up>

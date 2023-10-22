@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="misc">
+    <property value="0">fcs/gun</property>
+    <property value="0">fcs/boz-1</property>
+    <property value="0">fcs/boz-2</property>
+
+    <channel name="gun"><!-- no gun if FLIR installed -->
+        <switch name="fcs/gun">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /sim/flir == 0
+                fcs/guntrigger gt 0
+            </test>
+        </switch>
+    </channel>
+    <channel name="flares_1">
+        <switch name="fcs/boz-1">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /payload/weight[0]/weight-lb == 100
+                fcs/flaretrigger gt 0
+            </test>
+        </switch>
+    </channel>
+    <channel name="flares_2">
+        <switch name="fcs/boz-2">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /payload/weight[8]/weight-lb == 100
+                fcs/flaretrigger gt 0
+            </test>
+        </switch>
+    </channel>
+</system>

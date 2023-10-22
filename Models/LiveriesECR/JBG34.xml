@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name type="string">Luftwaffe JBG34 (Fighter Attack Sqdn.)</name>
+				<texture>LiveriesIDS/JBG34.jpg</texture>
+			</livery>
+		</model>
+		<flir type="int">0</flir><!-- TODO -->
+	</sim>
+</PropertyList>

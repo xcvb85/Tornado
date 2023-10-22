@@ -34,7 +34,7 @@ var pylonSets = {
     fueltank2: {name: "Droptank", content: [fuelTank2], fireOrder: [0], launcherDragArea: 0.35, launcherMass: 531, launcherJettisonable: 1, showLongTypeInsteadOfCount: 1, category: 2},
     fueltank3: {name: "Droptank", content: [fuelTank3], fireOrder: [0], launcherDragArea: 0.35, launcherMass: 531, launcherJettisonable: 1, showLongTypeInsteadOfCount: 1, category: 2},
     mm27:  {name: "27mm Cannon", content: [cannon], fireOrder: [0], launcherDragArea: 0.0, launcherMass: 0, launcherJettisonable: 0, showLongTypeInsteadOfCount: 1, category: 1},
-    boz10x: {name: "BOZ-101/102/107", content: [], fireOrder: [], launcherDragArea: 0.0, launcherMass: 480, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 1},
+    boz10x: {name: "BOZ-101/102/107", content: [], fireOrder: [], launcherDragArea: 0.0, launcherMass: 100, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 1},
 
     # A/A weapons
     aim9l:     {name: "1 x AIM-9L", content: ["AIM-9L"], fireOrder: [0], launcherDragArea: 0.025, launcherMass: 90, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 1},#non wingtip
@@ -111,7 +111,7 @@ pylon9 = stations.Pylon.new("Right wing outboard pylon", 8, [4.510,  4.511, -0.1
 pylonI = stations.InternalStation.new("Internal gun mount",   9, [pylonSets.mm27], props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[10]", 1));
 
 pylons = [pylon1, pylon2, pylon3, pylon4, pylon5, pylon6, pylon7, pylon8, pylon9, pylonI];
-fcs = fc.FireControl.new(pylons, [9, 7, 1, 6, 2, 5, 3, 4], ["27mm Cannon", "AIM-9L", "MK-82", "MK-82AIR", "B61-7", "AIM-120", "RB-71", "AGM-88"]);
+fcs = fc.FireControl.new(pylons, [9, 7, 1, 6, 2, 5, 3, 4], ["27mm Cannon", "AIM-9L", "MK-82", "MK-82AIR", "MK-83", "MK-84", "B61-7", "AIM-120", "RB-71", "AGM-88"]);
 
 var selectedWeapon = {};
 var bore_loop = func {
@@ -132,6 +132,10 @@ if (fcs!=nil) {
 var refill_cannons = func {
     if(!getprop("payload/armament/msg") or getprop("gear/gear[0]/wow")) {
         # cannons
+        setprop("ai/submodels/submodel[4]/count", 260);
+        setprop("ai/submodels/submodel[5]/count", 260);
+        setprop("ai/submodels/submodel[6]/count", 260);
+        setprop("ai/submodels/submodel[7]/count", 260);
         screen.log.write(msgB, 0.5, 0.5, 1);
     }
     else {
@@ -142,9 +146,56 @@ var refill_cannons = func {
 var refill_cf = func {
     if(!getprop("payload/armament/msg") or getprop("gear/gear[0]/wow")) {
         # chaffs/flares
+        setprop("ai/submodels/submodel[0]/count", 40);
+        setprop("ai/submodels/submodel[1]/count", 40);
+        setprop("ai/submodels/submodel[2]/count", 40);
+        setprop("ai/submodels/submodel[3]/count", 40);
         screen.log.write(msgB, 0.5, 0.5, 1);
     }
     else {
+        screen.log.write(msgA, 0.5, 0.5, 1);
+    }
+}
+
+var refill_weapons = func {
+    if(!getprop("payload/armament/msg") or getprop("gear/gear[0]/wow")) {
+    
+        if(variant==1) {
+            # IDS
+            pylon1.loadSet(pylonSets.boz10x);
+            pylon2.loadSet(pylonSets.aim9l);
+            pylon3.loadSet(pylonSets.empty);
+            pylon4.loadSet(pylonSets.m82air_2);
+            pylon5.loadSet(pylonSets.empty);
+            pylon6.loadSet(pylonSets.m82air_2);
+            pylon7.loadSet(pylonSets.empty);
+            pylon8.loadSet(pylonSets.aim9l);
+            pylon9.loadSet(pylonSets.boz10x);
+        }
+        else if(variant==2) {
+            # ADV
+            pylon1.loadSet(pylonSets.boz10x);
+            pylon2.loadSet(pylonSets.aim9l);
+            pylon3.loadSet(pylonSets.empty);
+            pylon4.loadSet(pylonSets.aim120_2);
+            pylon5.loadSet(pylonSets.empty);
+            pylon6.loadSet(pylonSets.aim120_2);
+            pylon7.loadSet(pylonSets.empty);
+            pylon8.loadSet(pylonSets.aim9l);
+            pylon9.loadSet(pylonSets.boz10x);
+        } else {
+            # ECR
+            pylon1.loadSet(pylonSets.boz10x);
+            pylon2.loadSet(pylonSets.aim9l);
+            pylon3.loadSet(pylonSets.a88);
+            pylon4.loadSet(pylonSets.a88);
+            pylon5.loadSet(pylonSets.empty);
+            pylon6.loadSet(pylonSets.a88);
+            pylon7.loadSet(pylonSets.a88);
+            pylon8.loadSet(pylonSets.aim9l);
+            pylon9.loadSet(pylonSets.boz10x);
+        }
+    } else {
         screen.log.write(msgA, 0.5, 0.5, 1);
     }
 }
@@ -159,22 +210,6 @@ var empty = func {
         pylon7.loadSet(pylonSets.empty);
         pylon8.loadSet(pylonSets.empty);
         pylon9.loadSet(pylonSets.empty);
-    } else {
-        screen.log.write(msgA, 0.5, 0.5, 1);
-    }
-}
-
-var aa_mk82 = func {
-    if(!getprop("payload/armament/msg") or getprop("gear/gear[0]/wow")) {
-        pylon1.loadSet(pylonSets.boz10x);
-        pylon2.loadSet(pylonSets.aim9l);
-        pylon3.loadSet(pylonSets.fuelTank1);
-        pylon4.loadSet(pylonSets.mk82_2);
-        pylon5.loadSet(pylonSets.empty);
-        pylon6.loadSet(pylonSets.mk82_2);
-        pylon7.loadSet(pylonSets.fuelTank1);
-        pylon8.loadSet(pylonSets.aim9l);
-        pylon9.loadSet(pylonSets.boz10x);
     } else {
         screen.log.write(msgA, 0.5, 0.5, 1);
     }

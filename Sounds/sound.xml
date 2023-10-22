@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<fx>
+		<!--================================= Engine =============================-->
 		<engine>
 			<name>engine-start-inside</name>
 			<mode>once</mode>
-			<path>Aircraft/Tornado/Sounds/turbine_start_in.wav</path>
+			<path>Aircraft/Tornado/Sounds/engine/turbine_start_in.wav</path>
 			<condition>
 				<and>
 					<property>/controls/engines/engine[0]/starter</property>
@@ -29,10 +30,10 @@
 		<engine>
 			<name>engine-start-inside</name>
 			<mode>once</mode>
-			<path>Aircraft/Tornado/Sounds/turbine_start_in.wav</path>
+			<path>Aircraft/Tornado/Sounds/engine/turbine_start_in.wav</path>
 			<condition>
 				<and>
-					<property>/controls/engines/engine[0]/starter</property>
+					<property>/controls/engines/engine[1]/starter</property>
 					<property>/sim/current-view/internal</property>
 				</and>
 			</condition>
@@ -54,17 +55,10 @@
 		<engine>
 			<name>engine-start-outside</name>
 			<mode>once</mode>
-			<path>Aircraft/Tornado/Sounds/startup.wav</path>
+			<path>Aircraft/Tornado/Sounds/engine/startup.wav</path>
 			<condition>
 				<and>
-					<greater-than>
-						<property>engines/engine[0]/rpm</property>
-						<value>0.5</value>
-					</greater-than>
-					<less-than>
-						<property>velocities/groundspeed-kt</property>
-						<value>1</value>
-					</less-than>
+					<property>/controls/engines/engine[0]/starter</property>
 					<not>
 						<property>/sim/current-view/internal</property>
 					</not>
@@ -86,19 +80,12 @@
 			<max-dist>1000</max-dist>
 		</engine>
 		<engine>
-			<name>engine-start-outside1</name>
+			<name>engine-start-outside2</name>
 			<mode>once</mode>
-			<path>Aircraft/Tornado/Sounds/startup.wav</path>
+			<path>Aircraft/Tornado/Sounds/engine/startup.wav</path>
 			<condition>
 				<and>
-					<greater-than>
-						<property>engines/engine[1]/rpm</property>
-						<value>0.5</value>
-					</greater-than>
-					<less-than>
-						<property>velocities/groundspeed-kt</property>
-						<value>1</value>
-					</less-than>
+					<property>/controls/engines/engine[1]/starter</property>
 					<not>
 						<property>/sim/current-view/internal</property>
 					</not>
@@ -119,39 +106,9 @@
 			<reference-dist>100</reference-dist>
 			<max-dist>1000</max-dist>
 		</engine>
-		<!--
-	 <shutdown>
-   <name>shutdown internal</name>
-   <path>Aircraft/Tornado/Sounds/f16-shutdown-int.wav</path>
-   <condition>
-     <not>
-      <property>/sim/current-view/external</property>
-     </not>
-     <equals>
-      <property>engines/engine[0]/running</property>
-      <value>false</value>
-     </equals>
-   </condition>
-  </shutdown>
-  
-   <shutdown>
-   <name>shutdown internal</name>
-   <path>Aircraft/Tornado/Sounds/f16-shutdown-ext.wav</path>
-   <condition>
-     <not>
-      <property>/sim/current-view/internal</property>
-     </not>
-     <equals>
-      <property>engines/engine[0]/running</property>
-      <value>false</value>
-     </equals>
-   </condition>
-  </shutdown>
-	
-  -->
 		<engine>
 			<name>engine</name>
-			<path>Aircraft/Tornado/Sounds/jet-blast.wav</path>
+			<path>Aircraft/Tornado/Sounds/engine/jet-blast.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<property>engines/engine[0]/running</property>
@@ -183,7 +140,7 @@
 		</engine>
 		<engine>
 			<name>engine1</name>
-			<path>Aircraft/Tornado/Sounds/jet-blast.wav</path>
+			<path>Aircraft/Tornado/Sounds/engine/jet-blast.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<property>engines/engine[1]/running</property>
@@ -215,7 +172,7 @@
 		</engine>
 		<engine>
 			<name>whine</name>
-			<path>Aircraft/Tornado/Sounds/engine-exhaust.wav</path>
+			<path>Aircraft/Tornado/Sounds/engine/engine-exhaust.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<property>engines/engine[0]/running</property>
@@ -236,7 +193,7 @@
 		</engine>
 		<engine>
 			<name>whine1</name>
-			<path>Aircraft/Tornado/Sounds/engine-exhaust.wav</path>
+			<path>Aircraft/Tornado/Sounds/engine/engine-exhaust.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<property>engines/engine[1]/running</property>
@@ -257,7 +214,7 @@
 		</engine>
 		<engine>
 			<name>whine-int</name>
-			<path>Aircraft/Tornado/Sounds/f16-engine-int.wav</path>
+			<path>Aircraft/Tornado/Sounds/engine/f16-engine-int.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<property>engines/engine[0]/running</property>
@@ -279,7 +236,7 @@
 		<engine>
 			<name>Reheat</name>
 			<mode>looped</mode>
-			<path>Aircraft/Tornado/Sounds/reheat.wav</path>
+			<path>Aircraft/Tornado/Sounds/engine/reheat.wav</path>
 			<condition>
 				<property>engines/engine[0]/afterburner</property>
 				<not>
@@ -309,7 +266,7 @@
 		<engine>
 			<name>Reheat1</name>
 			<mode>looped</mode>
-			<path>Aircraft/Tornado/Sounds/reheat.wav</path>
+			<path>Aircraft/Tornado/Sounds/engine/reheat.wav</path>
 			<condition>
 				<property>engines/engine[1]/afterburner</property>
 				<not>
@@ -339,7 +296,7 @@
 		<ignition>
 			<name>Reheat Ignition</name>
 			<mode>once</mode>
-			<path>Aircraft/Tornado/Sounds/reheat-ignite.wav</path>
+			<path>Aircraft/Tornado/Sounds/engine/reheat-ignite.wav</path>
 			<condition>
 				<not>
 					<property>/engines/engine/out-of-fuel</property>
@@ -358,6 +315,8 @@
 				<offset>0.25</offset>
 			</volume>
 		</ignition>
+
+		<!-- Gears -->
 		<rumble>
 			<name>rumble</name>
 			<mode>looped</mode>
@@ -568,6 +527,8 @@
 				<offset>1.2</offset>
 			</pitch>
 		</squeal>
+		
+		<!-- flaps -->
 		<flap>
 			<name>flaps</name>
 			<mode>in-transit</mode>
@@ -575,15 +536,6 @@
 			<property>/surface-positions/left-flap-pos-norm</property>
 			<volume>
 				<factor>0.15</factor>
-			</volume>
-		</flap>
-		<flap>
-			<name>flaps</name>
-			<mode>in-transit</mode>
-			<path>Sounds/flaps.wav</path>
-			<property>/surface-positions/right-flap-pos-norm</property>
-			<volume>
-				<factor>0.25</factor>
 			</volume>
 		</flap>
 		<spoiler>
@@ -595,10 +547,22 @@
 				<factor>0.15</factor>
 			</volume>
 		</spoiler>
+		<speedbrake>
+			<name>speedbrake</name>
+			<mode>in-transit</mode>
+			<path>Aircraft/Tornado/Sounds/misc/flaps.wav</path>
+			<property>/surface-positions/speedbrake-pos-norm</property>
+			<volume>
+				<offset>0.25</offset>
+				<max>0.9</max>
+			</volume>
+		</speedbrake>
+
+		<!--================================= avionics =============================-->
 		<cockpit>
 			<name>Cockpit Atmos</name>
 			<mode>looped</mode>
-			<path>Aircraft/Tornado/Sounds/cockpit.wav</path>
+			<path>Aircraft/Tornado/Sounds/misc/cockpit.wav</path>
 			<condition>
 				<property>/sim/current-view/internal</property>
 			</condition>
@@ -608,6 +572,35 @@
 				<max>1.0</max>
 			</volume>
 		</cockpit>
+		<stall>
+			<name>stall</name>
+			<mode>looped</mode>
+			<path>/Aircraft/Tornado/Sounds/misc/stall.wav</path>
+			<condition>
+				<less-than>
+					<property>/orientation/alpha-deg</property>
+					<value>15</value>
+				</less-than>
+				<not>
+					<property>gear/gear[0]/wow</property>
+					<property>gear/gear[1]/wow</property>
+					<property>gear/gear[2]/wow</property>
+					<property>surface-positions/flap-pos-norm</property>
+				</not>
+			</condition>
+			<volume>
+				<max>0.5</max>
+			</volume>
+			<position>
+				<x>-22</x>
+				<y>0</y>
+				<z>0</z>
+			</position>
+			<reference-dist>1.0</reference-dist>
+			<max-dist>2.0</max-dist>
+		</stall>
+
+		<!--================================= misc =============================-->
 		<wind>
 			<name>wind</name>
 			<mode>looped</mode>
@@ -625,139 +618,10 @@
 				<offset>1.25</offset>
 			</pitch>
 		</wind>
-		<stall>
-			<name>stall</name>
-			<mode>looped</mode>
-			<path>/Aircraft/Tornado/Sounds/stall.wav</path>
-			<condition>
-				<less-than>
-					<property>velocities/airspeed-kt</property>
-					<value>130</value>
-				</less-than>
-				<not>
-					<property>gear/gear[0]/wow</property>
-					<property>gear/gear[1]/wow</property>
-					<property>gear/gear[2]/wow</property>
-					<property>surface-positions/flap-pos-norm</property>
-					<property>gear/gear[0]/position-norm</property>
-				</not>
-			</condition>
-			<volume>
-				<max>0.5</max>
-			</volume>
-			<position>
-				<x>-23</x>
-				<y>0</y>
-				<z>1</z>
-			</position>
-			<reference-dist>1.0</reference-dist>
-			<max-dist>2.0</max-dist>
-		</stall>
-		<stall>
-			<name>stall</name>
-			<mode>looped</mode>
-			<path>/Aircraft/Tornado/Sounds/stall.wav</path>
-			<condition>
-				<less-than>
-					<property>velocities/airspeed-kt</property>
-					<value>120</value>
-				</less-than>
-				<not>
-					<property>gear/gear[0]/wow</property>
-					<property>gear/gear[1]/wow</property>
-					<property>gear/gear[2]/wow</property>
-					<property>gear/gear[0]/position-norm</property>
-				</not>
-			</condition>
-			<volume>
-				<max>0.5</max>
-			</volume>
-			<position>
-				<x>-22</x>
-				<y>0</y>
-				<z>0</z>
-			</position>
-			<reference-dist>1.0</reference-dist>
-			<max-dist>2.0</max-dist>
-		</stall>
-		<stall>
-			<name>stall</name>
-			<mode>looped</mode>
-			<path>/Aircraft/Tornado/Sounds/stall.wav</path>
-			<condition>
-				<less-than>
-					<property>velocities/airspeed-kt</property>
-					<value>100</value>
-				</less-than>
-				<not>
-					<property>gear/gear[0]/wow</property>
-					<property>gear/gear[1]/wow</property>
-					<property>gear/gear[2]/wow</property>
-					<property>surface-positions/flap-pos-norm</property>
-				</not>
-			</condition>
-			<volume>
-				<max>0.5</max>
-			</volume>
-			<position>
-				<x>-22</x>
-				<y>0</y>
-				<z>0</z>
-			</position>
-			<reference-dist>1.0</reference-dist>
-			<max-dist>2.0</max-dist>
-		</stall>
-		<speedbrake>
-			<name>speedbrake</name>
-			<mode>in-transit</mode>
-			<path>Aircraft/Tornado/Sounds/flaps.wav</path>
-			<property>/surface-positions/speedbrake-pos-norm</property>
-			<volume>
-				<offset>0.25</offset>
-				<max>0.9</max>
-			</volume>
-		</speedbrake>
-		<speedbrake>
-			<name>speedbrake</name>
-			<mode>in-transit</mode>
-			<path>Sounds/flaps.wav</path>
-			<property>/surface-positions/speedbrake-pos-norm</property>
-			<volume>
-				<offset>0.25</offset>
-				<max>0.9</max>
-			</volume>
-		</speedbrake>
-		<!-- flyby -->
-		<flyby>
-			<name>fly-by</name>
-			<mode>once</mode>
-			<path>Aircraft/Tornado/Sounds/flyby.wav</path>
-			<condition>
-				<and>
-					<greater-than>
-						<property>velocities/mach</property>
-						<value>0.8</value>
-					</greater-than>
-					<equals>
-						<property>sim/current-view/view-number</property>
-						<value>6</value>
-					</equals>
-				</and>
-				<not>
-					<property>/sim/current-view/internal</property>
-					<property>/engines/engine/out-of-fuel</property>
-				</not>
-			</condition>
-			<volume>
-				<property>velocities/airspeed-kt</property>
-				<factor>0.001</factor>
-			</volume>
-		</flyby>
-		<!-- Sonic Boom -->
 		<sonicboom>
 			<name>Sonic Boom</name>
 			<mode>once</mode>
-			<path>Aircraft/Tornado/Sounds/sonicboom.wav</path>
+			<path>Aircraft/Tornado/Sounds/misc/sonicboom.wav</path>
 			<condition>
 				<and>
 					<greater-than>
@@ -773,7 +637,7 @@
 		</sonicboom>
 		<voice>
 			<name>Geforce-breath-vox</name>
-			<path>Aircraft/Tornado/Sounds/Geforce.wav</path>
+			<path>Aircraft/Tornado/Sounds/misc/Geforce.wav</path>
 			<condition>
 				<greater-than>
 					<property>/accelerations/pilot/z-accel-fps_sec</property>
@@ -786,7 +650,7 @@
 		</voice>
 		<voice>
 			<name>Geforce-vox</name>
-			<path>Aircraft/Tornado/Sounds/geforce1.wav</path>
+			<path>Aircraft/Tornado/Sounds/misc/geforce1.wav</path>
 			<condition>
 				<less-than>
 					<property>/accelerations/pilot/z-accel-fps_sec</property>
@@ -809,54 +673,36 @@
 				<factor>1.5</factor>
 			</pitch>
 		</crash>
-		<stall>
-			<name>stall</name>
-			<mode>looped</mode>
-			<path>Aircraft/Tornado/Sounds/stall.wav</path>
+		<flyby>
+			<name>fly-by</name>
+			<mode>once</mode>
+			<path>Aircraft/Tornado/Sounds/misc/flyby.wav</path>
 			<condition>
-				<less-than>
-					<property>velocities/airspeed-kt</property>
-					<value>120</value>
-				</less-than>
+				<and>
+					<greater-than>
+						<property>velocities/mach</property>
+						<value>0.8</value>
+					</greater-than>
+					<equals>
+						<property>sim/current-view/view-number</property>
+						<value>6</value>
+					</equals>
+				</and>
+				<not>
+					<property>/sim/current-view/internal</property>
+					<property>/engines/engine/out-of-fuel</property>
+				</not>
 			</condition>
 			<volume>
-				<max>0.5</max>
+				<property>velocities/airspeed-kt</property>
+				<factor>0.001</factor>
 			</volume>
-			<position>
-				<x>-22</x>
-				<y>0</y>
-				<z>0</z>
-			</position>
-			<reference-dist>1.0</reference-dist>
-			<max-dist>2.0</max-dist>
-		</stall>
-		<!-- no binding yet?
-    <click>
-      <name>click</name>
-      <path>Sounds/click.wav</path>
-    </click>
--->
-		<guns>
-			<name>gunfire</name>
-			<mode>looped</mode>
-			<path>Aircraft/Tornado/Sounds/m61.wav</path>
-			<condition>
-				<property>controls/armament/trigger</property>
-				<property>ai/submodels/submodel/count</property>
-			</condition>
-			<volume>
-				<factor>1.2</factor>
-				<max>1.0</max>
-			</volume>
-			<reference-dist>100</reference-dist>
-			<max-dist>1000</max-dist>
-			<reference-dist>600.0</reference-dist>
-			<max-dist>1000.0</max-dist>
-		</guns>
-		<!-- switches -->
+		</flyby>
+
+		<!--================================= switches =============================-->
 		<click>
 			<name>hook click down</name>
-			<path>Aircraft/Tornado/Sounds/click.wav</path>
+			<path>Aircraft/Tornado/Sounds/misc/click.wav</path>
 			<condition>
 				<property>/controls/gear/tailhook</property>
 			</condition>
@@ -867,7 +713,7 @@
 		</click>
 		<click>
 			<name>hook click up</name>
-			<path>Aircraft/Tornado/Sounds/click.wav</path>
+			<path>Aircraft/Tornado/Sounds/misc/click.wav</path>
 			<condition>
 				<not>
 					<property>/controls/gear/tailhook</property>
@@ -880,7 +726,7 @@
 		</click>
 		<click>
 			<name>canopy click up</name>
-			<path>Aircraft/Tornado/Sounds/click.wav</path>
+			<path>Aircraft/Tornado/Sounds/misc/click.wav</path>
 			<condition>
 				<less-than>
 					<property>/controls/canopy/position-norm</property>
@@ -894,7 +740,7 @@
 		</click>
 		<click>
 			<name>canopy click down</name>
-			<path>Aircraft/Tornado/Sounds/click.wav</path>
+			<path>Aircraft/Tornado/Sounds/misc/click.wav</path>
 			<condition>
 				<greater-than>
 					<property>/controls/canopy/position-norm</property>
@@ -906,5 +752,58 @@
 				<max>1.0</max>
 			</volume>
 		</click>
+		
+		<!--================================= weapons =============================-->
+		<guns>
+			<name>gunfire</name>
+			<mode>looped</mode>
+			<path>Aircraft/Tornado/Sounds/weapons/cannon.wav</path>
+			<condition>
+				<property>fdm/jsbsim/fcs/gun</property>
+				<property>ai/submodels/submodel[4]/count</property>
+			</condition>
+			<volume>
+				<factor>1.2</factor>
+				<max>1.0</max>
+			</volume>
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+			<reference-dist>600.0</reference-dist>
+			<max-dist>1000.0</max-dist>
+		</guns>
+		<lock-tone>
+			<name>aim-9l-growl</name>
+			<mode>looped</mode>
+			<type>avionics</type>
+			<path>Aircraft/Tornado/Sounds/weapons/aim-9-growl.wav</path>
+			<condition>
+				<property>payload/armament/aim-9l/sound-on-off</property>
+			</condition>
+			<pitch>
+				<property>payload/armament/aim-9l/sound-volume</property>
+				<factor>1.00</factor>
+				<offset>1.60</offset>
+				<min>0</min>
+				<max>2</max>
+			</pitch>
+			<volume>
+				<property>payload/armament/aim-9l/sound-volume</property>
+			</volume>
+			<volume>
+				<property>sim/current-view/internal</property>
+			</volume>
+		</lock-tone>
+		<missiles>
+			<name>aim-9l</name>
+			<path>Aircraft/Tornado/Sounds/weapons/missile.wav</path>
+			<mode>once</mode>
+			<type>avionics</type>
+			<condition>
+				<property>payload/armament/aim-9l/sound-fire-on-off</property>
+			</condition>
+			<volume>
+				<factor>0.75</factor>
+			</volume>
+		</missiles>
 	</fx>
 </PropertyList>
