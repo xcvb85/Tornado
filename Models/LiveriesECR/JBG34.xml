@@ -7,5 +7,6 @@
 				<texture>LiveriesIDS/JBG34.jpg</texture>
 			</livery>
 		</model>
+		<flir type="int">0</flir><!-- TODO -->
 	</sim>
 </PropertyList>

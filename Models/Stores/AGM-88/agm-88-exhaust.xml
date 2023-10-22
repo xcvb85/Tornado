@@ -14,7 +14,7 @@
 		<z-offset>0.335</z-offset>
 	</animation>
 	<effect>
-		<inherits-from>Aircraft/Tornado/Models/Armament/Weapons/AIM-120/flame</inherits-from>
+		<inherits-from>Aircraft/Tornado/Models/Stores/AIM-120/flame</inherits-from>
 		<object-name>Bounding_box</object-name>
 	</effect>
 	<animation>

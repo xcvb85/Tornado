@@ -20,6 +20,7 @@
 			<name>Cockpit-ECR</name>
 			<path>Aircraft/Tornado/Models/Cockpit/Cockpit-IDS.xml</path>
 		</model>
+		<flir type="int">1</flir>
 		<aircraft-type type="int">0</aircraft-type>
 	</sim>
 	<tornado>

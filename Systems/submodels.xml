@@ -16,7 +16,7 @@
     <submodel>
         <name>flaresL</name>
         <model>Aircraft/Tornado/Models/Stores/flare.xml</model>
-        <trigger>fdm/jsbsim/fcs/flaretrigger</trigger>
+        <trigger>fdm/jsbsim/fcs/boz-1</trigger>
         <speed>700.0</speed>        <!-- ft/sec -->
         <repeat>true</repeat>
         <delay>0.25</delay>
@@ -39,7 +39,7 @@
     <submodel>
         <name>flaresR</name>
         <model>Aircraft/Tornado/Models/Stores/flare.xml</model>
-        <trigger>fdm/jsbsim/fcs/flaretrigger</trigger>
+        <trigger>fdm/jsbsim/fcs/boz-2</trigger>
         <speed>700.0</speed>        <!-- ft/sec -->
         <repeat>true</repeat>
         <delay>0.25</delay>
@@ -62,7 +62,7 @@
     <submodel>
         <name>chaffL</name>
         <model>Aircraft/MiG-21bis/Models/Effects/Chaff/chaff.xml</model>
-        <trigger>fdm/jsbsim/fcs/flaretrigger</trigger>
+        <trigger>fdm/jsbsim/fcs/boz-1</trigger>
         <speed>0.0</speed>        <!-- ft/sec -->
         <repeat>true</repeat>
         <delay>0.25</delay>
@@ -86,7 +86,7 @@
     <submodel>
         <name>chaffR</name>
         <model>Aircraft/MiG-21bis/Models/Effects/Chaff/chaff.xml</model>
-        <trigger>fdm/jsbsim/fcs/flaretrigger</trigger>
+        <trigger>fdm/jsbsim/fcs/boz-2</trigger>
         <speed>0.0</speed>        <!-- ft/sec -->
         <repeat>true</repeat>
         <delay>0.25</delay>
@@ -110,7 +110,7 @@
     <submodel>
         <name>BK-27 Tracer</name>
         <model>Aircraft/Tornado/Models/Stores/Tracer.xml</model>
-        <trigger>fdm/jsbsim/fcs/guntrigger</trigger>
+        <trigger>fdm/jsbsim/fcs/gun</trigger>
         <speed>2350</speed>
         <repeat>true</repeat>
         <delay>0.02</delay>
@@ -130,7 +130,7 @@
     <submodel>
         <name>BK-27</name>
         <model>Aircraft/Tornado/Models/Stores/Null.ac</model>
-        <trigger>fdm/jsbsim/fcs/guntrigger</trigger>
+        <trigger>fdm/jsbsim/fcs/gun</trigger>
         <speed>2350</speed>
         <repeat>true</repeat>
         <delay>0.02</delay><!-- 3000/min = 50/s = 0.02s -->
@@ -154,7 +154,7 @@
     <submodel>
         <name>BK-27 Tracer</name>
         <model>Aircraft/Tornado/Models/Stores/Tracer.xml</model>
-        <trigger>fdm/jsbsim/fcs/guntrigger</trigger>
+        <trigger>fdm/jsbsim/fcs/gun</trigger>
         <speed>2350</speed>
         <repeat>true</repeat>
         <delay>0.02</delay>
@@ -174,7 +174,7 @@
     <submodel>
         <name>BK-27</name>
         <model>Aircraft/Tornado/Models/Stores/Null.ac</model>
-        <trigger>fdm/jsbsim/fcs/guntrigger</trigger>
+        <trigger>fdm/jsbsim/fcs/gun</trigger>
         <speed>2350</speed>
         <repeat>true</repeat>
         <delay>0.02</delay><!-- 3000/min = 50/s = 0.02s -->

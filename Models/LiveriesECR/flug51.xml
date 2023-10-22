@@ -7,5 +7,6 @@
 				<texture>Tornado-IDS.jpg</texture>
 			</livery>
 		</model>
+		<flir type="int">1</flir>
 	</sim>
 </PropertyList>

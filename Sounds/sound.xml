@@ -759,7 +759,7 @@
 			<mode>looped</mode>
 			<path>Aircraft/Tornado/Sounds/weapons/cannon.wav</path>
 			<condition>
-				<property>fdm/jsbsim/fcs/guntrigger</property>
+				<property>fdm/jsbsim/fcs/gun</property>
 				<property>ai/submodels/submodel[4]/count</property>
 			</condition>
 			<volume>
