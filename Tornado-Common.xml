@@ -43,6 +43,12 @@
 	</input>
 	<fdm>
 		<jsbsim>
+			<inertia>
+				<tank-wing-left-fitted alias="/tornado/tankWL1200" />
+				<tank-centre-left-fitted alias="/tornado/tankCL1200" />
+				<tank-centre-right-fitted alias="/tornado/tankCR1200" />
+				<tank-wing-right-fitted alias="/tornado/tankWR1200" />
+			</inertia>
 			<systems>
 				<hook>
 					<tailhook-cmd-norm type="bool">false</tailhook-cmd-norm>
