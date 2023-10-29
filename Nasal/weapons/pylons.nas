@@ -74,9 +74,9 @@ if(variant==1) {
     pylon1set = [pylonSets.empty, pylonSets.boz10x];
     pylon2set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
     pylon3set = [pylonSets.empty, pylonSets.fuel12WL];
-    pylon4set = [pylonSets.empty, pylonSets.m82_2, pylonSets.m82air_2, pylonSets.m83, pylonSets.m84, pylonSets.fuel12CL];
+    pylon4set = [pylonSets.empty, pylonSets.m82_2, pylonSets.m82air_2, pylonSets.m83, pylonSets.m84]; #pylonSets.fuel12CL
     pylon5set = [pylonSets.empty, pylonSets.b617];
-    pylon6set = [pylonSets.empty, pylonSets.m82_2, pylonSets.m82air_2, pylonSets.m83, pylonSets.m84, pylonSets.fuel12CR];
+    pylon6set = [pylonSets.empty, pylonSets.m82_2, pylonSets.m82air_2, pylonSets.m83, pylonSets.m84]; #pylonSets.fuel12CR
     pylon7set = [pylonSets.empty, pylonSets.fuel12WR];
     pylon8set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
     pylon9set = [pylonSets.empty, pylonSets.boz10x];
@@ -99,7 +99,7 @@ else {
     pylon2set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
     pylon3set = [pylonSets.empty, pylonSets.a88];
     pylon4set = [pylonSets.empty, pylonSets.a88];
-    pylon5set = [pylonSets.empty];#, pylonSets.fueltank2];
+    pylon5set = [pylonSets.empty];
     pylon6set = [pylonSets.empty, pylonSets.a88];
     pylon7set = [pylonSets.empty, pylonSets.a88];
     pylon8set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
@@ -172,11 +172,11 @@ var refill_weapons = func {
             # IDS
             pylon1.loadSet(pylonSets.boz10x);
             pylon2.loadSet(pylonSets.aim9l);
-            pylon3.loadSet(pylonSets.empty);
+            pylon3.loadSet(pylonSets.fuel12WL);
             pylon4.loadSet(pylonSets.m82air_2);
             pylon5.loadSet(pylonSets.empty);
             pylon6.loadSet(pylonSets.m82air_2);
-            pylon7.loadSet(pylonSets.empty);
+            pylon7.loadSet(pylonSets.fuel12WR);
             pylon8.loadSet(pylonSets.aim9l);
             pylon9.loadSet(pylonSets.boz10x);
         }

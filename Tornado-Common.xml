@@ -68,6 +68,15 @@
 		</jsbsim>
 	</fdm>
 	<payload include="Systems/payload.xml"/>
+	<consumables>
+		<fuel>
+			<tank n="0"><name>Front Fuselage Tank</name></tank>
+			<tank n="1"><name>Left Wing Tank</name></tank>
+			<tank n="2"><name>Center Wing Tank</name></tank>
+			<tank n="3"><name>Right Wing Tank</name></tank>
+			<tank n="4"><name>Rear Fuselage Tank</name></tank>
+		</fuel>
+	</consumables>
 	<nasal>
 		<vector>
 			<file>Aircraft/Tornado/Nasal/weapons/vector.nas</file>
