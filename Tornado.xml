@@ -296,6 +296,7 @@
   </propulsion>
 
     <system file="jsb-misc"/>
+    <system file="jsb-electric"/>
     <flight_control file="Systems/jsb-controls"/>
     <aerodynamics file="Systems/jsb-aerodynamics.xml"/>
 
