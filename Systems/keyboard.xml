@@ -109,12 +109,4 @@
 			<script>pylons.fcs.cycleLoadedWeapon();</script>
 		</binding>
 	</key>
-	<key n="127">
-		<name>Delete</name>
-		<desc>Toggle Reversers</desc>
-		<binding>
-			<command>nasal</command>
-			<script>libraries.togglereverser()</script>
-		</binding>
-	</key>
 </PropertyList>

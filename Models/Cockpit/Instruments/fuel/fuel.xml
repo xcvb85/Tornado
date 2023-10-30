@@ -21,28 +21,57 @@
 			</less-than>
 		</condition>
 	</animation>
-<!--
 	<animation>
-		<name>needle</name>
 		<type>rotate</type>
-		<object-name>needle</object-name>
-		<property>engines/engine[0]/n1</property>
+		<object-name>needleLF</object-name>
+		<property>instrumentation/fuel/needleLeft</property>
 		<interpolation>
 			<entry>
-				<ind>0.0</ind>
-				<dep>-125.0</dep>
+				<ind>0</ind>
+				<dep>0</dep>
 			</entry>
 			<entry>
-				<ind>120.0</ind>
-				<dep>125.0</dep>
+				<ind>2500</ind>
+				<dep>220</dep>
 			</entry>
 		</interpolation>
+		<center>
+			<x-m>0.00</x-m>
+			<y-m>0.00</y-m>
+			<z-m>0.03</z-m>
+		</center>
 		<axis>
 			<x>-1</x>
 			<y>0</y>
 			<z>0</z>
 		</axis>
 	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>needleR</object-name>
+		<property>instrumentation/fuel/needleRight</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>2500</ind>
+				<dep>220</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0.00</x-m>
+			<y-m>0.00</y-m>
+			<z-m>0.03</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+<!--
 	<animation>
 		<type>textranslate</type>
 		<object-name>drum-1</object-name>
@@ -80,4 +109,154 @@
 		</axis>
 	</animation>
 -->
+	<animation>
+		<type>translate</type>
+		<object-name>btCFUS</object-name>
+		<property>instrumentation/fuel/btCFUS</property>
+		<factor>0.0016</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>btCFUS</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/fuel/btCFUS</property>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-toggle</command>
+					<property>instrumentation/fuel/btCFUS</property>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>btUFUS</object-name>
+		<property>instrumentation/fuel/btUFUS</property>
+		<factor>0.0016</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>btUFUS</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/fuel/btUFUS</property>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-toggle</command>
+					<property>instrumentation/fuel/btUFUS</property>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>btWING</object-name>
+		<property>instrumentation/fuel/btWING</property>
+		<factor>0.0016</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>btWING</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/fuel/btWING</property>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-toggle</command>
+					<property>instrumentation/fuel/btWING</property>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>btUWING</object-name>
+		<property>instrumentation/fuel/btUWING</property>
+		<factor>0.0016</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>btUWING</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/fuel/btUWING</property>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-toggle</command>
+					<property>instrumentation/fuel/btUWING</property>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>btTEST</object-name>
+		<property>instrumentation/fuel/btTEST</property>
+		<factor>0.0016</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>btTEST</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/fuel/btTEST</property>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-toggle</command>
+					<property>instrumentation/fuel/btTEST</property>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
 </PropertyList>

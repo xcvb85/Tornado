@@ -18,17 +18,6 @@ var doMagicStartup = func {
 	}, 5);
 }
 
-var aglgears = func {
-	var agl = getprop("/position/altitude-agl-ft") or 0;
-	var aglft = agl - 1.86;  # is the position from the Tornado above ground
-	var aglm = aglft * 0.3048;
-	setprop("position/gear-agl-ft", aglft);
-	setprop("position/gear-agl-m", aglm);
-
-	settimer(aglgears, 0.01);
-}
-#aglgears();
-
 var wingSweep = func(direction) {
 	Sweep += direction;
 
@@ -41,31 +30,52 @@ var wingSweep = func(direction) {
 	setprop("fdm/jsbsim/fcs/wing-sweep-cmd", (SweepAngles[Sweep]-25)/42.0);
 }
 
-togglereverser = func {
-	r1 = props.globals.getNode("/fdm/jsbsim/propulsion/engine[0]");
-	r2 = props.globals.getNode("/fdm/jsbsim/propulsion/engine[1]");
-	r3 = props.globals.getNode("/controls/engines/engine[0]");
-	r4 = props.globals.getNode("/controls/engines/engine[1]");
-	r5 = props.globals.getNode("/sim/input/selected");
-	rv1 = props.globals.getNode("/engines/engine[0]/reverser-pos-norm");
-	rv2 = props.globals.getNode("/engines/engine[1]/reverser-pos-norm");
+var indexTankLeft = 0;
+var indexTankRight = 4;
+var valueLeft = 0;
+var valueRight = 0;
+var needleLeft = props.globals.getNode("instrumentation/fuel/needleLeft");
+var needleRight = props.globals.getNode("instrumentation/fuel/needleRight");
+var btTEST = props.globals.getNode("instrumentation/fuel/btTEST");
+var btCFUS = props.globals.getNode("instrumentation/fuel/btCFUS");
+var btUFUS = props.globals.getNode("instrumentation/fuel/btUFUS");
+var btWING = props.globals.getNode("instrumentation/fuel/btWING");
+var btUWING = props.globals.getNode("instrumentation/fuel/btUWING");
 
-	val = rv1.getValue();
-	if (val == 0 or val == nil) {
-		interpolate(rv1.getPath(), 1.0, 1.4);
-		interpolate(rv2.getPath(), 1.0, 1.4);
-		r1.getChild("reverser-angle-rad").setValue(math.pi);
-		r2.getChild("reverser-angle-rad").setValue(math.pi);
-		r3.getChild("reverser").setBoolValue(1);
-		r4.getChild("reverser").setBoolValue(1);
-	} else {
-		if (val == 1.0) {
-			interpolate(rv1.getPath(), 0.0, 1.4);
-			interpolate(rv2.getPath(), 0.0, 1.4);
-			r1.getChild("reverser-angle-rad").setValue(0);
-			r2.getChild("reverser-angle-rad").setValue(0);
-			r3.getChild("reverser").setBoolValue(0);
-			r4.getChild("reverser").setBoolValue(0);
+var fuel_loop = func () {
+	indexTankLeft = 9; # invalid tank
+	indexTankRight = 9; # invalid tank
+	
+	if(getprop(("systems/electrical/ElBus/Voltage") or 0) > 18) {
+		indexTankLeft = 0;
+		indexTankRight = 4;
+		
+		if(btTEST.getValue()) {
+			# test successful if indicator shows 0
+			indexTankLeft = 9; # invalid tank
+			indexTankRight = 9; # invalid tank
+		}
+		if(btCFUS.getValue()) {
+			indexTankLeft = 2;
+			indexTankRight = 2;
+		}
+		if(btUFUS.getValue()) {
+			indexTankLeft = 6;
+			indexTankRight = 7;
+		}
+		if(btWING.getValue()) {
+			indexTankLeft = 1;
+			indexTankRight = 3;
+		}
+		if(btUWING.getValue()) {
+			indexTankLeft = 5;
+			indexTankRight = 8;
 		}
 	}
+	valueLeft = 0.7*valueLeft + 0.3*(getprop("consumables/fuel/tank["~indexTankLeft~"]/level-kg") or 0);
+	valueRight = 0.7*valueRight + 0.3*(getprop("consumables/fuel/tank["~indexTankRight~"]/level-kg") or 0);
+	needleLeft.setValue(valueLeft);
+	needleRight.setValue(valueRight);
 }
+var fuel_timer = maketimer(0.05, fuel_loop);
+fuel_timer.start();
