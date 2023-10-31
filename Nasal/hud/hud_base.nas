@@ -30,7 +30,7 @@ var hud_base = {
 		{
 			return "Helvetica.txf";
 		};
-		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_base.svg", {'font-mapper': font_mapper});
+		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Nasal/hud/hud_base.svg", {'font-mapper': font_mapper});
 		
 		var svg_keys = ["asi", "altitude", "needle",
 				"aoaMkr", "aoaScale", "vsiMkr",

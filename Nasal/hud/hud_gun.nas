@@ -1,10 +1,13 @@
-var hud_sbs = {
+var hud_gun = {
 	new: func(canvasGroup, instance)
 	{
-		var m = { parents: [hud_sbs] };
+		var m = { parents: [hud_gun] };
 		m.group = canvasGroup;
-		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_sbs.svg");
+		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Nasal/hud/hud_gun.svg");
 		return m;
+	},
+	update: func()
+	{
 	},
 	show: func()
 	{

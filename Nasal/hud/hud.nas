@@ -1,7 +1,9 @@
 var HUDInstance = {};
 
 var PageEnum = {
-	fd: 0
+	nav:  0,
+	ccip: 1,
+	gun: 2
 };
 
 var HUD = {
@@ -11,7 +13,9 @@ var HUD = {
 
 		m.Sbs = hud_sbs.new(group.createChild('group'), instance);
 		m.Hud = hud_base.new(group.createChild('group'), instance);
-		m.Pages[PageEnum.fd] = hud_fd.new(group.createChild('group'), instance);
+		m.Pages[PageEnum.nav] = hud_nav.new(group.createChild('group'), instance);
+		m.Pages[PageEnum.ccip] = hud_ccip.new(group.createChild('group'), instance);
+		m.Pages[PageEnum.gun] = hud_gun.new(group.createChild('group'), instance);
 
 		m.swMode = props.globals.getNode("instrumentation/hud/swMode");
 		m.swSbs = props.globals.getNode("instrumentation/hud/swSbs");
