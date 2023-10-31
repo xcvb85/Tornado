@@ -17,7 +17,7 @@
 		<object-name>HUD_Screen</object-name>
 		<condition>
 			<greater-than>
-				<property>systems/electrical/ElBus/Voltage</property>
+				<property>fdm/jsbsim/electric/buses/bus-ac</property>
 				<value>20</value>
 			</greater-than>
 		</condition>

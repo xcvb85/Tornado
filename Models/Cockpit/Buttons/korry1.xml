@@ -4,7 +4,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>button</object-name>
-		<property>instrumentation/cockpit_lights/Connected</property>
+		<property>fdm/jsbsim/electric/switches/cockpit-lights</property>
 		<factor>0.0016</factor>
 		<axis>
 			<x>-1</x>
@@ -21,7 +21,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>instrumentation/cockpit_lights/Connected</property>
+				<property>fdm/jsbsim/electric/switches/cockpit-lights</property>
 			</binding>
 		</action>
 	</animation>

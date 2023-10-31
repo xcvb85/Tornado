@@ -554,7 +554,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>TAB2ON</object-name>
-		<property>instrumentation/tvtab2/Connected</property>
+		<property>fdm/jsbsim/electric/switches/tvtab2</property>
 		<factor>0.0016</factor>
 		<axis>
 			<x>-1</x>
@@ -571,7 +571,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>instrumentation/tvtab2/Connected</property>
+				<property>fdm/jsbsim/electric/switches/tvtab2</property>
 			</binding>
 		</action>
 	</animation>
@@ -579,7 +579,7 @@
 		<object-name>TAB2ON</object-name>
 		<type>material</type>
 		<condition>
-			<property>systems/electrical/outputs/tvtab2</property>
+			<property>fdm/jsbsim/electric/output/tvtab2</property>
 		</condition>
 		<emission>
 			<red>1.0</red>

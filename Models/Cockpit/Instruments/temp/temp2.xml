@@ -19,7 +19,7 @@
 		<object-name>flag</object-name>
 		<condition>
 			<less-than>
-				<property>systems/electrical/ElBus/Voltage</property>
+				<property>fdm/jsbsim/electric/buses/bus-ac</property><!--the needle is driven by a 400Hz synchronous motor-->
 				<value>1</value>
 			</less-than>
 		</condition>

@@ -19,8 +19,8 @@
 		<object-name>off-flag</object-name>
 		<condition>
 			<less-than>
-				<property>systems/electrical/ElBus/Voltage</property>
-				<value>24</value>
+				<property>fdm/jsbsim/electric/buses/bus-ac</property>
+				<value>20</value>
 			</less-than>
 		</condition>
 	</animation>

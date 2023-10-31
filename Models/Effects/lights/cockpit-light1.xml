@@ -40,7 +40,7 @@
 		<spot-cutoff>60</spot-cutoff>
 		<range-m>0.6</range-m>
 		<dim-factor>
-			<property>systems/electrical/outputs/cockpit_lights</property>
+			<property>fdm/jsbsim/electric/switches/cockpit-lights</property>
 		</dim-factor>
 	</light>
 </PropertyList>

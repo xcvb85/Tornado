@@ -13,7 +13,7 @@
 			<internal-format>normalized</internal-format>
 		</texture>
 		<display-enabled type="int">
-			<use>systems/electrical/outputs/tvtab1</use>
+			<use>fdm/jsbsim/electric/output/tvtab1</use>
 		</display-enabled>
 		<display-zoom type="int">0</display-zoom>
 	</parameters>

@@ -12,22 +12,13 @@
 	</effect>
 	<animation>
 		<type>select</type>
+		<object-name>needle</object-name>
 		<object-name>Plane</object-name>
 		<condition>
 			<less-than>
-				<property>systems/electrical/ElBus/Voltage</property>
+				<property>fdm/jsbsim/electric/buses/bus-dc</property>
 				<value>1</value>
 			</less-than>
-		</condition>
-	</animation>
-	<animation>
-		<type>select</type>
-		<object-name>needle</object-name>
-		<condition>
-			<greater-than>
-				<property>systems/electrical/ElBus/Voltage</property>
-				<value>17</value>
-			</greater-than>
 		</condition>
 	</animation>
 	<animation>
