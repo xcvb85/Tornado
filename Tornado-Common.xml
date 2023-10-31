@@ -57,9 +57,6 @@
 					<flight-system-psi type="float">0</flight-system-psi>
 					<combined-system-psi type="float">0</combined-system-psi>
 				</hydraulics>
-				<electrics>
-					<ac-right-main-bus type="float">0</ac-right-main-bus>
-				</electrics>
 			</systems>
 			<fcs>
 				<wing-sweep-cmd type="double">0</wing-sweep-cmd>

@@ -33,7 +33,6 @@
 		<libraries>
 			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
 			<file>Aircraft/Tornado/Nasal/librariesECR.nas</file>
-			<file>Aircraft/Tornado/Nasal/electrical.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_sbs.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_fd.nas</file>
 			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_base.nas</file>

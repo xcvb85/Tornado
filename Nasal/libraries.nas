@@ -12,8 +12,8 @@ var doMagicStartup = func {
 	settimer(func {
 		setprop("controls/engines/engine[0]/cutoff", "false");
 		setprop("controls/engines/engine[1]/cutoff", "false");
-		setprop("systems/electrical/Generator1/Connected", 1);
-		setprop("systems/electrical/Generator2/Connected", 1);
+		setprop("fdm/jsbsim/electric/switches/dc-gen", 1);
+		setprop("fdm/jsbsim/electric/switches/ac-gen", 1);
 		setprop("instrumentation/hud/swMode", 1);
 	}, 5);
 }
@@ -46,7 +46,7 @@ var fuel_loop = func () {
 	indexTankLeft = 9; # invalid tank
 	indexTankRight = 9; # invalid tank
 	
-	if(getprop(("systems/electrical/ElBus/Voltage") or 0) > 18) {
+	if(getprop(("fdm/jsbsim/electric/buses/bus-dc") or 0) > 18) {
 		indexTankLeft = 0;
 		indexTankRight = 4;
 		
