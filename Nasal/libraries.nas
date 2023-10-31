@@ -3,18 +3,20 @@ var SweepAngles=[25,33,45,58,63,67]; #25=fully forward
 var Sweep=0;
 
 var doMagicStartup = func {
-	setprop("systems/electrical/Battery/Connected",1);
+	setprop("fdm/jsbsim/electric/switches/battery", 1);
 	setprop("controls/engines/engine[0]/starter", "true");
 	setprop("controls/engines/engine[1]/starter", "true");
-	setprop("instrumentation/ehdd/Connected", "1");
-	setprop("instrumentation/tvtab1/Connected", "1");
-	setprop("instrumentation/tvtab2/Connected", "1");
+	setprop("fdm/jsbsim/electric/switches/ehdd", 1);
+	setprop("fdm/jsbsim/electric/switches/crpmd", 1);
+	setprop("fdm/jsbsim/electric/switches/tvtab1", 1);
+	setprop("fdm/jsbsim/electric/switches/tvtab2", 1);
 	settimer(func {
 		setprop("controls/engines/engine[0]/cutoff", "false");
 		setprop("controls/engines/engine[1]/cutoff", "false");
 		setprop("fdm/jsbsim/electric/switches/dc-gen", 1);
 		setprop("fdm/jsbsim/electric/switches/ac-gen", 1);
 		setprop("instrumentation/hud/swMode", 1);
+		setprop("fdm/jsbsim/electric/switches/landing-lights", 1);
 	}, 5);
 }
 

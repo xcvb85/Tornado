@@ -579,7 +579,7 @@
 		<object-name>TAB2ON</object-name>
 		<type>material</type>
 		<condition>
-			<property>fdm/jsbsim/electric/buses/bus-ac</property>
+			<property>fdm/jsbsim/electric/output/tvtab2</property>
 		</condition>
 		<emission>
 			<red>1.0</red>

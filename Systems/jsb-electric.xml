@@ -7,8 +7,10 @@
     
     <property value="0">electric/switches/cockpit-lights</property>
     <property value="0">electric/switches/instrument-lights</property>
-    <property value="0">electric/switches/landinglight</property>
+    <property value="0">electric/switches/landing-lights</property>
 
+    <property value="0">electric/switches/ehdd</property>
+    <property value="0">electric/switches/crpmd</property>
     <property value="0">electric/switches/tvtab1</property>
     <property value="0">electric/switches/tvtab2</property>
 
@@ -123,10 +125,22 @@
                 electric/switches/instrument-lights == 1
             </test>
         </switch>
-        <switch name="electric/output/landinglight">
+        <switch name="electric/output/landing-lights">
             <default value="0"/>
             <test logic="AND" value="electric/buses/bus-ac">
-                electric/switches/landinglight == 1
+                electric/switches/landing-lights == 1
+            </test>
+        </switch>
+        <switch name="electric/output/ehdd">
+            <default value="0"/>
+            <test logic="AND" value="electric/buses/bus-ac">
+                electric/switches/ehdd > 0
+            </test>
+        </switch>
+        <switch name="electric/output/crpmd">
+            <default value="0"/>
+            <test logic="AND" value="electric/buses/bus-ac">
+                electric/switches/crpmd == 1
             </test>
         </switch>
         <switch name="electric/output/tvtab1">

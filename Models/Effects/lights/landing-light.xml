@@ -40,7 +40,7 @@
 		<spot-cutoff>20</spot-cutoff>
 		<range-m>200</range-m>
 		<dim-factor>
-			<property>fdm/jsbsim/electric/switches/cockpit-lights</property>
+			<property>fdm/jsbsim/electric/switches/landing-lights</property>
 		</dim-factor>
 	</light>
 </PropertyList>
