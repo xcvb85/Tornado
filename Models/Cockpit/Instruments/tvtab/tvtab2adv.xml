@@ -5,6 +5,50 @@
 		<inherits-from>Aircraft/Tornado/Models/Effects/displays/tvtab2</inherits-from>
 		<object-name>TVTAB2.screen</object-name>
 	</effect>
+	<animation>
+		<object-name>TAB2ON</object-name>
+		<type>material</type>
+		<condition>
+			<property>fdm/jsbsim/electric/output/tvtab2</property>
+		</condition>
+		<emission>
+			<red>1.0</red>
+			<green>1.0</green>
+			<blue>1.0</blue>
+		</emission>
+	</animation>
+	<animation>
+		<object-name>TAB2SK0</object-name>
+		<object-name>TAB2SK1</object-name>
+		<object-name>TAB2SK2</object-name>
+		<object-name>TAB2SK3</object-name>
+		<object-name>TAB2SK4</object-name>
+		<object-name>TAB2SK5</object-name>
+		<object-name>TAB2SK6</object-name>
+		<object-name>TAB2SK7</object-name>
+		<object-name>TAB2SK8</object-name>
+		<object-name>TAB2SK9</object-name>
+		<object-name>TAB2PLN</object-name>
+		<object-name>TAB2NAV</object-name>
+		<object-name>TAB2F</object-name>
+		<object-name>TAB2CLR</object-name>
+		<object-name>TAB2AK</object-name>
+		<object-name>TAB2LW</object-name>
+		<object-name>TAB2VAS</object-name>
+		<object-name>TAB2RDR</object-name>
+		<object-name>TAB2FLR</object-name>
+		<object-name>TAB209</object-name>
+		<object-name>TAB2ENTER</object-name>
+		<type>material</type>
+		<condition>
+			<property>fdm/jsbsim/electric/output/cockpit-lights</property>
+		</condition>
+		<emission>
+			<red>0.1</red>
+			<green>0.9</green>
+			<blue>0.7</blue>
+		</emission>
+	</animation>
 	<!--#########  Upper Buttons ########## -->
 	<animation>
 		<type>translate</type>
@@ -574,18 +618,6 @@
 				<property>fdm/jsbsim/electric/switches/tvtab2</property>
 			</binding>
 		</action>
-	</animation>
-	<animation>
-		<object-name>TAB2ON</object-name>
-		<type>material</type>
-		<condition>
-			<property>fdm/jsbsim/electric/output/tvtab2</property>
-		</condition>
-		<emission>
-			<red>1.0</red>
-			<green>1.0</green>
-			<blue>1.0</blue>
-		</emission>
 	</animation>
 	<animation>
 		<type>translate</type>
