@@ -37,16 +37,16 @@
 			<file>Aircraft/Tornado/Nasal/librariesIDS.nas</file>
 		</libraries>
 		<efis>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/rpmd/moving-map.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/maps/loader.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/Framework.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/plan.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/nav.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/fa.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/eqm.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/empty.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/overlay.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/TVTAB_IDS.nas</file>
+			<file>Aircraft/Tornado/Nasal/moving-map.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/maps/loader.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/Framework.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/plan.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/nav.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/fa.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/eqm.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/empty.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/overlay.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/TVTAB_IDS.nas</file>
 		</efis>
 	</nasal>
 </PropertyList>

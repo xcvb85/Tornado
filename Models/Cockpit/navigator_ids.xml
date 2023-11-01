@@ -41,7 +41,7 @@
 	</model>
 	<model>
 		<name>CRPMD</name>
-		<path>Aircraft/Tornado/Models/Cockpit/Instruments/rpmd/crpmd.xml</path>
+		<path>Aircraft/Tornado/Models/Cockpit/Instruments/crpmd/crpmd.xml</path>
 		<offsets>
 			<x-m>-2.942</x-m>
 			<y-m> 0.000</y-m>

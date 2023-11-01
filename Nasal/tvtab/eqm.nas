@@ -8,7 +8,7 @@ var canvas_eqm = {
 			return "Helvetica.txf";
 		};
 
-		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/eqm.svg", {'font-mapper': font_mapper});
+		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Nasal/tvtab/eqm.svg", {'font-mapper': font_mapper});
 		m.group = canvasGroup;
 
 		return m;

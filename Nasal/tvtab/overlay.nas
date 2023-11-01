@@ -20,7 +20,7 @@ var canvas_overlay = {
 			}
 		};
 		
-		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/overlay.svg", {'font-mapper': font_mapper});
+		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Nasal/tvtab/overlay.svg", {'font-mapper': font_mapper});
 
 		var keys = ["time","scratchpad"];
 		foreach(var key; keys) {

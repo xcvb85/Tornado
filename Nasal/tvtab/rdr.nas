@@ -11,7 +11,7 @@ var canvas_rdr = {
 			}
 		};
 
-		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/rdr.svg", {'font-mapper': font_mapper});
+		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Nasal/tvtab/rdr.svg", {'font-mapper': font_mapper});
 
 		var svg_keys = ["horizonBar"];
 		foreach(var key; svg_keys) {

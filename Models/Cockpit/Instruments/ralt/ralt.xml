@@ -4,21 +4,30 @@
 	<effect>
 		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/lm1</inherits-from>
 		<object-name>needle</object-name>
-		<object-name>BG</object-name>
+		<object-name>bg</object-name>
 	</effect>
 	<effect>
 		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/lm2</inherits-from>
-		<object-name>Circle</object-name>
+		<object-name>cover</object-name>
 	</effect>
 	<animation>
 		<type>select</type>
-		<object-name>needle</object-name>
-		<object-name>Plane</object-name>
+		<object-name>flag</object-name>
 		<condition>
 			<less-than>
 				<property>fdm/jsbsim/electric/buses/bus-dc</property>
 				<value>1</value>
 			</less-than>
+		</condition>
+	</animation>
+		<animation>
+		<type>select</type>
+		<object-name>needle</object-name>
+		<condition>
+			<greater-than>
+				<property>fdm/jsbsim/electric/buses/bus-dc</property>
+				<value>1</value>
+			</greater-than>
 		</condition>
 	</animation>
 	<animation>
