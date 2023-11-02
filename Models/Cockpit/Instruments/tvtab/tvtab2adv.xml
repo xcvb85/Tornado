@@ -41,11 +41,14 @@
 		<object-name>TAB2ENTER</object-name>
 		<type>material</type>
 		<condition>
-			<property>fdm/jsbsim/electric/output/cockpit-lights</property>
+			<and>
+				<property>fdm/jsbsim/electric/output/tvtab2</property>
+				<property>fdm/jsbsim/electric/output/cockpit-lights</property>
+			</and>
 		</condition>
 		<emission>
-			<red>0.1</red>
-			<green>0.9</green>
+			<red>0.0</red>
+			<green>0.8</green>
 			<blue>0.7</blue>
 		</emission>
 	</animation>

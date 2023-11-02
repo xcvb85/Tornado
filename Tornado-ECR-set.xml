@@ -34,6 +34,16 @@
 			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
 			<file>Aircraft/Tornado/Nasal/librariesECR.nas</file>
 		</libraries>
+		<hud>
+			<file>Aircraft/Tornado/Nasal/hud/hud_math.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_sbs.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_empty.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_base.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_fd.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_ccip.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_gun.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_ids.nas</file>
+		</hud>
 		<efis>
 			<file>Aircraft/Tornado/Nasal/moving-map.nas</file>
 			<file>Aircraft/Tornado/Nasal/tvtab/maps/loader.nas</file>

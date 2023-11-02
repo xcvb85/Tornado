@@ -1,8 +1,17 @@
 var HUDInstance = {};
 
+var ModeEnum = {
+	off: 0,
+	on: 1,
+	dcl: 2,
+	em: 3,
+	t2: 4,
+	t1: 5
+};
+
 var PageEnum = {
-	nav:  0,
-	ccip: 1,
+	empty: 0,
+	fd: 1,
 	gun: 2
 };
 
@@ -13,8 +22,8 @@ var HUD = {
 
 		m.Sbs = hud_sbs.new(group.createChild('group'), instance);
 		m.Hud = hud_base.new(group.createChild('group'), instance);
-		m.Pages[PageEnum.nav] = hud_nav.new(group.createChild('group'), instance);
-		m.Pages[PageEnum.ccip] = hud_ccip.new(group.createChild('group'), instance);
+		m.Pages[PageEnum.empty] = hud_empty.new(group.createChild('group'), instance);
+		m.Pages[PageEnum.fd] = hud_fd.new(group.createChild('group'), instance);
 		m.Pages[PageEnum.gun] = hud_gun.new(group.createChild('group'), instance);
 
 		m.swMode = props.globals.getNode("instrumentation/hud/swMode");
@@ -42,14 +51,25 @@ var HUD = {
 	},
 	Update: func()
 	{
-		if(me.swMode.getValue()) {
+		me.Mode = me.swMode.getValue() or 0;
+		
+		if(me.Mode > ModeEnum.off) {
 			me.Hud.show();
 			me.Hud.update();
-			if(me.ActivePage >= 0) {
-				me.Pages[me.ActivePage].update();
+			me.NewPage = PageEnum.empty;
+			
+			if(me.Mode == ModeEnum.on) {
+				me.NewPage = PageEnum.gun;
 			}
+			
+			if(me.NewPage != me.ActivePage) {
+				me.ActivatePage(me.NewPage);
+			}
+			me.ActivePage = me.NewPage;
+			me.Pages[me.ActivePage].update();
 		}
 		else {
+			me.ActivePage = -1;
 			me.Hud.hide();
 		}
 

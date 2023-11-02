@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<sim include="Systems/views.xml">
+		<expected-aircraft-dir-name>Tornado</expected-aircraft-dir-name>
 		<flight-model>jsb</flight-model>
 		<aero>Tornado</aero>
 		<menubar include="gui/menubar.xml"/>
@@ -75,15 +76,6 @@
 		</fuel>
 	</consumables>
 	<nasal>
-		<hud>
-			<file>Aircraft/Tornado/Nasal/hud/hud_math.nas</file>
-			<file>Aircraft/Tornado/Nasal/hud/hud_sbs.nas</file>
-			<file>Aircraft/Tornado/Nasal/hud/hud_nav.nas</file>
-			<file>Aircraft/Tornado/Nasal/hud/hud_ccip.nas</file>
-			<file>Aircraft/Tornado/Nasal/hud/hud_gun.nas</file>
-			<file>Aircraft/Tornado/Nasal/hud/hud_base.nas</file>
-			<file>Aircraft/Tornado/Nasal/hud/hud.nas</file>
-		</hud>
 		<vector>
 			<file>Aircraft/Tornado/Nasal/weapons/vector.nas</file>
 		</vector>
