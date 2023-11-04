@@ -33,7 +33,7 @@
 				<property>instrumentation/hud/swMode</property>
 				<mask>integer</mask>
 				<min>0</min>
-				<max>4</max>
+				<max>2</max>
 				<step>1</step>
 				<resolution>1</resolution>
 			</binding>
@@ -47,7 +47,7 @@
 				<property>instrumentation/hud/swMode</property>
 				<mask>integer</mask>
 				<min>0</min>
-				<max>4</max>
+				<max>2</max>
 				<step>-1</step>
 				<resolution>1</resolution>
 			</binding>
@@ -75,10 +75,19 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
+			<button>3</button>
 			<repeatable>false</repeatable>
 			<binding>
-				<command>property-toggle</command>
-				<property>instrumentation/hud/swSbs</property>
+				<command>nasal</command>
+				<script>hud.hudKnSbs(1);</script>
+			</binding>
+		</action>
+		<action>
+			<button>4</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>hud.hudKnSbs(-1);</script>
 			</binding>
 		</action>
 	</animation>
