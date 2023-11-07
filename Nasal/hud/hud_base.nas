@@ -35,7 +35,8 @@ var hud_base = {
 		var svg_keys = ["asi", "altitude", "needle",
 				"aoaMkr", "aoaScale", "vsiMkr",
 				"vv", "lock", "loc", "gs",
-				"ladder", "heading", "hdgBug"];
+				"ladder", "heading", "hdgBug",
+				"pullUp"];
 		foreach(var key; svg_keys) {
 			m[key] = canvasGroup.getElementById(key);
 		}
@@ -59,7 +60,8 @@ var hud_base = {
 			vsi:      "velocities/vertical-speed-fps",
 			loc:      "instrumentation/nav/in-range",
 			gs:       "instrumentation/nav/gs-in-range",
-			vv:       "instrumentation/hud/swVV"
+			vv:       "instrumentation/hud/swVV",
+			pullUp:   "instrumentation/mk-viii/outputs/discretes/gpws-warning"
 		};
 		foreach(var name; keys(m.input))
 			m.input[name] = props.globals.getNode(m.input[name], 1);
@@ -105,10 +107,21 @@ var hud_base = {
 
 		# hdg
 		me.tmp = me.input.hdg.getValue();
-		if(me.tmp < 180)
+		if(me.tmp < 180) {
 			me.heading.setTranslation(-me.tmp*3.23,0);
-		else
+		}
+		else {
 			me.heading.setTranslation((360-me.tmp)*3.23,0);
+		}
+
+		# pullUp
+		me.tmp = 0;
+		if(me.tmp) {
+			me.pullUp.show();
+		}
+		else {
+			me.pullUp.hide();
+		}
 
 		# velocity vector
 		if(me.input.vv.getValue()) {
@@ -155,6 +168,13 @@ var hud_base = {
 		}
 		else {
 			me.gs.hide();
+		}
+		
+		if(me.input.pullUp.getValue()) {
+			me.pullUp.show();
+		}
+		else {
+			me.pullUp.hide();
 		}
 	},
 	show: func()

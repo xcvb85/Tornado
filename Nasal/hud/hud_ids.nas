@@ -27,24 +27,24 @@ var HUD = {
 		HudMath.init([-4.732,-0.075,-0.0854], [-4.817,0.080,-0.209], [1024,1024], [0,1.0], [1,0.0], 0);
 
 		m.PageSbs = hud_sbs.new(group.createChild('group'), instance);
-		m.PageHud = hud_base.new(group.createChild('group'), instance);
+		m.GroupHud = group.createChild('group');
+		m.PageHud = hud_base.new(m.GroupHud, instance);
 		
 		setsize(m.Pages, PageEnum.NUM_PAGES);
-		m.Pages[PageEnum.PAGE_EMPTY] = hud_empty.new(group.createChild('group'), instance);
-		m.Pages[PageEnum.PAGE_FD] = hud_fd.new(group.createChild('group'), instance);
-		m.Pages[PageEnum.PAGE_CCIP] = hud_ccip.new(group.createChild('group'), instance);
-		m.Pages[PageEnum.PAGE_GUN] = hud_gun.new(group.createChild('group'), instance);
+		m.Pages[PageEnum.PAGE_EMPTY] = hud_empty.new(m.GroupHud.createChild('group'), instance);
+		m.Pages[PageEnum.PAGE_FD] = hud_fd.new(m.GroupHud.createChild('group'), instance);
+		m.Pages[PageEnum.PAGE_CCIP] = hud_ccip.new(m.GroupHud.createChild('group'), instance);
+		m.Pages[PageEnum.PAGE_GUN] = hud_gun.new(m.GroupHud.createChild('group'), instance);
 
 		m.swMode = props.globals.getNode("instrumentation/hud/swMode");
 		m.swSbs = props.globals.getNode("instrumentation/hud/swSbs");
 
-      m.rootLine = group.createChild("group");
 		m.ActivePage = -1;
 		m.NewPage = -1;
 		m.Mode = 0;
 		m.ActivatePage();
 		m.Update();
-		m.Timer = maketimer(0.05, m, m.Update);
+		m.Timer = maketimer(0.1, m, m.Update);
 		m.Timer.start();
 		return m;
 	},
@@ -61,24 +61,12 @@ var HUD = {
 			}
 		}
 	},
-	KnMode: func(input = -1)
-	{
-	},
-	KnSbs: func(input = -1)
-	{
-		if(input > 0) {
-			me.PageSbs.show();
-		}
-		else {
-			me.PageSbs.hide();
-		}
-	},
 	Update: func()
 	{
 		me.Mode = me.swMode.getValue() or 0;
 
 		if(me.Mode > ModeEnum.MODE_OFF) {
-			me.PageHud.show();
+			me.GroupHud.show();
 			me.PageHud.update();
 			me.NewPage = PageEnum.PAGE_EMPTY;
 			
@@ -86,7 +74,6 @@ var HUD = {
 				me.SelectedWeapon = pylons.fcs.getSelectedWeapon();
 				
 				if(me.SelectedWeapon != nil) { #and me.input.MasterArm.getValue()
-					print(me.SelectedWeapon.type);
 					if(me.SelectedWeapon.type == "MK-82" or me.SelectedWeapon.type == "MK-82AIR") {
 						me.NewPage = PageEnum.PAGE_CCIP;
 					}
@@ -110,18 +97,17 @@ var HUD = {
 		}
 		else {
 			me.ActivePage = -1;
-			me.PageHud.hide();
+			me.GroupHud.hide();
+		}
+		
+		if((me.swSbs.getValue() or 0) > 0) {
+			me.PageSbs.show();
+		}
+		else {
+			me.PageSbs.hide();
 		}
 	}
 };
-
-var hudKnMode = func(input = 0) {
-	HUDInstance.KnMode(input);
-}
-
-var hudKnSbs = func(input = 0) {
-	HUDInstance.KnSbs(input);
-}
 
 var hudListener = setlistener("/sim/signals/fdm-initialized", func () {
 

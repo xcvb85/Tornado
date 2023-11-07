@@ -66,6 +66,12 @@
 		</jsbsim>
 	</fdm>
 	<payload include="Systems/payload.xml"/>
+	<controls>
+		<ejected>0</ejected>
+		<gear>
+			<brake-parking>1</brake-parking>
+		</gear>
+	</controls>
 	<consumables>
 		<fuel>
 			<tank n="0"><name>Front Fuselage Tank</name></tank>
@@ -75,6 +81,33 @@
 			<tank n="4"><name>Rear Fuselage Tank</name></tank>
 		</fuel>
 	</consumables>
+	<instrumentation>
+		<marker-beacon>
+			<serviceable type="bool">false</serviceable>
+		</marker-beacon>
+		<radar-altimeter>
+			<serviceable type="bool">true</serviceable>
+		</radar-altimeter>
+		<mk-viii n="0">
+			<serviceable type="bool">true</serviceable>
+			<configuration-module>
+				<category-1 type="int">255</category-1>
+				<category-3 type="int">2</category-3>
+				<category-4 type="int">7</category-4>
+				<category-5 type="int">0</category-5>
+				<category-6 type="int">1</category-6>
+				<category-7 type="int">0</category-7>
+				<category-8 type="int">2</category-8>
+				<category-9 type="int">0</category-9> 
+				<category-10 type="int">6</category-10>
+				<category-13 type="int">7</category-13>
+				<category-14 type="int">0</category-14>
+			</configuration-module>
+			<voice>
+				<file-prefix>Aircraft/Tornado/Sounds/misc/</file-prefix>
+			</voice>
+		</mk-viii>
+	</instrumentation>
 	<nasal>
 		<vector>
 			<file>Aircraft/Tornado/Nasal/weapons/vector.nas</file>

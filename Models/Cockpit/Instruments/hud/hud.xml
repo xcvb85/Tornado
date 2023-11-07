@@ -75,19 +75,10 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<button>3</button>
 			<repeatable>false</repeatable>
 			<binding>
-				<command>nasal</command>
-				<script>hud.hudKnSbs(1);</script>
-			</binding>
-		</action>
-		<action>
-			<button>4</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>nasal</command>
-				<script>hud.hudKnSbs(-1);</script>
+				<command>property-toggle</command>
+				<property>instrumentation/hud/swSbs</property>
 			</binding>
 		</action>
 	</animation>
