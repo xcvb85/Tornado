@@ -42,7 +42,7 @@
 			<file>Aircraft/Tornado/Nasal/hud/hud_fd.nas</file>
 			<file>Aircraft/Tornado/Nasal/hud/hud_ccip.nas</file>
 			<file>Aircraft/Tornado/Nasal/hud/hud_gun.nas</file>
-			<file>Aircraft/Tornado/Nasal/hud/hud_ids.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_ecr.nas</file>
 		</hud>
 		<efis>
 			<file>Aircraft/Tornado/Nasal/moving-map.nas</file>
