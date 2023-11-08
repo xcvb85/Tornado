@@ -1,35 +1,45 @@
 var HUDInstance = {};
 
 var ModeEnum = {
-	off: 0,
-	on: 1,
-	dcl: 2,
-	em: 3,
-	t2: 4,
-	t1: 5
+	MODE_OFF: 0,
+	MODE_ON: 1,
+	MODE_DCL: 2,
+	MODE_EM: 3,
+	MODE_TEST2: 4,
+	MODE_TEST1: 5,
+	NUM_MODES: 6
 };
 
 var PageEnum = {
-	empty: 0,
-	fd: 1,
-	gun: 2
+	PAGE_EMPTY: 0,
+	PAGE_FD: 1,
+	PAGE_GUN: 2,
+	NUM_PAGES: 3
 };
 
 var HUD = {
 	new: func(group, instance) {
-		var m = {parents:[HUD], Pages:{}};
+		var m = {parents:[HUD], Pages: [], vv_dir: [], SelectedWeapon: {}};
 		m.Instance = instance;
+		
+		# HUD .ac coords:    upper-left                 lower-right        
+		HudMath.init([-4.732,-0.075,-0.0854], [-4.817,0.080,-0.209], [1024,1024], [0,1.0], [1,0.0], 0);
 
-		m.Sbs = hud_sbs.new(group.createChild('group'), instance);
-		m.Hud = hud_base.new(group.createChild('group'), instance);
-		m.Pages[PageEnum.empty] = hud_empty.new(group.createChild('group'), instance);
-		m.Pages[PageEnum.fd] = hud_fd.new(group.createChild('group'), instance);
-		m.Pages[PageEnum.gun] = hud_gun.new(group.createChild('group'), instance);
+		m.PageSbs = hud_sbs.new(group.createChild('group'), instance);
+		m.GroupHud = group.createChild('group');
+		m.PageBase = hud_base.new(m.GroupHud, instance);
+		
+		setsize(m.Pages, PageEnum.NUM_PAGES);
+		m.Pages[PageEnum.PAGE_EMPTY] = hud_empty.new(m.GroupHud.createChild('group'), instance);
+		m.Pages[PageEnum.PAGE_FD] = hud_fd.new(m.GroupHud.createChild('group'), instance);
+		m.Pages[PageEnum.PAGE_GUN] = hud_gun.new(m.GroupHud.createChild('group'), instance);
 
 		m.swMode = props.globals.getNode("instrumentation/hud/swMode");
 		m.swSbs = props.globals.getNode("instrumentation/hud/swSbs");
 
 		m.ActivePage = -1;
+		m.NewPage = -1;
+		m.Mode = 0;
 		m.ActivatePage();
 		m.Update();
 		m.Timer = maketimer(0.1, m, m.Update);
@@ -52,32 +62,39 @@ var HUD = {
 	Update: func()
 	{
 		me.Mode = me.swMode.getValue() or 0;
-		
-		if(me.Mode > ModeEnum.off) {
-			me.Hud.show();
-			me.Hud.update();
-			me.NewPage = PageEnum.empty;
+
+		if(me.Mode > ModeEnum.MODE_OFF) {
+			me.GroupHud.show();
+			me.vv_dir = me.PageBase.update();
+			me.NewPage = PageEnum.PAGE_EMPTY;
 			
-			if(me.Mode == ModeEnum.on) {
-				me.NewPage = PageEnum.gun;
+			if(me.Mode == ModeEnum.MODE_ON) {
+				me.SelectedWeapon = pylons.fcs.getSelectedWeapon();
+				
+				if(me.SelectedWeapon != nil) { #and me.input.MasterArm.getValue()
+					me.NewPage = PageEnum.PAGE_GUN;
+				}
+				else {
+					me.NewPage = PageEnum.PAGE_FD;
+				}
 			}
-			
+
 			if(me.NewPage != me.ActivePage) {
 				me.ActivatePage(me.NewPage);
 			}
 			me.ActivePage = me.NewPage;
-			me.Pages[me.ActivePage].update();
+			me.Pages[me.ActivePage].update(me.vv_dir[0], me.vv_dir[1]);
 		}
 		else {
 			me.ActivePage = -1;
-			me.Hud.hide();
+			me.GroupHud.hide();
 		}
-
-		if(me.swSbs.getValue()) {
-			me.Sbs.show();
+		
+		if((me.swSbs.getValue() or 0) > 0) {
+			me.PageSbs.show();
 		}
 		else {
-			me.Sbs.hide();
+			me.PageSbs.hide();
 		}
 	}
 };

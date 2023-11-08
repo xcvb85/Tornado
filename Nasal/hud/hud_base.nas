@@ -25,27 +25,29 @@ var acc = 0;
 var hud_base = {
 	new: func(canvasGroup, instance)
 	{
-		var m = { parents: [hud_base] };
+		var m = { parents: [hud_base], vv_dir: [] };
 		var font_mapper = func(family, weight)
 		{
 			return "Helvetica.txf";
 		};
 		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Nasal/hud/hud_base.svg", {'font-mapper': font_mapper});
-		
+
 		var svg_keys = ["asi", "altitude", "needle",
-				"aoaMkr", "aoaScale", "vsiMkr",
-				"vv", "lock", "loc", "gs",
-				"ladder", "heading", "hdgBug",
-				"pullUp"];
+						"aoaMkr", "aoaScale", "vsiMkr",
+						"vv", "lock", "loc", "gs",
+						"ladder", "heading", "hdgBug",
+						"pullUp"];
 		foreach(var key; svg_keys) {
 			m[key] = canvasGroup.getElementById(key);
 		}
+
 		m.aoaScale.hide();
 		m.hdgBug.hide();
 		m.h_trans = m.ladder.createTransform();
 		m.h_rot   = m.ladder.createTransform();
 		m.heading.set("clip", "rect(0, 169, 256, 69)"); #top,right,bottom,left
 		m.tmp = 0;
+		setsize(m.vv_dir, 2);
 
 		m.input = {
 			alpha:    "orientation/alpha-deg",
@@ -61,6 +63,7 @@ var hud_base = {
 			loc:      "instrumentation/nav/in-range",
 			gs:       "instrumentation/nav/gs-in-range",
 			vv:       "instrumentation/hud/swVV",
+			vertDatum:"instrumentation/hud/knVertDatum",
 			pullUp:   "instrumentation/mk-viii/outputs/discretes/gpws-warning"
 		};
 		foreach(var name; keys(m.input))
@@ -122,7 +125,27 @@ var hud_base = {
 		else {
 			me.pullUp.hide();
 		}
-
+		
+		if(me.input.loc.getValue()) {
+			me.loc.show();
+		}
+		else {
+			me.loc.hide();
+		}
+		if(me.input.gs.getValue()) {
+			me.gs.show();
+		}
+		else {
+			me.gs.hide();
+		}
+		
+		if(me.input.pullUp.getValue()) {
+			me.pullUp.show();
+		}
+		else {
+			me.pullUp.hide();
+		}
+		
 		# velocity vector
 		if(me.input.vv.getValue()) {
 			me.lock.hide();
@@ -148,34 +171,16 @@ var hud_base = {
 				+ vel_gy * (sy * sp * cr - cy * sr)
 				+ vel_gz * cp * cr;
 	
-			dir_y = math.atan2(round0(vel_bz), math.max(vel_bx, 0.01)) * 180.0 / math.pi;
-			dir_x  = math.atan2(round0(vel_by), math.max(vel_bx, 0.01)) * 180.0 / math.pi;
-
-			me.vv.setTranslation(dir_x * 18, dir_y * 18);
+			me.vv_dir[0] = 18 * (math.atan2(round0(vel_by), math.max(vel_bx, 0.01)) * 180.0 / math.pi);
+			me.vv_dir[1] = 18 * (math.atan2(round0(vel_bz), math.max(vel_bx, 0.01)) * 180.0 / math.pi);
 		}
 		else {
 			me.lock.show();
-			me.vv.setTranslation(0, 0);
+			me.vv_dir[0] = 0;
+			me.vv_dir[1] = me.input.vertDatum.getValue() or 0;
 		}
-		if(me.input.loc.getValue()) {
-			me.loc.show();
-		}
-		else {
-			me.loc.hide();
-		}
-		if(me.input.gs.getValue()) {
-			me.gs.show();
-		}
-		else {
-			me.gs.hide();
-		}
-		
-		if(me.input.pullUp.getValue()) {
-			me.pullUp.show();
-		}
-		else {
-			me.pullUp.hide();
-		}
+		me.vv.setTranslation(me.vv_dir[0], me.vv_dir[1]);
+		return me.vv_dir;
 	},
 	show: func()
 	{

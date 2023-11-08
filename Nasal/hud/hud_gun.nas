@@ -6,7 +6,7 @@ var hud_gun = {
 		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Nasal/hud/hud_gun.svg");
 		return m;
 	},
-	update: func()
+	update: func(dir_x, dir_y)
 	{
 	},
 	show: func()

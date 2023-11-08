@@ -20,7 +20,7 @@ var PageEnum = {
 
 var HUD = {
 	new: func(group, instance) {
-		var m = {parents:[HUD], Pages: [], SelectedWeapon: {}};
+		var m = {parents:[HUD], Pages: [], vv_dir: [], SelectedWeapon: {}};
 		m.Instance = instance;
 		
 		# HUD .ac coords:    upper-left                 lower-right        
@@ -28,7 +28,7 @@ var HUD = {
 
 		m.PageSbs = hud_sbs.new(group.createChild('group'), instance);
 		m.GroupHud = group.createChild('group');
-		m.PageHud = hud_base.new(m.GroupHud, instance);
+		m.PageBase = hud_base.new(m.GroupHud, instance);
 		
 		setsize(m.Pages, PageEnum.NUM_PAGES);
 		m.Pages[PageEnum.PAGE_EMPTY] = hud_empty.new(m.GroupHud.createChild('group'), instance);
@@ -67,7 +67,7 @@ var HUD = {
 
 		if(me.Mode > ModeEnum.MODE_OFF) {
 			me.GroupHud.show();
-			me.PageHud.update();
+			me.vv_dir = me.PageBase.update();
 			me.NewPage = PageEnum.PAGE_EMPTY;
 			
 			if(me.Mode == ModeEnum.MODE_AUTO) {
@@ -93,7 +93,7 @@ var HUD = {
 				me.ActivatePage(me.NewPage);
 			}
 			me.ActivePage = me.NewPage;
-			me.Pages[me.ActivePage].update();
+			me.Pages[me.ActivePage].update(me.vv_dir[0], me.vv_dir[1]);
 		}
 		else {
 			me.ActivePage = -1;

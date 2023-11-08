@@ -4,7 +4,7 @@ var hud_empty = {
 		var m = { parents: [hud_empty] };
 		return m;
 	},
-	update: func()
+	update: func(dir_x, dir_y)
 	{
 	},
 	show: func()

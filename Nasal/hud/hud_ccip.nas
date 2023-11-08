@@ -6,7 +6,7 @@ var hud_ccip = {
 		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Nasal/hud/hud_ccip.svg");
 		return m;
 	},
-	update: func()
+	update: func(dir_x, dir_y)
 	{
 	},
 	show: func()

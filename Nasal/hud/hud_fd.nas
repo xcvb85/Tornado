@@ -6,7 +6,7 @@ var hud_fd = {
 		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Nasal/hud/hud_fd.svg");
 		return m;
 	},
-	update: func()
+	update: func(dir_x, dir_y)
 	{
 	},
 	show: func()

@@ -71,35 +71,6 @@
 	</animation>
 	<animation>
 		<type>pick</type>
-		<object-name>knSBS</object-name>
-		<visible>true</visible>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>instrumentation/hud/swSbs</property>
-			</binding>
-		</action>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>knSBS</object-name>
-		<property>instrumentation/hud/swSbs</property>
-		<factor>-45</factor>
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-		<center>
-			<x-m>0.0</x-m>
-			<y-m>0.1356</y-m>
-			<z-m>0.0637</z-m>
-		</center>
-	</animation>
-	<animation>
-		<type>pick</type>
 		<object-name>swVV</object-name>
 		<visible>true</visible>
 		<action>
@@ -221,5 +192,86 @@
 			<y-m>0.0</y-m>
 			<z-m>0.067</z-m>
 		</center>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>knSBS</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/hud/swSbs</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>knSBS</object-name>
+		<property>instrumentation/hud/swSbs</property>
+		<factor>-45</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.1356</y-m>
+			<z-m>0.0637</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>knob</type>
+		<object-name>knSet</object-name>
+		<property>instrumentation/altimeter/setting-inhg</property>
+		<factor>0</factor>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.024</y-m>
+			<z-m>0.024</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/altimeter/setting-inhg</property>
+				<factor>0.01</factor>
+				<min>27.90</min>
+				<max>31.40</max>
+				<wrap>false</wrap>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>knob</type>
+		<object-name>knVertDatum</object-name>
+		<property>instrumentation/hud/knVertDatum</property>
+		<factor>0</factor>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.061</y-m>
+			<z-m>0.039</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/hud/knVertDatum</property>
+				<factor>1</factor>
+				<min>0</min>
+				<max>30</max>
+				<wrap>false</wrap>
+			</binding>
+		</action>
 	</animation>
 </PropertyList>
