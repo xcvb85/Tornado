@@ -8,56 +8,84 @@
 		<name>Cockpit-Common</name>
 		<path>Aircraft/Tornado/Models/Cockpit/Cockpit-Common.xml</path>
 	</model>
- <model>
-  <name>Joystick</name>
-  <path>Aircraft/Tornado/Models/Cockpit/Parts/joystick_adv.ac</path>
-  <offsets>
-   <x-m>-4.550</x-m>
-   <y-m> 0.000</y-m>
-   <z-m>-1.100</z-m>
-   <heading-deg>30.0</heading-deg>
-  </offsets>
- </model>
- <animation>
-  <type>rotate</type>
-  <object-name>Joystick</object-name>
-  <property>controls/flight/elevator</property>
-  <interpolation>
-   <entry><ind>-1.0</ind><dep> 14.0</dep></entry>
-   <entry><ind> 0.0</ind><dep>  0.0</dep></entry>
-   <entry><ind> 1.0</ind><dep> -7.0</dep></entry>
-  </interpolation>
-  <center>
-   <x-m>-4.550</x-m>
-   <y-m> 0.000</y-m>
-   <z-m>-1.100</z-m>
-  </center>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-   <z>0</z>
-  </axis>
- </animation>
- <animation>
-  <type>rotate</type>
-  <object-name>Joystick</object-name>
-  <property>controls/flight/aileron</property>
-  <interpolation>
-   <entry><ind>-1.0</ind><dep> -10.5</dep></entry>
-   <entry><ind> 0.0</ind><dep>   0.0</dep></entry>
-   <entry><ind> 1.0</ind><dep>  10.5</dep></entry>
-  </interpolation>
-  <center>
-   <x-m>-4.550</x-m>
-   <y-m> 0.000</y-m>
-   <z-m>-1.100</z-m>
-  </center>
-  <axis>
-   <x>-1</x>
-   <y> 0</y>
-   <z> 0</z>
-  </axis>
- </animation>
+	<model>
+		<name>FrontH</name>
+		<path>Aircraft/Tornado/Models/Cockpit/FrontUp-ADV.xml</path>
+		<offsets>
+			<x-m>-4.860</x-m>
+			<y-m> 0.000</y-m>
+			<z-m>-0.400</z-m>
+			<pitch-deg>-10.0</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>Joystick</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Parts/joystick_adv.ac</path>
+		<offsets>
+			<x-m>-4.550</x-m>
+			<y-m>0.000</y-m>
+			<z-m>-1.100</z-m>
+			<heading-deg>30.0</heading-deg>
+		</offsets>
+	</model>
+	<animation>
+		<type>rotate</type>
+		<object-name>Joystick</object-name>
+		<property>controls/flight/elevator</property>
+		<interpolation>
+			<entry>
+				<ind>-1.0</ind>
+				<dep>14.0</dep>
+			</entry>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>-7.0</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>-4.550</x-m>
+			<y-m>0.000</y-m>
+			<z-m>-1.100</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Joystick</object-name>
+		<property>controls/flight/aileron</property>
+		<interpolation>
+			<entry>
+				<ind>-1.0</ind>
+				<dep>-10.5</dep>
+			</entry>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>10.5</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>-4.550</x-m>
+			<y-m>0.000</y-m>
+			<z-m>-1.100</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	<model>
 		<name>Pilots Weapon Control Panel</name>
 		<path>Aircraft/Tornado/Models/Cockpit/Instruments/pwcp/pwcp.ac</path>
