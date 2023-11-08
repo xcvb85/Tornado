@@ -124,9 +124,11 @@ a synchro overrides the barometric mechanism and positions the pointer to true a
     <animation>
         <type>textranslate</type>
         <object-name>drum-inhg-1</object-name>
-        <property>instrumentation/altimeter/setting-inhg</property>
-        <factor>10</factor>
-        <offset>-0.01</offset>
+        <property>instrumentation/altimeter/setting-hpa</property>
+        <factor>0.1</factor>
+        <offset>-1</offset>
+        <step>1</step>
+        <scroll>1</scroll>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -137,11 +139,11 @@ a synchro overrides the barometric mechanism and positions the pointer to true a
     <animation>
         <type>textranslate</type>
         <object-name>drum-inhg-2</object-name>
-        <property>instrumentation/altimeter/setting-inhg</property>
-        <factor>1</factor>
-        <offset>-0.1</offset>
-        <step>0.1</step>
-        <scroll>0.01</scroll>
+        <property>instrumentation/altimeter/setting-hpa</property>
+        <factor>0.01</factor>
+        <offset>-10</offset>
+        <step>10</step>
+        <scroll>1</scroll>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -152,11 +154,11 @@ a synchro overrides the barometric mechanism and positions the pointer to true a
     <animation>
         <type>textranslate</type>
         <object-name>drum-inhg-3</object-name>
-        <property>instrumentation/altimeter/setting-inhg</property>
-        <factor>0.1</factor>
-        <offset>-1</offset>
-        <step>1</step>
-        <scroll>0.01</scroll>
+        <property>instrumentation/altimeter/setting-hpa</property>
+        <factor>0.001</factor>
+        <offset>-100</offset>
+        <step>100</step>
+        <scroll>1</scroll>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -167,11 +169,11 @@ a synchro overrides the barometric mechanism and positions the pointer to true a
     <animation>
         <type>textranslate</type>
         <object-name>drum-inhg-4</object-name>
-        <property>instrumentation/altimeter/setting-inhg</property>
-        <factor>0.01</factor>
-        <offset>-10</offset>
-        <step>10</step>
-        <scroll>0.01</scroll>
+        <property>instrumentation/altimeter/setting-hpa</property>
+        <factor>0.0001</factor>
+        <offset>-1000</offset>
+        <step>1000</step>
+        <scroll>1</scroll>
         <axis>
             <x>0</x>
             <y>-1</y>

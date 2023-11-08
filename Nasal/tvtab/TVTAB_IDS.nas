@@ -157,7 +157,7 @@ var TVTAB = {
 };
 
 var bak = 0;
-var tvTavBtClick = func(index = 0, input = -1) {
+var tvTabBtClick = func(index = 0, input = -1) {
 
 	if (input < 10) {
 		TvTabInstances[index].BtClick(input);
@@ -232,30 +232,30 @@ var tvTavBtClick = func(index = 0, input = -1) {
 	}
 }
 
-var tvTav1Knob = func(input = -1) {
+var tvTab1Knob = func(input = -1) {
 }
 
 tvTabListener = setlistener("/sim/signals/fdm-initialized", func () {
 
-	var tvTav1Canvas = canvas.new({
+	var tvTab1Canvas = canvas.new({
 		"name": "TVTAB1",
 		"size": [512, 512],
 		"view": [310, 250],
 		"mipmapping": 1
 	});
-	var tvTav2Canvas = canvas.new({
+	var tvTab2Canvas = canvas.new({
 		"name": "TVTAB1",
 		"size": [512, 512],
 		"view": [310, 250],
 		"mipmapping": 1
 	});
 
-	tvTav1Canvas.addPlacement({"node": "TVTAB1.screen"});
-	tvTav2Canvas.addPlacement({"node": "TVTAB2.screen"});
-	TvTabInstances[0] = TVTAB.new(tvTav1Canvas.createGroup(), 0);
-	TvTabInstances[1] = TVTAB.new(tvTav2Canvas.createGroup(), 0);
+	tvTab1Canvas.addPlacement({"node": "TVTAB1.screen"});
+	tvTab2Canvas.addPlacement({"node": "TVTAB2.screen"});
+	TvTabInstances[0] = TVTAB.new(tvTab1Canvas.createGroup(), 0);
+	TvTabInstances[1] = TVTAB.new(tvTab2Canvas.createGroup(), 0);
 
 	removelistener(tvTabListener);
-	tvTavBtClick(0, 10);
-	tvTavBtClick(1, 11);
+	tvTabBtClick(0, 10);
+	tvTabBtClick(1, 11);
 });

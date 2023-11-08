@@ -1,12 +1,12 @@
-var hud_fd = {
+var hud_ccip = {
 	new: func(canvasGroup, instance)
 	{
-		var m = { parents: [hud_fd] };
+		var m = { parents: [hud_ccip] };
 		m.group = canvasGroup;
-		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_fd.svg");
+		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Nasal/hud/hud_ccip.svg");
 		return m;
 	},
-	update: func()
+	update: func(dir_x, dir_y)
 	{
 	},
 	show: func()

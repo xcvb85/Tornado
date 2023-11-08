@@ -21,7 +21,7 @@
 			<internal-format>normalized</internal-format>
 		</texture>
 		<display-enabled type="int">
-			<use>systems/electrical/outputs/tvtab2</use>
+			<use>fdm/jsbsim/electric/output/tvtab2</use>
 		</display-enabled>
 	</parameters>
 

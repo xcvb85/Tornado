@@ -41,7 +41,7 @@ var canvas_plan = {
 				return "Helvetica.txf";
 			}
 		};
-		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/plan.svg", {'font-mapper': font_mapper});
+		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Nasal/tvtab/plan.svg", {'font-mapper': font_mapper});
 		m.group = canvasGroup;
 
 		var ctrl_ns = canvas.Map.Controller.get("Aircraft position");

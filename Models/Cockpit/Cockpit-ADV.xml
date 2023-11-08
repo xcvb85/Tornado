@@ -2,7 +2,7 @@
 <PropertyList>
 	<model>
 		<name>Navigator Panel</name>
-		<path>Aircraft/Tornado/Models/Cockpit/Parts/navigator_adv.xml</path>
+		<path>Aircraft/Tornado/Models/Cockpit/navigator_adv.xml</path>
 	</model>
 	<model>
 		<name>Cockpit-Common</name>

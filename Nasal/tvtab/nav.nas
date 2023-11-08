@@ -12,7 +12,7 @@ var canvas_nav = {
 			}
 		};
 
-		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/nav.svg", {'font-mapper': font_mapper});
+		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Nasal/tvtab/nav.svg", {'font-mapper': font_mapper});
 
 		var svg_keys = ["heading1", "heading2", "north", "range", "kalman"];
 		foreach(var key; svg_keys) {

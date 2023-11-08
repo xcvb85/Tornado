@@ -13,7 +13,7 @@
 			<internal-format>normalized</internal-format>
 		</texture>
 		<display-enabled type="int">
-			<use>systems/electrical/outputs/ehdd</use>
+			<use>fdm/jsbsim/electric/output/ehdd</use>
 		</display-enabled>
 		<heading type="double">
 			<use>orientation/heading-magnetic-deg</use>

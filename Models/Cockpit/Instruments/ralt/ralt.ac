@@ -4,7 +4,7 @@ OBJECT world
 name "Blender_exporter_v4.1__ralt.ac"
 kids 4
 OBJECT poly
-name "BG"
+name "bg"
 data 7
 BG.mesh
 crease 40.0
@@ -182,7 +182,7 @@ refs 3
 24 0.461762 0.535969
 kids 0
 OBJECT poly
-name "Circle"
+name "cover"
 data 10
 Circle.003
 crease 40.0
@@ -377,6 +377,26 @@ refs 4
 27 0.690013 0.200127
 kids 0
 OBJECT poly
+name "flag"
+data 5
+Plane
+crease 40.0
+texture "ralt.png"
+numvert 4
+0.0031 0.00827 0.00558
+0.0031 0.00827 -0.00504
+0.0031 0.01318 0.00558
+0.0031 0.01318 -0.00504
+numsurf 1
+SURF 0X0
+mat 0
+refs 4
+0 0.854458 -0.000132
+1 0.594535 -0.000132
+3 0.594535 0.101505
+2 0.854458 0.101505
+kids 0
+OBJECT poly
 name "needle"
 data 13
 needle_l.mesh
@@ -404,24 +424,4 @@ refs 4
 0 0.459835 0.165737
 5 0.459835 0.124322
 4 0.462867 0.132274
-kids 0
-OBJECT poly
-name "Plane"
-data 5
-Plane
-crease 40.0
-texture "ralt.png"
-numvert 4
-0.0031 0.00827 0.00558
-0.0031 0.00827 -0.00504
-0.0031 0.01318 0.00558
-0.0031 0.01318 -0.00504
-numsurf 1
-SURF 0X0
-mat 0
-refs 4
-0 0.854458 -0.000132
-1 0.594535 -0.000132
-3 0.594535 0.101505
-2 0.854458 0.101505
 kids 0

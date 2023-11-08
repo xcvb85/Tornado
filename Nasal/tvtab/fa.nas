@@ -10,7 +10,7 @@ var canvas_fa = {
 			}
 		};
 
-		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/fa.svg", {'font-mapper': font_mapper});
+		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Nasal/tvtab/fa.svg", {'font-mapper': font_mapper});
 		m.group = canvasGroup;
 
 		return m;

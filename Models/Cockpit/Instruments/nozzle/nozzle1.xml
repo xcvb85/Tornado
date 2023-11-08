@@ -11,7 +11,7 @@
 		<object-name>Plane</object-name>
 		<condition>
 			<less-than>
-				<property>systems/electrical/ElBus/Voltage</property>
+				<property>fdm/jsbsim/electric/buses/bus-dc</property><!--the needle is driven by a 24V dc motor-->
 				<value>1</value>
 			</less-than>
 		</condition>
