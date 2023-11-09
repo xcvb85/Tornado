@@ -120,7 +120,7 @@
 			<file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
 		</radardist>
 		<rcs>
-			<file>Aircraft/Tornado/Nasal/rcs.nas</file>
+			<file>Aircraft/Tornado/Nasal/radar/rcs.nas</file>
 		</rcs>
 		<radar_system>
 			<file>Aircraft/Tornado/Nasal/radar/radar-system.nas</file>
