@@ -6,7 +6,7 @@
 	</model>
 	<model>
 		<name>Enhanced Radar Warning Receiver</name>
-		<path>Aircraft/Tornado/Models/Cockpit/Instruments/rwr/erwr.ac</path>
+		<path>Aircraft/Tornado/Models/Cockpit/Instruments/rwr/erwr.xml</path>
 		<offsets>
 			<x-m> 0.000</x-m>
 			<y-m> 0.185</y-m>

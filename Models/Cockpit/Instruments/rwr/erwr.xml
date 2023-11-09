@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>erwr.ac</path>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/displays/ehdd</inherits-from>
+		<object-name>bg</object-name>
+	</effect>
+</PropertyList>

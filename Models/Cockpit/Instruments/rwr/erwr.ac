@@ -8,7 +8,7 @@ OBJECT group
 name "erwr"
 kids 3
 OBJECT poly
-name "bg"
+name "RHWR.screen"
 data 14
 mount.mesh.001
 crease 45.0
