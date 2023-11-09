@@ -121,12 +121,16 @@
 		</radardist>
 		<rcs>
 			<file>Aircraft/Tornado/Nasal/radar/rcs.nas</file>
+			<file>Aircraft/Tornado/Nasal/radar/rcs_mand.nas</file>
 		</rcs>
 		<radar_system>
+			<file>Aircraft/Tornado/Nasal/radar/radar-system-database.nas</file>
 			<file>Aircraft/Tornado/Nasal/radar/radar-system.nas</file>
 			<file>Aircraft/Tornado/Nasal/radar/rwr-only.nas</file>
-			<file>Aircraft/Tornado/Nasal/radar/rwr.nas</file>
 		</radar_system>
+		<rwr>
+			<file>Aircraft/Tornado/Nasal/radar/rwr.nas</file>
+		</rwr>
 		<damage>
 			<file>Aircraft/Tornado/Nasal/weapons/damage.nas</file>
 		</damage>
