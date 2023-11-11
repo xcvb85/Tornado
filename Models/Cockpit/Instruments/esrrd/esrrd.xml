@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>esrrd.ac</path>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/displays/esrrd</inherits-from>
+		<object-name>ESRRD.screen</object-name>
+	</effect>
 </PropertyList>

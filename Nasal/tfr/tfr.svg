@@ -67,5 +67,10 @@
        d="M 16.139147,1033.202 C 130.04583,1026.9606 156.154,916.82948 238.23113,927.90427"
        id="path939"
        sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#00ffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 20,1045.853 H 236"
+       id="path858"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>
