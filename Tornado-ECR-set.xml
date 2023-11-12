@@ -17,11 +17,7 @@
 			<splash-texture>Aircraft/Tornado/splash_ecr.png</splash-texture>
 		</startup>
 		<model>
-			<path>Aircraft/Tornado/Models/Tornado-IDS.xml</path>
-		</model>
-		<model>
-			<name>Cockpit-ECR</name>
-			<path>Aircraft/Tornado/Models/Cockpit/Cockpit-ECR.xml</path>
+			<path>Aircraft/Tornado/Models/Tornado-ECR.xml</path>
 		</model>
 		<flir type="int">1</flir>
 		<aircraft-type type="int">0</aircraft-type>

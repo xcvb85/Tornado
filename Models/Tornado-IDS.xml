@@ -2,6 +2,10 @@
 <PropertyList>
 	<path>Aircraft/Tornado/Models/Tornado-IDS.ac</path>
 	<model>
+		<name>Cockpit-IDS</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Cockpit-IDS.xml</path>
+	</model>
+	<model>
 		<name>landing light 1</name>
 		<path>Aircraft/Tornado/Models/Effects/lights/landing-light.xml</path>
 		<offsets>

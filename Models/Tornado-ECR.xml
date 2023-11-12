@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>Aircraft/Tornado/Models/Tornado-ECR.ac</path>
+	<model>
+		<name>IDS Model</name>
+		<path>Aircraft/Tornado/Models/Tornado-IDS.xml</path>
+	</model>
+	<model>
+		<name>Cockpit-ECR</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Cockpit-ECR.xml</path>
+	</model>
+</PropertyList>
