@@ -1,7 +1,10 @@
+#----------------------------------------------------------------------------
 # Panavia Tornado System Libraries
+#----------------------------------------------------------------------------
 var SweepAngles=[25,33,45,58,63,67]; #25=fully forward
 var Sweep=0;
 
+#----------------------------------------------------------------------------
 var doMagicStartup = func {
 	setprop("fdm/jsbsim/electric/switches/battery", 1);
 	setprop("controls/engines/engine[0]/starter", "true");
@@ -20,6 +23,7 @@ var doMagicStartup = func {
 	}, 5);
 }
 
+#----------------------------------------------------------------------------
 var wingSweep = func(direction) {
 	Sweep += direction;
 
@@ -32,6 +36,20 @@ var wingSweep = func(direction) {
 	setprop("fdm/jsbsim/fcs/wing-sweep-cmd", (SweepAngles[Sweep]-25)/42.0);
 }
 
+#----------------------------------------------------------------------------
+var CurrentView_Num = props.globals.getNode("sim/current-view/view-number");
+var nav_view_num = view.indexof("Navigators View");
+
+var toggle_cockpit_views = func() {
+	cur_v = CurrentView_Num.getValue();
+	if (cur_v != 0 ) {
+		CurrentView_Num.setValue(0);
+	} else {
+		CurrentView_Num.setValue(nav_view_num);
+	}
+}
+
+#----------------------------------------------------------------------------
 var indexTankLeft = 0;
 var indexTankRight = 4;
 var valueLeft = 0;

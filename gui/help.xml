@@ -30,6 +30,10 @@
 		<desc>cockpit lights</desc>
 	</key>
 	<key>
+		<name>Ctrl-v</name>
+		<desc>Back to Pilot's View or toggle Pilot's and Navigator's View.</desc>
+	</key>
+	<key>
 		<name>&gt;</name>
 		<desc>wing sweep aft</desc>
 	</key>
