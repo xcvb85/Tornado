@@ -40,6 +40,84 @@
 		</condition>
 	</animation>
 
+	<!-- Tank 1200l -->
+	<model>
+		<name>Tank 1200l 1</name>
+		<path>Aircraft/Tornado/Models/Stores/Tank1200l/Tank1200l.xml</path>
+		<offsets>
+			<x-m> 1.15</x-m>
+			<y-m>-3.05</y-m>
+			<z-m>-1.50</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>Tank 1200l 1</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>payload/armament/station/id-2-set</property>
+				<value>Left 1200l Wing-Tank</value>
+			</equals>
+		</condition>
+	</animation>
+	<model>
+		<name>Tank 1200l 2</name>
+		<path>Aircraft/Tornado/Models/Stores/Tank1200l/Tank1200l.xml</path>
+		<offsets>
+			<x-m>-1.30</x-m>
+			<y-m>-0.45</y-m>
+			<z-m>-2.05</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>Tank 1200l 2</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>payload/armament/station/id-3-set</property>
+				<value>Left 1200l Center-Tank</value>
+			</equals>
+		</condition>
+	</animation>
+	<model>
+		<name>Tank 1200l 3</name>
+		<path>Aircraft/Tornado/Models/Stores/Tank1200l/Tank1200l.xml</path>
+		<offsets>
+			<x-m>-1.30</x-m>
+			<y-m> 0.45</y-m>
+			<z-m>-2.05</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>Tank 1200l 3</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>payload/armament/station/id-5-set</property>
+				<value>Right 1200l Center-Tank</value>
+			</equals>
+		</condition>
+	</animation>
+	<model>
+		<name>Tank 1200l 4</name>
+		<path>Aircraft/Tornado/Models/Stores/Tank1200l/Tank1200l.xml</path>
+		<offsets>
+			<x-m> 1.15</x-m>
+			<y-m> 3.05</y-m>
+			<z-m>-1.50</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>Tank 1200l 4</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>payload/armament/station/id-6-set</property>
+				<value>Right 1200l Wing-Tank</value>
+			</equals>
+		</condition>
+	</animation>
+
 	<!-- AIM-9L -->
 	<model>
 		<name>AIM-9L Missile 1</name>

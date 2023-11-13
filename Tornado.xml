@@ -143,7 +143,14 @@
       <z> -0.9 </z>
     </location>
     <feed>0</feed>
+    <feed>1</feed>
     <feed>2</feed>
+    <feed>3</feed>
+    <feed>4</feed>
+    <feed>5</feed>
+    <feed>6</feed>
+    <feed>7</feed>
+    <feed>8</feed>
     <thruster file="direct">
      <location unit="M">
       <x>  4.5 </x>
@@ -164,8 +171,15 @@
       <y>  0.5 </y>
       <z> -0.9 </z>
     </location>
+    <feed>0</feed>
     <feed>1</feed>
     <feed>2</feed>
+    <feed>3</feed>
+    <feed>4</feed>
+    <feed>5</feed>
+    <feed>6</feed>
+    <feed>7</feed>
+    <feed>8</feed>
     <thruster file="direct">
      <location unit="M">
       <x>  4.5 </x>
@@ -180,41 +194,109 @@
     </thruster>
   </engine>
 
+  <!--0: Fuselage Tank Front-->
   <tank type="FUEL" number="0">
+     <location unit="M">
+       <x> -0.7 </x>
+       <y>  0.0 </y>
+       <z> -0.9 </z>
+     </location>
+     <priority>4</priority>
+     <capacity unit="KG"> 2128 </capacity>
+     <contents unit="KG"> 2128 </contents>
+  </tank>
+  <!--1: Wing Tank Left-->
+  <tank type="FUEL" number="1">
      <location unit="M">
        <x>  1.3 </x>
        <y> -3.5 </y>
        <z> -0.5 </z>
      </location>
-     <priority>1</priority>
-     <capacity unit="LBS"> 4158 </capacity>
-     <contents unit="LBS"> 4158 </contents>
+     <priority>3</priority>
+     <capacity unit="KG"> 300 </capacity>
+     <contents unit="KG"> 300 </contents>
   </tank>
-
-  <tank type="FUEL" number="1">
-     <location unit="M">
-       <x>  1.3 </x>
-       <y>  3.5 </y>
-       <z> -0.5 </z>
-     </location>
-     <priority>1</priority>
-     <capacity unit="LBS"> 4158 </capacity>
-     <contents unit="LBS"> 4158 </contents>
-  </tank>
-
+  <!--2: Wing Tank Center-->
   <tank type="FUEL" number="2">
      <location unit="M">
        <x>  0.0 </x>
        <y>  0.0 </y>
        <z> -0.9 </z>
      </location>
-     <priority>2</priority>
-     <capacity unit="LBS"> 11211 </capacity>
-     <contents unit="LBS"> 11211 </contents>
+     <priority>4</priority>
+     <capacity unit="KG"> 182 </capacity>
+     <contents unit="KG"> 182 </contents>
   </tank>
- </propulsion>
- 
+  <!--3: Wing Tank Right-->
+  <tank type="FUEL" number="3">
+     <location unit="M">
+       <x>  1.3 </x>
+       <y>  3.5 </y>
+       <z> -0.5 </z>
+     </location>
+     <priority>3</priority>
+     <capacity unit="KG"> 300 </capacity>
+     <contents unit="KG"> 300 </contents>
+  </tank>
+  <!--4: Fuselage Tank Rear-->
+  <tank type="FUEL" number="4">
+     <location unit="M">
+       <x>  0.0 </x>
+       <y>  0.0 </y>
+       <z> -0.9 </z>
+     </location>
+     <priority>4</priority>
+     <capacity unit="KG"> 1862 </capacity>
+     <contents unit="KG"> 1862 </contents>
+  </tank>
+  <!--5: External Left Wing Tank-->
+  <tank type="FUEL" number="5">
+     <location unit="M">
+       <x>  0.6 </x>
+       <y> -3.0 </y>
+       <z> -1.4 </z>
+     </location>
+     <priority>1</priority>
+     <capacity unit="KG"> 1200 </capacity>
+     <contents unit="KG"> 1200 </contents>
+  </tank>
+  <!--6: External Center Tank-->
+  <tank type="FUEL" number="6">
+     <location unit="M">
+       <x>  0.6 </x>
+       <y> -0.5 </y>
+       <z> -2.0 </z>
+     </location>
+     <priority>2</priority>
+     <capacity unit="KG"> 1200 </capacity>
+     <contents unit="KG"> 1200 </contents>
+  </tank>
+  <!--7: External Center Tank-->
+  <tank type="FUEL" number="7">
+     <location unit="M">
+       <x>  0.6 </x>
+       <y>  0.5 </y>
+       <z> -2.0 </z>
+     </location>
+     <priority>2</priority>
+     <capacity unit="KG"> 1200 </capacity>
+     <contents unit="KG"> 1200 </contents>
+  </tank>
+  <!--8: External Right Wing Tank-->
+  <tank type="FUEL" number="8">
+     <location unit="M">
+       <x>  0.6 </x>
+       <y>  3.0 </y>
+       <z> -1.4 </z>
+     </location>
+     <priority>1</priority>
+     <capacity unit="KG"> 1200 </capacity>
+     <contents unit="KG"> 1200 </contents>
+  </tank>
+  </propulsion>
+
     <system file="jsb-misc"/>
+    <system file="jsb-electric"/>
     <flight_control file="Systems/jsb-controls"/>
     <aerodynamics file="Systems/jsb-aerodynamics.xml"/>
 

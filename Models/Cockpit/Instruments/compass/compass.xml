@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>compass.ac</path>
+	<animation>
+		<type>rotate</type>
+		<object-name>card</object-name>
+		<property>instrumentation/magnetic-compass/indicated-heading-deg</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>knob</type>
+		<object-name>knob</object-name>
+		<factor>10</factor>
+		<property>instrumentation/magnetic-compass/offset</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0.017</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/magnetic-compass/offset</property>
+				<factor>0.1</factor>
+				<min>-30.0</min>
+				<max>30.0</max>
+				<wrap>false</wrap>
+			</binding>
+		</action>
+	</animation>
+</PropertyList>

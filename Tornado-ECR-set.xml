@@ -13,6 +13,9 @@
 			<cockpit type="int">2</cockpit>
 			<model type="int">5</model>
 		</rating>
+		<startup>
+			<splash-texture>Aircraft/Tornado/splash_ecr.png</splash-texture>
+		</startup>
 		<model>
 			<path>Aircraft/Tornado/Models/Tornado-IDS.xml</path>
 		</model>
@@ -33,25 +36,28 @@
 		<libraries>
 			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
 			<file>Aircraft/Tornado/Nasal/librariesECR.nas</file>
-			<file>Aircraft/Tornado/Nasal/electrical.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_sbs.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_fd.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_base.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/sbs.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/dir.nas</file>
 		</libraries>
+		<hud>
+			<file>Aircraft/Tornado/Nasal/hud/hud_math.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_sbs.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_empty.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_base.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_fd.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_ccip.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_gun.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_ecr.nas</file>
+		</hud>
 		<efis>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/rpmd/moving-map.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/maps/loader.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/Framework.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/plan.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/nav.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/fa.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/eqm.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/empty.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/overlay.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/TVTAB_IDS.nas</file>
+			<file>Aircraft/Tornado/Nasal/moving-map.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/maps/loader.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/Framework.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/plan.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/nav.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/fa.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/eqm.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/empty.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/overlay.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/TVTAB_IDS.nas</file>
 		</efis>
 	</nasal>
 </PropertyList>

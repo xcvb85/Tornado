@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<sim include="Systems/views.xml">
+		<expected-aircraft-dir-name>Tornado</expected-aircraft-dir-name>
 		<flight-model>jsb</flight-model>
 		<aero>Tornado</aero>
 		<menubar include="gui/menubar.xml"/>
@@ -43,6 +44,12 @@
 	</input>
 	<fdm>
 		<jsbsim>
+			<inertia>
+				<tank-wing-left-fitted alias="/tornado/tankWL1200" />
+				<tank-centre-left-fitted alias="/tornado/tankCL1200" />
+				<tank-centre-right-fitted alias="/tornado/tankCR1200" />
+				<tank-wing-right-fitted alias="/tornado/tankWR1200" />
+			</inertia>
 			<systems>
 				<hook>
 					<tailhook-cmd-norm type="bool">false</tailhook-cmd-norm>
@@ -51,9 +58,6 @@
 					<flight-system-psi type="float">0</flight-system-psi>
 					<combined-system-psi type="float">0</combined-system-psi>
 				</hydraulics>
-				<electrics>
-					<ac-right-main-bus type="float">0</ac-right-main-bus>
-				</electrics>
 			</systems>
 			<fcs>
 				<wing-sweep-cmd type="double">0</wing-sweep-cmd>
@@ -62,6 +66,48 @@
 		</jsbsim>
 	</fdm>
 	<payload include="Systems/payload.xml"/>
+	<controls>
+		<ejected>0</ejected>
+		<gear>
+			<brake-parking>1</brake-parking>
+		</gear>
+	</controls>
+	<consumables>
+		<fuel>
+			<tank n="0"><name>Front Fuselage Tank</name></tank>
+			<tank n="1"><name>Left Wing Tank</name></tank>
+			<tank n="2"><name>Center Wing Tank</name></tank>
+			<tank n="3"><name>Right Wing Tank</name></tank>
+			<tank n="4"><name>Rear Fuselage Tank</name></tank>
+		</fuel>
+	</consumables>
+	<instrumentation>
+		<marker-beacon>
+			<serviceable type="bool">false</serviceable>
+		</marker-beacon>
+		<radar-altimeter>
+			<serviceable type="bool">true</serviceable>
+		</radar-altimeter>
+		<mk-viii n="0">
+			<serviceable type="bool">true</serviceable>
+			<configuration-module>
+				<category-1 type="int">255</category-1>
+				<category-3 type="int">2</category-3>
+				<category-4 type="int">7</category-4>
+				<category-5 type="int">0</category-5>
+				<category-6 type="int">1</category-6>
+				<category-7 type="int">0</category-7>
+				<category-8 type="int">2</category-8>
+				<category-9 type="int">0</category-9> 
+				<category-10 type="int">6</category-10>
+				<category-13 type="int">7</category-13>
+				<category-14 type="int">0</category-14>
+			</configuration-module>
+			<voice>
+				<file-prefix>Aircraft/Tornado/Sounds/misc/</file-prefix>
+			</voice>
+		</mk-viii>
+	</instrumentation>
 	<nasal>
 		<vector>
 			<file>Aircraft/Tornado/Nasal/weapons/vector.nas</file>
@@ -74,13 +120,17 @@
 			<file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
 		</radardist>
 		<rcs>
-			<file>Aircraft/Tornado/Nasal/rcs.nas</file>
+			<file>Aircraft/Tornado/Nasal/radar/rcs.nas</file>
+			<file>Aircraft/Tornado/Nasal/radar/rcs_mand.nas</file>
 		</rcs>
 		<radar_system>
+			<file>Aircraft/Tornado/Nasal/radar/radar-system-database.nas</file>
 			<file>Aircraft/Tornado/Nasal/radar/radar-system.nas</file>
 			<file>Aircraft/Tornado/Nasal/radar/rwr-only.nas</file>
-			<file>Aircraft/Tornado/Nasal/radar/rwr.nas</file>
 		</radar_system>
+		<rwr>
+			<file>Aircraft/Tornado/Nasal/radar/rwr.nas</file>
+		</rwr>
 		<damage>
 			<file>Aircraft/Tornado/Nasal/weapons/damage.nas</file>
 		</damage>

@@ -5,6 +5,53 @@
 		<inherits-from>Aircraft/Tornado/Models/Effects/displays/tvtab1</inherits-from>
 		<object-name>TVTAB1.screen</object-name>
 	</effect>
+	<animation>
+		<object-name>TAB1ON</object-name>
+		<type>material</type>
+		<condition>
+			<property>fdm/jsbsim/electric/output/tvtab1</property>
+		</condition>
+		<emission>
+			<red>1.0</red>
+			<green>1.0</green>
+			<blue>1.0</blue>
+		</emission>
+	</animation>
+	<animation>
+		<object-name>TAB1SK0</object-name>
+		<object-name>TAB1SK1</object-name>
+		<object-name>TAB1SK2</object-name>
+		<object-name>TAB1SK3</object-name>
+		<object-name>TAB1SK4</object-name>
+		<object-name>TAB1SK5</object-name>
+		<object-name>TAB1SK6</object-name>
+		<object-name>TAB1SK7</object-name>
+		<object-name>TAB1SK8</object-name>
+		<object-name>TAB1SK9</object-name>
+		<object-name>TAB1PLN</object-name>
+		<object-name>TAB1NAV</object-name>
+		<object-name>TAB1F</object-name>
+		<object-name>TAB1CLR</object-name>
+		<object-name>TAB1AK</object-name>
+		<object-name>TAB1LW</object-name>
+		<object-name>TAB1VAS</object-name>
+		<object-name>TAB1RDR</object-name>
+		<object-name>TAB1FLR</object-name>
+		<object-name>TAB109</object-name>
+		<object-name>TAB1ENTER</object-name>
+		<type>material</type>
+		<condition>
+			<and>
+				<property>fdm/jsbsim/electric/output/tvtab1</property>
+				<property>fdm/jsbsim/electric/output/cockpit-lights</property>
+			</and>
+		</condition>
+		<emission>
+			<red>0.0</red>
+			<green>0.8</green>
+			<blue>0.7</blue>
+		</emission>
+	</animation>
 	<!--#########  Upper Buttons ########## -->
 	<animation>
 		<type>translate</type>
@@ -554,7 +601,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>TAB1ON</object-name>
-		<property>instrumentation/tvtab1/Connected</property>
+		<property>fdm/jsbsim/electric/switches/tvtab1</property>
 		<factor>0.0016</factor>
 		<axis>
 			<x>-1</x>
@@ -571,21 +618,9 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>instrumentation/tvtab1/Connected</property>
+				<property>fdm/jsbsim/electric/switches/tvtab1</property>
 			</binding>
 		</action>
-	</animation>
-	<animation>
-		<object-name>TAB1ON</object-name>
-		<type>material</type>
-		<condition>
-			<property>systems/electrical/outputs/tvtab1</property>
-		</condition>
-		<emission>
-			<red>1.0</red>
-			<green>1.0</green>
-			<blue>1.0</blue>
-		</emission>
 	</animation>
 	<animation>
 		<type>translate</type>

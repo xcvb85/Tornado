@@ -8,6 +8,14 @@
 			<property>controls/flight/speedbrake</property>
 		</binding>
 	</key>
+	<key n="22">
+		<name>Ctrl-v</name>
+		<desc>Select pilot's view (view 0) or toggle between pilot's and NAV's view</desc>
+		<binding>
+			<command>nasal</command>
+			<script>libraries.toggle_cockpit_views();</script>
+		</binding>
+	</key>
 	<key n="60">
 		<name>&lt;</name>
 		<desc>Decrease Sweep</desc>
@@ -38,7 +46,7 @@
 		<desc>Cockpit Light</desc>
 		<binding>
 			<command>property-toggle</command>
-			<property>instrumentation/cockpit_lights/Connected</property>
+			<property>fdm/jsbsim/electric/switches/cockpit-lights</property>
 		</binding>
 	</key>
 	<key n="100">
@@ -71,7 +79,7 @@
 		<desc>Landing Light</desc>
 		<binding>
 			<command>property-toggle</command>
-			<property>instrumentation/landing_lights/Connected</property>
+			<property>fdm/jsbsim/electric/switches/landing-lights</property>
 		</binding>
 	</key>
 	<key n="109">
@@ -107,14 +115,6 @@
 		<binding>
 			<command>nasal</command>
 			<script>pylons.fcs.cycleLoadedWeapon();</script>
-		</binding>
-	</key>
-	<key n="127">
-		<name>Delete</name>
-		<desc>Toggle Reversers</desc>
-		<binding>
-			<command>nasal</command>
-			<script>libraries.togglereverser()</script>
 		</binding>
 	</key>
 </PropertyList>

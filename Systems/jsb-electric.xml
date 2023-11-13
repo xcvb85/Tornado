@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<system name="electric">
+    <property value="0">electric/switches/battery</property>
+    <property value="0">electric/switches/dc-gen</property>
+    <property value="0">electric/switches/ac-gen</property>
+    
+    <property value="0">electric/switches/cockpit-lights</property>
+    <property value="0">electric/switches/instrument-lights</property>
+    <property value="0">electric/switches/landing-lights</property>
+
+    <property value="0">electric/switches/ehdd</property>
+    <property value="0">electric/switches/crpmd</property>
+    <property value="0">electric/switches/tvtab1</property>
+    <property value="0">electric/switches/tvtab2</property>
+
+    <channel name="sources" execrate="8">
+        <fcs_function name="electric/sources/battery">
+            <function>
+                <product>
+                    <property>electric/switches/battery</property>
+                    <value>24</value>
+                </product>
+            </function>
+            <output>electric/sources/battery</output>
+        </fcs_function>
+        <fcs_function name="electric/sources/dc-gen1">
+            <function>
+                <product>
+                    <property>electric/switches/dc-gen</property>
+                    <table>
+                        <independentVar lookup="row">propulsion/engine[0]/n1</independentVar>
+                        <tableData>
+                            0.0	 0.0
+                            30.0	24.0
+                            100.0   28.0
+                        </tableData>
+                    </table>
+                </product>
+            </function>
+            <output>electric/sources/dc-gen1</output>
+        </fcs_function>
+        <fcs_function name="electric/sources/dc-gen2">
+            <function>
+                <product>
+                    <property>electric/switches/dc-gen</property>
+                    <table>
+                        <independentVar lookup="row">propulsion/engine[1]/n1</independentVar>
+                        <tableData>
+                            0.0	 0.0
+                            30.0	24.0
+                            100.0   28.0
+                        </tableData>
+                    </table>
+                </product>
+            </function>
+            <output>electric/sources/dc-gen2</output>
+        </fcs_function>
+        <fcs_function name="electric/sources/ac-gen1">
+            <function>
+                <product>
+                    <property>electric/switches/ac-gen</property>
+                    <table>
+                        <independentVar lookup="row">propulsion/engine[0]/n1</independentVar>
+                        <tableData>
+                            0.0	 0.0
+                            30.0	112.0
+                            100.0   116.0
+                        </tableData>
+                    </table>
+                </product>
+            </function>
+            <output>electric/sources/ac-gen1</output>
+        </fcs_function>
+        <fcs_function name="electric/sources/ac-gen2">
+            <function>
+                <product>
+                    <property>electric/switches/ac-gen</property>
+                    <table>
+                        <independentVar lookup="row">propulsion/engine[1]/n1</independentVar>
+                        <tableData>
+                            0.0	 0.0
+                            30.0	112.0
+                            100.0   116.0
+                        </tableData>
+                    </table>
+                </product>
+            </function>
+            <output>electric/sources/ac-gen2</output>
+        </fcs_function>
+    </channel>
+    
+    <channel name="buses" execrate="8">
+        <fcs_function name="electric/buses/bus-dc">
+            <function>
+                <max>
+                    <property>electric/sources/battery</property>
+                    <property>electric/sources/dc-gen1</property>
+                    <property>electric/sources/dc-gen2</property>
+                </max>
+            </function>
+            <output>electric/buses/bus-dc</output>
+        </fcs_function>
+        <fcs_function name="electric/buses/bus-ac">
+            <function>
+                <max>
+                    <property>electric/sources/ac-gen1</property>
+                    <property>electric/sources/ac-gen2</property>
+                </max>
+            </function>
+            <output>electric/buses/bus-ac</output>
+        </fcs_function>
+    </channel>
+
+    <channel name="consumers" execrate="8">
+        <switch name="electric/output/cockpit-lights">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                electric/buses/bus-dc > 18
+                electric/switches/cockpit-lights == 1
+            </test>
+        </switch>
+        <switch name="electric/output/instrument-lights">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                electric/buses/bus-dc > 18
+                electric/switches/instrument-lights == 1
+            </test>
+        </switch>
+        <switch name="electric/output/landing-lights">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                electric/buses/bus-ac > 100
+                electric/switches/landing-lights == 1
+            </test>
+        </switch>
+        <switch name="electric/output/ehdd">
+            <default value="0"/>
+            <test logic="AND" value="electric/buses/bus-ac">
+                electric/switches/ehdd > 0
+            </test>
+        </switch>
+        <switch name="electric/output/crpmd">
+            <default value="0"/>
+            <test logic="AND" value="electric/buses/bus-ac">
+                electric/switches/crpmd == 1
+            </test>
+        </switch>
+        <switch name="electric/output/tvtab1">
+            <default value="0"/>
+            <test logic="AND" value="electric/buses/bus-ac">
+                electric/switches/tvtab1 == 1
+            </test>
+        </switch>
+        <switch name="electric/output/tvtab2">
+            <default value="0"/>
+            <test logic="AND" value="electric/buses/bus-ac">
+                electric/switches/tvtab2 == 1
+            </test>
+        </switch>
+    </channel>
+</system>

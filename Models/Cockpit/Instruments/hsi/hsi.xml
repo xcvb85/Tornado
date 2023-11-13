@@ -9,6 +9,7 @@
 	</effect>
 	<effect>
 		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/lm2</inherits-from>
+		<object-name>cover</object-name>
 		<object-name>compass</object-name>
 		<object-name>inner</object-name>
 		<object-name>from</object-name>
@@ -24,7 +25,7 @@
 		<object-name>flag</object-name>
 		<condition>
 			<less-than>
-				<property>systems/electrical/ElBus/Voltage</property>
+				<property>fdm/jsbsim/electric/buses/bus-ac</property><!--the needles are driven by 400Hz synchronous motors-->
 				<value>1</value>
 			</less-than>
 		</condition>

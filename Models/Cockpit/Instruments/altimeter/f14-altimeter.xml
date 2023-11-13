@@ -124,9 +124,11 @@ a synchro overrides the barometric mechanism and positions the pointer to true a
     <animation>
         <type>textranslate</type>
         <object-name>drum-inhg-1</object-name>
-        <property>instrumentation/altimeter/setting-inhg</property>
-        <factor>10</factor>
-        <offset>-0.01</offset>
+        <property>instrumentation/altimeter/setting-hpa</property>
+        <factor>0.1</factor>
+        <offset>-1</offset>
+        <step>1</step>
+        <scroll>1</scroll>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -137,11 +139,11 @@ a synchro overrides the barometric mechanism and positions the pointer to true a
     <animation>
         <type>textranslate</type>
         <object-name>drum-inhg-2</object-name>
-        <property>instrumentation/altimeter/setting-inhg</property>
-        <factor>1</factor>
-        <offset>-0.1</offset>
-        <step>0.1</step>
-        <scroll>0.01</scroll>
+        <property>instrumentation/altimeter/setting-hpa</property>
+        <factor>0.01</factor>
+        <offset>-10</offset>
+        <step>10</step>
+        <scroll>1</scroll>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -152,11 +154,11 @@ a synchro overrides the barometric mechanism and positions the pointer to true a
     <animation>
         <type>textranslate</type>
         <object-name>drum-inhg-3</object-name>
-        <property>instrumentation/altimeter/setting-inhg</property>
-        <factor>0.1</factor>
-        <offset>-1</offset>
-        <step>1</step>
-        <scroll>0.01</scroll>
+        <property>instrumentation/altimeter/setting-hpa</property>
+        <factor>0.001</factor>
+        <offset>-100</offset>
+        <step>100</step>
+        <scroll>1</scroll>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -167,11 +169,11 @@ a synchro overrides the barometric mechanism and positions the pointer to true a
     <animation>
         <type>textranslate</type>
         <object-name>drum-inhg-4</object-name>
-        <property>instrumentation/altimeter/setting-inhg</property>
-        <factor>0.01</factor>
-        <offset>-10</offset>
-        <step>10</step>
-        <scroll>0.01</scroll>
+        <property>instrumentation/altimeter/setting-hpa</property>
+        <factor>0.0001</factor>
+        <offset>-1000</offset>
+        <step>1000</step>
+        <scroll>1</scroll>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -236,85 +238,4 @@ a synchro overrides the barometric mechanism and positions the pointer to true a
             </binding>
         </action>
     </animation>
-    
-
-    <!-- lighting -->
-    <animation>
-        <object-name>mount</object-name>
-        <type>material</type>
-        <condition>
-            <greater-than>
-                <property>fdm/jsbsim/systems/electrics/ac-essential-bus1</property>
-                <value>0</value>
-            </greater-than>
-            <not>
-                <property>/sim/rendering/rembrandt/enabled</property>
-            </not>
-        </condition>
-        <emission>
-            <factor-prop>controls/lighting/dome-norm</factor-prop>
-            <red>  1.000</red>
-            <green>0.576</green>
-            <blue> 0.161</blue>
-            <red-prop>controls/lighting/panel-red</red-prop>
-            <green-prop>controls/lighting/panel-green</green-prop>
-            <blue-prop>controls/lighting/panel-blue</blue-prop>
-
-        </emission>
-    </animation>
-
-    <animation>
-        <object-name>instrument</object-name>
-        <type>material</type>
-        <condition>
-            <greater-than>
-                <property>fdm/jsbsim/systems/electrics/ac-essential-bus1</property>
-                <value>0</value>
-            </greater-than>
-            <greater-than-equals>
-                <property>controls/lighting/instruments-norm</property>
-                <property>controls/lighting/dome-norm</property>
-            </greater-than-equals>
-            <not>
-                <property>/sim/rendering/rembrandt/enabled</property>
-            </not>
-        </condition>
-        <emission>
-            <factor-prop>controls/lighting/instruments-norm</factor-prop>
-            <red>  1.1000</red>
-            <green>0.576</green>
-            <blue> 0.161</blue>
-            <red-prop>controls/lighting/instrument-red</red-prop>
-            <green-prop>controls/lighting/instrument-green</green-prop>
-            <blue-prop>controls/lighting/instrument-blue</blue-prop>
-
-        </emission>
-    </animation>
-    <animation>
-        <object-name>instrument</object-name>
-        <type>material</type>
-        <condition>
-            <greater-than>
-                <property>fdm/jsbsim/systems/electrics/ac-essential-bus1</property>
-                <value>0</value>
-            </greater-than>
-            <greater-than>
-                <property>controls/lighting/dome-norm</property>
-                <property>controls/lighting/instruments-norm</property>
-            </greater-than>
-            <not>
-                <property>/sim/rendering/rembrandt/enabled</property>
-            </not>
-        </condition>
-        <emission>
-            <factor-prop>controls/lighting/dome-norm</factor-prop>
-            <red>  1.1000</red>
-            <green>0.576</green>
-            <blue> 0.161</blue>
-            <red-prop>controls/lighting/instrument-red</red-prop>
-            <green-prop>controls/lighting/instrument-green</green-prop>
-            <blue-prop>controls/lighting/instrument-blue</blue-prop>
-        </emission>
-    </animation>
-    
 </PropertyList>

@@ -23,16 +23,24 @@ var cannon = stations.SubModelWeapon.new("27mm Cannon", 0.254, 510, [5], [4], pr
 cannon.typeShort = "GUN";
 cannon.brevity = "Guns guns";
 
-var fuelTank1 = stations.FuelTank.new("Droptank", "droptank", 4, 200, "sim/model/Tornado/stores");
-var fuelTank2 = stations.FuelTank.new("Droptank", "droptank", 3, 200, "sim/model/Tornado/stores");
-var fuelTank3 = stations.FuelTank.new("Droptank", "droptank", 5, 200, "sim/model/Tornado/stores");
+var fuelTankWL = stations.FuelTank.new("Left 1200l Wing-Tank", "TK1200", 5, 317, "tornado/tankWL1200");
+var fuelTankCL = stations.FuelTank.new("Left 1200l Center-Tank", "TK1200", 6, 317, "tornado/tankCL1200");
+var fuelTankCR = stations.FuelTank.new("Right 1200l Center-Tank", "TK1200", 7, 317, "tornado/tankCR1200");
+var fuelTankWR = stations.FuelTank.new("Right 1200l Wing-Tank", "TK1200", 8, 317, "tornado/tankWR1200");
+
+fuelTankWL.del();
+fuelTankCL.del();
+fuelTankCR.del();
+fuelTankWR.del();
 
 var pylonSets = {
     empty: {name: "Empty", content: [], fireOrder: [], launcherDragArea: 0.0, launcherMass: 0, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 1},
 
-    fueltank1: {name: "Droptank", content: [fuelTank1], fireOrder: [0], launcherDragArea: 0.35, launcherMass: 531, launcherJettisonable: 1, showLongTypeInsteadOfCount: 1, category: 2},
-    fueltank2: {name: "Droptank", content: [fuelTank2], fireOrder: [0], launcherDragArea: 0.35, launcherMass: 531, launcherJettisonable: 1, showLongTypeInsteadOfCount: 1, category: 2},
-    fueltank3: {name: "Droptank", content: [fuelTank3], fireOrder: [0], launcherDragArea: 0.35, launcherMass: 531, launcherJettisonable: 1, showLongTypeInsteadOfCount: 1, category: 2},
+    fuel12WL: {name: fuelTankWL.type, content: [fuelTankWL], fireOrder: [0], launcherDragArea: 0.35, launcherMass: 531, launcherJettisonable: 1, showLongTypeInsteadOfCount: 1, category: 2},
+    fuel12CL: {name: fuelTankCL.type, content: [fuelTankCL], fireOrder: [0], launcherDragArea: 0.35, launcherMass: 531, launcherJettisonable: 1, showLongTypeInsteadOfCount: 1, category: 2},
+    fuel12CR: {name: fuelTankCR.type, content: [fuelTankCR], fireOrder: [0], launcherDragArea: 0.35, launcherMass: 531, launcherJettisonable: 1, showLongTypeInsteadOfCount: 1, category: 2},
+    fuel12WR: {name: fuelTankWR.type, content: [fuelTankWR], fireOrder: [0], launcherDragArea: 0.35, launcherMass: 531, launcherJettisonable: 1, showLongTypeInsteadOfCount: 1, category: 2},
+
     mm27:  {name: "27mm Cannon", content: [cannon], fireOrder: [0], launcherDragArea: 0.0, launcherMass: 0, launcherJettisonable: 0, showLongTypeInsteadOfCount: 1, category: 1},
     boz10x: {name: "BOZ-101/102/107", content: [], fireOrder: [], launcherDragArea: 0.0, launcherMass: 100, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 1},
 
@@ -65,11 +73,11 @@ if(variant==1) {
     # IDS
     pylon1set = [pylonSets.empty, pylonSets.boz10x];
     pylon2set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
-    pylon3set = [pylonSets.empty];#, pylonSets.fueltank1];
-    pylon4set = [pylonSets.empty, pylonSets.m82_2, pylonSets.m82air_2, pylonSets.m83, pylonSets.m84];
-    pylon5set = [pylonSets.empty, pylonSets.b617];#, pylonSets.fueltank2];
-    pylon6set = [pylonSets.empty, pylonSets.m82_2, pylonSets.m82air_2, pylonSets.m83, pylonSets.m84];
-    pylon7set = [pylonSets.empty];#, pylonSets.fueltank3];
+    pylon3set = [pylonSets.empty, pylonSets.fuel12WL];
+    pylon4set = [pylonSets.empty, pylonSets.m82_2, pylonSets.m82air_2, pylonSets.m83, pylonSets.m84]; #pylonSets.fuel12CL
+    pylon5set = [pylonSets.empty, pylonSets.b617];
+    pylon6set = [pylonSets.empty, pylonSets.m82_2, pylonSets.m82air_2, pylonSets.m83, pylonSets.m84]; #pylonSets.fuel12CR
+    pylon7set = [pylonSets.empty, pylonSets.fuel12WR];
     pylon8set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
     pylon9set = [pylonSets.empty, pylonSets.boz10x];
 }
@@ -77,11 +85,11 @@ else if(variant==2) {
     # ADV
     pylon1set = [pylonSets.empty, pylonSets.boz10x];
     pylon2set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
-    pylon3set = [pylonSets.empty];#, pylonSets.fueltank1];
+    pylon3set = [pylonSets.empty, pylonSets.fuel12WL];
     pylon4set = [pylonSets.empty, pylonSets.rb71_2, pylonSets.aim120_2];
-    pylon5set = [pylonSets.empty];#, pylonSets.fueltank2];
+    pylon5set = [pylonSets.empty];
     pylon6set = [pylonSets.empty, pylonSets.rb71_2, pylonSets.aim120_2];
-    pylon7set = [pylonSets.empty];#, pylonSets.fueltank3];
+    pylon7set = [pylonSets.empty, pylonSets.fuel12WR];
     pylon8set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
     pylon9set = [pylonSets.empty, pylonSets.boz10x];
 }
@@ -91,7 +99,7 @@ else {
     pylon2set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
     pylon3set = [pylonSets.empty, pylonSets.a88];
     pylon4set = [pylonSets.empty, pylonSets.a88];
-    pylon5set = [pylonSets.empty];#, pylonSets.fueltank2];
+    pylon5set = [pylonSets.empty];
     pylon6set = [pylonSets.empty, pylonSets.a88];
     pylon7set = [pylonSets.empty, pylonSets.a88];
     pylon8set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
@@ -164,11 +172,11 @@ var refill_weapons = func {
             # IDS
             pylon1.loadSet(pylonSets.boz10x);
             pylon2.loadSet(pylonSets.aim9l);
-            pylon3.loadSet(pylonSets.empty);
+            pylon3.loadSet(pylonSets.fuel12WL);
             pylon4.loadSet(pylonSets.m82air_2);
             pylon5.loadSet(pylonSets.empty);
             pylon6.loadSet(pylonSets.m82air_2);
-            pylon7.loadSet(pylonSets.empty);
+            pylon7.loadSet(pylonSets.fuel12WR);
             pylon8.loadSet(pylonSets.aim9l);
             pylon9.loadSet(pylonSets.boz10x);
         }
