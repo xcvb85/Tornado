@@ -5,8 +5,4 @@
 		<name>IDS Model</name>
 		<path>Aircraft/Tornado/Models/Tornado-IDS.xml</path>
 	</model>
-	<model>
-		<name>Cockpit-ECR</name>
-		<path>Aircraft/Tornado/Models/Cockpit/Cockpit-ECR.xml</path>
-	</model>
 </PropertyList>

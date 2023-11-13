@@ -18,6 +18,10 @@
 		<model>
 			<path>Aircraft/Tornado/Models/Tornado-IDS.xml</path>
 		</model>
+		<model>
+			<name>Cockpit-IDS</name>
+			<path>Aircraft/Tornado/Models/Cockpit/Cockpit-IDS.xml</path>
+		</model>
 		<flir type="int">0</flir>
 		<aircraft-type type="int">0</aircraft-type>
 	</sim>
