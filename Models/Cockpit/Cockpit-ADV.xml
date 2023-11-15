@@ -87,16 +87,6 @@
 		</axis>
 	</animation>
 	<model>
-		<name>Pilots Weapon Control Panel</name>
-		<path>Aircraft/Tornado/Models/Cockpit/Instruments/pwcp/pwcp.ac</path>
-		<offsets>
-			<x-m>-4.855</x-m>
-			<y-m>-0.233</y-m>
-			<z-m>-0.443</z-m>
-			<pitch-deg>-10.0</pitch-deg>
-		</offsets>
-	</model>
-	<model>
 		<name>Electronic Head Down Display</name>
 		<path>Aircraft/Tornado/Models/Cockpit/Instruments/ehdd/ehdd.xml</path>
 		<offsets>

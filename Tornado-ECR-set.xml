@@ -37,6 +37,9 @@
 			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
 			<file>Aircraft/Tornado/Nasal/librariesECR.nas</file>
 		</libraries>
+		<tfr>
+			<file>Aircraft/Tornado/Nasal/tfr.nas</file>
+		</tfr>
 		<hud>
 			<file>Aircraft/Tornado/Nasal/hud/hud_math.nas</file>
 			<file>Aircraft/Tornado/Nasal/hud/hud_sbs.nas</file>

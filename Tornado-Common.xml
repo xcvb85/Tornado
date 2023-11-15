@@ -82,6 +82,10 @@
 		</fuel>
 	</consumables>
 	<instrumentation>
+		<parameter n="0">0</parameter>
+		<parameter n="1">0.6</parameter>
+		<parameter n="2">0</parameter>
+		<parameter n="3">0.1</parameter>
 		<marker-beacon>
 			<serviceable type="bool">false</serviceable>
 		</marker-beacon>
