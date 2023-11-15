@@ -15,9 +15,6 @@
 		<display-enabled type="int">
 			<use>fdm/jsbsim/electric/output/ehdd</use>
 		</display-enabled>
-		<heading type="double">
-			<use>orientation/heading-magnetic-deg</use>
-		</heading>
 	</parameters>
 
 	<technique n="5">
@@ -79,11 +76,6 @@
 				<name>display_enabled</name>
 				<type>int</type>
 				<value><use>display-enabled</use></value>
-			</uniform>
-			<uniform>
-				<name>rotation_deg</name>
-				<type>float</type>
-				<value><use>heading</use></value>
 			</uniform>
 		</pass>
 	</technique>

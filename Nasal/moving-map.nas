@@ -525,7 +525,7 @@ var MM = {
 		lastDay = me.day;
 		}
 
-		#me.mapRot.setRotation(-me.input.heading.getValue()*D2R);
+		me.mapRot.setRotation(-me.input.heading.getValue()*D2R);
 		#me.mapCenter.setRotation(-me.input.heading.getValue()*D2R);#switched to direct rotation to try and solve issue with approach line not updating fast.
 		me.rootCenter.setRotation(me.input.heading.getValue()*D2R);
 		#me.mapCenter.update();
