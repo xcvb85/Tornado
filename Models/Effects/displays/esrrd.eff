@@ -16,16 +16,16 @@
 			<use>fdm/jsbsim/electric/output/ehdd</use>
 		</display-enabled>
 		<parameter_a type="double">
-			<use>instrumentation/aparameter[0]</use>
+			<use>instrumentation/parameter[0]</use>
 		</parameter_a>
 		<parameter_b type="double">
-			<use>instrumentation/aparameter[1]</use>
+			<use>instrumentation/parameter[1]</use>
 		</parameter_b>
 		<parameter_c type="double">
-			<use>instrumentation/aparameter[2]</use>
+			<use>instrumentation/parameter[2]</use>
 		</parameter_c>
 		<parameter_d type="double">
-			<use>instrumentation/aparameter[3]</use>
+			<use>instrumentation/parameter[3]</use>
 		</parameter_d>
 	</parameters>
 
