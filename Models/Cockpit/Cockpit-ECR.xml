@@ -2,7 +2,7 @@
 <PropertyList>
 	<model>
 		<name>Navigator Panel</name>
-		<path>Aircraft/Tornado/Models/Cockpit/navigator_adv.xml</path>
+		<path>Aircraft/Tornado/Models/Cockpit/navigator_ids.xml</path>
 	</model>
 	<model>
 		<name>Cockpit-Common</name>
@@ -10,7 +10,7 @@
 	</model>
 	<model>
 		<name>FrontH</name>
-		<path>Aircraft/Tornado/Models/Cockpit/FrontUp-ADV.xml</path>
+		<path>Aircraft/Tornado/Models/Cockpit/FrontUp-IDS.xml</path>
 		<offsets>
 			<x-m>-4.860</x-m>
 			<y-m> 0.000</y-m>
@@ -20,12 +20,11 @@
 	</model>
 	<model>
 		<name>Joystick</name>
-		<path>Aircraft/Tornado/Models/Cockpit/Parts/joystick_adv.ac</path>
+		<path>Aircraft/Tornado/Models/Cockpit/Parts/joystick_ids.ac</path>
 		<offsets>
 			<x-m>-4.550</x-m>
 			<y-m>0.000</y-m>
 			<z-m>-1.100</z-m>
-			<heading-deg>30.0</heading-deg>
 		</offsets>
 	</model>
 	<animation>
@@ -87,13 +86,13 @@
 		</axis>
 	</animation>
 	<model>
-		<name>Electronic Head Down Display</name>
-		<path>Aircraft/Tornado/Models/Cockpit/Instruments/ehdd/ehdd.xml</path>
+		<name>CEDAM</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Instruments/cedam/cedam.xml</path>
 		<offsets>
-			<x-m>-4.840</x-m>
+			<x-m>-4.820</x-m>
 			<y-m>0.000</y-m>
-			<z-m>-0.580</z-m>
-			<pitch-deg>-24.0</pitch-deg>
+			<z-m>-0.570</z-m>
+			<pitch-deg>-20.0</pitch-deg>
 		</offsets>
 	</model>
 </PropertyList>
