@@ -18,7 +18,7 @@ var doMagicStartup = func {
 		setprop("controls/engines/engine[1]/cutoff", "false");
 		setprop("fdm/jsbsim/electric/switches/dc-gen", 1);
 		setprop("fdm/jsbsim/electric/switches/ac-gen", 1);
-		setprop("instrumentation/hud/swMode", 1);
+		setprop("instrumentation/hud/swMode", 2);
 		setprop("fdm/jsbsim/electric/switches/landing-lights", 1);
 	}, 5);
 }
