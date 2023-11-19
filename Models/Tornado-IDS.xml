@@ -222,7 +222,7 @@
 		<expression>
 			<sum>
 				<product>
-					<property>surface-positions/right-aileron-pos-norm</property>
+					<property>surface-positions/left-aileron-pos-norm</property>
 					<value>6</value>
 				</product>
 				<product>
@@ -333,7 +333,7 @@
 		<property>surface-positions/right-aileron-pos-norm</property>
 		<min-deg>-50</min-deg>
 		<max-deg>0</max-deg>
-		<factor>50</factor>
+		<factor>-50</factor>
 		<center>
 			<x-m>1.35</x-m>
 			<y-m>2.45384</y-m>
@@ -472,7 +472,7 @@
 		<property>surface-positions/left-aileron-pos-norm</property>
 		<min-deg>-50</min-deg>
 		<max-deg>0</max-deg>
-		<factor>-50</factor>
+		<factor>50</factor>
 		<center>
 			<x-m>1.35</x-m>
 			<y-m>-2.45384</y-m>

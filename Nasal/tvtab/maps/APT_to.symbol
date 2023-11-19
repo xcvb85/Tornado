@@ -6,8 +6,6 @@ var __self__ = caller(0)[0];
 DotSym.makeinstance( name, __self__ );
 
 var element_type = "group"; # we want a group, becomes "me.element"
-var icon_apt = nil;
-var text_apt = nil;
 
 # add the draw routine from airports-nd.draw here
 var init = func {
@@ -22,7 +20,7 @@ var init = func {
 	var text_apt = me.element.createChild("text", name ~ " label")
 		.setDrawMode( canvas.Text.TEXT )
 		.setTranslation(-47,14)
-		.setText(me.model.id[0]+me.model.id[1]+me.model.id[2]+me.model.id[3]-260)
+		.setText(me.model.id[0]+me.model.id[1]+me.model.id[2]+me.model.id[size(me.model.id)-1]-260)
 		.setFont("Helvetica.txf")
 		.setColor(me.layer.style.label_font_color)
 		.setFontSize(28);

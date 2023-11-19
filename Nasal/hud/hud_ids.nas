@@ -19,12 +19,17 @@ var PageEnum = {
 };
 
 var HUD = {
+	Pages: [],
+	vv_dir: [],
+	SelectedWeapon: {},
+
 	new: func(group, instance) {
-		var m = {parents:[HUD], Pages: [], vv_dir: [], SelectedWeapon: {}};
+		var m = {parents:[HUD]};
 		m.Instance = instance;
+		setsize(m.vv_dir, 2);
 		
 		# HUD .ac coords:    upper-left                 lower-right        
-		HudMath.init([-4.732,-0.075,-0.0854], [-4.817,0.080,-0.209], [1024,1024], [0,1.0], [1,0.0], 0);
+		HudMath.init([-4.732,-0.075,-0.0854-0.02], [-4.817,0.080,-0.209-0.02], [240,256], [0,1.0], [1,0.0], 0);
 
 		m.PageSbs = hud_sbs.new(group.createChild('group'), instance);
 		m.GroupHud = group.createChild('group');
@@ -44,7 +49,7 @@ var HUD = {
 		m.Mode = 0;
 		m.ActivatePage();
 		m.Update();
-		m.Timer = maketimer(0.1, m, m.Update);
+		m.Timer = maketimer(0.2, m, m.Update);
 		m.Timer.start();
 		return m;
 	},
@@ -69,12 +74,15 @@ var HUD = {
 			me.GroupHud.show();
 			me.vv_dir = me.PageBase.update();
 			me.NewPage = PageEnum.PAGE_EMPTY;
-			
+
 			if(me.Mode == ModeEnum.MODE_AUTO) {
 				me.SelectedWeapon = pylons.fcs.getSelectedWeapon();
 				
 				if(me.SelectedWeapon != nil) { #and me.input.MasterArm.getValue()
-					if(me.SelectedWeapon.type == "MK-82" or me.SelectedWeapon.type == "MK-82AIR") {
+					if( me.SelectedWeapon.type == "MK-82" or
+						me.SelectedWeapon.type == "MK-82AIR" or
+						me.SelectedWeapon.type == "MK-83" or
+						me.SelectedWeapon.type == "MK-84") {
 						me.NewPage = PageEnum.PAGE_CCIP;
 					}
 					else {
@@ -82,11 +90,11 @@ var HUD = {
 					}
 				}
 				else {
-					me.NewPage = PageEnum.PAGE_FD;
+					#me.NewPage = PageEnum.PAGE_FD;
 				}
 			}
 			else if(me.Mode == ModeEnum.MODE_NAV) {
-				me.NewPage = PageEnum.PAGE_FD;
+				#me.NewPage = PageEnum.PAGE_FD;
 			}
 			
 			if(me.NewPage != me.ActivePage) {
@@ -114,7 +122,7 @@ var hudListener = setlistener("/sim/signals/fdm-initialized", func () {
 	var hudCanvas = canvas.new({
 		"name": "HUD_Screen", 
 		"size": [1024, 1024],
-		"view": [256, 256],
+		"view": [240, 256],
 		"mipmapping": 1
 	});
 	hudCanvas.addPlacement({"node": "HUD_Screen"});
