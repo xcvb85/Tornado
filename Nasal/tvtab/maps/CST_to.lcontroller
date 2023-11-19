@@ -1,0 +1,55 @@
+# See: http://wiki.flightgear.org/MapStructure
+# Class things:
+var name = 'CST_to';
+var parents = [SymbolLayer.Controller];
+var __self__ = caller(0)[0];
+var coastline = [];
+var coords = [];
+var type = 'coastline';
+
+SymbolLayer.Controller.add(name, __self__);
+SymbolLayer.add(name, {
+	parents: [MultiSymbolLayer],
+	type: name, # Symbol type
+	df_controller: __self__, # controller to use by default -- this one
+});
+
+var new = func(layer) {
+	var m = {
+		parents: [__self__],
+		layer: layer,
+		options: layer.options,
+		map: layer.map,
+		listeners: [],
+	};
+	layer.searcher._equals = func(l,r) l.equals(r);
+	m.addVisibilityListener();
+	
+	if(size(coords) == 0) {
+		var points = props.globals.getNode("instrumentation/coastline", 1).getChildren("points");
+		for(var i=0; i < size(points); i+=1) {
+			append(coords, {lat: points[i].getNode("lat").getValue(),
+							lon: points[i].getNode("lon").getValue(),
+							alt: 0});
+		}
+
+		append(coastline, {
+			id: type,
+			type: type,
+			path: coords,
+			equals: func(o) {
+				me.id == o.id
+			}
+		});
+	}
+	return m;
+};
+
+var del = func() {
+	foreach (var l; me.listeners)
+		removelistener(l);
+};
+
+var searchCmd = func {
+	return coastline;
+};

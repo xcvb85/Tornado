@@ -32,7 +32,7 @@ var HUD = {
 		setsize(m.Pages, PageEnum.NUM_PAGES);
 		m.Pages[PageEnum.PAGE_EMPTY] = hud_empty.new(m.GroupHud.createChild('group'), instance);
 		m.Pages[PageEnum.PAGE_FD] = hud_fd.new(m.GroupHud.createChild('group'), instance);
-		m.Pages[PageEnum.PAGE_SENSOR] = hud_ccip.new(m.GroupHud.createChild('group'), instance);
+		m.Pages[PageEnum.PAGE_SENSOR] = hud_sensor.new(m.GroupHud.createChild('group'), instance);
 		m.Pages[PageEnum.PAGE_GUN] = hud_gun.new(m.GroupHud.createChild('group'), instance);
 
 		m.swMode = props.globals.getNode("instrumentation/hud/swMode");

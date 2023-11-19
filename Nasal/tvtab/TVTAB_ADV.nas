@@ -344,7 +344,40 @@ var tvTabBtClick = func(index = 0, input = -1) {
 var tvTab1Knob = func(input = -1) {
 }
 
+var coastlineStorage = func() {
+	# the alternative route is not required for an interceptor that is only used against moving targets
+	# instead, this route is used to show the coastline on the TV-TAB/EHDD (the map display was omitted)
+	# the following coastline represents the UK east coast (home of this variant)
+
+	var node = "instrumentation";
+	var path = getprop("/sim/fg-home")~"/aircraft-data/Tornado-Coastline.xml";
+
+	var tree = {
+		"coastline": {
+			"points": [
+				{"lat": 53.4863, "lon": 0.1734},
+				{"lat": 53.1237, "lon": 0.3821},
+				{"lat": 52.9452, "lon": 0.0676},
+				{"lat": 52.8105, "lon": 0.4280},
+				{"lat": 52.9812, "lon": 0.5161},
+				{"lat": 52.9467, "lon": 1.2612}
+			]
+		}
+	};
+	props.globals.getNode(node).setValues(tree);
+
+	# read data from xml file
+	io.read_properties(path, node~"/coastline");
+
+	# store data
+	setlistener("/sim/signals/save", func () {
+		io.write_properties(path, props.globals.getNode(node~"/coastline"));
+	});
+}
+
 tvTabListener = setlistener("/sim/signals/fdm-initialized", func () {
+
+	coastlineStorage();
 
 	var tvTab1Canvas = canvas.new({
 		"name": "TVTAB1",
