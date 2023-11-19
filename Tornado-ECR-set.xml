@@ -46,7 +46,7 @@
 			<file>Aircraft/Tornado/Nasal/hud/hud_empty.nas</file>
 			<file>Aircraft/Tornado/Nasal/hud/hud_base.nas</file>
 			<file>Aircraft/Tornado/Nasal/hud/hud_fd.nas</file>
-			<file>Aircraft/Tornado/Nasal/hud/hud_ccip.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_sensor.nas</file>
 			<file>Aircraft/Tornado/Nasal/hud/hud_gun.nas</file>
 			<file>Aircraft/Tornado/Nasal/hud/hud_ecr.nas</file>
 		</hud>

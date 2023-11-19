@@ -269,7 +269,7 @@
 				<property>instrumentation/hud/knVertDatum</property>
 				<factor>1</factor>
 				<min>0</min>
-				<max>30</max>
+				<max>100</max>
 				<wrap>false</wrap>
 			</binding>
 		</action>
