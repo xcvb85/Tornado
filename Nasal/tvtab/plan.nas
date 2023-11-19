@@ -3,7 +3,8 @@ var ndlayers = [{name:'APT_to',style:{scale_factor:0.3,label_font_color:[0,1,0],
 		{name:'CUR_to',style:{scale_factor:0.3,color:[0,1,0],line_width:5}},
 		{name:'DME_to',style:{scale_factor:0.3,color_default:[0,1,0],line_width:3}},
 		{name:'WPT_to',style:{scale_factor:0.3,color:[0,1,0]}},
-		{name:'CST_to',style:{scale_factor:0.3,color:[0,1,0],line_width:1}}];
+		{name:'CST_to',style:{scale_factor:0.3,color:[0,1,0],line_width:1}},
+		{name:'RTE',style:{scale_factor:0.3,color:[0,1,0],line_width:1}}];
 
 var lon = props.globals.getNode("position/longitude-deg");
 var lat = props.globals.getNode("position/latitude-deg");
