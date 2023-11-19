@@ -17,7 +17,7 @@ var test = func (echoHeading, echoPitch, echoRoll, bearing, frontRCS) {
 };
 
 var rcs_database = {
-	#REVISION: 2023/06/06
+    #REVISION: 2022/12/11
     "YF-16":                    5,      #higher because earlier blocks had larger RCS
     "F-16CJ":                   2,      #average
     "f16":                      2,      #average
@@ -25,8 +25,6 @@ var rcs_database = {
     "KC135":                    100,    #guess
     "onox-tanker":              100,    #guess
     "A-6E":                     9,      #average
-    "A-6E-model":               9,      #average
-    "ea6-b":                    9,      #average
     "EF2000":                   0.5,
     "brsq":                     1.5,    #average (multiple sources)
     "FA-18C_Hornet":            3.5,    #later Blocks have 1
@@ -77,9 +75,6 @@ var rcs_database = {
     "C130J":                    32,    #average
     "c130k":                    32,    #average
     "kc130":                    32,    #average
-    "C-17":                     21.5,  #average
-    "C-17-GlobemasterIII":      21.5,  #average
-    "C-17_GlobemasterIII":      21.5,  #average
     "XB-70":                    21,    #average
     # Helis:
     "uh60_Blackhawk":           4,      #average
@@ -97,9 +92,9 @@ var rcs_database = {
     #Stealth
     "b2-spirit":                0.0001,  #actual: 0.0001
     "B-2A":                     0.0001,  #actual: 0.0001
-    "F-22-Raptor":				0.0001,	 #actual: 0.0001
-    "F-35A":					0.0015,
-    "F-35B":					0.0015,
+    "F-22-Raptor":              0.0001,  #actual: 0.0001
+    "F-35A":                    0.0015,
+    "F-35B":                    0.0015,
     "F-35C":                    0.0015,
     "daVinci_F-35A":            0.0015,
     "daVinci_F-35B":            0.0015,
@@ -107,40 +102,12 @@ var rcs_database = {
     "T-50":                     0.5,    #low end of sources
     "u-2s":                     0.01,
     "U-2S-model":               0.01,
-    #Carriers
-    "mp-clemenceau":            500,
-    "mp-eisenhower":            500,
-    "mp-nimitz":                500,
-    "mp-vinson":                500,
 };
 
 var prevVisible = {};
-var lastUpdateTime = {};
 
-var timeNode = props.globals.getNode("sim/time/elapsed-sec");
-
-
-# For 'inRadarRange', decide if the previous RCS test result can be result, or if a new test should be done.
-# If the previous test is more than 'max_refresh_sec' old (resp. less than 'min_refresh_sec'),
-# then a new test is always (resp. never) done.
-# In between these two values, a test is done with probability 'refresh_prob'.
-var refreshRequired = func (contact, min_refresh_sec, max_refresh_sec, refresh_prob) {
-    var callsign = contact.get_Callsign();
-    if (callsign == nil or !contains(lastUpdateTime, callsign)) return 1;
-
-    var update_age = timeNode.getValue() - lastUpdateTime[callsign];
-    if (update_age < min_refresh_sec) return 0;
-    elsif (update_age > max_refresh_sec) return 1;
-    else return (rand() < refresh_prob);
-}
-
-var inRadarRange = func (contact, myRadarDistance_nm, myRadarStrength_rcs,
-                         min_refresh_sec=1, max_refresh_sec=10, refresh_prob=0.05) {
-    if (refreshRequired(contact, min_refresh_sec, max_refresh_sec, refresh_prob)) {
-        return isInRadarRange(contact, myRadarDistance_nm, myRadarStrength_rcs);
-    } else {
-        return wasInRadarRange(contact, myRadarDistance_nm, myRadarStrength_rcs);
-    }
+var inRadarRange = func (contact, myRadarDistance_nm, myRadarStrength_rcs) {
+    return rand() < 0.05?rcs.isInRadarRange(contact, myRadarDistance_nm, myRadarStrength_rcs) == 1:rcs.wasInRadarRange(contact, myRadarDistance_nm, myRadarStrength_rcs);
 }
 
 var wasInRadarRange = func (contact, myRadarDistance_nm, myRadarStrength_rcs) {
@@ -155,7 +122,7 @@ var wasInRadarRange = func (contact, myRadarDistance_nm, myRadarStrength_rcs) {
 var isInRadarRange = func (contact, myRadarDistance_nm, myRadarStrength_rcs) {
     if (contact != nil and contact.get_Coord() != nil) {
         var value = 1;
-        call(func {value = targetRCSSignal(contact.get_Coord(), contact.getModel(), contact.get_heading(), contact.get_Pitch(), contact.get_Roll(), geo.aircraft_position(), myRadarDistance_nm*NM2M, myRadarStrength_rcs)},nil, var err = []);
+        call(func {value = targetRCSSignal(contact.get_Coord(), contact.get_model(), contact.get_heading(), contact.get_Pitch(), contact.get_Roll(), geo.aircraft_position(), myRadarDistance_nm*NM2M, myRadarStrength_rcs)},nil, var err = []);
         if (size(err)) {
             foreach(line;err) {
                 print(line);
@@ -163,9 +130,7 @@ var isInRadarRange = func (contact, myRadarDistance_nm, myRadarStrength_rcs) {
             # open radar for one will make this happen.
             return value;
         }
-        var callsign = contact.get_Callsign();
-        prevVisible[callsign] = value;
-        lastUpdateTime[callsign] = timeNode.getValue();
+        prevVisible[contact.get_Callsign()] = value;
         return value;
     }
     return 0;
@@ -182,9 +147,8 @@ var targetRCSSignal = func(targetCoord, targetModel, targetHeading, targetPitch,
         target_front_rcs = rcs_database[targetModel];
     } else {
         return 1;
-        target_front_rcs = rcs_oprf_database["default"];
+        target_front_rcs = rcs_database["default"];
     }
-    #print(target_front_rcs," RCS from ", targetModel, " m:", myRadarDistance_m, " rcs:",myRadarStrength_rcs);
     var target_rcs = getRCS(targetCoord, targetHeading, targetPitch, targetRoll, myCoord, target_front_rcs);
     var target_distance = myCoord.direct_distance_to(targetCoord);
 
