@@ -3,7 +3,6 @@
 	<sim>
 		<description>Panavia Tornado IDS</description>
 		<variant-id type="int">1</variant-id>
-		<author>Heiko Schulz (3D external model)</author>
 		<long-description>The Panavia Tornado Interdiction/Strike (IDS) is the bomber version of the Tornado, developed by UK, Germany and Italy, made for supersonic low-level flights. It has variable-sweep wing and reverse thrust. Introduction was in 1980.</long-description>
 		<status>beta</status>
 		<rating>

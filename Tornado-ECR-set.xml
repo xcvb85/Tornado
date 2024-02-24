@@ -4,7 +4,6 @@
 		<description>Panavia Tornado ECR</description>
 		<variant-of>Tornado-IDS</variant-of>
 		<variant-id type="int">3</variant-id>
-		<author>Heiko Schulz (3D external model)</author>
 		<long-description>The Panavia Tornado Electronic Combat Reconnaissance (ECR) is the SEAD version of the Tornado, used by Germany and Italy. Introduction was in 1990.</long-description>
 		<status>beta</status>
 		<rating>

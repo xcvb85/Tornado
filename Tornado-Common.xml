@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<sim include="Systems/views.xml">
+		<author>Eci-23, Richard Harrison, Daniel Overbeck, Heiko Schulz, Virtavia</author>
 		<expected-aircraft-dir-name>Tornado</expected-aircraft-dir-name>
 		<flight-model>jsb</flight-model>
 		<aero>Tornado</aero>
