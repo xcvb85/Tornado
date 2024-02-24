@@ -41,8 +41,7 @@ var CurrentView_Num = props.globals.getNode("sim/current-view/view-number");
 var nav_view_num = view.indexof("Navigators View");
 
 var toggle_cockpit_views = func() {
-	cur_v = CurrentView_Num.getValue();
-	if (cur_v != 0 ) {
+	if (CurrentView_Num.getValue() != 0 ) {
 		CurrentView_Num.setValue(0);
 	} else {
 		CurrentView_Num.setValue(nav_view_num);

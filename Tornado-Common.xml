@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<sim include="Systems/views.xml">
+		<author>Eci-23, Richard Harrison, Daniel Overbeck, Heiko Schulz, Virtavia</author>
 		<expected-aircraft-dir-name>Tornado</expected-aircraft-dir-name>
 		<flight-model>jsb</flight-model>
 		<aero>Tornado</aero>
@@ -130,7 +131,7 @@
 		<radar_system>
 			<file>Aircraft/Tornado/Nasal/radar/radar-system-database.nas</file>
 			<file>Aircraft/Tornado/Nasal/radar/radar-system.nas</file>
-			<file>Aircraft/Tornado/Nasal/radar/rwr-only.nas</file>
+			<file>Aircraft/Tornado/Nasal/radar/apg-68.nas</file>
 		</radar_system>
 		<rwr>
 			<file>Aircraft/Tornado/Nasal/radar/rwr.nas</file>
