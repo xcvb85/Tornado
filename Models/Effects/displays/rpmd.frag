@@ -11,9 +11,7 @@ void main()
 	float dirt = 0.3*texture2D(DirtTex, gl_TexCoord[0].xy).a;
 	vec2 position = vec2(2.0 * gl_TexCoord[0].xy - 1.0);
 
-	if(		display_enabled > 0 && // display enabled
-			length(position) > 0.05 && // black dot
-			abs(position.x) > 0.01) // black line
+	if(		display_enabled > 0) // display enabled
 	{
 		vec3 bg_lightning = vec3(1.0, 0.8, 0.0) * (1.0 - length(position));
 

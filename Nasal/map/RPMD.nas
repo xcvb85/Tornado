@@ -3,9 +3,18 @@ var RpmdInstances = [];
 var rpmdListener = 0;
 
 var RPMD = {
-	new: func(group, instance)
+	new: func(canvasGroup)
 	{
 		var m = { parents: [RPMD] };
+		m.MM = MM.new(canvasGroup.createChild('group'));
+		
+		var font_mapper = func(family, weight)
+		{
+			if(family == "'Liberation Sans'" and weight == "normal") {
+				return "Helvetica.txf";
+			}
+		};
+		canvas.parsesvg(canvasGroup.createChild('group'), "Aircraft/Tornado/Nasal/map/cedam.svg", {'font-mapper': font_mapper});
 		return m;
 	}
 };
@@ -36,7 +45,7 @@ rpmdListener = setlistener("/sim/signals/fdm-initialized", func () {
 
 	rpmdCanvas.addPlacement({"node": "RPMD.screen"});
 	crpmdCanvas.addPlacement({"node": "CRPMD.screen"});
-	append(RpmdInstances, MM.new(rpmdCanvas.createGroup(), 0));
-	append(RpmdInstances, MM.new(crpmdCanvas.createGroup(), 0));
+	append(RpmdInstances, RPMD.new(rpmdCanvas.createGroup()));
+	append(RpmdInstances, MM.new(crpmdCanvas.createGroup()));
 	removelistener(rpmdListener);
 });
