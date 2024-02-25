@@ -3,22 +3,6 @@ var (width, height) = (512, 512);
 var FALSE = 0;
 var TRUE = 1;
 
-var mycanvas = nil;
-var root = nil;
-var setupCanvas = func {
-	mycanvas = canvas.new({
-	  "name": "MM",
-	  "size": [height, height],
-	  "view": [height, height],
-	  "mipmapping": 0,
-	  #"additive-blend": 1
-	});
-	root = mycanvas.createGroup();
-	root.set("font", "LiberationFonts/LiberationMono-Regular.ttf");
-	mycanvas.setColorBackground(0, 0, 0, 1.0);
-	mycanvas.addPlacement({"node": "RPMD.screen"});
-	mycanvas.addPlacement({"node": "CRPMD.screen"});
-}
 var (center_x, center_y) = (width/2,height/2);
 
 var MM2TEX = 1;
@@ -38,20 +22,8 @@ var meterPerPixel = [156412,78206,39103,19551,9776,4888,2444,1222,610.984,305.49
 #zooms      = [4, 7, 9, 11, 13];#old
 var zooms      = [10, 11];
 var zoomLevels = [100, 50];
-var zoom_curr  = 0;
-var zoom = zooms[zoom_curr];
 
-var M2TEX = 1/(meterPerPixel[zoom]*math.cos(getprop('/position/latitude-deg')*D2R));
-
-var toggleScale = func {
-  zoom_curr -= 1;
-  if (zoom_curr < 0) {
-  	zoom_curr = 1;
-  }
-  zoom = zooms[zoom_curr];
-  M2TEX = 1/(meterPerPixel[zoom]*math.cos(getprop('/position/latitude-deg')*D2R));
-  setprop("tornado/displays/scale", zoom_curr);
-}
+var M2TEX = nil;
 
 var maps_base = getprop("/sim/fg-home") ~ '/cache/mapsTornado';
 
@@ -66,14 +38,6 @@ var center_tile_offset = [(num_tiles[0] - 1) / 2,(num_tiles[1] - 1) / 2];#(width
 ##
 # initialize the map by setting up
 # a grid of raster images
-
-var tiles = setsize([], num_tiles[0]);
-
-var last_tile = [-1,-1];
-var last_type = type;
-var last_zoom = zoom;
-var lastLiveMap = getprop("tornado/displays/live-map");
-var lastDay   = TRUE;
 
 # stuff
 
@@ -145,7 +109,7 @@ var MM = {
 
 	setupCanvasSymbols: func {
 		# map groups
-		me.mapCentrum = root.createChild("group")
+		me.mapCentrum = me.group.createChild("group")
 			.set("z-index", 1)
 			.setTranslation(width/2,height*2/3);
 		me.mapCenter = me.mapCentrum.createChild("group");
@@ -154,10 +118,10 @@ var MM = {
 		#me.mapFinal.setTranslation(-tile_size*center_tile_offset[0],-tile_size*center_tile_offset[1]);
 
 		# groups
-		me.rootCenter = root.createChild("group")
+		me.rootCenter = me.group.createChild("group")
 			.setTranslation(width/2,height/2)
 			.set("z-index",  9);
-		me.rootRealCenter = root.createChild("group")
+		me.rootRealCenter = me.group.createChild("group")
 			.setTranslation(width/2,height/2)
 			.set("z-index", 10);
 
@@ -174,8 +138,19 @@ var MM = {
 	    			.set("z-index", 6);
 	},
 
-	new: func {
+	new: func(canvasGroup) {
 	  	var ti = { parents: [MM] };
+		canvasGroup.set("font", "LiberationFonts/LiberationMono-Regular.ttf");
+		ti.group = canvasGroup;
+		ti.zoom_curr  = 0;
+		ti.zoom = zooms[0];
+		ti.tiles = setsize([], num_tiles[0]);
+		ti.last_tile = [-1,-1];
+		ti.last_type = type;
+		ti.last_zoom = ti.zoom;
+		ti.lastLiveMap = getprop("tornado/displays/live-map");
+		ti.lastDay   = TRUE;
+
 	  	ti.input = {
 			alt_ft:               "instrumentation/altimeter/indicated-altitude-ft",
 			APLockAlt:            "autopilot/locks/altitude",
@@ -239,6 +214,7 @@ var MM = {
       	ti.mapSelfCentered = TRUE;
       	ti.day = TRUE;
       	ti.setupMap();
+		M2TEX = 1/(meterPerPixel[ti.zoom]*math.cos(ti.lat*D2R));
 
 		# display
 		ti.brightness = 1;
@@ -254,6 +230,8 @@ var MM = {
 		# misc
 		ti.twoHz = 0;		
 
+		ti.Timer = maketimer(0.5, ti, ti.loop);
+		ti.Timer.start();
       	return ti;
 	},
 
@@ -284,16 +262,15 @@ var MM = {
 			#setprop("ja37/avionics/cursor-on", cursorOn);
 		}
 		if (me.day == TRUE) {
-			mycanvas.setColorBackground(0.3, 0.3, 0.3, 1.0);
+			#mycanvas.setColorBackground(0.3, 0.3, 0.3, 1.0);
 		} else {
-			mycanvas.setColorBackground(0.15, 0.15, 0.15, 1.0);
+			#mycanvas.setColorBackground(0.15, 0.15, 0.15, 1.0);
 		}
 		me.whereIsMap();#must be before mapUpdate
 		me.updateMap();
 		#me.updateMapNames();
 		
 		me.twoHz = !me.twoHz;
-		settimer(func{me.loop();},0.5);
 	},
 
 	showMap: func {
@@ -388,18 +365,16 @@ var MM = {
 	########################################################################################################
 	########################################################################################################
 
-
-
 	setupMap: func {
 		me.mapFinal.removeAllChildren();
 		for(var x = 0; x < num_tiles[0]; x += 1) {
-		  	tiles[x] = setsize([], num_tiles[1]);
+		  	me.tiles[x] = setsize([], num_tiles[1]);
 		  	for(var y = 0; y < num_tiles[1]; y += 1) {
-		    	tiles[x][y] = me.mapFinal.createChild("image", "map-tile").set("z-index", 15);
+		    	me.tiles[x][y] = me.mapFinal.createChild("image", "map-tile").set("z-index", 15);
 		    	if (me.day == TRUE) {
-		    		tiles[x][y].set("fill", COLOR_DAY);
+		    		me.tiles[x][y].set("fill", COLOR_DAY);
 	    		} else {
-	    			tiles[x][y].set("fill", COLOR_NIGHT);
+	    			me.tiles[x][y].set("fill", COLOR_NIGHT);
 	    		}
 	    	}
 		}
@@ -414,12 +389,12 @@ var MM = {
 			me.lat = me.lat_own;
 			me.lon = me.lon_own;# TODO: USE GPS/INS here.
 		}
-		M2TEX = 1/(meterPerPixel[zoom]*math.cos(me.lat*D2R));
+		M2TEX = 1/(meterPerPixel[me.zoom]*math.cos(me.lat*D2R));
 	},
 
 	updateMap: func {
 		# update the map
-		if (lastDay != me.day)  {
+		if (me.lastDay != me.day)  {
 			me.setupMap();
 		}
 		me.rootCenterY = height-height*0.5;
@@ -436,7 +411,7 @@ var MM = {
 		}
 		me.mapCentrum.setTranslation(width/2, me.rootCenterY);
 
-		me.n = math.pow(2, zoom);
+		me.n = math.pow(2, me.zoom);
 		me.center_tile_float = [
 			me.n * ((me.lon + 180) / 360),
 			(1 - math.ln(math.tan(me.lat * D2R) + 1 / math.cos(me.lat * D2R)) / math.pi) / 2 * me.n
@@ -461,13 +436,13 @@ var MM = {
 
 		for(var xxx = 0; xxx < num_tiles[0]; xxx += 1) {
 			for(var yyy = 0; yyy < num_tiles[1]; yyy += 1) {
-				tiles[xxx][yyy].setTranslation(-int((me.center_tile_fraction_x - xxx+me.tile_offset[0]) * tile_size), -int((me.center_tile_fraction_y - yyy+me.tile_offset[1]) * tile_size));
+				me.tiles[xxx][yyy].setTranslation(-int((me.center_tile_fraction_x - xxx+me.tile_offset[0]) * tile_size), -int((me.center_tile_fraction_y - yyy+me.tile_offset[1]) * tile_size));
 			}
 		}
 
 		me.liveMap = getprop("tornado/displays/live-map");
-		me.zoomed = zoom != last_zoom;
-		if(me.center_tile_int[0] != last_tile[0] or me.center_tile_int[1] != last_tile[1] or type != last_type or me.zoomed or me.liveMap != lastLiveMap or lastDay != me.day)  {
+		me.zoomed = me.zoom != me.last_zoom;
+		if(me.center_tile_int[0] != me.last_tile[0] or me.center_tile_int[1] != me.last_tile[1] or type != me.last_type or me.zoomed or me.liveMap != me.lastLiveMap or me.lastDay != me.day)  {
 			for(var x = 0; x < num_tiles[0]; x += 1) {
 		  		for(var y = 0; y < num_tiles[1]; y += 1) {
 		  			# inside here we use 'var' instead of 'me.' due to generator function, should be able to remember it.
@@ -480,7 +455,7 @@ var MM = {
 		  				xx = xx - me.n;#print(xx~" from "~(xx+me.n));
 		  			}
 					var pos = {
-						z: zoom,
+						z: me.zoom,
 						x: xx,
 						y: me.center_tile_int[1] + y - me.tile_offset[1],
 						type: type
@@ -488,7 +463,7 @@ var MM = {
 
 					(func {# generator function
 					    var img_path = makePath(pos);
-					    var tile = tiles[x][y];
+					    var tile = me.tiles[x][y];
 					    #print('showing ' ~ img_path);
 					    if( io.stat(img_path) == nil and me.liveMap == TRUE) { # image not found, save in $FG_HOME
 					      	var img_url = makeUrl(pos);
@@ -518,11 +493,11 @@ var MM = {
 		  		}
 			}
 
-		last_tile = me.center_tile_int;
-		last_type = type;
-		last_zoom = zoom;
-		lastLiveMap = me.liveMap;
-		lastDay = me.day;
+		me.last_tile = me.center_tile_int;
+		me.last_type = type;
+		me.last_zoom = me.zoom;
+		me.lastLiveMap = me.liveMap;
+		me.lastDay = me.day;
 		}
 
 		me.mapRot.setRotation(-me.input.heading.getValue()*D2R);
@@ -531,15 +506,3 @@ var MM = {
 		#me.mapCenter.update();
 	},
 };
-
-var mm = nil;
-var init = func {
-	removelistener(idl); # only call once
-	setupCanvas();
-	mm = MM.new();
-	settimer(func {
-		mm.loop();
-	},0.5);# this will prevent it from starting before route has been initialized.
-}
-
-var idl = setlistener("sim/signals/fdm-initialized", init, nil, 1);

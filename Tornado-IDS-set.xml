@@ -49,7 +49,8 @@
 			<file>Aircraft/Tornado/Nasal/hud/hud_ids.nas</file>
 		</hud>
 		<efis>
-			<file>Aircraft/Tornado/Nasal/moving-map.nas</file>
+			<file>Aircraft/Tornado/Nasal/map/moving-map.nas</file>
+			<file>Aircraft/Tornado/Nasal/map/RPMD.nas</file>
 			<file>Aircraft/Tornado/Nasal/tvtab/maps/loader.nas</file>
 			<file>Aircraft/Tornado/Nasal/tvtab/Framework.nas</file>
 			<file>Aircraft/Tornado/Nasal/tvtab/plan.nas</file>
