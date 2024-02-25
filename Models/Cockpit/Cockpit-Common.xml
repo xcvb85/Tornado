@@ -50,13 +50,48 @@
 	</model>
 	<model>
 		<name>Gear Lever</name>
-		<path>Aircraft/Tornado/Models/Cockpit/Parts/lever.xml</path>
+		<path>Aircraft/Tornado/Models/Cockpit/Parts/gear_lever.ac</path>
 		<offsets>
 			<x-m>-4.762</x-m>
 			<y-m>-0.328</y-m>
 			<z-m>-0.743</z-m>
 			<pitch-deg>-17</pitch-deg>
 			<heading-deg>3</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>EPS HYDS Panel</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Panels/hyd.ac</path>
+		<offsets>
+			<x-m>-4.790</x-m>
+			<y-m>0.299</y-m>
+			<z-m>-0.654</z-m>
+			<pitch-deg>-17</pitch-deg>
+			<heading-deg>-3</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>Left Valve</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Parts/valve.ac</path>
+		<offsets>
+			<x-m>-4.724</x-m>
+			<y-m>-0.513</y-m>
+			<z-m>-0.668</z-m>
+			<pitch-deg>-17</pitch-deg>
+			<heading-deg>3</heading-deg>
+			<roll-deg>-25</roll-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>Right Valve</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Parts/valve.ac</path>
+		<offsets>
+			<x-m>-4.724</x-m>
+			<y-m>0.513</y-m>
+			<z-m>-0.668</z-m>
+			<pitch-deg>-17</pitch-deg>
+			<heading-deg>-3</heading-deg>
+			<roll-deg>25</roll-deg>
 		</offsets>
 	</model>
 	<model>
@@ -69,6 +104,10 @@
 			<pitch-deg>-17</pitch-deg>
 			<heading-deg>-3</heading-deg>
 		</offsets>
+	</model>
+	<model>
+		<name>Levers</name>
+		<path>Aircraft/Tornado/Models/Cockpit/Parts/levers.ac</path>
 	</model>
 	<model>
 		<name>Pilot Seat</name>

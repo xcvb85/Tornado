@@ -33,6 +33,11 @@
 		<name>Stores</name>
 		<path>Aircraft/Tornado/Models/Stores/Stores-ADV.xml</path>
 	</model>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/glass</inherits-from>
+		<object-name>CanopyGlass</object-name>
+		<object-name>WindscreenGlass</object-name>
+	</effect>
 	<animation>
 		<type>select</type>
 		<object-name>pilot</object-name>
