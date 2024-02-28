@@ -1,4 +1,5 @@
-print("*** LOADING AI_list.nas ... ***");
+#print("*** LOADING AI_list.nas ... ***");
+# File from F-16 - https://github.com/NikolaiVChr/f16/blob/master/Nasal/AI_list.nas
 # Autonomous singleton class that monitors AI object,
 # maintains data in various structures, and raises signal
 # "/sim/signals/ai-updated" whenever an aircraft
@@ -23,11 +24,25 @@ var AImodel = {
         m.data = {};
         m.callsign = {};
         m.list = {};
-        
+
         # return our new object
         return m;
     },
 
+    init: func() {
+        #me.L = [];
+        #append(me.L, setlistener("ai/models/model-added", func(n) {
+            # Defer update() to the next convenient time to allow the
+            # new MP entry to become fully initialized.
+            #settimer(func me.update(), 0);
+        #}));
+        #append(me.L, setlistener("ai/models/model-removed", func(n) {
+            # Defer update() to the next convenient time to allow the
+            # old MP entry to become fully deactivated.
+            #settimer(func me.update(), 0);
+        #}));
+        me.update();
+    },
     update: func(n = nil) {
         var changedNode = props.globals.getNode(n, 1);
         me.data = {};
@@ -36,12 +51,15 @@ var AImodel = {
         foreach(var n ; props.globals.getNode("ai/models", 1).getChildren())
         {
             #print(n.getName());
-            
-            if((var valid = n.getNode("valid")) == nil or (!valid.getValue()))
+
+            if((var valid = n.getNode("valid")) == nil or !valid.getValue() or ((n.getNode("missile") == nil or n.getNode("missile").getValue() != 1) and (n.getNode("type") == nil or (n.getNode("type").getValue() != "Mig-28" and n.getNode("type").getValue() != "F-16"))))
             {
                 continue;
             }
             var myName = string.replace(n.getPath(), "/ai/models/", "");
+            if (n.getNode("callsign") != nil and n.getNode("callsign").getValue()!=nil) {
+              myName = n.getNode("callsign").getValue();
+            }
             #print( string.replace(n.getPath(),"/ai/models/",""));
 
             var root = n.getPath();
@@ -57,13 +75,14 @@ var AImodel = {
         }
         #print(size(me.data));
         me.list = sort(values(me.data), func(a, b) cmp(a.sort, b.sort));
-        
+
         if(size(me.data) > 0)
         {
             #print(me.list[1]);
             setprop("ai/models/num-ai", size(me.list));
             setprop("sim/signals/ai-updated", 1);
         }
+        settimer(func(){ me.update() }, 0.5);
     },
     get_list: func(){
         return me.list;

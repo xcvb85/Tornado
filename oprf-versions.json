@@ -1,0 +1,30 @@
+{
+  "vector": {
+    "version": null,
+    "path": "Nasal/weapons/vector.nas"
+  },
+  "missile-code": {
+    "version": null,
+    "path": "Nasal/weapons/missile-code.nas"
+  },
+  "damage": {
+    "version": null,
+    "path": "Nasal/weapons/damage.nas"
+  },
+  "rcs-mand": {
+    "version": null,
+    "path": "Nasal/radar/rcs-mand.nas"
+  },
+  "radar-system": {
+    "version": null,
+    "path": "Nasal/radar/radar-system.nas"
+  },
+  "radar-system-database": {
+    "version": null,
+    "path": "Nasal/radar/radar-system-database.nas"
+  },
+  "armament-notification": {
+    "version": null,
+    "path": "Nasal/weapons/ArmamentNotification.nas"
+  }
+}
