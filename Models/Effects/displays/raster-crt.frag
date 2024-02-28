@@ -31,7 +31,7 @@ vec3 scanline(vec3 texel)
 void main()
 {
 	vec3 texel = vec3(0.0, 0.0, 0.0);
-	vec3 dirt = texture2D(DirtTex, gl_TexCoord[0].xy).rgb;
+	float dirt = 0.3*texture2D(DirtTex, gl_TexCoord[0].xy).a;
 
 	// crt-effect
 	if(display_enabled > 0) {
@@ -42,6 +42,6 @@ void main()
 			texel = scanline(texel);
 		}
 	}
-	texel = mix(texel, dirt, 0.05);
+	texel = max(texel, vec3(dirt));
 	gl_FragColor = vec4(texel, 1.0);
 }

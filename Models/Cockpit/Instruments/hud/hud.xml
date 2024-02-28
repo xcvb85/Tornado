@@ -1,17 +1,14 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>hud.ac</path>
-
 	<model>
 		<name>Panel</name>
-		<path>Aircraft/Tornado/Models/Cockpit/Instruments/hud/panel_ids.ac</path>
+		<path>Aircraft/Tornado/Models/Cockpit/Instruments/hud/panel_adv.ac</path>
 	</model>
-
 	<model>
 		<name>Camera</name>
 		<path>Aircraft/Tornado/Models/Cockpit/Instruments/hud/camera_ids.ac</path>
 	</model>
-
 	<animation>
 		<type>select</type>
 		<object-name>HUD_Screen</object-name>
@@ -22,23 +19,43 @@
 			</greater-than>
 		</condition>
 	</animation>
-
 	<animation>
-        <type>pick</type>
-		<object-name>Cylinder.005</object-name>
+		<type>pick</type>
+		<object-name>knMode</object-name>
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>
+			<button>3</button>
+			<repeatable>true</repeatable>
+			<interval-sec>0.1</interval-sec>
 			<binding>
-				<command>property-toggle</command>
+				<command>property-adjust</command>
 				<property>instrumentation/hud/swMode</property>
+				<mask>integer</mask>
+				<min>0</min>
+				<max>2</max>
+				<step>1</step>
+				<resolution>1</resolution>
+			</binding>
+		</action>
+		<action>
+			<button>4</button>
+			<repeatable>true</repeatable>
+			<interval-sec>0.1</interval-sec>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/hud/swMode</property>
+				<mask>integer</mask>
+				<min>0</min>
+				<max>2</max>
+				<step>-1</step>
+				<resolution>1</resolution>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>rotate</type>
-		<object-name>Cylinder.005</object-name>
+		<object-name>knMode</object-name>
 		<property>instrumentation/hud/swMode</property>
 		<factor>-45</factor>
 		<axis>
@@ -52,40 +69,9 @@
 			<z-m>0.063</z-m>
 		</center>
 	</animation>
-
 	<animation>
-        <type>pick</type>
-		<object-name>Cylinder.004</object-name>
-		<visible>true</visible>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>instrumentation/hud/swSbs</property>
-			</binding>
-		</action>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>Cylinder.004</object-name>
-		<property>instrumentation/hud/swSbs</property>
-		<factor>-45</factor>
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-		<center>
-			<x-m>0.0</x-m>
-			<y-m>0.1356</y-m>
-			<z-m>0.0637</z-m>
-		</center>
-	</animation>
-
-	<animation>
-        <type>pick</type>
-		<object-name>Sphere</object-name>
+		<type>pick</type>
+		<object-name>swVV</object-name>
 		<visible>true</visible>
 		<action>
 			<button>0</button>
@@ -93,14 +79,14 @@
 			<binding>
 				<command>property-toggle</command>
 				<property>instrumentation/hud/swVV</property>
-                <value>0.5</value>
-                <value>1.0</value>  
+				<value>0.5</value>
+				<value>1.0</value>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>rotate</type>
-		<object-name>Sphere</object-name>
+		<object-name>swVV</object-name>
 		<property>instrumentation/hud/swVV</property>
 		<factor>-40</factor>
 		<axis>
@@ -114,10 +100,9 @@
 			<z-m>0.067</z-m>
 		</center>
 	</animation>
-
 	<animation>
-        <type>pick</type>
-		<object-name>Sphere.001</object-name>
+		<type>pick</type>
+		<object-name>swMach</object-name>
 		<visible>true</visible>
 		<action>
 			<button>0</button>
@@ -125,14 +110,14 @@
 			<binding>
 				<command>property-toggle</command>
 				<property>instrumentation/hud/swMach</property>
-                <value>0.5</value>
-                <value>1.0</value>  
+				<value>0.5</value>
+				<value>1.0</value>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>rotate</type>
-		<object-name>Sphere.001</object-name>
+		<object-name>swMach</object-name>
 		<property>instrumentation/hud/swMach</property>
 		<factor>-40</factor>
 		<axis>
@@ -146,10 +131,9 @@
 			<z-m>0.067</z-m>
 		</center>
 	</animation>
-
 	<animation>
-        <type>pick</type>
-		<object-name>Sphere.002</object-name>
+		<type>pick</type>
+		<object-name>swAlt</object-name>
 		<visible>true</visible>
 		<action>
 			<button>0</button>
@@ -157,14 +141,14 @@
 			<binding>
 				<command>property-toggle</command>
 				<property>instrumentation/hud/swAlt</property>
-                <value>0.5</value>
-                <value>1.0</value>  
+				<value>0.5</value>
+				<value>1.0</value>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>rotate</type>
-		<object-name>Sphere.002</object-name>
+		<object-name>swAlt</object-name>
 		<property>instrumentation/hud/swAlt</property>
 		<factor>-40</factor>
 		<axis>
@@ -178,10 +162,9 @@
 			<z-m>0.067</z-m>
 		</center>
 	</animation>
-
 	<animation>
-        <type>pick</type>
-		<object-name>Sphere.003</object-name>
+		<type>pick</type>
+		<object-name>swHeading</object-name>
 		<visible>true</visible>
 		<action>
 			<button>0</button>
@@ -189,14 +172,14 @@
 			<binding>
 				<command>property-toggle</command>
 				<property>instrumentation/hud/swHeading</property>
-                <value>0.5</value>
-                <value>1.0</value>  
+				<value>0.5</value>
+				<value>1.0</value>
 			</binding>
 		</action>
 	</animation>
 	<animation>
 		<type>rotate</type>
-		<object-name>Sphere.003</object-name>
+		<object-name>swHeading</object-name>
 		<property>instrumentation/hud/swHeading</property>
 		<factor>-40</factor>
 		<axis>
@@ -209,5 +192,86 @@
 			<y-m>0.0</y-m>
 			<z-m>0.067</z-m>
 		</center>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>knSBS</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/hud/swSbs</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>knSBS</object-name>
+		<property>instrumentation/hud/swSbs</property>
+		<factor>-45</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.1356</y-m>
+			<z-m>0.0637</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>knob</type>
+		<object-name>knSet</object-name>
+		<property>instrumentation/altimeter/setting-inhg</property>
+		<factor>0</factor>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.024</y-m>
+			<z-m>0.024</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/altimeter/setting-inhg</property>
+				<factor>0.01</factor>
+				<min>27.90</min>
+				<max>31.40</max>
+				<wrap>false</wrap>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>knob</type>
+		<object-name>knVertDatum</object-name>
+		<property>instrumentation/hud/knVertDatum</property>
+		<factor>0</factor>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.061</y-m>
+			<z-m>0.039</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/hud/knVertDatum</property>
+				<factor>1</factor>
+				<min>0</min>
+				<max>100</max>
+				<wrap>false</wrap>
+			</binding>
+		</action>
 	</animation>
 </PropertyList>

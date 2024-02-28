@@ -9,8 +9,8 @@ uniform float rotation_deg;
 void main()
 {
 	vec3 texel = vec3(0.0, 0.0, 0.0);
-	vec3 dirt = texture2D(DirtTex, gl_TexCoord[0].xy).rgb;
-	vec2 position = vec2(2.0 * gl_TexCoord[0].xy - 1.0);
+	float dirt = 0.3*texture2D(DirtTex, gl_TexCoord[0].xy).a;
+	vec2 position = 0.75*vec2(2.0 * gl_TexCoord[0].xy - 1.0);
 
 	if(		display_enabled > 0 && // display enabled
 			length(position) < 1.0 && // within visible area
@@ -36,6 +36,6 @@ void main()
 		// add background lightning and dirt
 		texel = mix(texel, bg_lightning, 0.6*alpha);
 	}
-	texel = mix(texel, dirt, 0.05);
+	texel = max(texel, vec3(dirt));
 	gl_FragColor = vec4(texel, 1.0);
 }

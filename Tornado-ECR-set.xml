@@ -2,9 +2,8 @@
 <PropertyList include="Tornado-Common.xml">
 	<sim>
 		<description>Panavia Tornado ECR</description>
-		<variant-id type="int">3</variant-id>
 		<variant-of>Tornado-IDS</variant-of>
-		<author>Heiko Schulz (3D external model)</author>
+		<variant-id type="int">3</variant-id>
 		<long-description>The Panavia Tornado Electronic Combat Reconnaissance (ECR) is the SEAD version of the Tornado, used by Germany and Italy. Introduction was in 1990.</long-description>
 		<status>beta</status>
 		<rating>
@@ -13,12 +12,15 @@
 			<cockpit type="int">2</cockpit>
 			<model type="int">5</model>
 		</rating>
+		<startup>
+			<splash-texture>Aircraft/Tornado/splash_ecr.png</splash-texture>
+		</startup>
 		<model>
-			<path>Aircraft/Tornado/Models/Tornado-IDS.xml</path>
+			<path>Aircraft/Tornado/Models/Tornado-ECR.xml</path>
 		</model>
 		<model>
 			<name>Cockpit-ECR</name>
-			<path>Aircraft/Tornado/Models/Cockpit/Cockpit-IDS.xml</path>
+			<path>Aircraft/Tornado/Models/Cockpit/Cockpit-ECR.xml</path>
 		</model>
 		<flir type="int">1</flir>
 		<aircraft-type type="int">0</aircraft-type>
@@ -33,24 +35,31 @@
 		<libraries>
 			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
 			<file>Aircraft/Tornado/Nasal/librariesECR.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_sbs.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_fd.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_base.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/sbs.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/dir.nas</file>
 		</libraries>
+		<tfr>
+			<file>Aircraft/Tornado/Nasal/tfr.nas</file>
+		</tfr>
+		<hud>
+			<file>Aircraft/Tornado/Nasal/hud/hud_math.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_sbs.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_empty.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_base.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_fd.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_sensor.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_gun.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_ecr.nas</file>
+		</hud>
 		<efis>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/rpmd/moving-map.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/maps/loader.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/Framework.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/plan.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/nav.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/fa.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/eqm.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/empty.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/overlay.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/TVTAB_IDS.nas</file>
+			<file>Aircraft/Tornado/Nasal/moving-map.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/maps/loader.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/Framework.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/plan.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/nav.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/fa.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/eqm.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/empty.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/overlay.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/TVTAB_IDS.nas</file>
 		</efis>
 	</nasal>
 </PropertyList>

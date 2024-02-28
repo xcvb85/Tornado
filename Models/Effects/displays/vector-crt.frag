@@ -63,7 +63,7 @@ vec3 flickering(vec2 position, vec3 texel)
 void main()
 {
 	vec3 texel = vec3(0.0, 0.0, 0.0);
-	vec3 dirt = texture2D(DirtTex, gl_TexCoord[0].xy).rgb;
+	float dirt = 0.3*texture2D(DirtTex, gl_TexCoord[0].xy).a;
 
 	if(display_enabled > 0) {
 		vec2 position = gl_TexCoord[0].xy;
@@ -84,12 +84,10 @@ void main()
 			texel = rdrNoise(position, texel);
 			texel.b = 0.0;
 			texel = max(texel, orgtexel);
-			texel = flickering(position, texel);
+			//texel = flickering(position, texel);
 			texel = backlight(texel);
 		}
 	}
-
-	texel = mix(texel, dirt, 0.05);
-
+	texel = max(texel, vec3(dirt));
 	gl_FragColor = vec4(texel, 1.0);
 }

@@ -33,6 +33,11 @@
 		<name>Stores</name>
 		<path>Aircraft/Tornado/Models/Stores/Stores-IDS.xml</path>
 	</model>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/glass</inherits-from>
+		<object-name>CanopyGlass</object-name>
+		<object-name>WindscreenGlass</object-name>
+	</effect>
 	<animation>
 		<type>select</type>
 		<object-name>pilot</object-name>
@@ -156,52 +161,6 @@
 		<object-name>airintake1l</object-name>
 		<object-name>airintake2l</object-name>
 	</effect>
-	<!-- Solid Surfaces for Rembrandt rendering -->
-	<animation>
-		<object-name>Radom</object-name>
-		<object-name>Radom</object-name>
-		<object-name>Fuselage</object-name>
-		<object-name>Canopy</object-name>
-		<object-name>Windscreen</object-name>
-		<object-name>Fuselage2</object-name>
-		<object-name>airintake1l</object-name>
-		<object-name>airintake2l</object-name>
-		<object-name>airintake1r</object-name>
-		<object-name>airintake2r</object-name>
-		<object-name>fronttyre</object-name>
-		<object-name>tyrel</object-name>
-		<object-name>tyrer</object-name>
-		<object-name>rudder</object-name>
-		<object-name>leftaileron</object-name>
-		<object-name>rightaileron</object-name>
-		<object-name>sweepwing.L</object-name>
-		<object-name>sweepwing.R</object-name>
-		<object-name>spoilerleft</object-name>
-		<object-name>spoilerright</object-name>
-		<object-name>flaps.L</object-name>
-		<object-name>flaps.R</object-name>
-		<object-name>slatleft</object-name>
-		<object-name>slatright</object-name>
-		<object-name>reversersup.L</object-name>
-		<object-name>reversersup.R</object-name>
-		<object-name>reverserdown.L</object-name>
-		<object-name>reverserdown.R</object-name>
-		<object-name>leftinnerwingtank</object-name>
-		<object-name>rightinnerwingtank</object-name>
-		<object-name>Speedbrake.R</object-name>
-		<object-name>Speedbrake.L</object-name>
-		<object-name>airintakes</object-name>
-		<object-name>maingeardoor_right</object-name>
-		<object-name>maingeardoor_left</object-name>
-		<object-name>ngeardoorright</object-name>
-		<object-name>ngeardoorleft</object-name>
-		<object-name>frontgeardoor1</object-name>
-		<object-name>targetpod_0</object-name>
-		<object-name>targetpod_1</object-name>
-		<object-name>targetpod_0.001</object-name>
-		<object-name>targetpod_1.001</object-name>
-		<object-name>FuelHoseCover</object-name>
-	</animation>
 	<animation>
 		<type>rotate</type>
 		<object-name>rudder</object-name>
@@ -222,7 +181,7 @@
 		<expression>
 			<sum>
 				<product>
-					<property>surface-positions/right-aileron-pos-norm</property>
+					<property>surface-positions/left-aileron-pos-norm</property>
 					<value>6</value>
 				</product>
 				<product>
@@ -333,7 +292,7 @@
 		<property>surface-positions/right-aileron-pos-norm</property>
 		<min-deg>-50</min-deg>
 		<max-deg>0</max-deg>
-		<factor>50</factor>
+		<factor>-50</factor>
 		<center>
 			<x-m>1.35</x-m>
 			<y-m>2.45384</y-m>
@@ -472,7 +431,7 @@
 		<property>surface-positions/left-aileron-pos-norm</property>
 		<min-deg>-50</min-deg>
 		<max-deg>0</max-deg>
-		<factor>-50</factor>
+		<factor>50</factor>
 		<center>
 			<x-m>1.35</x-m>
 			<y-m>-2.45384</y-m>

@@ -115,19 +115,22 @@
     <channel name="consumers" execrate="8">
         <switch name="electric/output/cockpit-lights">
             <default value="0"/>
-            <test logic="AND" value="electric/buses/bus-dc">
+            <test logic="AND" value="1">
+                electric/buses/bus-dc > 18
                 electric/switches/cockpit-lights == 1
             </test>
         </switch>
         <switch name="electric/output/instrument-lights">
             <default value="0"/>
-            <test logic="AND" value="electric/buses/bus-dc">
+            <test logic="AND" value="1">
+                electric/buses/bus-dc > 18
                 electric/switches/instrument-lights == 1
             </test>
         </switch>
         <switch name="electric/output/landing-lights">
             <default value="0"/>
-            <test logic="AND" value="electric/buses/bus-ac">
+            <test logic="AND" value="1">
+                electric/buses/bus-ac > 100
                 electric/switches/landing-lights == 1
             </test>
         </switch>

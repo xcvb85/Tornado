@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>brakes.ac</path>
+	<effect>
+		<inherits-from>Aircraft/Tornado/Models/Effects/instruments/lm1</inherits-from>
+		<object-name>BG</object-name>
+		<object-name>needle1</object-name>
+		<object-name>needle2</object-name>
+		<object-name>needle3</object-name>
+	</effect>
+</PropertyList>

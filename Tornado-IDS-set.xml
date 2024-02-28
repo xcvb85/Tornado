@@ -3,7 +3,6 @@
 	<sim>
 		<description>Panavia Tornado IDS</description>
 		<variant-id type="int">1</variant-id>
-		<author>Heiko Schulz (3D external model)</author>
 		<long-description>The Panavia Tornado Interdiction/Strike (IDS) is the bomber version of the Tornado, developed by UK, Germany and Italy, made for supersonic low-level flights. It has variable-sweep wing and reverse thrust. Introduction was in 1980.</long-description>
 		<status>beta</status>
 		<rating>
@@ -35,24 +34,31 @@
 		<libraries>
 			<file>Aircraft/Tornado/Nasal/libraries.nas</file>
 			<file>Aircraft/Tornado/Nasal/librariesIDS.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_sbs.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_fd.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud_base.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/hud.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/sbs.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/hud/dir.nas</file>
 		</libraries>
+		<tfr>
+			<file>Aircraft/Tornado/Nasal/tfr.nas</file>
+		</tfr>
+		<hud>
+			<file>Aircraft/Tornado/Nasal/hud/hud_math.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_sbs.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_empty.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_base.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_fd.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_ccip.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_gun.nas</file>
+			<file>Aircraft/Tornado/Nasal/hud/hud_ids.nas</file>
+		</hud>
 		<efis>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/rpmd/moving-map.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/maps/loader.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/Framework.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/plan.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/nav.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/fa.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/eqm.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/empty.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/overlay.nas</file>
-			<file>Aircraft/Tornado/Models/Cockpit/Instruments/tvtab/TVTAB_IDS.nas</file>
+			<file>Aircraft/Tornado/Nasal/moving-map.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/maps/loader.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/Framework.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/plan.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/nav.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/fa.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/eqm.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/empty.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/overlay.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/TVTAB_IDS.nas</file>
 		</efis>
 	</nasal>
 </PropertyList>

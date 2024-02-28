@@ -116,15 +116,6 @@
 		</offsets>
 	</model>
 	<model>
-		<name>Radar Homing Warning Receiver</name>
-		<path>Aircraft/Tornado/Models/Cockpit/Instruments/rhwr/rhwr.xml</path>
-		<offsets>
-			<x-m> 0.000</x-m>
-			<y-m> 0.185</y-m>
-			<z-m>-0.020</z-m>
-		</offsets>
-	</model>
-	<model>
 		<name>Frequency Panel</name>
 		<path>Aircraft/Tornado/Models/Cockpit/Panels/freq.xml</path>
 		<offsets>
