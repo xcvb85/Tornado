@@ -62,7 +62,7 @@
 			<file>Aircraft/Tornado/Nasal/tvtab/eqm.nas</file>
 			<file>Aircraft/Tornado/Nasal/tvtab/empty.nas</file>
 			<file>Aircraft/Tornado/Nasal/tvtab/overlay.nas</file>
-			<file>Aircraft/Tornado/Nasal/tvtab/TVTAB_IDS.nas</file>
+			<file>Aircraft/Tornado/Nasal/tvtab/TVTAB_ECR.nas</file>
 		</efis>
 	</nasal>
 </PropertyList>
