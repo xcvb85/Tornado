@@ -114,6 +114,7 @@
 		</mk-viii>
 		<rwr>
 			<serviceable type="bool">true</serviceable>
+			<display-lighting-intens type="float">0.8</display-lighting-intens>
 		</rwr>
 	</instrumentation>
 	<nasal>

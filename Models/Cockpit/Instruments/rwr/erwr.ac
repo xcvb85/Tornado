@@ -6,26 +6,15 @@ name "Blender_exporter_v4.1__erwr.ac"
 kids 1
 OBJECT group
 name "erwr"
-kids 3
+kids 4
 OBJECT poly
-name "RHWR.screen"
-data 14
-mount.mesh.001
-crease 45.0
-texture "erwr.png"
-numvert 4
-0.00775 -0.03435 -0.03407
-0.00775 0.03448 -0.03407
-0.00775 -0.03435 0.03401
-0.00775 0.03448 0.03401
-numsurf 1
-SURF 0X10
-mat 1
-refs 4
-1 1 1
-3 0 1
-2 0 0
-0 1 0
+name "erwr-knob-axis"
+data 5
+Plane
+crease 40.0
+numvert 2
+-0.00367 0.0325 0.0315
+0.02626 0.0325 0.0315
 kids 0
 OBJECT poly
 name "knob"
@@ -819,4 +808,24 @@ refs 3
 75 0.498565 0.984456
 17 0.499025 0.932929
 74 0.958678 0.9847
+kids 0
+OBJECT poly
+name "RHWR.screen"
+data 14
+mount.mesh.001
+crease 45.0
+texture "erwr.png"
+numvert 4
+0.00775 -0.03435 -0.03407
+0.00775 0.03448 -0.03407
+0.00775 -0.03435 0.03401
+0.00775 0.03448 0.03401
+numsurf 1
+SURF 0X10
+mat 1
+refs 4
+1 1 1
+3 0 1
+2 0 0
+0 1 0
 kids 0

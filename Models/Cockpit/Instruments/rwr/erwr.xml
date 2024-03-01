@@ -1,8 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<path>erwr.ac</path>
+
+	   <animation>
+        <type>knob</type>
+        <object-name>knob</object-name>
+        <property>instrumentation/rwr/display-lighting-intens</property>
+		<factor>-180</factor>
+        <offset-deg>0</offset-deg>
+        <center>
+            <x-m>  0.02266 </x-m>
+            <y-m> -0.0315 </y-m>
+            <z-m>  0.0325 </z-m>
+        </center>
+        <axis>
+            <x> 1.0 </x>
+            <y> 0.0 </y>
+            <z> 0.0 </z>
+        </axis>
+        <increase>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/rwr/display-lighting-intens</property>
+                <factor>1</factor>
+                <step>0.1</step>
+                <min>0</min>
+                <max>2</max>
+                <wrap>false</wrap>
+            </binding>
+        </increase>
+        <decrease>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/rwr/display-lighting-intens</property>
+                <factor>1</factor>
+                <step>-0.1</step>
+                <min>0</min>
+                <max>2</max>
+                <wrap>false</wrap>
+            </binding>
+        </decrease>
+    </animation>
+
+
 	<effect>
-		<inherits-from>Aircraft/Tornado/Models/Effects/displays/ehdd</inherits-from>
-		<object-name>bg</object-name>
+		<inherits-from>Aircraft/Tornado/Models/Effects/displays/tvtab1</inherits-from> <!-- I set TVTab1 because it looks the nicest as a CRT style display, Eventually a CRT generic or RWR specific one can be made-->
+		<object-name>RHWR.screen</object-name>
 	</effect>
+
+
 </PropertyList>
