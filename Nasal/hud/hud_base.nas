@@ -52,6 +52,7 @@ var hud_base = {
 		m.input = {
 			alpha:    "orientation/alpha-deg",
 			ias:      "velocities/airspeed-kt",
+			mach:     "velocities/mach",
 			alt:      "instrumentation/altimeter/indicated-altitude-ft",
 			pitch:    "orientation/pitch-deg",
 			roll:     "orientation/roll-deg",
@@ -75,7 +76,11 @@ var hud_base = {
 	update: func()
 	{
 		# asi
-		me.asi.setText(sprintf("%d", me.input.ias.getValue()));
+		if (getprop("instrumentation/hud/swMach")) {
+			me.asi.setText(sprintf("%d", me.input.ias.getValue()));
+		}else{
+			me.asi.setText(sprintf("%0.2f", me.input.mach.getValue()));
+		}
 
 		# alt
 		me.tmp = me.input.alt.getValue();
