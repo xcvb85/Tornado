@@ -120,7 +120,7 @@
             <y-m> 0.00</y-m>
             <z-m>-0.95</z-m>
         </offsets>
-        <life>3.0</life>
+        <life>10.0</life>
         <wind>false</wind>
         <weight>0.1069</weight>
         <cd>0.193</cd>
@@ -128,7 +128,7 @@
     </submodel>
     <!-- 5 -->
     <submodel>
-        <name>BK-27</name>
+        <name>BK27</name>
         <model>Aircraft/Tornado/Models/Stores/Null.ac</model>
         <trigger>fdm/jsbsim/fcs/gun</trigger>
         <speed>2350</speed>
@@ -140,15 +140,14 @@
             <y-m> 0.00</y-m>
             <z-m>-0.95</z-m>
         </offsets>
-        <life>3.0</life>
+        <life>10.0</life>
         <wind>false</wind>
         <weight>0.1069</weight>
         <cd>0.193</cd>
         <eda>0.00136354</eda>
         <collision>true</collision>
-        <collision-report>sim/ai/aircraft/collision/bullet</collision-report>
         <impact>true</impact>
-        <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+        <impact-report>ai/models/model-impact</impact-report>
     </submodel>
     <!-- 6 -->
     <submodel>
@@ -164,7 +163,7 @@
             <y-m> 0.00</y-m>
             <z-m>-0.95</z-m>
         </offsets>
-        <life>3.0</life>
+        <life>10.0</life>
         <wind>false</wind>
         <weight>0.1069</weight>
         <cd>0.193</cd>
@@ -172,7 +171,7 @@
     </submodel>
     <!-- 7 -->
     <submodel>
-        <name>BK-27</name>
+        <name>BK27</name>
         <model>Aircraft/Tornado/Models/Stores/Null.ac</model>
         <trigger>fdm/jsbsim/fcs/gun</trigger>
         <speed>2350</speed>
@@ -184,14 +183,13 @@
             <y-m> 0.00</y-m>
             <z-m>-0.95</z-m>
         </offsets>
-        <life>3.0</life>
+        <life>10.0</life>
         <wind>false</wind>
         <weight>0.1069</weight>
         <cd>0.193</cd>
         <eda>0.00136354</eda>
         <collision>true</collision>
-        <collision-report>sim/ai/aircraft/collision/bullet</collision-report>
         <impact>true</impact>
-        <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+        <impact-report>ai/models/model-impact</impact-report>
     </submodel>
 </PropertyList>
