@@ -13,12 +13,14 @@ RWRCanvas = {
         rwr.sep2_radius = radius*0.525;
         rwr.sep3_radius = radius*0.775;
         rwr.circle_radius_big = radius*0.5;
+        rwr.circle_radius_medium = radius * 0.3;
         rwr.circle_radius_small = radius*0.125;
         var tick_long = radius*0.25;
         var tick_short = tick_long*0.5;
+        var tick_tiny = tick_short*0.5;
         var font = int(0.08*diameter);
-        var colorG = [0.3,1,0.3];
-        var colorLG = [0,0.5,0];
+        var colorLG = [0.3,1,0.3];
+        var colorG = [0.69,0.69,0.69]; #Yes, apparently this is hornet NVis white RGB value... Not a joke.
         rwr.fadeTime = 7;#seconds
         rwr.rootCenter = root.createChild("group")
                 .setTranslation(center[0],center[1]);
@@ -38,18 +40,30 @@ RWRCanvas = {
            .setStrokeLineWidth(lineWidth)
            .setColor(colorLG);
         rootOffset.createChild("path")
+           .moveTo(diameter/2-rwr.circle_radius_medium, diameter/2)
+           .arcSmallCW(rwr.circle_radius_medium, rwr.circle_radius_medium, 0, rwr.circle_radius_medium*2, 0)
+           .arcSmallCW(rwr.circle_radius_medium, rwr.circle_radius_medium, 0, -rwr.circle_radius_medium*2, 0)
+           .setStrokeLineWidth(lineWidth)
+           .setColor(colorLG);
+        rootOffset.createChild("path")
            .moveTo(diameter/2-rwr.circle_radius_big, diameter/2)
            .arcSmallCW(rwr.circle_radius_big, rwr.circle_radius_big, 0, rwr.circle_radius_big*2, 0)
            .arcSmallCW(rwr.circle_radius_big, rwr.circle_radius_big, 0, -rwr.circle_radius_big*2, 0)
            .setStrokeLineWidth(lineWidth)
            .setColor(colorLG);
+        # rootOffset.createChild("path")
+        #    .moveTo(diameter/2-rwr.circle_radius_small/2, diameter/2)
+        #    .lineTo(diameter/2+rwr.circle_radius_small/2, diameter/2)
+        #    .moveTo(diameter/2, diameter/2-rwr.circle_radius_small/2)
+        #    .lineTo(diameter/2, diameter/2+rwr.circle_radius_small/2)
+        #    .setStrokeLineWidth(lineWidth)
+        #    .setColor(colorLG);
         rootOffset.createChild("path")
-           .moveTo(diameter/2-rwr.circle_radius_small/2, diameter/2)
-           .lineTo(diameter/2+rwr.circle_radius_small/2, diameter/2)
-           .moveTo(diameter/2, diameter/2-rwr.circle_radius_small/2)
-           .lineTo(diameter/2, diameter/2+rwr.circle_radius_small/2)
-           .setStrokeLineWidth(lineWidth)
-           .setColor(colorLG);
+            .moveTo(diameter/2, diameter/2)
+            .arcSmallCW(1, 1, 0, 2, 0)
+            .arcSmallCW(1, 1, 0, -2, 0)
+            .setStrokeLineWidth(lineWidth)
+            .setColor(colorLG);
         rootOffset.createChild("path")
            .moveTo(0,diameter*0.5)
            .horiz(tick_long)
@@ -62,23 +76,47 @@ RWRCanvas = {
            .setStrokeLineWidth(lineWidth)
            .setColor(colorLG);
         rwr.rootCenter.createChild("path")
+           .moveTo(radius*math.cos(15*D2R),radius*math.sin(-15*D2R))
+           .lineTo((radius-tick_tiny)*math.cos(15*D2R),(radius-tick_tiny)*math.sin(-15*D2R))
            .moveTo(radius*math.cos(30*D2R),radius*math.sin(-30*D2R))
            .lineTo((radius-tick_short)*math.cos(30*D2R),(radius-tick_short)*math.sin(-30*D2R))
+           .moveTo(radius*math.cos(45*D2R),radius*math.sin(-45*D2R))
+           .lineTo((radius-tick_tiny)*math.cos(45*D2R),(radius-tick_tiny)*math.sin(-45*D2R))
            .moveTo(radius*math.cos(60*D2R),radius*math.sin(-60*D2R))
            .lineTo((radius-tick_short)*math.cos(60*D2R),(radius-tick_short)*math.sin(-60*D2R))
+           .moveTo(radius*math.cos(75*D2R),radius*math.sin(-75*D2R))
+           .lineTo((radius-tick_tiny)*math.cos(75*D2R),(radius-tick_tiny)*math.sin(-75*D2R))
+           .moveTo(radius*math.cos(15*D2R),radius*math.sin(15*D2R))
+           .lineTo((radius-tick_tiny)*math.cos(15*D2R),(radius-tick_tiny)*math.sin(15*D2R))
            .moveTo(radius*math.cos(30*D2R),radius*math.sin(30*D2R))
            .lineTo((radius-tick_short)*math.cos(30*D2R),(radius-tick_short)*math.sin(30*D2R))
+           .moveTo(radius*math.cos(45*D2R),radius*math.sin(45*D2R))
+           .lineTo((radius-tick_tiny)*math.cos(45*D2R),(radius-tick_tiny)*math.sin(45*D2R))
            .moveTo(radius*math.cos(60*D2R),radius*math.sin(60*D2R))
            .lineTo((radius-tick_short)*math.cos(60*D2R),(radius-tick_short)*math.sin(60*D2R))
+           .moveTo(radius*math.cos(75*D2R),radius*math.sin(75*D2R))
+           .lineTo((radius-tick_tiny)*math.cos(75*D2R),(radius-tick_tiny)*math.sin(75*D2R))
 
+           .moveTo(-radius*math.cos(15*D2R),radius*math.sin(-15*D2R))
+           .lineTo(-(radius-tick_tiny)*math.cos(15*D2R),(radius-tick_tiny)*math.sin(-15*D2R))
            .moveTo(-radius*math.cos(30*D2R),radius*math.sin(-30*D2R))
            .lineTo(-(radius-tick_short)*math.cos(30*D2R),(radius-tick_short)*math.sin(-30*D2R))
+           .moveTo(-radius*math.cos(45*D2R),radius*math.sin(-45*D2R))
+           .lineTo(-(radius-tick_tiny)*math.cos(45*D2R),(radius-tick_tiny)*math.sin(-45*D2R))
            .moveTo(-radius*math.cos(60*D2R),radius*math.sin(-60*D2R))
            .lineTo(-(radius-tick_short)*math.cos(60*D2R),(radius-tick_short)*math.sin(-60*D2R))
+           .moveTo(-radius*math.cos(75*D2R),radius*math.sin(-75*D2R))
+           .lineTo(-(radius-tick_tiny)*math.cos(75*D2R),(radius-tick_tiny)*math.sin(-75*D2R))
+           .moveTo(-radius*math.cos(15*D2R),radius*math.sin(15*D2R))
+           .lineTo(-(radius-tick_short)*math.cos(15*D2R),(radius-tick_short)*math.sin(15*D2R))
            .moveTo(-radius*math.cos(30*D2R),radius*math.sin(30*D2R))
            .lineTo(-(radius-tick_short)*math.cos(30*D2R),(radius-tick_short)*math.sin(30*D2R))
+           .moveTo(-radius*math.cos(45*D2R),radius*math.sin(45*D2R))
+           .lineTo(-(radius-tick_short)*math.cos(45*D2R),(radius-tick_short)*math.sin(45*D2R))
            .moveTo(-radius*math.cos(60*D2R),radius*math.sin(60*D2R))
            .lineTo(-(radius-tick_short)*math.cos(60*D2R),(radius-tick_short)*math.sin(60*D2R))
+           .moveTo(-radius*math.cos(75*D2R),radius*math.sin(75*D2R))
+           .lineTo(-(radius-tick_short)*math.cos(75*D2R),(radius-tick_short)*math.sin(75*D2R))
            .setStrokeLineWidth(lineWidth)
            .setColor(colorLG);
         rwr.texts = setsize([],rwr.max_icons);
@@ -263,17 +301,17 @@ RWRCanvas = {
         }
         me.sortedlist = sort(list, sorter);#sort threat
 
-#        me.sortedlist = [# This is for testing. Uncomment as needed.
-#            [{getModel:func{return "buk-m2";}, get_range:func{return 30;}, get_Speed:func{return 65;}, get_Callsign:func{return "";},equals:func (it){return it.getModel()==me.getModel();}}, 0.45, -0],
-#            [{getModel:func{return "s-300";}, get_range:func{return 30;}, get_Speed:func{return 65;}, get_Callsign:func{return "";},equals:func (it){return it.getModel()==me.getModel();}}, 0.45, -5],
-#            [{getModel:func{return "A-50";}, get_range:func{return 30;}, get_Speed:func{return 65;}, get_Callsign:func{return "";},equals:func (it){return it.getModel()==me.getModel();}}, 0.45, -15],
-#            [{getModel:func{return "s-200";}, get_range:func{return 30;}, get_Speed:func{return 65;}, get_Callsign:func{return "";},equals:func (it){return it.getModel()==me.getModel();}}, 0.20, -25],
-#            [{getModel:func{return "S-75";}, get_range:func{return 30;}, get_Speed:func{return 65;}, get_Callsign:func{return "";},equals:func (it){return it.getModel()==me.getModel();}}, 0.20, -30],
-#            [{getModel:func{return "MIM104D";}, get_range:func{return 30;}, get_Speed:func{return 65;}, get_Callsign:func{return "";},equals:func (it){return it.getModel()==me.getModel();}}, 0.20, -30],
-#            [{getModel:func{return "fleet";}, get_range:func{return 30;}, get_Speed:func{return 65;}, get_Callsign:func{return "";},equals:func (it){return it.getModel()==me.getModel();}}, 0.20, -25],
-#            [{getModel:func{return "SA-6";}, get_range:func{return 30;}, get_Speed:func{return 65;}, get_Callsign:func{return "";},equals:func (it){return it.getModel()==me.getModel();}}, 0.20, -30],
-#            [{getModel:func{return "missile_frigate";}, get_range:func{return 30;}, get_Speed:func{return 65;}, get_Callsign:func{return "";},equals:func (it){return it.getModel()==me.getModel();}}, 0.20, -30],
-#        ];
+       # me.sortedlist = [# This is for testing. Uncomment as needed.
+       #     [{getModel:func{return "buk-m2";}, get_range:func{return 30;}, get_Speed:func{return 65;}, get_Callsign:func{return "";},equals:func (it){return it.getModel()==me.getModel();}}, 0.45, -0],
+       #     [{getModel:func{return "s-300";}, get_range:func{return 30;}, get_Speed:func{return 65;}, get_Callsign:func{return "";},equals:func (it){return it.getModel()==me.getModel();}}, 0.45, -5],
+       #     [{getModel:func{return "A-50";}, get_range:func{return 30;}, get_Speed:func{return 65;}, get_Callsign:func{return "";},equals:func (it){return it.getModel()==me.getModel();}}, 0.45, -15],
+       #     [{getModel:func{return "s-200";}, get_range:func{return 30;}, get_Speed:func{return 65;}, get_Callsign:func{return "";},equals:func (it){return it.getModel()==me.getModel();}}, 0.20, -25],
+       #     [{getModel:func{return "S-75";}, get_range:func{return 30;}, get_Speed:func{return 65;}, get_Callsign:func{return "";},equals:func (it){return it.getModel()==me.getModel();}}, 0.20, -30],
+       #     [{getModel:func{return "MIM104D";}, get_range:func{return 30;}, get_Speed:func{return 65;}, get_Callsign:func{return "";},equals:func (it){return it.getModel()==me.getModel();}}, 0.20, -30],
+       #     [{getModel:func{return "fleet";}, get_range:func{return 30;}, get_Speed:func{return 65;}, get_Callsign:func{return "";},equals:func (it){return it.getModel()==me.getModel();}}, 0.20, -25],
+       #     [{getModel:func{return "SA-6";}, get_range:func{return 30;}, get_Speed:func{return 65;}, get_Callsign:func{return "";},equals:func (it){return it.getModel()==me.getModel();}}, 0.20, -30],
+       #     [{getModel:func{return "missile_frigate";}, get_range:func{return 30;}, get_Speed:func{return 65;}, get_Callsign:func{return "";},equals:func (it){return it.getModel()==me.getModel();}}, 0.20, -30],
+       # ];
 
 
         me.sep_spots = [[0,0,0,0,0,0,0,0],#45 degs  8
