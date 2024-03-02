@@ -161,5 +161,8 @@
 		<pylons>
 			<file>Aircraft/Tornado/Nasal/weapons/pylons.nas</file>
 		</pylons>
+		<weapons>
+			<file>Aircraft/Tornado/Nasal/weapons/weaponUtils.nas</file>
+		</weapons>
 	</nasal>
 </PropertyList>
