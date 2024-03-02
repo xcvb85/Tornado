@@ -4,9 +4,9 @@ OBJECT world
 name "Blender_exporter_v4.1__Tornado-ECR.ac"
 kids 1
 OBJECT poly
-name "Fuselage"
+name "Cover"
 data 17
-Fuselage.mesh.001
+Cover.mesh
 crease 61.0
 texture "Tornado-IDS.jpg"
 numvert 20

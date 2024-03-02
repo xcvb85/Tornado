@@ -25,7 +25,7 @@ mapListener = setlistener("/sim/signals/fdm-initialized", func () {
 	});
 	crpmdCanvas.setColorBackground(0, 0, 0, 1.0);
 
-	cedamCanvas.addPlacement({"node": "CEDAM.screen"});
+	cedamCanvas.addPlacement({"node": "RPMD.screen"});
 	crpmdCanvas.addPlacement({"node": "CRPMD.screen"});
 	append(mapInstances, CEDAM.new(cedamCanvas.createGroup()));
 	append(mapInstances, CRPMD.new(crpmdCanvas.createGroup()));

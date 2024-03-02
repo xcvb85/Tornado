@@ -52467,9 +52467,9 @@ refs 4
 152 0.677049 0.13518
 kids 0
 OBJECT poly
-name "guns.000"
+name "Cannon"
 data 13
-guns.000.mesh
+Cannon.mesh
 crease 61.0
 texture "Tornado-IDS.jpg"
 numvert 881
