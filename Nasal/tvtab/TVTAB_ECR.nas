@@ -175,7 +175,14 @@ var TVTAB = {
 		m.Menus[MenuEnum.EQM].AddItem(SkItem.new(7, m, "TST"));
 		m.Menus[MenuEnum.EQM].AddItem(SkItem.new(8, m, "ACC"));
 
+		m.Timer = maketimer(1.0, m, m.update);
+		m.Timer.start();
 		return m;
+	},
+	update: func()
+	{
+		me.SkInstance.update();
+		me.Pages[me.ActivePage].update();
 	}
 };
 

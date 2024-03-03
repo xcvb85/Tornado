@@ -264,9 +264,14 @@ var TVTAB = {
 		m.Menus[MenuEnum.RDE].AddItem(SkItem.new(8, m, "FREQ"));
 		m.Menus[MenuEnum.RDE].AddItem(SkItem.new(9, m, "COOP"));
 
-		m.ActivatePage(PageEnum.PLN);
-		m.ActivateMenu(MenuEnum.PRI);
+		m.Timer = maketimer(1.0, m, m.update);
+		m.Timer.start();
 		return m;
+	},
+	update: func()
+	{
+		me.SkInstance.update();
+		me.Pages[me.ActivePage].update();
 	}
 };
 

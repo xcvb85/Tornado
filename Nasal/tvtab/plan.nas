@@ -33,7 +33,7 @@ var tvtab_controller = {
 var canvas_plan = {
 	new: func(canvasGroup)
 	{
-		var m = { parents: [canvas_plan] };
+		var m = { parents: [canvas_plan, canvas_base.new(canvasGroup)] };
 		m.map = canvasGroup.createChild('map');
 
 		var font_mapper = func(family, weight)
@@ -43,7 +43,6 @@ var canvas_plan = {
 			}
 		};
 		canvas.parsesvg(canvasGroup, "Aircraft/Tornado/Nasal/tvtab/plan.svg", {'font-mapper': font_mapper});
-		m.group = canvasGroup;
 
 		var ctrl_ns = canvas.Map.Controller.get("Aircraft position");
 		var source = ctrl_ns.SOURCES["to-map"];
@@ -71,13 +70,5 @@ var canvas_plan = {
 		}
 
 		return m;
-	},
-	show: func()
-	{
-		me.group.show();
-	},
-	hide: func()
-	{
-		me.group.hide();
 	}
 };

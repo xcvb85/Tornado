@@ -1,7 +1,11 @@
 var canvas_overlay = {
+	chr_data: [],
+	fp:{},
+	wp:{},
+	
 	new: func(canvasGroup)
 	{
-		var m = { parents: [canvas_overlay], chr_data:[], fp:{}, wp:{} };
+		var m = { parents: [canvas_overlay, canvas_base.new(canvasGroup)] };
 		m.fp = flightplan();
 		m.text = "";
 		m.prefix = "";
@@ -35,8 +39,6 @@ var canvas_overlay = {
 			m[key] = canvasGroup.getElementById(key);
 			m[key].setDrawMode(canvas.Text.TEXT + canvas.Text.FILLEDBOUNDINGBOX);
 		}
-		m.timer = maketimer(1.0, m, m.update);
-		m.timer.start();
 		return m;
 	},
 	setSoftkeys: func(softkeys, selectedSoftkeys)

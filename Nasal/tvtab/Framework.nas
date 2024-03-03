@@ -5,6 +5,22 @@
 
 var NUM_SOFTKEYS = 10;
 
+var canvas_base = {
+	new: func(canvas_group) {
+		var m = {parents: [canvas_base]};
+		m.group = canvas_group;
+		return m;
+	},
+	update: func {
+	},
+	show: func() {
+		me.group.show();
+	},
+	hide: func() {
+		me.group.hide();
+	}
+};
+
 # base class
 var SkItem = {
 	new: func(id, device, title, decoration=0) {
@@ -186,6 +202,7 @@ var Device = {
 			Softkeys: [],
 			SoftkeyFrames: [],
 			ActiveMenu: 0, # to know where button clicks must go
+			ActivePage: 0, # update
 			SkFrameMenu: 0,
 			InstanceId: instance,
 			Tmp: 0,
@@ -203,6 +220,7 @@ var Device = {
 		me.UpdateMenu();
 	},
 	ActivatePage: func(page) {
+		me.ActivePage = page;
 		me.Menus[me.SkFrameMenu].ResetDecoration();
 		me.SkFrameMenu = me.ActiveMenu;
 
