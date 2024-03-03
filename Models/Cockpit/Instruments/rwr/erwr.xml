@@ -2,7 +2,52 @@
 <PropertyList>
 	<path>erwr.ac</path>
 	<effect>
-		<inherits-from>Aircraft/Tornado/Models/Effects/displays/ehdd</inherits-from>
+		<inherits-from>Aircraft/Tornado/Models/Effects/displays/erwr</inherits-from>
 		<object-name>bg</object-name>
 	</effect>
+	<animation>
+		<type>knob</type>
+		<object-name>knob</object-name>
+		<property>instrumentation/rwr/bright</property>
+		<factor>275</factor>
+		<offset-deg>0</offset-deg>
+		<interval-sec>0.075</interval-sec>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>-0.0315</y-m>
+			<z-m>0.0325</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<increase>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/rwr/bright</property>
+				<step>0.1</step>
+				<min>0</min>
+				<max>1</max>
+				<wrap>false</wrap>
+			</binding>
+		</increase>
+		<decrease>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/rwr/bright</property>
+				<step>-0.1</step>
+				<min>0</min>
+				<max>1</max>
+				<wrap>false</wrap>
+			</binding>
+		</decrease>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>bright</tooltip-id>
+				<label>Brightness</label>
+			</binding>
+		</hovered>
+	</animation>
 </PropertyList>

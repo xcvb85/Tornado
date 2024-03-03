@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<name>crt-ehdd</name>
+	<name>crt-erwr</name>
 	<inherits-from>Effects/model-default</inherits-from>
 	<parameters>
 		<!-- Dirt -->
@@ -15,7 +15,9 @@
 		<display-power type="int">
 			<use>fdm/jsbsim/electric/output/ehdd</use>
 		</display-power>
-		<display-bright type="float">1.0</display-bright>
+		<display-bright type="float">
+			<use>instrumentation/rwr/bright</use>
+		</display-bright>
 		<display-zoom type="float">1.0</display-zoom>
 	</parameters>
 
