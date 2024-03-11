@@ -112,6 +112,10 @@
 				<file-prefix>Aircraft/Tornado/Sounds/misc/</file-prefix>
 			</voice>
 		</mk-viii>
+		<rwr>
+			<serviceable type="bool">true</serviceable>
+			<bright type="float">0.6</bright>
+		</rwr>
 	</instrumentation>
 	<nasal>
 		<vector>
@@ -126,12 +130,12 @@
 		</radardist>
 		<rcs>
 			<file>Aircraft/Tornado/Nasal/radar/rcs.nas</file>
-			<file>Aircraft/Tornado/Nasal/radar/rcs_mand.nas</file>
+			<file>Aircraft/Tornado/Nasal/radar/rcs-mand.nas</file>
 		</rcs>
 		<radar_system>
 			<file>Aircraft/Tornado/Nasal/radar/radar-system-database.nas</file>
 			<file>Aircraft/Tornado/Nasal/radar/radar-system.nas</file>
-			<file>Aircraft/Tornado/Nasal/radar/apg-68.nas</file>
+			<file>Aircraft/Tornado/Nasal/radar/RWROnly.nas</file>
 		</radar_system>
 		<rwr>
 			<file>Aircraft/Tornado/Nasal/radar/rwr.nas</file>

@@ -6,7 +6,7 @@ name "Blender_exporter_v4.1__erwr.ac"
 kids 1
 OBJECT group
 name "erwr"
-kids 3
+kids 4
 OBJECT poly
 name "knob"
 data 11
