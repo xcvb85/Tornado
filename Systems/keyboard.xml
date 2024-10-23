@@ -32,13 +32,12 @@
 			<script>libraries.wingSweep(1)</script>
 		</binding>
 	</key>
-	<key n="68">
-		<name>D</name>
-		<desc>Close Canopy</desc>
+	<key n="102">
+		<name>f</name>
+		<desc>Fuel Hose</desc>
 		<binding>
-			<command>property-assign</command>
-			<property>sim/model/canopy-positions/Canopy/position-norm</property>
-			<value>0</value>
+			<command>nasal</command>
+			<script>doors.FuelHose.toggle();</script>
 		</binding>
 	</key>
 	<key n="79">
@@ -71,9 +70,19 @@
 		<name>d</name>
 		<desc>Open Canopy</desc>
 		<binding>
-			<command>property-assign</command>
-			<property>sim/model/canopy-positions/Canopy/position-norm</property>
-			<value>1</value>
+			<condition>
+				<and>
+					<property>/gear/gear[0]/wow</property>
+					<property>/gear/gear[1]/wow</property>
+					<property>/gear/gear[2]/wow</property>
+					<less-than>
+						<property>/gear/gear[0]/rollspeed-ms</property>
+						<value>15</value>
+					</less-than>
+				</and>
+			</condition>
+			<command>nasal</command>
+			<script>doors.Canopy.toggle();</script>
 		</binding>
 	</key>
 	<key n="101">
@@ -102,7 +111,7 @@
 	</key>
 	<key n="109">
 		<name>m</name>
-		<desc>Masterarm</desc>
+		<desc>Master arm</desc>
 		<binding>
 			<command>nasal</command>
 			<script><![CDATA[
@@ -133,6 +142,19 @@
 		<binding>
 			<command>nasal</command>
 			<script>pylons.fcs.cycleLoadedWeapon();</script>
+		</binding>
+	</key>
+	<key n="81">
+		<name>Q</name>
+		<desc>Reset view</desc>
+		<binding>
+			<command>nasal</command>
+			<script>
+				setprop("sim/current-view/field-of-view",      getprop("sim/current-view/config/default-field-of-view-deg"));
+				setprop("sim/current-view/heading-offset-deg", getprop("sim/current-view/config/heading-offset-deg"));
+				setprop("sim/current-view/pitch-offset-deg",   getprop("sim/current-view/config/pitch-offset-deg"));
+				setprop("sim/current-view/roll-offset-deg",    getprop("sim/current-view/config/roll-offset-deg"));
+			</script>
 		</binding>
 	</key>
 </PropertyList>

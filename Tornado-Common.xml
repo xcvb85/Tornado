@@ -118,6 +118,9 @@
 		</rwr>
 	</instrumentation>
 	<nasal>
+		<doors>
+			<file>Aircraft/Tornado/Nasal/doors.nas</file>
+		</doors>
 		<vector>
 			<file>Aircraft/Tornado/Nasal/weapons/vector.nas</file>
 		</vector>

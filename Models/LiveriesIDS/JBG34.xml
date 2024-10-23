@@ -6,9 +6,10 @@
 				<name type="string">Luftwaffe, JBG34 (Fighter Attack Sqdn.)</name>
 				<texture>LiveriesIDS/JBG34.jpg</texture>
 			</livery>
-                <tornado>
-                   <GR4 type="bool">false</GR4>
-                </tornado>
+			<tornado>
+				<GR4 type="bool">false</GR4>
+				<Probe type="bool">true</Probe>
+			</tornado>
 		</model>
 	</sim>
 </PropertyList>

@@ -6,9 +6,10 @@
 				<name type="string">Luftwaffe, AG51 Tiger Meet '09</name>
 				<texture>LiveriesIDS/TM09.jpg</texture>
 			</livery>
-                <tornado>
-                   <GR4 type="bool">false</GR4>
-                </tornado>
+			<tornado>
+				<GR4 type="bool">false</GR4>
+				<Probe type="bool">true</Probe>
+			</tornado>
 		</model>
 	</sim>
 </PropertyList>

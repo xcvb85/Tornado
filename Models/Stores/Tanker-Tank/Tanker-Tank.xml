@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>Tanker-Tank.ac</path>
+
+  <animation>
+    <type>spin</type>
+    <object-name>TankerProp</object-name>
+    <factor>1</factor>
+    <property>velocities/airspeed-kt</property>
+    <center>
+      <x-m> -2.9452 </x-m>
+      <y-m>  0.0000 </y-m>
+      <z-m> -2.1602 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- TEMPORARY CODE to allow a view of operation during test. It will be removed when the system is fully integrated -->
+  <animation>
+    <type>pick</type>
+    <object-name>TankerTank</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeat>false</repeat>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/show-drogue</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>RefuelDrogue</object-name>
+    <condition>
+      <property>sim/model/show-drogue</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>RefuelDrogue_R</object-name>
+    <condition>
+      <not>
+        <property>sim/model/show-drogue</property>
+      </not>
+    </condition>
+  </animation>
+
+</PropertyList>

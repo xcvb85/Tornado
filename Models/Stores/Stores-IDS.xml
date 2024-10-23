@@ -677,4 +677,19 @@
 			</equals>
 		</condition>
 	</animation>
+	<!-- Tornado Tanker -->
+	<model>
+		<name>Tanker</name>
+		<path>Aircraft/Tornado/Models/Stores/Tanker-Tank/Tanker-Tank.xml</path>
+	</model>
+	<animation>
+		<object-name>Tanker</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>payload/armament/station/id-4-set</property>
+				<value>Tanker Tank</value>
+			</equals>
+		</condition>
+	</animation>
 </PropertyList>

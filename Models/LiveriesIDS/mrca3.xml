@@ -6,9 +6,10 @@
 				<name type="string">MRCA Prototype P-09 (Aeronautica Militare)</name>
 				<texture>LiveriesIDS/mrca3.jpg</texture>
 			</livery>
-                <tornado>
-                   <GR4 type="bool">false</GR4>
-                </tornado>
+			<tornado>
+				<GR4 type="bool">false</GR4>
+				<Probe type="bool">false</Probe>
+			</tornado>
 		</model>
 	</sim>
 </PropertyList>

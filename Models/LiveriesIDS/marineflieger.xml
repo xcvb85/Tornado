@@ -6,9 +6,10 @@
 				<name type="string">Marineflieger</name>
 				<texture>LiveriesIDS/marineflieger.jpg</texture>
 			</livery>
-                <tornado>
-                   <GR4 type="bool">false</GR4>
-                </tornado>
+			<tornado>
+				<GR4 type="bool">false</GR4>
+				<Probe type="bool">false</Probe>
+			</tornado>
 		</model>
 	</sim>
 </PropertyList>

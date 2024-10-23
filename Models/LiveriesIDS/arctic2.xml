@@ -6,9 +6,10 @@
 				<name type="string">RAF, 2nd Sqdn. "Arctic Paint"</name>
 				<texture>LiveriesIDS/arctic2.jpg</texture>
 			</livery>
-                <tornado>
-                   <GR4 type="bool">true</GR4>
-                </tornado>
+			<tornado>
+				<GR4 type="bool">true</GR4>
+				<Probe type="bool">true</Probe>
+			</tornado>
 		</model>
 	</sim>
 </PropertyList>

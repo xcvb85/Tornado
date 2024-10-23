@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <model>
+    <name>FlameRNOALS</name>
+    <path>Classic/flameR.xml</path>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>FlameRNOALS</object-name>
+    <condition>
+      <not><property>/sim/rendering/shaders/skydome</property></not>
+    </condition>
+  </animation>
+
+  <model>
+    <name>FlameRALS</name>
+    <path>ALS/flameR.xml</path>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>FlameRALS</object-name>
+    <condition>
+      <property>/sim/rendering/shaders/skydome</property>
+    </condition>
+  </animation>
+
+  <model>
+    <name>FlameRHDR</name>
+    <path>HDR/flameR.xml</path>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>FlameRHDR</object-name>
+    <condition>
+      <property>/sim/rendering/hdr/hdr-enabled</property>
+    </condition>
+  </animation>
+
+</PropertyList>

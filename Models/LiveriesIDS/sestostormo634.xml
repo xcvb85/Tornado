@@ -5,13 +5,14 @@
 	<sim>
 		<model>
 				<livery>
-					<name type="string">AMI, 634 SESTO STORMO</name>
+					<name type="string">AMI, 6 Stormo 634 Gruppo</name>
 					 <index type="int">1</index>
 					  <texture>LiveriesIDS/sestostormo634.jpg</texture>
 				</livery>
-                <tornado>
-                   <GR4 type="bool">false</GR4>
-                </tornado>
+			<tornado>
+				<GR4 type="bool">false</GR4>
+				<Probe type="bool">true</Probe>
+			</tornado>
 		</model>
 	</sim>
 </PropertyList>

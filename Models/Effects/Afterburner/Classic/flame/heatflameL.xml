@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>heatflame.ac</path>
+  <nopreview/>
+
+  <animation>
+    <object-name>heatflame</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>heatflame</object-name>
+  </animation>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>heatflame</object-name>
+  </effect>
+
+  <animation>
+    <type>material</type>
+    <object-name>heatflame</object-name>
+    <emission>
+      <property>controls/engines/engine[0]/throttle</property>
+      <red>   1.000 </red>
+      <green> 0.800 </green>
+      <blue>  0.000 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>heatflame</object-name>
+    <property>engines/engine[0]/n2</property>
+    <interpolation>
+      <entry><ind>  80 </ind><dep>   0 </dep></entry>
+      <entry><ind>  98 </ind><dep>  20 </dep></entry>
+      <entry><ind> 107 </ind><dep>  40 </dep></entry>
+      <entry><ind> 110 </ind><dep> -10 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

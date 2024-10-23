@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>flame.ac</path>
+  <nopreview/>
+
+  <animation>
+    <object-name>Reheatback</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>Reheatback</object-name>
+  </animation>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>Reheatback</object-name>
+  </effect>
+
+  <animation>
+    <type>material</type>
+    <object-name>Reheatback</object-name>
+    <emission>
+      <property>controls/engines/engine[1]/throttle</property>
+      <red>   1.000 </red>
+      <green> 0.800 </green>
+      <blue>  0.000 </blue>
+    </emission>
+  </animation>
+
+  <model>
+    <name>F1</name>
+    <path>flame/heatflameR.xml</path>
+    <offsets>
+      <x-m> 0.00000 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 0.53635 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>F2</name>
+    <path>flame/heatflameR.xml</path>
+    <offsets>
+      <x-m> 0.00000 </x-m>
+      <y-m> 0.26817 </y-m>
+      <z-m> 0.46449 </z-m>
+      <roll-deg> -30 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>F3</name>
+    <path>flame/heatflameR.xml</path>
+    <offsets>
+      <x-m> 0.00000 </x-m>
+      <y-m> 0.46449 </y-m>
+      <z-m> 0.26817 </z-m>
+      <roll-deg> -60 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>F4</name>
+    <path>flame/heatflameR.xml</path>
+    <offsets>
+      <x-m> 0.00000 </x-m>
+      <y-m> 0.53635 </y-m>
+      <z-m> 0.00000 </z-m>
+      <roll-deg> -90 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>F5</name>
+    <path>flame/heatflameR.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m>  0.46449 </y-m>
+      <z-m> -0.26817 </z-m>
+      <roll-deg> -120 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>F6</name>
+    <path>flame/heatflameR.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m>  0.26817 </y-m>
+      <z-m> -0.46449 </z-m>
+      <roll-deg> -150 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>F7</name>
+    <path>flame/heatflameR.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.53635 </z-m>
+      <roll-deg> -180 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>F8</name>
+    <path>flame/heatflameR.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.26817 </y-m>
+      <z-m> -0.46449 </z-m>
+      <roll-deg> -210 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>F9</name>
+    <path>flame/heatflameR.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.46449 </y-m>
+      <z-m> -0.26817 </z-m>
+      <roll-deg> -240 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>F10</name>
+    <path>flame/heatflameR.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.53635 </y-m>
+      <z-m>  0.00000 </z-m>
+      <roll-deg> -270 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>F11</name>
+    <path>flame/heatflameR.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.46449 </y-m>
+      <z-m>  0.26817 </z-m>
+      <roll-deg> -300 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>F12</name>
+    <path>flame/heatflameR.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.26817 </y-m>
+      <z-m>  0.46449 </z-m>
+      <roll-deg> -330 </roll-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <name>AllFlame</name>
+    <object-name>Reheatback</object-name>
+    <object-name>F1</object-name>
+    <object-name>F2</object-name>
+    <object-name>F3</object-name>
+    <object-name>F4</object-name>
+    <object-name>F5</object-name>
+    <object-name>F6</object-name>
+    <object-name>F7</object-name>
+    <object-name>F8</object-name>
+    <object-name>F9</object-name>
+    <object-name>F10</object-name>
+    <object-name>F11</object-name>
+    <object-name>F12</object-name>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>AllFlame</object-name>
+    <property>engines/engine[1]/n1</property>
+    <factor> 3 </factor>   <!-- FACTOR DE ROTACIÓN ó VELOCIDAD DE ROTACIÓN (Valor original era 3) -->
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Afterburner -->
+  <model>
+    <name>flammeDay</name>
+    <path>combustion_Day.xml</path>
+    <offsets>
+      <x-m> 0.6 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>flammeDusk</name>
+    <path>combustion_Dusk.xml</path>
+    <offsets>
+      <x-m> 0.6 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>flammeNight</name>
+    <path>combustion_Night.xml</path>
+    <offsets>
+      <x-m> 0.6 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ******************************************** -->
+  <animation>
+    <type>select</type>
+    <object-name>flammeDay</object-name>
+    <condition>
+      <less-than>
+        <property>sim/time/sun-angle-rad</property>
+        <value>1.45</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>flammeDusk</object-name>
+    <condition>
+      <and>
+        <less-than>
+          <property>sim/time/sun-angle-rad</property>
+          <value>1.7</value>
+        </less-than>
+        <greater-than>
+          <property>sim/time/sun-angle-rad</property>
+          <value>1.45</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>flammeNight</object-name>
+    <condition>
+      <greater-than>
+        <property>sim/time/sun-angle-rad</property>
+        <value>1.7</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>scale</type>
+    <object-name>flammeDay</object-name>
+    <object-name>flammeDusk</object-name>
+    <object-name>flammeNight</object-name>
+    <property>engines/engine[1]/afterburner</property>
+    <x-min> 0.0 </x-min>
+    <y-min> 1.0 </y-min>
+    <z-min> 1.0 </z-min>
+    <x-factor> 2 </x-factor>
+    <y-factor> 1 </y-factor>
+    <z-factor> 1 </z-factor>
+  </animation>
+
+</PropertyList>

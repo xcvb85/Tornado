@@ -3,12 +3,13 @@
 	<sim>
 		<model>
 			<livery>
-				<name type="string">RAF, 41 Sqdn. (95th Anniv.)</name>
+				<name type="string">RAF, 41 Sqdn. 95th Anniversary</name>
 				<texture>LiveriesIDS/GR4-41st.jpg</texture>
 			</livery>
-                <tornado>
-                   <GR4 type="bool">true</GR4>
-                </tornado>
+			<tornado>
+				<GR4 type="bool">true</GR4>
+				<Probe type="bool">true</Probe>
+			</tornado>
 		</model>
 	</sim>
 </PropertyList>

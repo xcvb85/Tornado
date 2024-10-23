@@ -3,50 +3,58 @@
 	<title>Panavia Tornado</title>
 	<key>
 		<name>b</name>
-		<desc>apply all brakes</desc>
+		<desc>Apply All Brakes</desc>
 	</key>
 	<key>
 		<name>B</name>
-		<desc>toggle parking brake</desc>
+		<desc>Tggle Parking Brake</desc>
 	</key>
 	<key>
 		<name>Ctrl+b</name>
-		<desc>toggle speedbrake</desc>
+		<desc>Toggle Speedbrake</desc>
 	</key>
 	<key>
-		<name>d/D</name>
-		<desc>open/close canopy</desc>
+		<name>d</name>
+		<desc>Open/Close Canopy</desc>
 	</key>
 	<key>
 		<name>g/G</name>
-		<desc>gear up/down</desc>
+		<desc>Gear Up/Down</desc>
+	</key>
+	<key>
+		<name>f</name>
+		<desc>Refuelling Probe</desc>
 	</key>
 	<key>
 		<name>l</name>
-		<desc>landing lights</desc>
+		<desc>Landing Lights</desc>
 	</key>
 	<key>
 		<name>L</name>
-		<desc>cockpit lights</desc>
+		<desc>Cockpit Lights</desc>
 	</key>
 	<key>
 		<name>Ctrl-v</name>
-		<desc>Back to Pilot's View or toggle Pilot's and Navigator's View.</desc>
+		<desc>Back to Pilot's View or toggle Pilot's and Navigator's View</desc>
 	</key>
 	<key>
 		<name>&gt;</name>
-		<desc>wing sweep aft</desc>
+		<desc>Wing Sweep Aft</desc>
 	</key>
 	<key>
 		<name>&lt;</name>
-		<desc>wing sweep forward</desc>
+		<desc>Wing Sweep Forward</desc>
 	</key>
 	<key>
-		<name>[ ]</name>
-		<desc>flaps up/down</desc>
+		<name>[ / ]</name>
+		<desc>Flaps Up/Down</desc>
 	</key>
 	<key>
 		<name>Del</name>
-		<desc>thrust reverser</desc>
+		<desc>Thrust Reverser</desc>
+	</key>
+	<key>
+		<name>Q</name>
+		<desc>Reset View</desc>
 	</key>
 </PropertyList>

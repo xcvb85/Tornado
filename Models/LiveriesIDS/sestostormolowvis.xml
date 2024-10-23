@@ -5,13 +5,14 @@
 	<sim>
 		<model>
 				<livery>
-					<name type="string">AMI, SESTO STORMO low visibility</name>
+					<name type="string">AMI, 6 Stormo Low Visibility</name>
 					 <index type="int">1</index>
 					  <texture>LiveriesIDS/sestostormolowvis.jpg</texture>
 				</livery>
-                <tornado>
-                   <GR4 type="bool">false</GR4>
-                </tornado>
+			<tornado>
+				<GR4 type="bool">false</GR4>
+				<Probe type="bool">true</Probe>
+			</tornado>
 		</model>
 	</sim>
 </PropertyList>

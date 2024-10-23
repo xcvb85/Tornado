@@ -3,12 +3,13 @@
 	<sim>
 		<model>
 			<livery>
-				<name type="string">RAF, 16th Sqdn.; "Mig Killer"</name>
+				<name type="string">RAF, 16th Sqdn. "Mig Killer"</name>
 				<texture>LiveriesIDS/GR4-16th.jpg</texture>
 			</livery>
-                <tornado>
-                   <GR4 type="bool">true</GR4>
-                </tornado>
+			<tornado>
+				<GR4 type="bool">true</GR4>
+				<Probe type="bool">true</Probe>
+			</tornado>
 		</model>
 	</sim>
 </PropertyList>

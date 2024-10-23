@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <model>
+    <name>TrailLNOALS</name>
+    <path>Classic/trailL.xml</path>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>TrailLNOALS</object-name>
+    <condition>
+      <not><property>/sim/rendering/shaders/skydome</property></not>
+    </condition>
+  </animation>
+
+  <model>
+    <name>TrailLALS</name>
+    <path>ALS/trailL.xml</path>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>TrailLALS</object-name>
+    <condition>
+      <property>/sim/rendering/shaders/skydome</property>
+    </condition>
+  </animation>
+
+  <model>
+    <name>TrailLHDR</name>
+    <path>HDR/trailL.xml</path>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>TrailLHDR</object-name>
+    <condition>
+      <property>/sim/rendering/hdr/hdr-enabled</property>
+    </condition>
+  </animation>
+
+</PropertyList>

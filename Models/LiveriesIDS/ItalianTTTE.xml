@@ -3,12 +3,13 @@
 	<sim>
 		<model>
 			<livery>
-				<name type="string">Aeronautica Militaire, TTTE</name>
+				<name type="string">AMI, TTTE</name>
 				<texture>LiveriesIDS/ItalianTTTE.jpg</texture>
 			</livery>
-                <tornado>
-                   <GR4 type="bool">false</GR4>
-                </tornado>
+			<tornado>
+				<GR4 type="bool">false</GR4>
+				<Probe type="bool">false</Probe>
+			</tornado>
 		</model>
 	</sim>
 </PropertyList>

@@ -6,9 +6,10 @@
 				<name type="string">RAF, Farewell Flight Camo</name>
 				<texture>LiveriesIDS/2019Farewell_Camo.jpg</texture>
 			</livery>
-                <tornado>
-                   <GR4 type="bool">true</GR4>
-                </tornado>
+			<tornado>
+				<GR4 type="bool">true</GR4>
+				<Probe type="bool">true</Probe>
+			</tornado>
 		</model>
 	</sim>
 </PropertyList>
