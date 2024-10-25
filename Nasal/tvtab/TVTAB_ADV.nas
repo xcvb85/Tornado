@@ -405,5 +405,5 @@ tvTabListener = setlistener("/sim/signals/fdm-initialized", func () {
 	append(TvTabInstances, TVTAB.new(tvTab2Canvas.createGroup(), 0));
 	removelistener(tvTabListener);
 	tvTabBtClick(0, 10);
-	tvTabBtClick(1, 11);
+	tvTabBtClick(1, 10);
 });

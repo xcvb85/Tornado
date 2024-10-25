@@ -287,5 +287,5 @@ tvTabListener = setlistener("/sim/signals/fdm-initialized", func () {
 
 	removelistener(tvTabListener);
 	tvTabBtClick(0, 10);
-	tvTabBtClick(1, 11);
+	tvTabBtClick(1, 10);
 });
