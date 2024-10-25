@@ -1489,6 +1489,17 @@
 		</offsets>
 	</model>
 	<model>
+		<path>Aircraft/Tornado/Models/Effects/afterburner/afterburner.xml</path>
+		<condition>
+			<property>sim/multiplay/generic/bool[1]</property>
+		</condition>
+		<offsets>
+			<x-m>6.00</x-m>
+			<y-m>-0.52</y-m>
+			<z-m>-0.81</z-m>
+		</offsets>
+	</model>
+	<model>
 		<name>nozzleRight</name>
 		<path>Aircraft/Tornado/Models/nozzle.xml</path>
 		<offsets>
@@ -1497,53 +1508,16 @@
 			<z-m>-0.81</z-m>
 		</offsets>
 	</model>
-	<!-- AFTERBURNER EFFECT -->
-	<!-- Left Afterburner -->
 	<model>
-		<path>Aircraft/Tornado/Models/Effects/Afterburner/flameL.xml</path>
+		<path>Aircraft/Tornado/Models/Effects/afterburner/afterburner.xml</path>
 		<condition>
-			<not><property>/controls/engines/engine[0]/cutoff</property></not>
+			<property>sim/multiplay/generic/bool[2]</property>
 		</condition>
 		<offsets>
-			<x-m>  5.39950 </x-m>
-			<y-m> -0.51984 </y-m>
-			<z-m> -0.79200 </z-m>
+			<x-m>6.00</x-m>
+			<y-m>0.52</y-m>
+			<z-m>-0.81</z-m>
 		</offsets>
-		<overlay>
-			<animation n="100">
-				<type>scale</type>
-				<property>constants/zero</property>
-				<x-offset> 0.65 </x-offset>
-				<y-offset> 0.65 </y-offset>
-				<z-offset> 0.65 </z-offset>
-			</animation>
-		</overlay>
-	</model>
-	<!-- Right Afterburner  -->
-	<model>
-		<path>Aircraft/Tornado/Models/Effects/Afterburner/flameR.xml</path>
-		<condition>
-			<not><property>/controls/engines/engine[1]/cutoff</property></not>
-		</condition>
-		<offsets>
-			<x-m>  5.39950 </x-m>
-			<y-m>  0.51984 </y-m>
-			<z-m> -0.79200 </z-m>
-		</offsets>
-		<overlay>
-			<animation n="100">
-				<type>scale</type>
-				<property>constants/zero</property>
-				<x-offset> 0.65 </x-offset>
-				<y-offset> 0.65 </y-offset>
-				<z-offset> 0.65 </z-offset>
-			</animation>
-		</overlay>
-	</model>
-	
-	<!-- TRAILS EFFECT -->
-	<model>
-		<path>Aircraft/Tornado/Models/Effects/Trail/all-trails.xml</path>
 	</model>
 	<!-- Selection of the nose equipment depending on the IDS/GR.4 Variant -->
         <animation>
