@@ -292,6 +292,7 @@
 		<object-name>spoilerright</object-name>
 		<object-name>AIM-9L Missile 3</object-name>
 		<object-name>AIM-9L Missile 4</object-name>
+		<object-name>AIM-132_3</object-name>
 		<object-name>BOZ-10X 2</object-name>
 		<name>rightvapour</name>
 		<property>fdm/jsbsim/fcs/wing-sweep</property>
@@ -360,6 +361,7 @@
 		<object-name>rightinnerwingtank</object-name>
 		<object-name>AIM-9L Missile 3</object-name>
 		<object-name>AIM-9L Missile 4</object-name>
+		<object-name>AIM-132_3</object-name>
 		<property>fdm/jsbsim/fcs/wing-sweep</property>
 		<interpolation>
 			<entry>
@@ -427,6 +429,7 @@
 		<object-name>spoilerleft</object-name>
 		<object-name>AIM-9L Missile 1</object-name>
 		<object-name>AIM-9L Missile 2</object-name>
+		<object-name>AIM-132_2</object-name>
 		<object-name>BOZ-10X 1</object-name>
 		<name>leftvapour</name>
 		<property>fdm/jsbsim/fcs/wing-sweep</property>
@@ -495,6 +498,7 @@
 		<object-name>leftinnerwingtank</object-name>
 		<object-name>AIM-9L Missile 1</object-name>
 		<object-name>AIM-9L Missile 2</object-name>
+		<object-name>AIM-132_2</object-name>
 		<property>fdm/jsbsim/fcs/wing-sweep</property>
 		<interpolation>
 			<entry>

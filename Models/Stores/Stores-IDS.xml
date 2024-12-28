@@ -692,4 +692,56 @@
 			</equals>
 		</condition>
 	</animation>
+
+	<model>
+		<name>AIM-132_2</name>
+		<path>Aircraft/Tornado/Models/Stores/AIM-132/AIM-132.xml</path>
+		<offsets>
+			<x-m>1.09</x-m>
+			<y-m>-2.78995</y-m>
+			<z-m>-0.96</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>AIM-132_2</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-1-type</property>
+					<value>AIM-132</value>
+				</equals>
+				<equals>
+					<property>payload/armament/station/id-1-count</property>
+					<value>1</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+
+	<model>
+		<name>AIM-132_3</name>
+		<path>Aircraft/Tornado/Models/Stores/AIM-132/AIM-132.xml</path>
+		<offsets>
+			<x-m>1.09</x-m>
+			<y-m>2.78995</y-m>
+			<z-m>-0.96</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>AIM-132_3</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+				<equals>
+					<property>payload/armament/station/id-7-type</property>
+					<value>AIM-132</value>
+				</equals>
+				<equals>
+					<property>payload/armament/station/id-7-count</property>
+					<value>1</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
 </PropertyList>

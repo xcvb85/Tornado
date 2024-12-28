@@ -793,6 +793,28 @@
 				<property>sim/current-view/internal</property>
 			</volume>
 		</lock-tone>
+		<lock-tone>
+			<name>asraam-growl</name>
+			<mode>looped</mode>
+			<type>avionics</type>
+			<path>Aircraft/Tornado/Sounds/weapons/aim-9-growl.wav</path>
+			<condition>
+				<property>payload/armament/aim-132/sound-on-off</property>
+			</condition>
+			<pitch>
+				<property>payload/armament/aim-132/sound-volume</property>
+				<factor>1.00</factor>
+				<offset>1.60</offset>
+				<min>0</min>
+				<max>2</max>
+			</pitch>
+			<volume>
+				<property>payload/armament/aim-132/sound-volume</property>
+			</volume>
+			<volume>
+				<property>sim/current-view/internal</property>
+			</volume>
+		</lock-tone>
 		<missiles>
 			<name>aim-9l</name>
 			<path>Aircraft/Tornado/Sounds/weapons/missile.wav</path>
@@ -800,6 +822,18 @@
 			<type>avionics</type>
 			<condition>
 				<property>payload/armament/aim-9l/sound-fire-on-off</property>
+			</condition>
+			<volume>
+				<factor>0.75</factor>
+			</volume>
+		</missiles>
+		<missiles>
+			<name>aim-132</name>
+			<path>Aircraft/Tornado/Sounds/weapons/missile.wav</path>
+			<mode>once</mode>
+			<type>avionics</type>
+			<condition>
+				<property>payload/armament/aim-132/sound-fire-on-off</property>
 			</condition>
 			<volume>
 				<factor>0.75</factor>
