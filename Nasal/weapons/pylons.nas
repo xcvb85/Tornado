@@ -55,6 +55,7 @@ var pylonSets = {
 
     # A/G weapons
     a88:       {name: "AGM-88 HARM", content: ["AGM-88"], fireOrder: [0], launcherDragArea: 0.06, launcherMass: 340, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 3},
+    alarm:     {name: "ALARM", content: ["ALARM"], fireOrder: [0], launcherDragArea: 0.06, launcherMass: 340, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 3},
     m82_2:     {name: "2 x MK-82", content: ["MK-82","MK-82"], fireOrder: [0,1], launcherDragArea: 0.05, launcherMass: 220, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 3},
     m82air_2:  {name: "2 x MK-82AIR", content: ["MK-82AIR","MK-82AIR"], fireOrder: [0,1], launcherDragArea: 0.05, launcherMass: 220, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 3},
     m83:       {name: "1 x MK-83", content: ["MK-83"], fireOrder: [0], launcherDragArea: 0.075, launcherMass: 470, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 3},
@@ -75,13 +76,13 @@ var pylon9set = nil;
 if(variant==1) {
     # IDS
     pylon1set = [pylonSets.empty, pylonSets.boz10x];
-    pylon2set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2, pylonSets.aim132];
-    pylon3set = [pylonSets.empty, pylonSets.fuel12WL];
-    pylon4set = [pylonSets.empty, pylonSets.m82_2, pylonSets.m82air_2, pylonSets.m83, pylonSets.m84]; #pylonSets.fuel12CL
-    pylon5set = [pylonSets.empty, pylonSets.b617, pylonSets.LITENING, pylonSets.Tanker];
-    pylon6set = [pylonSets.empty, pylonSets.m82_2, pylonSets.m82air_2, pylonSets.m83, pylonSets.m84]; #pylonSets.fuel12CR
-    pylon7set = [pylonSets.empty, pylonSets.fuel12WR];
-    pylon8set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2, pylonSets.aim132];
+    pylon2set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2, pylonSets.aim132, pylonSets.alarm];
+    pylon3set = [pylonSets.empty, pylonSets.fuel12WL, pylonSets.alarm];
+    pylon4set = [pylonSets.empty, pylonSets.m82_2, pylonSets.m82air_2, pylonSets.m83, pylonSets.m84, pylonSets.alarm]; #pylonSets.fuel12CL
+    pylon5set = [pylonSets.empty, pylonSets.b617, pylonSets.alarm, pylonSets.LITENING, pylonSets.Tanker];
+    pylon6set = [pylonSets.empty, pylonSets.m82_2, pylonSets.m82air_2, pylonSets.m83, pylonSets.m84, pylonSets.alarm]; #pylonSets.fuel12CR
+    pylon7set = [pylonSets.empty, pylonSets.fuel12WR, pylonSets.alarm];
+    pylon8set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2, pylonSets.aim132, pylonSets.alarm];
     pylon9set = [pylonSets.empty, pylonSets.boz10x];
 }
 else if(variant==2) {
@@ -122,7 +123,7 @@ pylon9 = stations.Pylon.new("Right wing outboard pylon", 8, [4.510,  4.511, -0.1
 pylonI = stations.InternalStation.new("Internal gun mount",   9, [pylonSets.mm27], props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[10]", 1));
 
 pylons = [pylon1, pylon2, pylon3, pylon4, pylon5, pylon6, pylon7, pylon8, pylon9, pylonI];
-fcs = fc.FireControl.new(pylons, [9, 7, 1, 6, 2, 5, 3, 4], ["27mm Cannon", "AIM-9L", "AIM-132", "MK-82", "MK-82AIR", "MK-83", "MK-84", "B61-7", "AIM-120", "RB-71", "AGM-88"]);
+fcs = fc.FireControl.new(pylons, [9, 7, 1, 6, 2, 5, 3, 4], ["27mm Cannon", "AIM-9L", "AIM-132", "MK-82", "MK-82AIR", "MK-83", "MK-84", "B61-7", "AIM-120", "RB-71", "AGM-88", "ALARM"]);
 
 var selectedWeapon = {};
 var bore_loop = func {

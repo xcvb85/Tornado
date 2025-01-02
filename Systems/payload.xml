@@ -284,6 +284,49 @@
             <ready-time type="double">3</ready-time>
             <power-on-battery-time type="double">1800</power-on-battery-time>
         </agm-88>
+        <alarm>
+            <type-id type="int">7</type-id>
+            <short-name type="string">ALM</short-name>
+            <long-name type="string">ALARM</long-name>
+            <vol-search type="double">0.00</vol-search>
+            <vol-track type="double">1.00</vol-track>
+            <guidance type="string">radiation</guidance>
+            <navigation type="string">APN</navigation>
+            <all-aspect type="bool">true</all-aspect>
+            <max-fire-range-nm type="double">55</max-fire-range-nm>              <!--  -->
+            <FCS-field-deg type="int">100</FCS-field-deg>
+            <seeker-field-deg type="int">100</seeker-field-deg>
+            <max-g type="int">17</max-g>
+            <thrust-lbf-stage-1 type="double">12000</thrust-lbf-stage-1>
+            <thrust-lbf-stage-2 type="double">1000</thrust-lbf-stage-2>
+            <stage-1-duration-sec type="double">0.8</stage-1-duration-sec>
+            <stage-2-duration-sec type="double">52</stage-2-duration-sec>
+            <weight-launch-lbs type="double">572</weight-launch-lbs>  <!--  -->
+            <weight-warhead-lbs type="double">146</weight-warhead-lbs>   <!--  -->
+            <weight-fuel-lbm type="double">250</weight-fuel-lbm>
+            <drag-coeff type="double">0.23</drag-coeff>
+            <cross-section-sqft type="double">0.424</cross-section-sqft> <!-- 8.8 inch diam -->
+            <arming-time-sec type="double">4.0</arming-time-sec>
+            <min-speed-for-guiding-mach type="double">0.5</min-speed-for-guiding-mach>
+            <self-destruct-time-sec type="double">150</self-destruct-time-sec>
+            <loft-altitude type="int">40000</loft-altitude>
+            <min-fire-range-nm type="double">0.25</min-fire-range-nm>
+            <rail type="bool">true</rail>
+            <rail-length-m type="double">1.95</rail-length-m><!-- LAU 127 Missile Launcher -->
+            <rail-point-forward type="bool">true</rail-point-forward>
+            <max-report-distance type="double">65</max-report-distance>
+            <reaquire type="bool">true</reaquire>
+            <lock-on-after-launch type="bool">true</lock-on-after-launch>
+            <auto-switch-target-allowed type="bool">true</auto-switch-target-allowed>
+            <no-common-target type="bool">true</no-common-target>
+            <prowl-flight type="string">gyro-pitch</prowl-flight>
+            <switch-time-sec type="double">30</switch-time-sec>
+            <class type="string">GMA</class>
+            <fire-msg type="string">Magnum</fire-msg>
+            <requires-power-on type="bool">false</requires-power-on>
+            <ready-time type="double">0.5</ready-time>
+            <power-on-battery-time type="double">1800</power-on-battery-time>
+        </alarm>
         <b61-7>
             <!--type-id type="int">TBD</type-id-->
             <short-name type="string">B61-7</short-name>
