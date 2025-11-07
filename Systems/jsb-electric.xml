@@ -140,6 +140,12 @@
                 electric/switches/ehdd > 0
             </test>
         </switch>
+        <switch name="electric/output/jtids">
+            <default value="0"/>
+            <test value="1">
+                electric/buses/bus-ac > 100
+            </test>
+        </switch>
         <switch name="electric/output/crpmd">
             <default value="0"/>
             <test logic="AND" value="electric/buses/bus-ac">

@@ -72,6 +72,20 @@
 		<gear>
 			<brake-parking>1</brake-parking>
 		</gear>
+		<radar>
+			<antennae-knob type="float">0</antennae-knob>
+		</radar>
+		<displays>
+			<stick-controls-cursor type="bool">false</stick-controls-cursor>
+			<arrows-controls-cursor type="bool">false</arrows-controls-cursor>
+			<!-- Inputs (to be used e.g. in joystick configuration) -->
+			<cursor-slew-x type="double">0.0</cursor-slew-x>
+			<cursor-slew-y type="double">0.0</cursor-slew-y>
+			<cursor-click type="bool">false</cursor-click>
+			<!-- JSBSim computed final input. To be used in the systems reading the cursor. -->
+			<cursor-total-slew-x type="double">0.0</cursor-total-slew-x>
+			<cursor-total-slew-y type="double">0.0</cursor-total-slew-y>
+		</displays>
 	</controls>
 	<consumables>
 		<fuel>
@@ -82,6 +96,12 @@
 			<tank n="4"><name>Rear Fuselage Tank</name></tank>
 		</fuel>
 	</consumables>
+	<debug-radar>
+		<debug-main type="bool">0</debug-main>
+		<debug-mapper type="bool">0</debug-mapper>
+		<debug-stt type="bool">0</debug-stt>
+		<display-width type="float">512</display-width>
+	</debug-radar>
 	<instrumentation>
 		<parameter n="0">0</parameter>
 		<parameter n="1">0.6</parameter>
@@ -116,6 +136,13 @@
 			<serviceable type="bool">true</serviceable>
 			<bright type="float">0.6</bright>
 		</rwr>
+		<datalink>
+			<power_prop type="string">electric/output/jtids</power_prop>
+			<channel_prop type="string">instrumentation/jtids/channel</channel_prop>
+		</datalink>
+		<jtids>
+			<channel type="int">6675</channel>
+		</jtids>
 	</instrumentation>
 	<nasal>
 		<doors>
@@ -135,14 +162,17 @@
 			<file>Aircraft/Tornado/Nasal/radar/rcs.nas</file>
 			<file>Aircraft/Tornado/Nasal/radar/rcs-mand.nas</file>
 		</rcs>
+		<datalink>
+			<file>Aircraft/Tornado/Nasal/datalink.nas</file>
+		</datalink>
 		<radar_system>
 			<file>Aircraft/Tornado/Nasal/radar/radar-system-database.nas</file>
 			<file>Aircraft/Tornado/Nasal/radar/radar-system.nas</file>
-			<file>Aircraft/Tornado/Nasal/radar/RWROnly.nas</file>
+			<file>Aircraft/Tornado/Nasal/radar/apg-68.nas</file>
 		</radar_system>
-		<rwr>
+<!-- 		<rwr>
 			<file>Aircraft/Tornado/Nasal/radar/rwr.nas</file>
-		</rwr>
+		</rwr> -->
 		<damage>
 			<file>Aircraft/Tornado/Nasal/weapons/damage.nas</file>
 		</damage>

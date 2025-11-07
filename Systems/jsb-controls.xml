@@ -232,5 +232,45 @@
      <output>fcs/speedbrake-pos-norm</output>
    </kinematic>
   </channel>
+    <!-- Copied from JA37 -->
+  <channel name="Cursor">
+    <switch name="names/cursor/cursor-x-from-flight-controls">
+      <description>Cursor control component from flight controls</description>
+      <default value="0"/>
+      <test value="fcs/aileron-cmd-norm">
+        /controls/displays/stick-controls-cursor == 1
+      </test>
+    </switch>
+
+    <switch name="names/cursor/cursor-y-from-flight-controls">
+      <description>Cursor control component from flight controls</description>
+      <default value="0"/>
+      <test value="-fcs/elevator-cmd-norm">
+        /controls/displays/stick-controls-cursor == 1
+      </test>
+    </switch>
+
+    <summer name="names/cursor/cursor-slew-x">
+      <description>Combined cursor control</description>
+      <input>names/cursor/cursor-x-from-flight-controls</input>
+      <input>/controls/displays/cursor-slew-x</input>
+      <clipto>
+        <min>-1.0</min>
+        <max>1.0</max>
+      </clipto>
+      <output>/controls/displays/cursor-total-slew-x</output>
+    </summer>
+
+    <summer name="names/cursor/cursor-slew-y">
+      <description>Combined cursor control</description>
+      <input>names/cursor/cursor-y-from-flight-controls</input>
+      <input>/controls/displays/cursor-slew-y</input>
+      <clipto>
+        <min>-1.0</min>
+        <max>1.0</max>
+      </clipto>
+      <output>/controls/displays/cursor-total-slew-y</output>
+    </summer>
+  </channel>
  </flight_control>
  
