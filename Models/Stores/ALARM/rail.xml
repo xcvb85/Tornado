@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<path>boz.ac</path>
+	<path>rail.ac</path>
 
 	<effect>
 		<inherits-from>Aircraft/Tornado/Models/Effects/fuselage/tornado-fuselage</inherits-from>
-		<object-name>rightouter_pylon</object-name>
+		<object-name>ALARM-rail</object-name>
 	</effect>
 </PropertyList>

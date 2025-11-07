@@ -246,6 +246,9 @@
 		<object-name>spoilerright</object-name>
 		<object-name>AIM-9L Missile 3</object-name>
 		<object-name>AIM-9L Missile 4</object-name>
+		<object-name>ALARM Rail 6</object-name>
+		<object-name>ALARM Missile 6</object-name>
+		<object-name>AIM-132_3</object-name>
 		<object-name>AGM-88 Missile 4</object-name>
 		<object-name>Tank 1200l 4</object-name>
 		<object-name>BOZ-10X 2</object-name>
@@ -316,7 +319,10 @@
 		<object-name>rightinnerwingtank</object-name>
 		<object-name>AIM-9L Missile 3</object-name>
 		<object-name>AIM-9L Missile 4</object-name>
+		<object-name>AIM-132_3</object-name>
 		<object-name>AGM-88 Missile 4</object-name>
+		<object-name>ALARM Rail 6</object-name>
+		<object-name>ALARM Missile 6</object-name>
 		<object-name>Tank 1200l 4</object-name>
 		<property>fdm/jsbsim/fcs/wing-sweep</property>
 		<interpolation>
@@ -385,6 +391,9 @@
 		<object-name>spoilerleft</object-name>
 		<object-name>AIM-9L Missile 1</object-name>
 		<object-name>AIM-9L Missile 2</object-name>
+		<object-name>AIM-132_2</object-name>
+		<object-name>ALARM Missile 2</object-name>
+		<object-name>ALARM Rail 2</object-name>
 		<object-name>AGM-88 Missile 1</object-name>
 		<object-name>Tank 1200l 1</object-name>
 		<object-name>BOZ-10X 1</object-name>
@@ -455,6 +464,9 @@
 		<object-name>leftinnerwingtank</object-name>
 		<object-name>AIM-9L Missile 1</object-name>
 		<object-name>AIM-9L Missile 2</object-name>
+		<object-name>AIM-132_2</object-name>
+		<object-name>ALARM Missile 2</object-name>
+		<object-name>ALARM Rail 2</object-name>
 		<object-name>AGM-88 Missile 1</object-name>
 		<object-name>Tank 1200l 1</object-name>
 		<property>fdm/jsbsim/fcs/wing-sweep</property>
