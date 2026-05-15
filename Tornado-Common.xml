@@ -138,7 +138,7 @@
 		<radar_system>
 			<file>Aircraft/Tornado/Nasal/radar/radar-system-database.nas</file>
 			<file>Aircraft/Tornado/Nasal/radar/radar-system.nas</file>
-			<file>Aircraft/Tornado/Nasal/radar/RWROnly.nas</file>
+			<file>Aircraft/Tornado/Nasal/radar/RWRonly.nas</file>
 		</radar_system>
 		<rwr>
 			<file>Aircraft/Tornado/Nasal/radar/rwr.nas</file>
